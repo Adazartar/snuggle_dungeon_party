@@ -70,7 +70,7 @@
     {
       "Id": "5b483a09-bbf2-4949-98c7-a73b789d0ee7",
       "Name": "Wall",
-      "Position": "124.6689,87.76766,43.67614",
+      "Position": "124.6689,37.14378,43.67614",
       "Scale": "0.5632889,7.633394,0.5632889",
       "Enabled": true,
       "Components": [
@@ -160,7 +160,7 @@
     {
       "Id": "76e4c851-33c1-4773-a0b5-dfb482d09759",
       "Name": "Player",
-      "Position": "0,0,44.59811",
+      "Position": "0,0,35.67874",
       "Scale": "0.5,0.5,1",
       "Enabled": true,
       "Components": [
@@ -189,6 +189,7 @@
         },
         {
           "__type": "Player",
+          "rotation_speed": 50,
           "speed": 10
         },
         {
@@ -233,7 +234,7 @@
               "MaterialOverride": null,
               "Model": "models/dev/box.vmdl",
               "RenderType": "On",
-              "Tint": "0,0,0,1"
+              "Tint": "1,0,0,1"
             }
           ]
         }
@@ -263,6 +264,6 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-02-21T11:28:35.1773727\u002B11:00",
+  "LastSaved": "2024-02-22T00:50:36.9345977\u002B11:00",
   "__references": []
 }
