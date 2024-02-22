@@ -108,6 +108,10 @@
           "MassOverride": 0,
           "RigidbodyFlags": 0,
           "StartAsleep": false
+        },
+        {
+          "__type": "Health",
+          "max_health": 50
         }
       ]
     },
@@ -180,6 +184,7 @@
       "Name": "Player",
       "Position": "0,0,35.67874",
       "Scale": "0.5,0.5,1",
+      "Tags": "player",
       "Enabled": true,
       "Components": [
         {
@@ -209,6 +214,7 @@
           "__type": "Player",
           "rotation_speed": 50,
           "speed": 10,
+          "time_moving_for_1_ability_pt": 1,
           "using_controller": true
         },
         {
@@ -229,6 +235,14 @@
           },
           "projectile_duration": 0.3,
           "projectile_speed": 5
+        },
+        {
+          "__type": "Health",
+          "max_health": 100
+        },
+        {
+          "__type": "Ability",
+          "ability_meter_max": 50
         }
       ],
       "Children": [
@@ -294,6 +308,6 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-02-23T00:03:13.2540647\u002B11:00",
+  "LastSaved": "2024-02-23T01:02:42.6500506\u002B11:00",
   "__references": []
 }
