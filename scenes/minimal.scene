@@ -115,7 +115,7 @@
       "Id": "3ee1c9f4-07be-4e0b-8b23-67bee2d8ec8a",
       "Name": "Camera",
       "Position": "0,0,800",
-      "Rotation": "0.5,0.5,-0.5,0.5",
+      "Rotation": "0,0.7071068,0,0.7071068",
       "Enabled": true,
       "Components": [
         {
@@ -294,6 +294,6 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-02-22T19:35:37.870091\u002B11:00",
+  "LastSaved": "2024-02-23T00:03:13.2540647\u002B11:00",
   "__references": []
 }
