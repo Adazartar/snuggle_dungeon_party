@@ -8,6 +8,7 @@ public sealed class Player : Component
 	[Property] int rotation_speed = 10;
 	Vector3 vel;
 	Rotation target_rotation;
+	bool using_controller = true;
 	protected override void OnStart(){
 		Log.Info("We have started");
 		rb = GameObject.Components.Get<Rigidbody>();
@@ -27,18 +28,27 @@ public sealed class Player : Component
 	private void updateMove()
 	{
 		vel = Vector3.Zero;
-		if(Input.Down("forward")){
-			vel += new Vector3(0, -1, 0);
+		if(using_controller)
+		{
+			Vector3 adjustedAnalogMove = new Vector3(Input.AnalogMove.y, -Input.AnalogMove.x, Input.AnalogMove.z);
+        	vel += adjustedAnalogMove;
 		}
-		if(Input.Down("backward")){
-			vel += new Vector3(0, 1, 0);
+		else
+		{
+			if(Input.Down("forward")){
+				vel += new Vector3(0, -1, 0);
+			}
+			if(Input.Down("backward")){
+				vel += new Vector3(0, 1, 0);
+			}
+			if(Input.Down("left")){
+				vel += new Vector3(1, 0, 0);
+			}
+			if(Input.Down("right")){
+				vel += new Vector3(-1, 0, 0);
+			}
 		}
-		if(Input.Down("left")){
-			vel += new Vector3(1, 0, 0);
-		}
-		if(Input.Down("right")){
-			vel += new Vector3(-1, 0, 0);
-		}
+		
 	}
 
 	private void updateRotate()

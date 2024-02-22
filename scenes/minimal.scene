@@ -70,8 +70,9 @@
     {
       "Id": "5b483a09-bbf2-4949-98c7-a73b789d0ee7",
       "Name": "Wall",
-      "Position": "124.6689,37.14378,43.67614",
+      "Position": "124.6689,87.76766,43.67614",
       "Scale": "0.5632889,7.633394,0.5632889",
+      "Tags": "enemy",
       "Enabled": true,
       "Components": [
         {
@@ -90,6 +91,23 @@
           "Scale": "50,50,50",
           "Static": false,
           "Surface": null
+        },
+        {
+          "__type": "Rigidbody",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassOverride": 0,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     },
@@ -199,6 +217,17 @@
           "Scale": "50,50,50",
           "Static": false,
           "Surface": null
+        },
+        {
+          "__type": "Attack",
+          "attack_damage": 5,
+          "attack_delay": 0.1,
+          "attack_item": {
+            "_type": "gameobject",
+            "prefab": "code/test_attack.prefab"
+          },
+          "projectile_duration": 0.3,
+          "projectile_speed": 5
         }
       ],
       "Children": [
@@ -264,6 +293,6 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-02-22T00:50:36.9345977\u002B11:00",
+  "LastSaved": "2024-02-22T19:28:35.7157841\u002B11:00",
   "__references": []
 }
