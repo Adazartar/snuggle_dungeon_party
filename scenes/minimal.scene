@@ -5,6 +5,7 @@
       "Id": "bfc59c12-1ed2-4f91-8956-a95a315eac3c",
       "Name": "Sun",
       "Rotation": "-0.0729315,0.4822396,0.1305433,0.8631827",
+      "Tags": "light_directional,light",
       "Enabled": true,
       "Components": [
         {
@@ -20,6 +21,7 @@
     {
       "Id": "00344a8c-fa5e-45ae-b12a-10bb781a1dc3",
       "Name": "2D Skybox",
+      "Tags": "skybox",
       "Enabled": true,
       "Components": [
         {
@@ -66,83 +68,11 @@
       ]
     },
     {
-      "Id": "3c2490ef-54a0-49bb-8f13-490e40aa51d1",
-      "Name": "Cube",
-      "Position": "21.41682,74.1244,14.40159",
-      "Rotation": "0.00000001819328,-0.00000000000000008235059,0.3052325,0.952278",
-      "Scale": "0.5632889,0.5632889,0.5632889",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "ModelRenderer",
-          "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": "materials/default.vmat",
-          "Model": "models/dev/box.vmdl",
-          "RenderType": "On",
-          "Tint": "1,0,0.93333,1"
-        },
-        {
-          "__type": "BoxCollider",
-          "Center": "0,0,0",
-          "IsTrigger": false,
-          "Scale": "50,50,50",
-          "Static": false,
-          "Surface": null
-        },
-        {
-          "__type": "Rigidbody",
-          "AngularDamping": 0,
-          "Gravity": true,
-          "LinearDamping": 0,
-          "Locking": {},
-          "RigidbodyFlags": 0,
-          "StartAsleep": false
-        }
-      ]
-    },
-    {
-      "Id": "523e3e8f-a4ec-4ec1-af9a-d86ffc9c17e1",
-      "Name": "Cube (1)",
-      "Position": "40.81348,46.97572,14.40159",
-      "Rotation": "0.00000001819328,-0.00000000000000008235059,0.3052325,0.952278",
-      "Scale": "0.5632889,0.5632889,0.5632889",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "ModelRenderer",
-          "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": "materials/default.vmat",
-          "Model": "models/dev/box.vmdl",
-          "RenderType": "On",
-          "Tint": "1,0,0.93333,1"
-        },
-        {
-          "__type": "BoxCollider",
-          "Center": "0,0,0",
-          "IsTrigger": false,
-          "Scale": "50,50,50",
-          "Static": false,
-          "Surface": null
-        },
-        {
-          "__type": "Rigidbody",
-          "AngularDamping": 0,
-          "Gravity": true,
-          "LinearDamping": 0,
-          "Locking": {},
-          "RigidbodyFlags": 0,
-          "StartAsleep": false
-        }
-      ]
-    },
-    {
       "Id": "5b483a09-bbf2-4949-98c7-a73b789d0ee7",
-      "Name": "Cube (2)",
-      "Position": "49.53707,34.08896,43.67614",
-      "Rotation": "0.00000001819328,-0.00000000000000008235059,0.3052325,0.952278",
-      "Scale": "0.5632889,0.5632889,0.5632889",
+      "Name": "Wall",
+      "Position": "124.6689,87.76766,43.67614",
+      "Scale": "0.5632889,7.633394,0.5632889",
+      "Tags": "enemy",
       "Enabled": true,
       "Components": [
         {
@@ -165,9 +95,17 @@
         {
           "__type": "Rigidbody",
           "AngularDamping": 0,
-          "Gravity": true,
+          "Gravity": false,
           "LinearDamping": 0,
-          "Locking": {},
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassOverride": 0,
           "RigidbodyFlags": 0,
           "StartAsleep": false
         }
@@ -176,8 +114,8 @@
     {
       "Id": "3ee1c9f4-07be-4e0b-8b23-67bee2d8ec8a",
       "Name": "Camera",
-      "Position": "-267.452,-379.653,297.7903",
-      "Rotation": "-0.1448582,0.2860239,0.4279631,0.8450171",
+      "Position": "0,0,800",
+      "Rotation": "0.5,0.5,-0.5,0.5",
       "Enabled": true,
       "Components": [
         {
@@ -207,7 +145,8 @@
                 "t": 1,
                 "c": "1,1,1,1"
               }
-            ]
+            ],
+            "alpha": []
           },
           "BloomCurve": [
             {
@@ -235,6 +174,101 @@
           "Scale": 0.2
         }
       ]
+    },
+    {
+      "Id": "76e4c851-33c1-4773-a0b5-dfb482d09759",
+      "Name": "Player",
+      "Position": "0,0,35.67874",
+      "Scale": "0.5,0.5,1",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/dev/sphere.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Rigidbody",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassOverride": 0,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        },
+        {
+          "__type": "Player",
+          "rotation_speed": 50,
+          "speed": 10,
+          "using_controller": true
+        },
+        {
+          "__type": "BoxCollider",
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Scale": "50,50,50",
+          "Static": false,
+          "Surface": null
+        },
+        {
+          "__type": "Attack",
+          "attack_damage": 5,
+          "attack_delay": 0.1,
+          "attack_item": {
+            "_type": "gameobject",
+            "prefab": "code/test_attack.prefab"
+          },
+          "projectile_duration": 0.3,
+          "projectile_speed": 5
+        }
+      ],
+      "Children": [
+        {
+          "Id": "c3ca6aa2-fd2b-4da9-b582-cdca8f15f2bf",
+          "Name": "Look Direction",
+          "Position": "64.90598,0,0",
+          "Scale": "0.5,0.5,0.25",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/dev/box.vmdl",
+              "RenderType": "On",
+              "Tint": "0,0,0,1"
+            }
+          ]
+        },
+        {
+          "Id": "d29a067d-af65-401a-89c0-963260126a80",
+          "Name": "Hat",
+          "Position": "0.2146606,0,37.8529",
+          "Scale": "0.5,0.5,0.25",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/dev/box.vmdl",
+              "RenderType": "On",
+              "Tint": "1,0,0,1"
+            }
+          ]
+        }
+      ]
     }
   ],
   "SceneProperties": {
@@ -260,6 +294,6 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-02-08T13:32:32.3548959\u002B00:00",
+  "LastSaved": "2024-02-22T19:35:37.870091\u002B11:00",
   "__references": []
 }
