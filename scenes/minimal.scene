@@ -208,7 +208,8 @@
         {
           "__type": "Player",
           "rotation_speed": 50,
-          "speed": 10
+          "speed": 10,
+          "using_controller": true
         },
         {
           "__type": "BoxCollider",
@@ -293,6 +294,6 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-02-22T19:28:35.7157841\u002B11:00",
+  "LastSaved": "2024-02-22T19:35:37.870091\u002B11:00",
   "__references": []
 }

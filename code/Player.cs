@@ -8,7 +8,7 @@ public sealed class Player : Component
 	[Property] int rotation_speed = 10;
 	Vector3 vel;
 	Rotation target_rotation;
-	bool using_controller = true;
+	[Property] bool using_controller = true;
 	protected override void OnStart(){
 		Log.Info("We have started");
 		rb = GameObject.Components.Get<Rigidbody>();
