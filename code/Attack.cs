@@ -3,7 +3,7 @@ using Sandbox;
 public sealed class Attack : Component
 {
 	[Property] float attack_delay = 3;
-	[Property] GameObject attack_item;
+	[Property] GameObject attack_item = null;
 	[Property] float projectile_speed = 5;
 	[Property] float projectile_duration = 1;
 	[Property] int attack_damage = 5;

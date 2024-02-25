@@ -6,9 +6,13 @@ public sealed class Player : Component
 	Rigidbody rb;
 	[Property] int speed = 10;
 	[Property] int rotation_speed = 10;
+	[Property] float interact_range = 3;
 	public int ability_meter = 0;
 	[Property] float time_moving_for_1_ability_pt = 1;
 	float time_moving_for_1_ability_pt_timer = 1;
+	[Property] GameObject interact_bubble = null;
+	[Property] float interact_cooldown = 1;
+	float interact_timer;
 	Ability ability;
 
 	Vector3 vel;
@@ -29,7 +33,9 @@ public sealed class Player : Component
 		updateMove();
 		updateRotate();
 		chargeAbilityMoving();
-		Log.Info($"{ability_meter}");
+		updateInteract();
+		//Log.Info($"{ability_meter}");
+		//Log.Info($"{interact_timer}");
 		
 	}
 
@@ -100,5 +106,16 @@ public sealed class Player : Component
 		if(ability_meter > ability.ability_meter_max){
 			ability_meter = ability.ability_meter_max;
 		}
+	}
+
+	public void updateInteract(){
+		interact_timer -= Time.Delta;
+		if(interact_timer < 0 && Input.Down("use")){
+			GameObject new_bubble = interact_bubble.Clone(Transform.Position, Transform.Rotation, new Vector3(interact_range, interact_range, interact_range));
+			new_bubble.Components.Get<InteractBubble>().getClosest();
+			new_bubble.Destroy();
+			interact_timer = interact_cooldown;
+		}
+		
 	}
 }

@@ -212,6 +212,12 @@
         },
         {
           "__type": "Player",
+          "interact_bubble": {
+            "_type": "gameobject",
+            "prefab": "code/interact_bubble.prefab"
+          },
+          "interact_cooldown": 1,
+          "interact_range": 3,
           "rotation_speed": 50,
           "speed": 10,
           "time_moving_for_1_ability_pt": 1,
@@ -242,7 +248,8 @@
         },
         {
           "__type": "Ability",
-          "ability_meter_max": 50
+          "ability_meter_max": 50,
+          "ability_type": "Paladin"
         }
       ],
       "Children": [
@@ -283,6 +290,27 @@
           ]
         }
       ]
+    },
+    {
+      "Id": "1ca882d8-884f-4f84-9707-6c574d8152d9",
+      "Name": "Cube",
+      "Position": "-207.0229,76.77678,25.46207",
+      "Tags": "interactable",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/dev/box.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "HealthPickup"
+        }
+      ]
     }
   ],
   "SceneProperties": {
@@ -308,6 +336,6 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-02-23T01:02:42.6500506\u002B11:00",
+  "LastSaved": "2024-02-25T11:45:35.5718778\u002B11:00",
   "__references": []
 }

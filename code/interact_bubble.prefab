@@ -1,0 +1,23 @@
+{
+  "RootObject": {
+    "Id": "615c5228-5c0a-41c5-a427-cba8d07fc428",
+    "Name": "interact_bubble",
+    "Scale": "0,0,0",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "SphereCollider",
+        "Center": "0,0,0",
+        "IsTrigger": true,
+        "Radius": 10,
+        "Static": false,
+        "Surface": null
+      }
+    ],
+    "Children": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "__references": []
+}
