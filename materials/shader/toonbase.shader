@@ -73,6 +73,14 @@ PS
 	CreateInputTexture2D( AlbedoMap, Srgb, 8, "None", "_color", ",0/,0/0", Default4( 1.00, 1.00, 1.00, 1.00 ) );
 	Texture2D g_tAlbedoMap < Channel( RGBA, Box( AlbedoMap ), Srgb ); OutputFormat( DXT5 ); SrgbRead( True ); >;
 	float4 g_vTint < UiType( Color ); UiGroup( ",0/,0/0" ); Default4( 1.00, 1.00, 1.00, 1.00 ); >;
+	float g_flF_ShadowSS_Min < UiGroup( ",0/,0/0" ); Default1( 0 ); Range1( 0, 1 ); >;
+	float g_flF_ShadowSS_Max < UiGroup( ",0/,0/0" ); Default1( 0.8929459 ); Range1( 0, 1 ); >;
+	float g_flF_ShadowPwr < UiGroup( ",0/,0/0" ); Default1( -0.09166849 ); Range1( -1, 2 ); >;
+	float4 g_vShadowColour < UiType( Color ); UiGroup( ",0/,0/0" ); Default4( 1.00, 1.00, 1.00, 1.00 ); >;
+	float g_flF_HighlightSS_Min < UiGroup( ",0/,0/0" ); Default1( 1 ); Range1( 0, 1 ); >;
+	float g_flF_HighlightSS_Max < UiGroup( ",0/,0/0" ); Default1( 1 ); Range1( 0, 1 ); >;
+	float g_flF_HighlightPwr < UiGroup( ",0/,0/0" ); Default1( -0.17884111 ); Range1( -1, 2 ); >;
+	float4 g_vFresnelColour < UiType( Color ); UiGroup( ",0/,0/0" ); Default4( 1.00, 1.00, 1.00, 1.00 ); >;
 	
 	float4 MainPs( PixelInput i ) : SV_Target0
 	{
@@ -87,15 +95,29 @@ PS
 		m.Emission = float3( 0, 0, 0 );
 		m.Transmission = 0;
 		
-		float3 l_0 = pow( 1.0 - dot( normalize( i.vNormalWs ), normalize( CalculatePositionToCameraDirWs( i.vPositionWithOffsetWs.xyz + g_vHighPrecisionLightingOffsetWs.xyz ) ) ), 10 );
-		float4 l_1 = float4( 1, 1, 1, 1 );
-		float4 l_2 = float4( l_0, 0 ) * l_1;
-		float4 l_3 = Tex2DS( g_tAlbedoMap, g_sSampler0, i.vTextureCoords.xy );
-		float4 l_4 = g_vTint;
-		float4 l_5 = l_3 * l_4;
-		float4 l_6 = l_2 + l_5;
+		float4 l_0 = Tex2DS( g_tAlbedoMap, g_sSampler0, i.vTextureCoords.xy );
+		float4 l_1 = g_vTint;
+		float4 l_2 = l_0 * l_1;
+		float l_3 = g_flF_ShadowSS_Min;
+		float l_4 = g_flF_ShadowSS_Max;
+		float l_5 = g_flF_ShadowPwr;
+		float3 l_6 = CalculatePositionToCameraDirWs( i.vPositionWithOffsetWs.xyz + g_vHighPrecisionLightingOffsetWs.xyz );
+		float3 l_7 = float3( 1, 1, 1 ) - l_6;
+		float3 l_8 = pow( 1.0 - dot( normalize( i.vNormalWs ), normalize( l_7 ) ), l_5 );
+		float3 l_9 = smoothstep( l_3, l_4, l_8 );
+		float4 l_10 = g_vShadowColour;
+		float4 l_11 = float4( l_9, 0 ) * l_10;
+		float4 l_12 = l_2 * l_11;
+		float l_13 = g_flF_HighlightSS_Min;
+		float l_14 = g_flF_HighlightSS_Max;
+		float l_15 = g_flF_HighlightPwr;
+		float3 l_16 = pow( 1.0 - dot( normalize( i.vNormalWs ), normalize( CalculatePositionToCameraDirWs( i.vPositionWithOffsetWs.xyz + g_vHighPrecisionLightingOffsetWs.xyz ) ) ), l_15 );
+		float4 l_17 = g_vFresnelColour;
+		float4 l_18 = float4( l_16, 0 ) * l_17;
+		float4 l_19 = smoothstep( l_13, l_14, l_18 );
 		
-		m.Albedo = l_6.xyz;
+		m.Albedo = l_12.xyz;
+		m.Emission = l_19.xyz;
 		m.Opacity = 1;
 		m.Roughness = 1;
 		m.Metalness = 0;

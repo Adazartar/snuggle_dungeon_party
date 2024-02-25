@@ -2,38 +2,20 @@
 
 Layer0
 {
-	shader "shaders/complex.shader"
+	shader "materials/shader/toonbase.shader"
 
-	//---- Ambient Occlusion ----
-	g_flAmbientOcclusionDirectDiffuse "0.000"
-	g_flAmbientOcclusionDirectSpecular "0.000"
-	TextureAmbientOcclusion "materials/default/default_ao.tga"
-
-	//---- Color ----
-	g_flModelTintAmount "1.000"
-	g_vColorTint "[1.000000 1.000000 1.000000 0.000000]"
-	TextureColor "materials/textures/palette01_color.png"
-
-	//---- Fade ----
-	g_flFadeExponent "1.000"
+	AlbedoMap "materials/textures/palette01_color.png"
+	g_flDarkStr "0.103"
+	g_flF_HighlightPwr "0.571"
+	g_flF_HighlightSS_Max "1.000"
+	g_flF_HighlightSS_Min "0.867"
+	g_flF_ShadowPwr "0.050"
+	g_flF_ShadowSS_Max "1.000"
+	g_flF_ShadowSS_Min "0.907"
+	g_vFresnelColour "[1.000000 1.000000 1.000000 1.000000]"
+	g_vShadowColour "[1.000000 1.000000 1.000000 1.000000]"
+	g_vTint "[1.000000 1.000000 1.000000 1.000000]"
 
 	//---- Fog ----
 	g_bFogEnabled "1"
-
-	//---- Metalness ----
-	g_flMetalness "0.000"
-
-	//---- Normal ----
-	TextureNormal "materials/default/default_normal.tga"
-
-	//---- Roughness ----
-	g_flRoughnessScaleFactor "1.000"
-	TextureRoughness "materials/default/default_rough.tga"
-
-	//---- Texture Coordinates ----
-	g_nScaleTexCoordUByModelScaleAxis "0"
-	g_nScaleTexCoordVByModelScaleAxis "0"
-	g_vTexCoordOffset "[0.000 0.000]"
-	g_vTexCoordScale "[1.000 1.000]"
-	g_vTexCoordScrollSpeed "[0.000 0.000]"
 }

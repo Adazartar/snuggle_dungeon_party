@@ -10,9 +10,13 @@
       "DefaultMetalness": 0,
       "DefaultAmbientOcclusion": 1,
       "Identifier": "0",
-      "Position": "272,-128",
+      "Position": "640,-224",
       "Albedo": {
-        "Identifier": "4",
+        "Identifier": "11",
+        "Output": "Result"
+      },
+      "Emission": {
+        "Identifier": "18",
         "Output": "Result"
       }
     },
@@ -27,14 +31,14 @@
         "CreateInput": "CreateInputTexture2D"
       },
       "Identifier": "1",
-      "Position": "-448,-208"
+      "Position": "-848,-608"
     },
     {
       "_class": "Multiply",
       "DefaultA": 0,
       "DefaultB": 1,
       "Identifier": "2",
-      "Position": "-192,-112",
+      "Position": "-496,-384",
       "A": {
         "Identifier": "1",
         "Output": "Result"
@@ -53,35 +57,29 @@
         "Type": "Color"
       },
       "Identifier": "3",
-      "Position": "-448,-0"
+      "Position": "-848,-416"
     },
     {
-      "_class": "Add",
-      "DefaultA": 0,
-      "DefaultB": 1,
+      "_class": "ViewDirection",
       "Identifier": "4",
-      "Position": "128,-128",
-      "A": {
-        "Identifier": "6",
-        "Output": "Result"
-      },
-      "B": {
-        "Identifier": "2",
-        "Output": "Result"
-      }
+      "Position": "-1008,-240"
     },
     {
       "_class": "Fresnel",
       "DefaultPower": 10,
       "Identifier": "5",
-      "Position": "-272,-448"
+      "Position": "-368,48",
+      "Power": {
+        "Identifier": "16",
+        "Output": "Result"
+      }
     },
     {
       "_class": "Multiply",
       "DefaultA": 0,
       "DefaultB": 1,
       "Identifier": "6",
-      "Position": "16,-272",
+      "Position": "-96,48",
       "A": {
         "Identifier": "5",
         "Output": "Result"
@@ -94,13 +92,179 @@
     {
       "_class": "Float4",
       "Value": "1,1,1,1",
-      "Name": "",
+      "Name": "FresnelColour",
       "IsAttribute": false,
       "UI": {
         "Type": "Color"
       },
       "Identifier": "7",
-      "Position": "-272,-336"
+      "Position": "-368,176"
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "8",
+      "Position": "-32,-304",
+      "A": {
+        "Identifier": "13",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "9",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float4",
+      "Value": "1,1,1,1",
+      "Name": "ShadowColour",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Color"
+      },
+      "Identifier": "9",
+      "Position": "-160,-192"
+    },
+    {
+      "_class": "Fresnel",
+      "DefaultPower": 10,
+      "Identifier": "10",
+      "Position": "-576,-272",
+      "Direction": {
+        "Identifier": "20",
+        "Output": "Result"
+      },
+      "Power": {
+        "Identifier": "12",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "11",
+      "Position": "144,-384",
+      "A": {
+        "Identifier": "2",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "8",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float",
+      "Min": -1,
+      "Max": 2,
+      "Value": -0.09166849,
+      "Name": "F_ShadowPwr",
+      "IsAttribute": false,
+      "UI": {},
+      "Identifier": "12",
+      "Position": "-1008,-176"
+    },
+    {
+      "_class": "SmoothStep",
+      "Identifier": "13",
+      "Position": "-384,-288",
+      "Input": {
+        "Identifier": "10",
+        "Output": "Result"
+      },
+      "Edge1": {
+        "Identifier": "15",
+        "Output": "Result"
+      },
+      "Edge2": {
+        "Identifier": "14",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 1,
+      "Value": 0.8929459,
+      "Name": "F_ShadowSS_Max",
+      "IsAttribute": false,
+      "UI": {},
+      "Identifier": "14",
+      "Position": "-576,-96"
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 1,
+      "Value": 0,
+      "Name": "F_ShadowSS_Min",
+      "IsAttribute": false,
+      "UI": {},
+      "Identifier": "15",
+      "Position": "-576,-160"
+    },
+    {
+      "_class": "Float",
+      "Min": -1,
+      "Max": 2,
+      "Value": -0.17884111,
+      "Name": "F_HighlightPwr",
+      "IsAttribute": false,
+      "UI": {},
+      "Identifier": "16",
+      "Position": "-576,96"
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 1,
+      "Value": 1,
+      "Name": "F_HighlightSS_Max",
+      "IsAttribute": false,
+      "UI": {},
+      "Identifier": "17",
+      "Position": "-96,208"
+    },
+    {
+      "_class": "SmoothStep",
+      "Identifier": "18",
+      "Position": "176,48",
+      "Input": {
+        "Identifier": "6",
+        "Output": "Result"
+      },
+      "Edge1": {
+        "Identifier": "19",
+        "Output": "Result"
+      },
+      "Edge2": {
+        "Identifier": "17",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 1,
+      "Value": 1,
+      "Name": "F_HighlightSS_Min",
+      "IsAttribute": false,
+      "UI": {},
+      "Identifier": "19",
+      "Position": "-96,144"
+    },
+    {
+      "_class": "Subtract",
+      "DefaultA": 1,
+      "DefaultB": 0,
+      "Identifier": "20",
+      "Position": "-688,-272",
+      "B": {
+        "Identifier": "4",
+        "Output": "Result"
+      }
     }
   ]
 }
