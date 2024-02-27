@@ -13,11 +13,11 @@ public sealed class Projectile : Component, Component.ITriggerListener
 		projectile_duration -= Time.Delta;
 		Transform.Position += projectile_speed * projectile_direction;
 		if(projectile_duration < 0){
-			GameObject.Root.Destroy();
+			GameObject.Parent.Components.Get<Pool>().returnToPool(GameObject);
 		}
 	}
 
-	public void projectObject(float speed, Vector3 direction, float duration, int damage, bool from_player, GameObject source)
+	public void projectObject(float speed, Vector3 direction, float duration, int damage, bool from_player, GameObject source, float width)
 	{
 		projectile_speed = speed;
 		projectile_direction = direction;
@@ -25,6 +25,10 @@ public sealed class Projectile : Component, Component.ITriggerListener
 		projectile_damage = damage;
 		player_projectile = from_player;
 		projectile_source = source;
+		Transform.Position = source.Transform.Position;
+		Transform.Rotation = source.Transform.Rotation;
+		Transform.Scale = new Vector3(0.4f,width,0.4f);
+
 	}
 
 	public void OnTriggerEnter(Collider other)

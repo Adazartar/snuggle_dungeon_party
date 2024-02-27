@@ -212,12 +212,12 @@
         },
         {
           "__type": "Player",
-          "interact_bubble": {
+          "interact_cooldown": 0.2,
+          "interact_range": 100,
+          "interactables": {
             "_type": "gameobject",
-            "prefab": "code/interact_bubble.prefab"
+            "go": "b868e8e5-79b3-418b-8198-337aece08c9d"
           },
-          "interact_cooldown": 1,
-          "interact_range": 3,
           "rotation_speed": 50,
           "speed": 10,
           "time_moving_for_1_ability_pt": 1,
@@ -235,12 +235,13 @@
           "__type": "Attack",
           "attack_damage": 5,
           "attack_delay": 0.1,
-          "attack_item": {
-            "_type": "gameobject",
-            "prefab": "code/test_attack.prefab"
-          },
           "projectile_duration": 0.3,
-          "projectile_speed": 5
+          "projectile_pool": {
+            "_type": "gameobject",
+            "go": "a2842977-2178-4570-b806-db38e051019c"
+          },
+          "projectile_speed": 5,
+          "width": 2.5
         },
         {
           "__type": "Health",
@@ -292,23 +293,181 @@
       ]
     },
     {
-      "Id": "1ca882d8-884f-4f84-9707-6c574d8152d9",
-      "Name": "Cube",
-      "Position": "-207.0229,76.77678,25.46207",
-      "Tags": "interactable",
+      "Id": "a2842977-2178-4570-b806-db38e051019c",
+      "Name": "Pool",
+      "Position": "7.581024,9.416229,44.74358",
       "Enabled": true,
       "Components": [
         {
-          "__type": "ModelRenderer",
-          "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Model": "models/dev/box.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
+          "__type": "Pool"
+        }
+      ],
+      "Children": [
+        {
+          "Id": "f4e1d91f-5445-485b-80ce-cd318974f3f9",
+          "Name": "attack",
+          "Scale": "0.4,2.5,0.4",
+          "Tags": "projectile",
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/dev/box.vmdl",
+              "RenderType": "On",
+              "Tint": "1,0,0,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "Center": "0,0,0",
+              "IsTrigger": true,
+              "Scale": "50,50,50",
+              "Static": false,
+              "Surface": null
+            },
+            {
+              "__type": "Projectile"
+            }
+          ]
         },
         {
-          "__type": "HealthPickup"
+          "Id": "9b45bc71-ef34-416b-9810-20002694c6a8",
+          "Name": "attack",
+          "Scale": "0.4,2.5,0.4",
+          "Tags": "projectile",
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/dev/box.vmdl",
+              "RenderType": "On",
+              "Tint": "1,0,0,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "Center": "0,0,0",
+              "IsTrigger": true,
+              "Scale": "50,50,50",
+              "Static": false,
+              "Surface": null
+            },
+            {
+              "__type": "Projectile"
+            }
+          ]
+        },
+        {
+          "Id": "5d992e59-e86c-455c-80b8-c47c714f80d5",
+          "Name": "attack",
+          "Scale": "0.4,2.5,0.4",
+          "Tags": "projectile",
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/dev/box.vmdl",
+              "RenderType": "On",
+              "Tint": "1,0,0,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "Center": "0,0,0",
+              "IsTrigger": true,
+              "Scale": "50,50,50",
+              "Static": false,
+              "Surface": null
+            },
+            {
+              "__type": "Projectile"
+            }
+          ]
+        },
+        {
+          "Id": "76830988-b6db-4bc4-a168-ea120494d623",
+          "Name": "attack",
+          "Scale": "0.4,2.5,0.4",
+          "Tags": "projectile",
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/dev/box.vmdl",
+              "RenderType": "On",
+              "Tint": "1,0,0,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "Center": "0,0,0",
+              "IsTrigger": true,
+              "Scale": "50,50,50",
+              "Static": false,
+              "Surface": null
+            },
+            {
+              "__type": "Projectile"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": "b868e8e5-79b3-418b-8198-337aece08c9d",
+      "Name": "Interactables",
+      "Position": "-7.482315,19.00005,73.61964",
+      "Enabled": true,
+      "Children": [
+        {
+          "Id": "1ca882d8-884f-4f84-9707-6c574d8152d9",
+          "Name": "Cube",
+          "Position": "-17.20024,57.77673,-48.15757",
+          "Tags": "interactable",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/dev/box.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "HealthPickup"
+            },
+            {
+              "__type": "Rigidbody",
+              "AngularDamping": 0,
+              "Gravity": false,
+              "LinearDamping": 0,
+              "Locking": {
+                "X": true,
+                "Y": true,
+                "Z": true,
+                "Pitch": true,
+                "Yaw": true,
+                "Roll": true
+              },
+              "MassOverride": 0,
+              "RigidbodyFlags": 0,
+              "StartAsleep": false
+            },
+            {
+              "__type": "BoxCollider",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "50,50,50",
+              "Static": false,
+              "Surface": null
+            }
+          ]
         }
       ]
     }
@@ -336,6 +495,6 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-02-25T11:45:35.5718778\u002B11:00",
+  "LastSaved": "2024-02-27T22:04:15.5636654\u002B11:00",
   "__references": []
 }

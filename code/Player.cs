@@ -6,22 +6,26 @@ public sealed class Player : Component
 	Rigidbody rb;
 	[Property] int speed = 10;
 	[Property] int rotation_speed = 10;
-	[Property] float interact_range = 3;
 	public int ability_meter = 0;
 	[Property] float time_moving_for_1_ability_pt = 1;
 	float time_moving_for_1_ability_pt_timer = 1;
-	[Property] GameObject interact_bubble = null;
 	[Property] float interact_cooldown = 1;
+	[Property] float interact_range = 100;
 	float interact_timer;
 	Ability ability;
 
 	Vector3 vel;
 	Rotation target_rotation;
 	[Property] bool using_controller = true;
-	protected override void OnStart(){
+	[Property] GameObject interactables = null;
+	List<GameObject> interactable_objects = new List<GameObject>();
+	protected override void OnStart()
+	{
 		Log.Info("We have started");
 		rb = GameObject.Components.Get<Rigidbody>();
 		ability = GameObject.Components.Get<Ability>();
+		interactable_objects = interactables.Children;
+
 
 	}
 	protected override void OnFixedUpdate()
@@ -111,11 +115,28 @@ public sealed class Player : Component
 	public void updateInteract(){
 		interact_timer -= Time.Delta;
 		if(interact_timer < 0 && Input.Down("use")){
-			GameObject new_bubble = interact_bubble.Clone(Transform.Position, Transform.Rotation, new Vector3(interact_range, interact_range, interact_range));
-			new_bubble.Components.Get<InteractBubble>().getClosest();
-			new_bubble.Destroy();
 			interact_timer = interact_cooldown;
+			interactWithClosest();
 		}
-		
+	}
+
+	public void interactWithClosest()
+	{
+		GameObject closestInteractable = null;
+        float closestDistance = 999;
+        foreach (var interactable_object in interactable_objects){
+			if(interactable_object.Enabled == true){
+				float distance = Transform.Position.Distance(interactable_object.Transform.Position);
+				if (distance < closestDistance){
+					closestInteractable = interactable_object;
+					closestDistance = distance;
+				}
+			}
+        }
+
+        if (closestInteractable != null && closestDistance < interact_range){
+            closestInteractable.Components.Get<HealthPickup>().interact();
+			closestInteractable.Enabled = false;
+        }
 	}
 }
