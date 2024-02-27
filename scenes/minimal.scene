@@ -441,31 +441,6 @@
             },
             {
               "__type": "HealthPickup"
-            },
-            {
-              "__type": "Rigidbody",
-              "AngularDamping": 0,
-              "Gravity": false,
-              "LinearDamping": 0,
-              "Locking": {
-                "X": true,
-                "Y": true,
-                "Z": true,
-                "Pitch": true,
-                "Yaw": true,
-                "Roll": true
-              },
-              "MassOverride": 0,
-              "RigidbodyFlags": 0,
-              "StartAsleep": false
-            },
-            {
-              "__type": "BoxCollider",
-              "Center": "0,0,0",
-              "IsTrigger": false,
-              "Scale": "50,50,50",
-              "Static": false,
-              "Surface": null
             }
           ]
         }
@@ -495,6 +470,6 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-02-27T22:04:15.5636654\u002B11:00",
+  "LastSaved": "2024-02-27T22:08:59.1071727\u002B11:00",
   "__references": []
 }
