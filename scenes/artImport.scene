@@ -5,7 +5,7 @@
       "Id": "79923949-7d1f-457d-9470-6142efb76409",
       "Name": "Sun",
       "Position": "0,0,32",
-      "Rotation": "0.309287,0.2253625,-0.5804256,0.7187904",
+      "Rotation": "-0.1373625,0.4182646,0.4454848,0.7795703",
       "Tags": "light_directional,light",
       "Enabled": true,
       "Components": [
@@ -34,6 +34,49 @@
           "Tint": "1,1,1,1"
         }
       ]
+    },
+    {
+      "Id": "50d9d19c-1577-4566-93e6-ab39e08691b5",
+      "Name": "stone_pillar_01",
+      "Position": "29.6683,267.8782,15.75481",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "art/models/environment/stone_pillar_01.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ]
+    },
+    {
+      "Id": "8e8c2b56-1929-453b-b9b0-a474fac49258",
+      "Name": "Camera",
+      "Position": "-573.3,53.60013,568.9169",
+      "Rotation": "0,0.258819,0,0.9659258",
+      "Tags": "maincamera",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "CameraComponent",
+          "BackgroundColor": "0.33333,0.46275,0.52157,1",
+          "ClearFlags": "All",
+          "FieldOfView": 60,
+          "IsMainCamera": true,
+          "Orthographic": false,
+          "OrthographicHeight": 1204,
+          "Priority": 1,
+          "RenderExcludeTags": "",
+          "RenderTags": "",
+          "TargetEye": "None",
+          "Viewport": "0,0,1,1",
+          "ZFar": 10000,
+          "ZNear": 10
+        }
+      ]
     }
   ],
   "SceneProperties": {
@@ -59,6 +102,6 @@
   },
   "Title": "artimport",
   "Description": "",
-  "LastSaved": "2024-02-24T02:31:31.4688342\u002B11:00",
+  "LastSaved": "2024-02-28T01:04:44.6051479\u002B11:00",
   "__references": []
 }

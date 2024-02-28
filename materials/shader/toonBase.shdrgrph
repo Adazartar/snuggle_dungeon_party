@@ -10,7 +10,7 @@
       "DefaultMetalness": 0,
       "DefaultAmbientOcclusion": 1,
       "Identifier": "0",
-      "Position": "640,-224",
+      "Position": "512,-208",
       "Albedo": {
         "Identifier": "11",
         "Output": "Result"
@@ -31,7 +31,7 @@
         "CreateInput": "CreateInputTexture2D"
       },
       "Identifier": "1",
-      "Position": "-848,-608"
+      "Position": "-752,-704"
     },
     {
       "_class": "Multiply",
@@ -57,12 +57,12 @@
         "Type": "Color"
       },
       "Identifier": "3",
-      "Position": "-848,-416"
+      "Position": "-752,-512"
     },
     {
       "_class": "ViewDirection",
       "Identifier": "4",
-      "Position": "-1008,-240"
+      "Position": "-1232,-240"
     },
     {
       "_class": "Fresnel",
@@ -260,8 +260,26 @@
       "DefaultA": 1,
       "DefaultB": 0,
       "Identifier": "20",
-      "Position": "-688,-272",
+      "Position": "-912,-272",
       "B": {
+        "Identifier": "22",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "WorldNormal",
+      "Identifier": "21",
+      "Position": "-1200,-336"
+    },
+    {
+      "_class": "DotProduct",
+      "Identifier": "22",
+      "Position": "-960,-384",
+      "InputA": {
+        "Identifier": "21",
+        "Output": "Result"
+      },
+      "InputB": {
         "Identifier": "4",
         "Output": "Result"
       }
