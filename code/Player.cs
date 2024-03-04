@@ -135,7 +135,7 @@ public sealed class Player : Component
         }
 
         if (closestInteractable != null && closestDistance < interact_range){
-            closestInteractable.Components.Get<HealthPickup>().interact();
+            closestInteractable.Components.Get<InteractableObject>().interact();
 			closestInteractable.Enabled = false;
         }
 	}
