@@ -3,11 +3,13 @@ using Sandbox;
 public sealed class Attack : Component
 {
 	[Property] float attack_delay = 3;
-	[Property] GameObject attack_item;
 	[Property] float projectile_speed = 5;
 	[Property] float projectile_duration = 1;
-	[Property] float attack_damage = 5;
+	[Property] int attack_damage = 5;
+	[Property] float width = 2.5f;
 	float timer;
+	[Property] GameObject projectile_pool = null;
+	
 	protected override void OnUpdate()
 	{
 		timer -= Time.Delta;
@@ -15,8 +17,8 @@ public sealed class Attack : Component
 		if(Input.Down("attack1") && timer < 0)
 		{
 			timer = attack_delay;
-			GameObject new_attack = attack_item.Clone(Transform.Position, Transform.Rotation);
-			new_attack.Components.Get<Projectile>().projectObject(projectile_speed, Transform.Rotation.Forward, projectile_duration, attack_damage);
+			GameObject new_attack = projectile_pool.Components.Get<Pool>().getFromPool();
+			new_attack.Components.Get<Projectile>().projectObject(projectile_speed, Transform.Rotation.Forward, projectile_duration, attack_damage, true, GameObject, width);
 
 		}
 	}

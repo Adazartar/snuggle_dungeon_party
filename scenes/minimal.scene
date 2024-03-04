@@ -108,6 +108,10 @@
           "MassOverride": 0,
           "RigidbodyFlags": 0,
           "StartAsleep": false
+        },
+        {
+          "__type": "Health",
+          "max_health": 50
         }
       ]
     },
@@ -115,7 +119,7 @@
       "Id": "3ee1c9f4-07be-4e0b-8b23-67bee2d8ec8a",
       "Name": "Camera",
       "Position": "0,0,800",
-      "Rotation": "0.5,0.5,-0.5,0.5",
+      "Rotation": "0,0.7071068,0,0.7071068",
       "Enabled": true,
       "Components": [
         {
@@ -180,6 +184,7 @@
       "Name": "Player",
       "Position": "0,0,35.67874",
       "Scale": "0.5,0.5,1",
+      "Tags": "player",
       "Enabled": true,
       "Components": [
         {
@@ -207,8 +212,15 @@
         },
         {
           "__type": "Player",
+          "interact_cooldown": 0.2,
+          "interact_range": 100,
+          "interactables": {
+            "_type": "gameobject",
+            "go": "b868e8e5-79b3-418b-8198-337aece08c9d"
+          },
           "rotation_speed": 50,
           "speed": 10,
+          "time_moving_for_1_ability_pt": 1,
           "using_controller": true
         },
         {
@@ -223,12 +235,22 @@
           "__type": "Attack",
           "attack_damage": 5,
           "attack_delay": 0.1,
-          "attack_item": {
-            "_type": "gameobject",
-            "prefab": "code/test_attack.prefab"
-          },
           "projectile_duration": 0.3,
-          "projectile_speed": 5
+          "projectile_pool": {
+            "_type": "gameobject",
+            "go": "a2842977-2178-4570-b806-db38e051019c"
+          },
+          "projectile_speed": 5,
+          "width": 2.5
+        },
+        {
+          "__type": "Health",
+          "max_health": 100
+        },
+        {
+          "__type": "Ability",
+          "ability_meter_max": 50,
+          "ability_type": "Paladin"
         }
       ],
       "Children": [
@@ -269,6 +291,165 @@
           ]
         }
       ]
+    },
+    {
+      "Id": "a2842977-2178-4570-b806-db38e051019c",
+      "Name": "Pool",
+      "Position": "7.581024,9.416229,44.74358",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Pool"
+        }
+      ],
+      "Children": [
+        {
+          "Id": "f4e1d91f-5445-485b-80ce-cd318974f3f9",
+          "Name": "attack",
+          "Position": "0,0,0",
+          "Scale": "0.4,2.5,0.4",
+          "Tags": "projectile",
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/dev/box.vmdl",
+              "RenderType": "On",
+              "Tint": "1,0,0,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "Center": "0,0,0",
+              "IsTrigger": true,
+              "Scale": "50,50,50",
+              "Static": false,
+              "Surface": null
+            },
+            {
+              "__type": "Projectile"
+            }
+          ]
+        },
+        {
+          "Id": "9b45bc71-ef34-416b-9810-20002694c6a8",
+          "Name": "attack",
+          "Position": "0,0,0",
+          "Scale": "0.4,2.5,0.4",
+          "Tags": "projectile",
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/dev/box.vmdl",
+              "RenderType": "On",
+              "Tint": "1,0,0,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "Center": "0,0,0",
+              "IsTrigger": true,
+              "Scale": "50,50,50",
+              "Static": false,
+              "Surface": null
+            },
+            {
+              "__type": "Projectile"
+            }
+          ]
+        },
+        {
+          "Id": "5d992e59-e86c-455c-80b8-c47c714f80d5",
+          "Name": "attack",
+          "Position": "0,0,0",
+          "Scale": "0.4,2.5,0.4",
+          "Tags": "projectile",
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/dev/box.vmdl",
+              "RenderType": "On",
+              "Tint": "1,0,0,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "Center": "0,0,0",
+              "IsTrigger": true,
+              "Scale": "50,50,50",
+              "Static": false,
+              "Surface": null
+            },
+            {
+              "__type": "Projectile"
+            }
+          ]
+        },
+        {
+          "Id": "76830988-b6db-4bc4-a168-ea120494d623",
+          "Name": "attack",
+          "Position": "0,0,0",
+          "Scale": "0.4,2.5,0.4",
+          "Tags": "projectile",
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/dev/box.vmdl",
+              "RenderType": "On",
+              "Tint": "1,0,0,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "Center": "0,0,0",
+              "IsTrigger": true,
+              "Scale": "50,50,50",
+              "Static": false,
+              "Surface": null
+            },
+            {
+              "__type": "Projectile"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": "b868e8e5-79b3-418b-8198-337aece08c9d",
+      "Name": "Interactables",
+      "Position": "-7.482315,19.00005,73.61964",
+      "Enabled": true,
+      "Children": [
+        {
+          "Id": "e095fe0b-3d73-441c-96fc-5458e5aa670d",
+          "Name": "Object",
+          "Position": "-183.469,81.43805,-41.53441",
+          "Tags": "interactable",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": null,
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "InteractableObject",
+              "pickup_type": "IceElement"
+            }
+          ]
+        }
+      ]
     }
   ],
   "SceneProperties": {
@@ -294,6 +475,6 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-02-22T19:35:37.870091\u002B11:00",
+  "LastSaved": "2024-03-04T12:40:53.3265052\u002B11:00",
   "__references": []
 }
