@@ -2,7 +2,7 @@ using Sandbox;
 
 public sealed class InteractableObject : Component
 {
-    [Property] PickupType pickup_type;
+    [Property] PickupType pickup_type = PickupType.Health;
     
     private PickupTemplate pickup;
 

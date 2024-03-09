@@ -11,7 +11,7 @@ public sealed class Projectile : Component, Component.ITriggerListener
 	protected override void OnUpdate()
 	{
 		projectile_duration -= Time.Delta;
-		Transform.Position += projectile_speed * projectile_direction;
+		Transform.Position += projectile_speed * projectile_direction * Time.Delta * 100;
 		if(projectile_duration < 0){
 			GameObject.Parent.Components.Get<Pool>().returnToPool(GameObject);
 		}
@@ -41,7 +41,7 @@ public sealed class Projectile : Component, Component.ITriggerListener
 				projectile_source.Components.Get<Player>().chargeAbilityDamaging(projectile_damage);
 			}
 			if(!player_projectile && hit_gameObject.Tags.Has("player")){
-				Log.Info("enemy hit player");
+				//Log.Info("enemy hit player");
 				hit_gameObject.Components.Get<Health>().changeHealth(-1 * projectile_damage);
 			}
 		}
