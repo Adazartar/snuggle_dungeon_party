@@ -3,7 +3,6 @@ using System;
 
 public sealed class Player : Component
 {
-	Rigidbody rb;
 	[Property] int speed = 10;
 	[Property] int rotation_speed = 10;
 	public int ability_meter = 0;
@@ -13,24 +12,24 @@ public sealed class Player : Component
 	[Property] float interact_range = 100;
 	float interact_timer;
 	Ability ability;
+	public Health health;
 
 	Vector3 vel;
 	Rotation target_rotation;
 	[Property] bool using_controller = true;
 	[Property] GameObject interactables = null;
+	[Property] GameObject enemies = null;
 	List<GameObject> interactable_objects = new List<GameObject>();
+	List<GameObject> enemy_objects = new List<GameObject>();
 	protected override void OnStart()
 	{
 		Log.Info("We have started");
-		rb = GameObject.Components.Get<Rigidbody>();
 		ability = GameObject.Components.Get<Ability>();
+		health = GameObject.Components.Get<Health>();
 		interactable_objects = interactables.Children;
+		enemy_objects = enemies.Children;
 
 
-	}
-	protected override void OnFixedUpdate()
-	{
-		rb.Velocity = vel.Normal * Time.Delta * 1000 * speed;
 	}
 	protected override void OnUpdate()
 	{
@@ -38,7 +37,7 @@ public sealed class Player : Component
 		updateRotate();
 		chargeAbilityMoving();
 		updateInteract();
-		//Log.Info($"{ability_meter}");
+		Log.Info($"{ability_meter}");
 		//Log.Info($"{interact_timer}");
 		
 	}
@@ -65,6 +64,8 @@ public sealed class Player : Component
 				vel += new Vector3(0, -1, 0);
 			}
 		}
+
+		Transform.Position += vel.Normal * speed * Time.Delta * 10;
 		
 		
 	}

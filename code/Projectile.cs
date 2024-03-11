@@ -8,17 +8,20 @@ public sealed class Projectile : Component, Component.ITriggerListener
 	int projectile_damage = 0;
 	bool player_projectile = false;
 	GameObject projectile_source;
+	bool piercing;
+	Pool pool;
 	protected override void OnUpdate()
 	{
 		projectile_duration -= Time.Delta;
 		Transform.Position += projectile_speed * projectile_direction * Time.Delta * 100;
 		if(projectile_duration < 0){
-			GameObject.Parent.Components.Get<Pool>().returnToPool(GameObject);
+			pool.returnObject(GameObject);
 		}
 	}
 
-	public void projectObject(float speed, Vector3 direction, float duration, int damage, bool from_player, GameObject source, float width)
+	public void projectObject(float speed, Vector3 direction, float duration, int damage, bool from_player, GameObject source, float width, Pool obj_pool, bool is_piercing)
 	{
+		pool = obj_pool;
 		projectile_speed = speed;
 		projectile_direction = direction;
 		projectile_duration = duration;
@@ -28,21 +31,28 @@ public sealed class Projectile : Component, Component.ITriggerListener
 		Transform.Position = source.Transform.Position;
 		Transform.Rotation = source.Transform.Rotation;
 		Transform.Scale = new Vector3(0.4f,width,0.4f);
+		piercing = is_piercing;
 
 	}
 
 	public void OnTriggerEnter(Collider other)
 	{
-		if(other.Rigidbody != null){
-			var hit_gameObject = other.Rigidbody.GameObject;
-			if(player_projectile && hit_gameObject.Tags.Has("enemy")){
+		GameObject hit_target = other.GameObject;
+		if(hit_target != null){
+			if(player_projectile && hit_target.Tags.Has("enemy")){
 				Log.Info("player hit enemy");
-				hit_gameObject.Components.Get<Health>().changeHealth(-1 * projectile_damage);
+				hit_target.Components.Get<Health>().changeHealth(-1 * projectile_damage);
 				projectile_source.Components.Get<Player>().chargeAbilityDamaging(projectile_damage);
+				if(!piercing){
+					pool.returnObject(GameObject);
+				}
 			}
-			if(!player_projectile && hit_gameObject.Tags.Has("player")){
-				//Log.Info("enemy hit player");
-				hit_gameObject.Components.Get<Health>().changeHealth(-1 * projectile_damage);
+			if(!player_projectile && hit_target.Tags.Has("player")){
+				Log.Info("enemy hit player");
+				hit_target.Components.Get<Health>().changeHealth(-1 * projectile_damage);
+				if(!piercing){
+					pool.returnObject(GameObject);
+				}
 			}
 		}
 		

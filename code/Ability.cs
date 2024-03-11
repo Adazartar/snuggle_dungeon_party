@@ -16,7 +16,7 @@ public sealed class Ability : Component
 	{
 		if(Input.Down("attack2") &&  player.ability_meter == ability_meter_max){
 			Log.Info("using ability");
-			ability.useAbility();
+			ability.useAbility(player);
 			player.ability_meter = 0;
 		}
 	}
@@ -26,16 +26,16 @@ public sealed class Ability : Component
 		switch (name)
 		{
 			case AbilityType.Paladin:
-				ability = new PaladinAbility();
+				ability = GameObject.Components.Create<PaladinAbility>();
 				break;
 			case AbilityType.Barbarian:
-				ability = new BarbarianAbility();
+				ability = GameObject.Components.Create<BarbarianAbility>();
 				break;
 			case AbilityType.Wizard:
-				ability = new WizardAbility();
+				ability = GameObject.Components.Create<WizardAbility>();
 				break;
 			case AbilityType.Priest:
-				ability = new PriestAbility();
+				ability = GameObject.Components.Create<PriestAbility>();
 				break;
 			default:
 				Log.Info("Class name not found");

@@ -1,0 +1,32 @@
+{
+  "RootObject": {
+    "Id": "f4e1d91f-5445-485b-80ce-cd318974f3f9",
+    "Name": "projectile",
+    "Scale": "0.4,2.5,0.4",
+    "Tags": "projectile",
+    "Components": [
+      {
+        "__type": "ModelRenderer",
+        "BodyGroups": 18446744073709551615,
+        "Model": "models/dev/box.vmdl",
+        "RenderType": "On",
+        "Tint": "1,0,0,1"
+      },
+      {
+        "__type": "BoxCollider",
+        "Center": "0,0,0",
+        "IsTrigger": true,
+        "Scale": "50,50,50",
+        "Static": false
+      },
+      {
+        "__type": "Projectile"
+      }
+    ],
+    "Children": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "__references": []
+}

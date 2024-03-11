@@ -7,9 +7,11 @@ public sealed class Enemy : Component
 	float attack_windup_timer;
 	[Property] float projectile_speed = 5;
 	[Property] float projectile_duration = 1;
+	[Property] bool piercing = true;
 	[Property] int attack_damage = 5;
 	[Property] float width = 2.5f;
 	[Property] GameObject projectile_pool = null;
+	Pool pool;
 	[Property] GameObject players_container = null;
 	[Property] float target_range = 10000f;
 	[Property] float attackingRange = 100f;
@@ -27,6 +29,7 @@ public sealed class Enemy : Component
 	float rotation_timer;
 	protected override void OnStart()
 	{
+		pool = projectile_pool.Components.Get<Pool>();
 		players = players_container.Children;
 		agent = GameObject.Components.Get<NavMeshAgent>();
 		attack_windup_timer = attack_windup;
@@ -34,7 +37,7 @@ public sealed class Enemy : Component
 	}
 	protected override void OnUpdate()
 	{
-		updateState(); 
+		updateState();
 	}
 
 	private void findNearestPlayer()
@@ -82,7 +85,6 @@ public sealed class Enemy : Component
 
 	private void chasingState()
 	{
-		Log.Info("in chasing state");
 		re_adjustposition_timer -= Time.Delta;
 		
 		targetDistance = Transform.Position.Distance(targetPlayer.Transform.Position);
@@ -112,8 +114,10 @@ public sealed class Enemy : Component
 		attack_windup_timer -= Time.Delta;
 
 		if(attack_windup_timer < 0){
-			GameObject new_attack = projectile_pool.Components.Get<Pool>().getFromPool();
-			new_attack.Components.Get<Projectile>().projectObject(projectile_speed, Transform.Rotation.Forward, projectile_duration, attack_damage, false, GameObject, width);
+			GameObject new_attack = pool.getObject();
+			new_attack.Transform.Position = Transform.Position;
+			new_attack.Components.Get<Projectile>().projectObject(projectile_speed, Transform.Rotation.Forward, 
+				projectile_duration, attack_damage, false, GameObject, width, pool, piercing);
 			attack_windup_timer = attack_windup;
 			state = EnemyState.Chasing;
 		}
@@ -144,9 +148,6 @@ public sealed class Enemy : Component
 			
 		}
 		else if(rotation_timer > 0){
-			// Smoothly interpolate towards the target rotation
-			Log.Info("we are rotating");
-			//agent.UpdateRotation = false;
 			Transform.Rotation = Rotation.Slerp(Transform.Rotation, target_rotation, Time.Delta * rotation_speed, true);
 		}
 		else{

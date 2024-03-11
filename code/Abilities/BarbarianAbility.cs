@@ -6,7 +6,7 @@ public sealed class BarbarianAbility : AbilityTemplate
     {
         Log.Info("barbarian is working");
     }
-    public override void useAbility()
+    public override void useAbility(Player player)
     {
         Log.Info("barbarian uses ability");
     }

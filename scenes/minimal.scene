@@ -51,7 +51,6 @@
         {
           "__type": "ModelRenderer",
           "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
           "MaterialOverride": "materials/default.vmat",
           "Model": "models/dev/plane.vmdl",
           "RenderType": "On",
@@ -62,23 +61,20 @@
           "Center": "0,0,-5",
           "IsTrigger": false,
           "Scale": "100,100,10",
-          "Static": false,
-          "Surface": null
+          "Static": false
         }
       ]
     },
     {
       "Id": "5b483a09-bbf2-4949-98c7-a73b789d0ee7",
       "Name": "Wall",
-      "Position": "124.6689,87.76766,43.67614",
+      "Position": "124.6689,-15.24236,43.67614",
       "Scale": "0.5632889,7.633394,0.5632889",
-      "Tags": "enemy",
       "Enabled": true,
       "Components": [
         {
           "__type": "ModelRenderer",
           "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
           "MaterialOverride": "materials/default.vmat",
           "Model": "models/dev/box.vmdl",
           "RenderType": "On",
@@ -89,29 +85,7 @@
           "Center": "0,0,0",
           "IsTrigger": false,
           "Scale": "50,50,50",
-          "Static": false,
-          "Surface": null
-        },
-        {
-          "__type": "Rigidbody",
-          "AngularDamping": 0,
-          "Gravity": false,
-          "LinearDamping": 0,
-          "Locking": {
-            "X": true,
-            "Y": true,
-            "Z": true,
-            "Pitch": true,
-            "Yaw": true,
-            "Roll": true
-          },
-          "MassOverride": 0,
-          "RigidbodyFlags": 0,
-          "StartAsleep": false
-        },
-        {
-          "__type": "Health",
-          "max_health": 50
+          "Static": false
         }
       ]
     },
@@ -182,72 +156,20 @@
     {
       "Id": "a2842977-2178-4570-b806-db38e051019c",
       "Name": "Pool",
-      "Position": "7.581024,9.416229,44.74358",
+      "Position": "7.581024,9.416229,282.2225",
       "Enabled": true,
       "Components": [
         {
-          "__type": "Pool"
+          "__type": "Pool",
+          "expandable": true,
+          "pool_size": 5,
+          "prefab": {
+            "_type": "gameobject",
+            "prefab": "code/projectile.prefab"
+          }
         }
       ],
       "Children": [
-        {
-          "Id": "f4e1d91f-5445-485b-80ce-cd318974f3f9",
-          "Name": "attack",
-          "Position": "0,0,0",
-          "Scale": "0.4,2.5,0.4",
-          "Tags": "projectile",
-          "Components": [
-            {
-              "__type": "ModelRenderer",
-              "BodyGroups": 18446744073709551615,
-              "MaterialGroup": null,
-              "MaterialOverride": null,
-              "Model": "models/dev/box.vmdl",
-              "RenderType": "On",
-              "Tint": "1,0,0,1"
-            },
-            {
-              "__type": "BoxCollider",
-              "Center": "0,0,0",
-              "IsTrigger": true,
-              "Scale": "50,50,50",
-              "Static": false,
-              "Surface": null
-            },
-            {
-              "__type": "Projectile"
-            }
-          ]
-        },
-        {
-          "Id": "9b45bc71-ef34-416b-9810-20002694c6a8",
-          "Name": "attack",
-          "Position": "0,0,0",
-          "Scale": "0.4,2.5,0.4",
-          "Tags": "projectile",
-          "Components": [
-            {
-              "__type": "ModelRenderer",
-              "BodyGroups": 18446744073709551615,
-              "MaterialGroup": null,
-              "MaterialOverride": null,
-              "Model": "models/dev/box.vmdl",
-              "RenderType": "On",
-              "Tint": "1,0,0,1"
-            },
-            {
-              "__type": "BoxCollider",
-              "Center": "0,0,0",
-              "IsTrigger": true,
-              "Scale": "50,50,50",
-              "Static": false,
-              "Surface": null
-            },
-            {
-              "__type": "Projectile"
-            }
-          ]
-        },
         {
           "Id": "5d992e59-e86c-455c-80b8-c47c714f80d5",
           "Name": "attack",
@@ -258,8 +180,6 @@
             {
               "__type": "ModelRenderer",
               "BodyGroups": 18446744073709551615,
-              "MaterialGroup": null,
-              "MaterialOverride": null,
               "Model": "models/dev/box.vmdl",
               "RenderType": "On",
               "Tint": "1,0,0,1"
@@ -269,8 +189,7 @@
               "Center": "0,0,0",
               "IsTrigger": true,
               "Scale": "50,50,50",
-              "Static": false,
-              "Surface": null
+              "Static": false
             },
             {
               "__type": "Projectile"
@@ -287,8 +206,6 @@
             {
               "__type": "ModelRenderer",
               "BodyGroups": 18446744073709551615,
-              "MaterialGroup": null,
-              "MaterialOverride": null,
               "Model": "models/dev/box.vmdl",
               "RenderType": "On",
               "Tint": "1,0,0,1"
@@ -298,8 +215,7 @@
               "Center": "0,0,0",
               "IsTrigger": true,
               "Scale": "50,50,50",
-              "Static": false,
-              "Surface": null
+              "Static": false
             },
             {
               "__type": "Projectile"
@@ -324,85 +240,12 @@
             {
               "__type": "ModelRenderer",
               "BodyGroups": 18446744073709551615,
-              "MaterialGroup": null,
-              "MaterialOverride": null,
-              "Model": null,
               "RenderType": "On",
               "Tint": "1,1,1,1"
             },
             {
               "__type": "InteractableObject",
               "pickup_type": "Health"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Id": "15e3be92-876e-4927-abd9-2ade58748b3c",
-      "Name": "Enemy",
-      "Position": "-200,-200,35",
-      "Scale": "0.5,0.5,1",
-      "Tags": "enemy",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "ModelRenderer",
-          "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Model": "models/dev/sphere.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "NavMeshAgent",
-          "Acceleration": 10000,
-          "Height": 5,
-          "MaxSpeed": 100,
-          "Radius": 16,
-          "Separation": 0.25,
-          "UpdatePosition": true,
-          "UpdateRotation": true
-        },
-        {
-          "__type": "Enemy",
-          "attack_damage": 5,
-          "attack_windup": 1,
-          "attackingRange": 200,
-          "players_container": {
-            "_type": "gameobject",
-            "go": "6b6fb711-6467-4fcb-aa4b-a69398b01d3d"
-          },
-          "projectile_duration": 1,
-          "projectile_pool": {
-            "_type": "gameobject",
-            "go": "a2842977-2178-4570-b806-db38e051019c"
-          },
-          "projectile_speed": 5,
-          "re_adjustposition_interval": 0.3,
-          "rotation_speed": 15,
-          "rotation_time": 0.4,
-          "target_range": 10000,
-          "width": 2.5
-        }
-      ],
-      "Children": [
-        {
-          "Id": "abe6beed-8410-441a-a1af-693747f5f825",
-          "Name": "Look Direction",
-          "Position": "64,0,5",
-          "Scale": "0.5,0.5,0.25",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "ModelRenderer",
-              "BodyGroups": 18446744073709551615,
-              "MaterialGroup": null,
-              "MaterialOverride": null,
-              "Model": "models/dev/box.vmdl",
-              "RenderType": "On",
-              "Tint": "0,0,0,1"
             }
           ]
         }
@@ -424,28 +267,16 @@
             {
               "__type": "ModelRenderer",
               "BodyGroups": 18446744073709551615,
-              "MaterialGroup": null,
-              "MaterialOverride": null,
               "Model": "models/dev/sphere.vmdl",
               "RenderType": "On",
               "Tint": "1,1,1,1"
             },
             {
-              "__type": "Rigidbody",
-              "AngularDamping": 0,
-              "Gravity": false,
-              "LinearDamping": 0,
-              "Locking": {
-                "Pitch": true,
-                "Yaw": true,
-                "Roll": true
-              },
-              "MassOverride": 0,
-              "RigidbodyFlags": 0,
-              "StartAsleep": false
-            },
-            {
               "__type": "Player",
+              "enemies": {
+                "_type": "gameobject",
+                "go": "4c0de541-69aa-45ec-bd57-02894c5d0170"
+              },
               "interact_cooldown": 0.2,
               "interact_range": 100,
               "interactables": {
@@ -461,14 +292,14 @@
               "__type": "BoxCollider",
               "Center": "0,0,0",
               "IsTrigger": false,
-              "Scale": "50,50,50",
-              "Static": false,
-              "Surface": null
+              "Scale": "40,40,100",
+              "Static": false
             },
             {
               "__type": "Attack",
               "attack_damage": 5,
               "attack_delay": 0.1,
+              "piercing": true,
               "projectile_duration": 0.3,
               "projectile_pool": {
                 "_type": "gameobject",
@@ -483,8 +314,18 @@
             },
             {
               "__type": "Ability",
-              "ability_meter_max": 50,
+              "ability_meter_max": 5,
               "ability_type": "Paladin"
+            },
+            {
+              "__type": "Rigidbody",
+              "AngularDamping": 0,
+              "Gravity": false,
+              "LinearDamping": 0,
+              "Locking": {},
+              "MassOverride": 0,
+              "RigidbodyFlags": 0,
+              "StartAsleep": false
             }
           ],
           "Children": [
@@ -493,13 +334,10 @@
               "Name": "Look Direction",
               "Position": "64.90598,0,0",
               "Scale": "0.5,0.5,0.25",
-              "Enabled": true,
               "Components": [
                 {
                   "__type": "ModelRenderer",
                   "BodyGroups": 18446744073709551615,
-                  "MaterialGroup": null,
-                  "MaterialOverride": null,
                   "Model": "models/dev/box.vmdl",
                   "RenderType": "On",
                   "Tint": "0,0,0,1"
@@ -511,16 +349,105 @@
               "Name": "Hat",
               "Position": "0.2146606,0,37.8529",
               "Scale": "0.5,0.5,0.25",
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,0,0,1"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": "4c0de541-69aa-45ec-bd57-02894c5d0170",
+      "Name": "Enemies",
+      "Enabled": true,
+      "Children": [
+        {
+          "Id": "15e3be92-876e-4927-abd9-2ade58748b3c",
+          "Name": "Enemy",
+          "Position": "-200,-200,35",
+          "Scale": "0.5,0.5,1",
+          "Tags": "enemy",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "NavMeshAgent",
+              "Acceleration": 10000,
+              "Height": 30,
+              "MaxSpeed": 100,
+              "Radius": 16,
+              "Separation": 0.25,
+              "UpdatePosition": true,
+              "UpdateRotation": true
+            },
+            {
+              "__type": "Enemy",
+              "attack_damage": 5,
+              "attack_windup": 1,
+              "attackingRange": 200,
+              "piercing": false,
+              "players_container": {
+                "_type": "gameobject",
+                "go": "6b6fb711-6467-4fcb-aa4b-a69398b01d3d"
+              },
+              "projectile_duration": 1,
+              "projectile_pool": {
+                "_type": "gameobject",
+                "go": "a2842977-2178-4570-b806-db38e051019c"
+              },
+              "projectile_speed": 5,
+              "re_adjustposition_interval": 0.3,
+              "rotation_speed": 15,
+              "rotation_time": 0.4,
+              "target_range": 10000,
+              "width": 2.5
+            },
+            {
+              "__type": "BoxCollider",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "60,60,100",
+              "Static": false
+            },
+            {
+              "__type": "Health",
+              "max_health": 20
+            }
+          ],
+          "Children": [
+            {
+              "Id": "abe6beed-8410-441a-a1af-693747f5f825",
+              "Name": "Look Direction",
+              "Position": "64,0,5",
+              "Scale": "0.5,0.5,0.25",
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            },
+            {
+              "Id": "5a1621c6-bc10-44be-8991-8c1228981f76",
+              "Name": "Model",
+              "Position": "0,0,35",
               "Enabled": true,
               "Components": [
                 {
                   "__type": "ModelRenderer",
                   "BodyGroups": 18446744073709551615,
-                  "MaterialGroup": null,
-                  "MaterialOverride": null,
-                  "Model": "models/dev/box.vmdl",
+                  "Model": "models/dev/sphere.vmdl",
                   "RenderType": "On",
-                  "Tint": "1,0,0,1"
+                  "Tint": "1,1,1,1"
                 }
               ]
             }
@@ -546,12 +473,12 @@
       "AgentRadius": 16,
       "AgentStepSize": 18,
       "AgentMaxSlope": 40,
-      "ExcludedBodies": "",
+      "ExcludedBodies": "enemy,player",
       "IncludedBodies": ""
     }
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-03-09T11:32:49.2956087\u002B11:00",
+  "LastSaved": "2024-03-11T23:22:26.3698259\u002B11:00",
   "__references": []
 }
