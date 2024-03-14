@@ -3,6 +3,7 @@ using System;
 
 public sealed class Player : Component
 {
+	[Property] public NearbyObjects nearby_objects_handler = null;
 	[Property] int speed = 10;
 	[Property] int rotation_speed = 10;
 	public int ability_meter = 0;
@@ -16,11 +17,11 @@ public sealed class Player : Component
 
 	Vector3 vel;
 	Rotation target_rotation;
-	[Property] bool using_controller = true;
 	[Property] GameObject interactables = null;
 	[Property] GameObject enemies = null;
 	List<GameObject> interactable_objects = new List<GameObject>();
-	List<GameObject> enemy_objects = new List<GameObject>();
+	public List<GameObject> enemy_objects = new List<GameObject>();
+	[Property] public InputType input_type = InputType.BaseKeyboard;
 	protected override void OnStart()
 	{
 		Log.Info("We have started");
@@ -36,8 +37,8 @@ public sealed class Player : Component
 		updateMove();
 		updateRotate();
 		chargeAbilityMoving();
-		updateInteract();
-		Log.Info($"{ability_meter}");
+		updateInteractKey();
+		//Log.Info($"{ability_meter}");
 		//Log.Info($"{interact_timer}");
 		
 	}
@@ -45,11 +46,22 @@ public sealed class Player : Component
 	private void updateMove()
 	{
 		vel = Vector3.Zero;
-		if(using_controller)
+		if(input_type == InputType.Controller)
 		{
-			vel += Input.AnalogMove;
+			if(Input.Down("forward_con")){
+				vel += new Vector3(1, 0, 0);
+			}
+			if(Input.Down("backward_con")){
+				vel += new Vector3(-1,0, 0);
+			}
+			if(Input.Down("left_con")){
+				vel += new Vector3(0, 1, 0);
+			}
+			if(Input.Down("right_con")){
+				vel += new Vector3(0, -1, 0);
+			}
 		}
-		else
+		else if(input_type == InputType.BaseKeyboard)
 		{
 			if(Input.Down("forward")){
 				vel += new Vector3(1, 0, 0);
@@ -64,10 +76,24 @@ public sealed class Player : Component
 				vel += new Vector3(0, -1, 0);
 			}
 		}
+		else
+		{
+			if(Input.Down("forward_sec")){
+				vel += new Vector3(1, 0, 0);
+			}
+			if(Input.Down("backward_sec")){
+				vel += new Vector3(-1,0, 0);
+			}
+			if(Input.Down("left_sec")){
+				vel += new Vector3(0, 1, 0);
+			}
+			if(Input.Down("right_sec")){
+				vel += new Vector3(0, -1, 0);
+			}
+		}
 
 		Transform.Position += vel.Normal * speed * Time.Delta * 10;
-		
-		
+	
 	}
 
 	private void updateRotate()
@@ -113,19 +139,32 @@ public sealed class Player : Component
 		}
 	}
 
-	public void updateInteract(){
-		interact_timer -= Time.Delta;
-		if(interact_timer < 0 && Input.Down("use")){
-			interact_timer = interact_cooldown;
-			interactWithClosest();
+	public void updateInteractKey(){
+		if(input_type == InputType.Controller){
+			updateInteract("interact_con");
+		}
+		else if(input_type == InputType.BaseKeyboard){
+			updateInteract("interact");
+		}
+		else{
+			updateInteract("interact_sec");
 		}
 	}
 
-	public void interactWithClosest()
+	public void updateInteract(string input_name){
+		interact_timer -= Time.Delta;
+		if(interact_timer < 0 && Input.Down(input_name)){
+			interact_timer = interact_cooldown;
+			List<GameObject> nearby = nearby_objects_handler.getNearbyObjects(interactable_objects, interact_range);
+			interactWithClosest(nearby);
+		}
+	}
+
+	public void interactWithClosest(List<GameObject> nearby)
 	{
 		GameObject closestInteractable = null;
         float closestDistance = 999;
-        foreach (var interactable_object in interactable_objects){
+        foreach (var interactable_object in nearby){
 			if(interactable_object.Enabled == true){
 				float distance = Transform.Position.Distance(interactable_object.Transform.Position);
 				if (distance < closestDistance){
@@ -135,7 +174,7 @@ public sealed class Player : Component
 			}
         }
 
-        if (closestInteractable != null && closestDistance < interact_range){
+        if (closestInteractable != null){
             closestInteractable.Components.Get<InteractableObject>().interact();
 			closestInteractable.Enabled = false;
         }

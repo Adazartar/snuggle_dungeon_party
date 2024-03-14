@@ -3,29 +3,28 @@ using Sandbox;
 public sealed class PaladinAbility : AbilityTemplate
 {
     float invulnerability_duration = 5f;
-    Health health_controller;
-    int stored_health;
     float timer;
     bool active = false;
+    Player player;
 
     protected override void OnUpdate(){
         timer -= Time.Delta;
         if(active && timer < 0){
-            health_controller.setHealth(stored_health);
+            player.health.unchangeable = false;
             active = false;
+            Log.Info("paladin ability is finished");
         }
     }
     public override void testing()
     {
         Log.Info("paladin is working");
     }
-    public override void useAbility(Player player)
+    public override void useAbility(Player this_player)
     {
         Log.Info("paladin uses ability");
+        player = this_player;
         active = true;
-        health_controller = player.health;
-        stored_health = health_controller.current_health;
-        health_controller.setHealth(1000);
+        player.health.unchangeable = true;
         timer = invulnerability_duration;
         
     }

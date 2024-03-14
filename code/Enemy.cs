@@ -14,6 +14,7 @@ public sealed class Enemy : Component
 	Pool pool;
 	[Property] GameObject players_container = null;
 	[Property] float target_range = 10000f;
+	[Property] float aggro_range = 500f;
 	[Property] float attackingRange = 100f;
 	GameObject targetPlayer = null;
 	float targetDistance = 1000f;
@@ -43,7 +44,7 @@ public sealed class Enemy : Component
 	private void findNearestPlayer()
 	{
 		GameObject closestPlayer = null;
-        float closestDistance = 999;
+        float closestDistance = 10000000;
         foreach (var player in players){
 			if(player.Enabled == true){
 				float distance = Transform.Position.Distance(player.Transform.Position);
@@ -88,6 +89,9 @@ public sealed class Enemy : Component
 		re_adjustposition_timer -= Time.Delta;
 		
 		targetDistance = Transform.Position.Distance(targetPlayer.Transform.Position);
+		if(targetDistance > aggro_range){
+			state = EnemyState.Idle;
+		}
 		if(targetDistance < attackingRange){
 			state = EnemyState.Aiming;
 		}
@@ -102,13 +106,16 @@ public sealed class Enemy : Component
 
 	private void idleState()
 	{
-		Log.Info("in idle state");
+		//Log.Info("in idle state");
 		findNearestPlayer();
 	}
 
 	private void attackingState()
 	{
 		//Log.Info("in attacking state");
+		if(!targetPlayer.Enabled){
+			state = EnemyState.Idle;
+		}
 		re_adjustposition_timer -= Time.Delta;
 		targetDistance = Transform.Position.Distance(targetPlayer.Transform.Position);
 		attack_windup_timer -= Time.Delta;
@@ -117,10 +124,12 @@ public sealed class Enemy : Component
 			GameObject new_attack = pool.getObject();
 			new_attack.Transform.Position = Transform.Position;
 			new_attack.Components.Get<Projectile>().projectObject(projectile_speed, Transform.Rotation.Forward, 
-				projectile_duration, attack_damage, false, GameObject, width, pool, piercing);
+				projectile_duration, attack_damage, false, GameObject, width, pool, piercing, false, 0);
 			attack_windup_timer = attack_windup;
+			findNearestPlayer();
 			state = EnemyState.Chasing;
 		}
+
 		
 	}
 

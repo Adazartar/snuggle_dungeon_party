@@ -14,7 +14,23 @@ public sealed class Ability : Component
 	}
 	protected override void OnUpdate()
 	{
-		if(Input.Down("attack2") &&  player.ability_meter == ability_meter_max){
+		updateAbilityKey();
+	}
+
+	public void updateAbilityKey(){
+		if(player.input_type == InputType.Controller){
+			updateAbility("ability_con");
+		}
+		else if(player.input_type == InputType.BaseKeyboard){
+			updateAbility("ability");
+		}
+		else{
+			updateAbility("ability_sec");
+		}
+	}
+
+	public void updateAbility(string input_name){
+		if(Input.Down(input_name) &&  player.ability_meter == ability_meter_max){
 			Log.Info("using ability");
 			ability.useAbility(player);
 			player.ability_meter = 0;
