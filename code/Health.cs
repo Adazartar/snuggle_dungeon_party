@@ -3,8 +3,9 @@ using Sandbox;
 public sealed class Health : Component
 {
 	[Property] int max_health = 100;
-	int current_health;
+	public int current_health;
 	bool alive = true;
+	public bool unchangeable = false;
 	
 	protected override void OnStart()
 	{
@@ -21,11 +22,15 @@ public sealed class Health : Component
 
 		}
 		else{
-			current_health += amount;
-			Log.Info($"{current_health}");
-			if(current_health <= 0){
-				alive = false;
+			if(!unchangeable){
+				current_health += amount;
+				Log.Info($"{Tags} {current_health}");
+				if(current_health <= 0){
+					alive = false;
+					GameObject.Enabled = false;
+				}
 			}
+			
 		}
 		
 	}

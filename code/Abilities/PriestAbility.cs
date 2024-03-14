@@ -6,7 +6,7 @@ public sealed class PriestAbility : AbilityTemplate
     {
         Log.Info("preist is working");
     }
-    public override void useAbility()
+    public override void useAbility(Player player)
     {
         Log.Info("priest uses ability");
     }

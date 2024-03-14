@@ -1,15 +1,17 @@
 {
-  "Id": "9f832399-4887-46b0-8f21-2ee284f538e2",
+  "Id": "dd6adb81-49ed-40f1-a959-261d32334617",
   "GameObjects": [
     {
-      "Id": "bfc59c12-1ed2-4f91-8956-a95a315eac3c",
+      "__guid": "bfc59c12-1ed2-4f91-8956-a95a315eac3c",
       "Name": "Sun",
       "Rotation": "-0.0729315,0.4822396,0.1305433,0.8631827",
       "Tags": "light_directional,light",
       "Enabled": true,
+      "NetworkMode": 2,
       "Components": [
         {
           "__type": "DirectionalLight",
+          "__guid": "bb731ff6-23d7-49da-8860-4a7326e71859",
           "FogMode": "Enabled",
           "FogStrength": 1,
           "LightColor": "0.94419,0.97767,1,1",
@@ -19,18 +21,21 @@
       ]
     },
     {
-      "Id": "00344a8c-fa5e-45ae-b12a-10bb781a1dc3",
+      "__guid": "00344a8c-fa5e-45ae-b12a-10bb781a1dc3",
       "Name": "2D Skybox",
       "Tags": "skybox",
       "Enabled": true,
+      "NetworkMode": 2,
       "Components": [
         {
           "__type": "SkyBox2D",
+          "__guid": "771a6a12-fc2c-4b86-a011-4dac8bbaacba",
           "SkyMaterial": "materials/skybox/light_test_sky_sunny03.vmat",
           "Tint": "1,1,1,1"
         },
         {
           "__type": "EnvmapProbe",
+          "__guid": "ab37a59f-48ea-4bbb-8c19-433b88e4c510",
           "Bounds": {
             "Mins": "-512,-512,-512",
             "Maxs": "512,512,512"
@@ -43,15 +48,16 @@
       ]
     },
     {
-      "Id": "6ad70641-3c6c-4402-9c85-9a4969af4764",
+      "__guid": "6ad70641-3c6c-4402-9c85-9a4969af4764",
       "Name": "Plane",
       "Scale": "5,5,5",
       "Enabled": true,
+      "NetworkMode": 2,
       "Components": [
         {
           "__type": "ModelRenderer",
+          "__guid": "ff5a4898-3ee5-4d07-9972-29760ec203b4",
           "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
           "MaterialOverride": "materials/default.vmat",
           "Model": "models/dev/plane.vmdl",
           "RenderType": "On",
@@ -59,26 +65,26 @@
         },
         {
           "__type": "BoxCollider",
+          "__guid": "f9b7c4f9-a658-46b3-bd7d-fd1996a67583",
           "Center": "0,0,-5",
           "IsTrigger": false,
           "Scale": "100,100,10",
-          "Static": false,
-          "Surface": null
+          "Static": false
         }
       ]
     },
     {
-      "Id": "5b483a09-bbf2-4949-98c7-a73b789d0ee7",
+      "__guid": "5b483a09-bbf2-4949-98c7-a73b789d0ee7",
       "Name": "Wall",
-      "Position": "124.6689,87.76766,43.67614",
+      "Position": "124.6689,-15.24236,43.67614",
       "Scale": "0.5632889,7.633394,0.5632889",
-      "Tags": "enemy",
       "Enabled": true,
+      "NetworkMode": 2,
       "Components": [
         {
           "__type": "ModelRenderer",
+          "__guid": "fd5c51a7-f3d5-4c48-8bdb-9cfa974dc2fb",
           "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
           "MaterialOverride": "materials/default.vmat",
           "Model": "models/dev/box.vmdl",
           "RenderType": "On",
@@ -86,44 +92,25 @@
         },
         {
           "__type": "BoxCollider",
+          "__guid": "4f8f7d07-7028-4b30-9139-22ca61daf6ef",
           "Center": "0,0,0",
           "IsTrigger": false,
           "Scale": "50,50,50",
-          "Static": false,
-          "Surface": null
-        },
-        {
-          "__type": "Rigidbody",
-          "AngularDamping": 0,
-          "Gravity": false,
-          "LinearDamping": 0,
-          "Locking": {
-            "X": true,
-            "Y": true,
-            "Z": true,
-            "Pitch": true,
-            "Yaw": true,
-            "Roll": true
-          },
-          "MassOverride": 0,
-          "RigidbodyFlags": 0,
-          "StartAsleep": false
-        },
-        {
-          "__type": "Health",
-          "max_health": 50
+          "Static": false
         }
       ]
     },
     {
-      "Id": "3ee1c9f4-07be-4e0b-8b23-67bee2d8ec8a",
+      "__guid": "3ee1c9f4-07be-4e0b-8b23-67bee2d8ec8a",
       "Name": "Camera",
       "Position": "0,0,800",
       "Rotation": "0,0.7071068,0,0.7071068",
       "Enabled": true,
+      "NetworkMode": 2,
       "Components": [
         {
           "__type": "CameraComponent",
+          "__guid": "ee5ea3b8-6aa5-4b56-a54b-66d1e04791f1",
           "BackgroundColor": "0.33333,0.46275,0.52157,1",
           "ClearFlags": "All",
           "FieldOfView": 60,
@@ -140,6 +127,7 @@
         },
         {
           "__type": "Bloom",
+          "__guid": "0eb0386e-cb72-4af9-b35e-2e672fbd2779",
           "BloomColor": {
             "color": [
               {
@@ -168,6 +156,7 @@
         },
         {
           "__type": "Tonemapping",
+          "__guid": "d9164855-8c9f-456c-8143-f0ac8ae0a5a1",
           "ExposureCompensation": 0,
           "MaximumExposure": 2,
           "MinimumExposure": 1,
@@ -175,277 +164,821 @@
         },
         {
           "__type": "Sharpen",
+          "__guid": "e1ba7423-11f4-4d93-9419-0d3d876b5d34",
           "Scale": 0.2
         }
       ]
     },
     {
-      "Id": "76e4c851-33c1-4773-a0b5-dfb482d09759",
-      "Name": "Player",
-      "Position": "0,0,35.67874",
-      "Scale": "0.5,0.5,1",
-      "Tags": "player",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "ModelRenderer",
-          "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Model": "models/dev/sphere.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "Rigidbody",
-          "AngularDamping": 0,
-          "Gravity": false,
-          "LinearDamping": 0,
-          "Locking": {
-            "Pitch": true,
-            "Yaw": true,
-            "Roll": true
-          },
-          "MassOverride": 0,
-          "RigidbodyFlags": 0,
-          "StartAsleep": false
-        },
-        {
-          "__type": "Player",
-          "interact_cooldown": 0.2,
-          "interact_range": 100,
-          "interactables": {
-            "_type": "gameobject",
-            "go": "b868e8e5-79b3-418b-8198-337aece08c9d"
-          },
-          "rotation_speed": 50,
-          "speed": 10,
-          "time_moving_for_1_ability_pt": 1,
-          "using_controller": true
-        },
-        {
-          "__type": "BoxCollider",
-          "Center": "0,0,0",
-          "IsTrigger": false,
-          "Scale": "50,50,50",
-          "Static": false,
-          "Surface": null
-        },
-        {
-          "__type": "Attack",
-          "attack_damage": 5,
-          "attack_delay": 0.1,
-          "projectile_duration": 0.3,
-          "projectile_pool": {
-            "_type": "gameobject",
-            "go": "a2842977-2178-4570-b806-db38e051019c"
-          },
-          "projectile_speed": 5,
-          "width": 2.5
-        },
-        {
-          "__type": "Health",
-          "max_health": 100
-        },
-        {
-          "__type": "Ability",
-          "ability_meter_max": 50,
-          "ability_type": "Paladin"
-        }
-      ],
-      "Children": [
-        {
-          "Id": "c3ca6aa2-fd2b-4da9-b582-cdca8f15f2bf",
-          "Name": "Look Direction",
-          "Position": "64.90598,0,0",
-          "Scale": "0.5,0.5,0.25",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "ModelRenderer",
-              "BodyGroups": 18446744073709551615,
-              "MaterialGroup": null,
-              "MaterialOverride": null,
-              "Model": "models/dev/box.vmdl",
-              "RenderType": "On",
-              "Tint": "0,0,0,1"
-            }
-          ]
-        },
-        {
-          "Id": "d29a067d-af65-401a-89c0-963260126a80",
-          "Name": "Hat",
-          "Position": "0.2146606,0,37.8529",
-          "Scale": "0.5,0.5,0.25",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "ModelRenderer",
-              "BodyGroups": 18446744073709551615,
-              "MaterialGroup": null,
-              "MaterialOverride": null,
-              "Model": "models/dev/box.vmdl",
-              "RenderType": "On",
-              "Tint": "1,0,0,1"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Id": "a2842977-2178-4570-b806-db38e051019c",
+      "__guid": "a2842977-2178-4570-b806-db38e051019c",
       "Name": "Pool",
-      "Position": "7.581024,9.416229,44.74358",
+      "Position": "7.581024,9.416229,282.2225",
       "Enabled": true,
+      "NetworkMode": 2,
       "Components": [
         {
-          "__type": "Pool"
+          "__type": "Pool",
+          "__guid": "f82afda2-1354-47d0-9d2b-d26a5f57c190",
+          "expandable": true,
+          "pool_size": 5,
+          "prefab": {
+            "_type": "gameobject",
+            "prefab": "code/projectile.prefab"
+          }
         }
       ],
       "Children": [
         {
-          "Id": "f4e1d91f-5445-485b-80ce-cd318974f3f9",
+          "__guid": "5d992e59-e86c-455c-80b8-c47c714f80d5",
           "Name": "attack",
           "Position": "0,0,0",
           "Scale": "0.4,2.5,0.4",
           "Tags": "projectile",
+          "NetworkMode": 2,
           "Components": [
             {
               "__type": "ModelRenderer",
+              "__guid": "75f9e73e-03c3-428d-b996-b8e9ad109962",
               "BodyGroups": 18446744073709551615,
-              "MaterialGroup": null,
-              "MaterialOverride": null,
               "Model": "models/dev/box.vmdl",
               "RenderType": "On",
               "Tint": "1,0,0,1"
             },
             {
               "__type": "BoxCollider",
+              "__guid": "2863f822-d6ee-425d-8b29-e5ee2b3ba71f",
               "Center": "0,0,0",
               "IsTrigger": true,
               "Scale": "50,50,50",
-              "Static": false,
-              "Surface": null
+              "Static": false
             },
             {
-              "__type": "Projectile"
+              "__type": "Projectile",
+              "__guid": "40681321-3146-4a0d-804b-1cfa08ed16ad"
             }
           ]
         },
         {
-          "Id": "9b45bc71-ef34-416b-9810-20002694c6a8",
+          "__guid": "76830988-b6db-4bc4-a168-ea120494d623",
           "Name": "attack",
           "Position": "0,0,0",
           "Scale": "0.4,2.5,0.4",
           "Tags": "projectile",
+          "NetworkMode": 2,
           "Components": [
             {
               "__type": "ModelRenderer",
+              "__guid": "29904b17-c235-447c-925a-e6a199a6ce88",
               "BodyGroups": 18446744073709551615,
-              "MaterialGroup": null,
-              "MaterialOverride": null,
               "Model": "models/dev/box.vmdl",
               "RenderType": "On",
               "Tint": "1,0,0,1"
             },
             {
               "__type": "BoxCollider",
+              "__guid": "d00e7f33-4cd2-4898-aef9-700bbbd94841",
               "Center": "0,0,0",
               "IsTrigger": true,
               "Scale": "50,50,50",
-              "Static": false,
-              "Surface": null
+              "Static": false
             },
             {
-              "__type": "Projectile"
-            }
-          ]
-        },
-        {
-          "Id": "5d992e59-e86c-455c-80b8-c47c714f80d5",
-          "Name": "attack",
-          "Position": "0,0,0",
-          "Scale": "0.4,2.5,0.4",
-          "Tags": "projectile",
-          "Components": [
-            {
-              "__type": "ModelRenderer",
-              "BodyGroups": 18446744073709551615,
-              "MaterialGroup": null,
-              "MaterialOverride": null,
-              "Model": "models/dev/box.vmdl",
-              "RenderType": "On",
-              "Tint": "1,0,0,1"
-            },
-            {
-              "__type": "BoxCollider",
-              "Center": "0,0,0",
-              "IsTrigger": true,
-              "Scale": "50,50,50",
-              "Static": false,
-              "Surface": null
-            },
-            {
-              "__type": "Projectile"
-            }
-          ]
-        },
-        {
-          "Id": "76830988-b6db-4bc4-a168-ea120494d623",
-          "Name": "attack",
-          "Position": "0,0,0",
-          "Scale": "0.4,2.5,0.4",
-          "Tags": "projectile",
-          "Components": [
-            {
-              "__type": "ModelRenderer",
-              "BodyGroups": 18446744073709551615,
-              "MaterialGroup": null,
-              "MaterialOverride": null,
-              "Model": "models/dev/box.vmdl",
-              "RenderType": "On",
-              "Tint": "1,0,0,1"
-            },
-            {
-              "__type": "BoxCollider",
-              "Center": "0,0,0",
-              "IsTrigger": true,
-              "Scale": "50,50,50",
-              "Static": false,
-              "Surface": null
-            },
-            {
-              "__type": "Projectile"
+              "__type": "Projectile",
+              "__guid": "6c03b71f-9b86-4e5f-82a2-6677e1accc36"
             }
           ]
         }
       ]
     },
     {
-      "Id": "b868e8e5-79b3-418b-8198-337aece08c9d",
+      "__guid": "b868e8e5-79b3-418b-8198-337aece08c9d",
       "Name": "Interactables",
       "Position": "-7.482315,19.00005,73.61964",
       "Enabled": true,
+      "NetworkMode": 2,
       "Children": [
         {
-          "Id": "e095fe0b-3d73-441c-96fc-5458e5aa670d",
+          "__guid": "e095fe0b-3d73-441c-96fc-5458e5aa670d",
           "Name": "Object",
           "Position": "-183.469,81.43805,-41.53441",
           "Tags": "interactable",
           "Enabled": true,
+          "NetworkMode": 2,
           "Components": [
             {
               "__type": "ModelRenderer",
+              "__guid": "088c158a-b084-450d-b1d2-1b87d40fd803",
               "BodyGroups": 18446744073709551615,
-              "MaterialGroup": null,
-              "MaterialOverride": null,
-              "Model": null,
               "RenderType": "On",
               "Tint": "1,1,1,1"
             },
             {
               "__type": "InteractableObject",
-              "pickup_type": "IceElement"
+              "__guid": "777e092d-f9d3-4ec5-8a69-86ef46b23278",
+              "pickup_type": "Health"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "6b6fb711-6467-4fcb-aa4b-a69398b01d3d",
+      "Name": "Players",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Children": [
+        {
+          "__guid": "76e4c851-33c1-4773-a0b5-dfb482d09759",
+          "Name": "Barbarian",
+          "Position": "0,0,35",
+          "Scale": "0.5,0.5,1",
+          "Tags": "player",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__guid": "f7a85938-eee4-4870-a945-0c8ffca5721c",
+              "BodyGroups": 18446744073709551615,
+              "Model": "models/dev/sphere.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "Player",
+              "__guid": "5b6ef975-7d68-43db-bd1d-560e84cc18c5",
+              "enemies": {
+                "_type": "gameobject",
+                "go": "4c0de541-69aa-45ec-bd57-02894c5d0170"
+              },
+              "input_type": "BaseKeyboard",
+              "interact_cooldown": 0.2,
+              "interact_range": 100,
+              "interactables": {
+                "_type": "gameobject",
+                "go": "b868e8e5-79b3-418b-8198-337aece08c9d"
+              },
+              "nearby_objects_handler": {
+                "_type": "component",
+                "component_id": "d5d7b90c-034c-4e10-88e4-4999389d405c",
+                "go": "76e4c851-33c1-4773-a0b5-dfb482d09759",
+                "component_type": "NearbyObjects"
+              },
+              "rotation_speed": 50,
+              "speed": 10,
+              "time_moving_for_1_ability_pt": 1
+            },
+            {
+              "__type": "BoxCollider",
+              "__guid": "0722e9f6-3d5f-4b02-a11c-b34ea9b20cd1",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "40,40,100",
+              "Static": false
+            },
+            {
+              "__type": "Attack",
+              "__guid": "f4166c5e-825f-4a7e-a5a3-fd1307fcffb6",
+              "attack_damage": 5,
+              "attack_delay": 0.1,
+              "piercing": true,
+              "projectile_duration": 0.3,
+              "projectile_pool": {
+                "_type": "gameobject",
+                "go": "a2842977-2178-4570-b806-db38e051019c"
+              },
+              "projectile_speed": 5,
+              "width": 2.5
+            },
+            {
+              "__type": "Health",
+              "__guid": "0b5dc2c1-7e64-4155-a98b-9d297d9e80c2",
+              "max_health": 100
+            },
+            {
+              "__type": "Ability",
+              "__guid": "352df93e-7925-4750-8044-5e6dd5f013ea",
+              "ability_meter_max": 5,
+              "ability_type": "Barbarian"
+            },
+            {
+              "__type": "Rigidbody",
+              "__guid": "c8b8dab7-ddcb-4dd4-8af7-626854b56755",
+              "AngularDamping": 0,
+              "Gravity": false,
+              "LinearDamping": 0,
+              "Locking": {
+                "Pitch": true,
+                "Yaw": true,
+                "Roll": true
+              },
+              "MassOverride": 0,
+              "MotionEnabled": true,
+              "RigidbodyFlags": 0,
+              "StartAsleep": false
+            },
+            {
+              "__type": "NearbyObjects",
+              "__guid": "d5d7b90c-034c-4e10-88e4-4999389d405c"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "c3ca6aa2-fd2b-4da9-b582-cdca8f15f2bf",
+              "Name": "Look Direction",
+              "Position": "64.90598,0,0",
+              "Scale": "0.5,0.5,0.25",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "c3b1edf7-934c-47f3-a936-fbff139146f4",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            },
+            {
+              "__guid": "d29a067d-af65-401a-89c0-963260126a80",
+              "Name": "Hat",
+              "Position": "0.2146606,0,37.8529",
+              "Scale": "0.5,0.5,0.25",
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "3c59c36b-15e4-4fdc-828d-2b104db642b3",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,0,0,1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "3a5cff7a-8e95-4166-89ca-5651110abb8a",
+          "Name": "Paladin",
+          "Position": "0,0,35",
+          "Scale": "0.5,0.5,1",
+          "Tags": "player",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__guid": "bdb3d88d-dfe4-4dfa-b04c-eb30410547f1",
+              "BodyGroups": 18446744073709551615,
+              "Model": "models/dev/sphere.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "Player",
+              "__guid": "e82f9ae0-f755-4998-b899-a4f92b30a571",
+              "enemies": {
+                "_type": "gameobject",
+                "go": "4c0de541-69aa-45ec-bd57-02894c5d0170"
+              },
+              "input_type": "SecondaryKeyboard",
+              "interact_cooldown": 0.2,
+              "interact_range": 100,
+              "interactables": {
+                "_type": "gameobject",
+                "go": "b868e8e5-79b3-418b-8198-337aece08c9d"
+              },
+              "nearby_objects_handler": {
+                "_type": "component",
+                "component_id": "eb302118-1202-4fbf-86f4-f3b8318d24e8",
+                "go": "3a5cff7a-8e95-4166-89ca-5651110abb8a",
+                "component_type": "NearbyObjects"
+              },
+              "rotation_speed": 50,
+              "speed": 10,
+              "time_moving_for_1_ability_pt": 1
+            },
+            {
+              "__type": "BoxCollider",
+              "__guid": "e3f7afe8-0512-4235-970a-2077736728a4",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "40,40,100",
+              "Static": false
+            },
+            {
+              "__type": "Attack",
+              "__guid": "c2fd13de-27b5-4df5-bcdd-5d757d9bb0c5",
+              "attack_damage": 5,
+              "attack_delay": 0.1,
+              "piercing": true,
+              "projectile_duration": 0.3,
+              "projectile_pool": {
+                "_type": "gameobject",
+                "go": "a2842977-2178-4570-b806-db38e051019c"
+              },
+              "projectile_speed": 5,
+              "width": 2.5
+            },
+            {
+              "__type": "Health",
+              "__guid": "2d46132e-8bc3-4cba-8591-37d94c91a173",
+              "max_health": 100
+            },
+            {
+              "__type": "Ability",
+              "__guid": "ce095a70-7ff2-436c-8483-922804a80ba8",
+              "ability_meter_max": 5,
+              "ability_type": "Paladin"
+            },
+            {
+              "__type": "Rigidbody",
+              "__guid": "b0ca6f16-33b8-4034-ab89-0f1204abd4eb",
+              "AngularDamping": 0,
+              "Gravity": false,
+              "LinearDamping": 0,
+              "Locking": {
+                "Pitch": true,
+                "Yaw": true,
+                "Roll": true
+              },
+              "MassOverride": 0,
+              "MotionEnabled": true,
+              "RigidbodyFlags": 0,
+              "StartAsleep": false
+            },
+            {
+              "__type": "NearbyObjects",
+              "__guid": "eb302118-1202-4fbf-86f4-f3b8318d24e8"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "bb9807f0-6ba0-44b3-a7c0-89c81973a323",
+              "Name": "Look Direction",
+              "Position": "64.90598,0,0",
+              "Scale": "0.5,0.5,0.25",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "0f7896a8-b7a4-464f-ab10-dc666cd4afec",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            },
+            {
+              "__guid": "1ada6dcf-1d7f-4d81-bcb6-0f354958863e",
+              "Name": "Hat",
+              "Position": "0.2146606,0,37.8529",
+              "Scale": "0.5,0.5,0.25",
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "a8b868d0-b856-4ba1-85b8-29d4f6dae945",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,0,0,1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "d56e0f8a-2814-4ffb-8d87-9343bba16370",
+          "Name": "Wizard",
+          "Position": "0,0,35",
+          "Scale": "0.5,0.5,1",
+          "Tags": "player",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__guid": "5084d493-319d-4ce0-af3f-cef0622be235",
+              "BodyGroups": 18446744073709551615,
+              "Model": "models/dev/sphere.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "Player",
+              "__guid": "9df3abca-1a73-4d6c-b89a-d05bd7c579aa",
+              "enemies": {
+                "_type": "gameobject",
+                "go": "4c0de541-69aa-45ec-bd57-02894c5d0170"
+              },
+              "input_type": "Controller",
+              "interact_cooldown": 0.2,
+              "interact_range": 100,
+              "interactables": {
+                "_type": "gameobject",
+                "go": "b868e8e5-79b3-418b-8198-337aece08c9d"
+              },
+              "nearby_objects_handler": {
+                "_type": "component",
+                "component_id": "ea4e0c74-a40e-46d0-871b-4a4e221ff7a3",
+                "go": "d56e0f8a-2814-4ffb-8d87-9343bba16370",
+                "component_type": "NearbyObjects"
+              },
+              "rotation_speed": 50,
+              "speed": 10,
+              "time_moving_for_1_ability_pt": 1
+            },
+            {
+              "__type": "BoxCollider",
+              "__guid": "219cd4a2-d6a1-4beb-8857-7390f88b2c3c",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "40,40,100",
+              "Static": false
+            },
+            {
+              "__type": "Attack",
+              "__guid": "c20d157d-c595-42c1-b41f-e2f2a08e6678",
+              "attack_damage": 5,
+              "attack_delay": 0.1,
+              "piercing": true,
+              "projectile_duration": 0.3,
+              "projectile_pool": {
+                "_type": "gameobject",
+                "go": "a2842977-2178-4570-b806-db38e051019c"
+              },
+              "projectile_speed": 5,
+              "width": 2.5
+            },
+            {
+              "__type": "Health",
+              "__guid": "8aee0fc1-3012-437a-bedf-5dc327fc49d8",
+              "max_health": 100
+            },
+            {
+              "__type": "Ability",
+              "__guid": "030f5908-fd51-4cd9-b621-11ba025f1719",
+              "ability_meter_max": 5,
+              "ability_type": "Wizard"
+            },
+            {
+              "__type": "Rigidbody",
+              "__guid": "5650519d-4b3c-4fa7-a075-02320a55670d",
+              "AngularDamping": 0,
+              "Gravity": false,
+              "LinearDamping": 0,
+              "Locking": {
+                "Pitch": true,
+                "Yaw": true,
+                "Roll": true
+              },
+              "MassOverride": 0,
+              "MotionEnabled": true,
+              "RigidbodyFlags": 0,
+              "StartAsleep": false
+            },
+            {
+              "__type": "NearbyObjects",
+              "__guid": "ea4e0c74-a40e-46d0-871b-4a4e221ff7a3"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "657f7307-6091-4bb7-a10a-3139cc5fe008",
+              "Name": "Look Direction",
+              "Position": "64.90598,0,0",
+              "Scale": "0.5,0.5,0.25",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "99e40ee6-6611-46e0-8b1a-0a71c8b53f34",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            },
+            {
+              "__guid": "307a9e86-c4f0-4393-8618-c4a0446355e7",
+              "Name": "Hat",
+              "Position": "0.2146606,0,37.8529",
+              "Scale": "0.5,0.5,0.25",
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "5f9e8392-80d4-4018-b771-fb7493073a2d",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,0,0,1"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "4c0de541-69aa-45ec-bd57-02894c5d0170",
+      "Name": "Enemies",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Children": [
+        {
+          "__guid": "15e3be92-876e-4927-abd9-2ade58748b3c",
+          "Name": "Enemy",
+          "Position": "-200,-200,35",
+          "Scale": "0.5,0.5,1",
+          "Tags": "enemy",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "NavMeshAgent",
+              "__guid": "3fd4a699-5d7d-474a-9c70-dffa3f96c3f6",
+              "Acceleration": 10000,
+              "Height": 30,
+              "MaxSpeed": 100,
+              "Radius": 16,
+              "Separation": 0.25,
+              "UpdatePosition": true,
+              "UpdateRotation": true
+            },
+            {
+              "__type": "Enemy",
+              "__guid": "de0ae222-ef27-409c-b6fd-025cbaebe290",
+              "aggro_range": 300,
+              "attack_damage": 5,
+              "attack_windup": 1,
+              "attackingRange": 200,
+              "piercing": false,
+              "players_container": {
+                "_type": "gameobject",
+                "go": "6b6fb711-6467-4fcb-aa4b-a69398b01d3d"
+              },
+              "projectile_duration": 1,
+              "projectile_pool": {
+                "_type": "gameobject",
+                "go": "a2842977-2178-4570-b806-db38e051019c"
+              },
+              "projectile_speed": 5,
+              "re_adjustposition_interval": 0.3,
+              "rotation_speed": 15,
+              "rotation_time": 0.4,
+              "target_range": 10000,
+              "width": 2.5
+            },
+            {
+              "__type": "BoxCollider",
+              "__guid": "3c81c38e-f9e2-4d38-9f31-4b56c8fcdfb2",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "60,60,100",
+              "Static": false
+            },
+            {
+              "__type": "Health",
+              "__guid": "b735f551-e99b-462f-a491-35e842dbf4ef",
+              "max_health": 20
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "abe6beed-8410-441a-a1af-693747f5f825",
+              "Name": "Look Direction",
+              "Position": "64,0,5",
+              "Scale": "0.5,0.5,0.25",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "7caa1480-513e-4823-b656-872b9c4177cb",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            },
+            {
+              "__guid": "5a1621c6-bc10-44be-8991-8c1228981f76",
+              "Name": "Model",
+              "Position": "0,0,35",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "b4bc6cb3-f7b9-4929-a4fb-48121ebe17d8",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/sphere.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "36fb11ae-a548-4264-9852-2ec37ac42601",
+          "Name": "Enemy",
+          "Position": "-200,-100,35",
+          "Scale": "0.5,0.5,1",
+          "Tags": "enemy",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "NavMeshAgent",
+              "__guid": "d56725ae-bb4d-4c48-9cbe-f29d225fb90e",
+              "Acceleration": 10000,
+              "Height": 30,
+              "MaxSpeed": 100,
+              "Radius": 16,
+              "Separation": 0.25,
+              "UpdatePosition": true,
+              "UpdateRotation": true
+            },
+            {
+              "__type": "Enemy",
+              "__guid": "d174be83-4a50-405e-aa98-241659e91eae",
+              "aggro_range": 300,
+              "attack_damage": 5,
+              "attack_windup": 1,
+              "attackingRange": 200,
+              "piercing": false,
+              "players_container": {
+                "_type": "gameobject",
+                "go": "6b6fb711-6467-4fcb-aa4b-a69398b01d3d"
+              },
+              "projectile_duration": 1,
+              "projectile_pool": {
+                "_type": "gameobject",
+                "go": "a2842977-2178-4570-b806-db38e051019c"
+              },
+              "projectile_speed": 5,
+              "re_adjustposition_interval": 0.3,
+              "rotation_speed": 15,
+              "rotation_time": 0.4,
+              "target_range": 10000,
+              "width": 2.5
+            },
+            {
+              "__type": "BoxCollider",
+              "__guid": "fbe0c22c-a568-4bc5-9c8f-32c3f8757554",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "60,60,100",
+              "Static": false
+            },
+            {
+              "__type": "Health",
+              "__guid": "f91c7641-6364-493c-b9a6-f1c16a16652a",
+              "max_health": 20
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "0bc08789-87c5-49fb-bc0a-a5525ece2574",
+              "Name": "Look Direction",
+              "Position": "64,0,5",
+              "Scale": "0.5,0.5,0.25",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "124c02f6-7ee9-4f47-ab9d-7f781ae4a451",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            },
+            {
+              "__guid": "2add75bd-90ea-4f37-9c9c-7d2115f012b8",
+              "Name": "Model",
+              "Position": "0,0,35",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "67c95853-8e4a-4efd-a449-6d058445cc98",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/sphere.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "7a94863a-2676-4346-90fb-5562e80e5dce",
+          "Name": "Enemy",
+          "Position": "-200,0,35",
+          "Scale": "0.5,0.5,1",
+          "Tags": "enemy",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "NavMeshAgent",
+              "__guid": "a3c52c6d-1387-4d46-bf81-325295460333",
+              "Acceleration": 10000,
+              "Height": 30,
+              "MaxSpeed": 100,
+              "Radius": 16,
+              "Separation": 0.25,
+              "UpdatePosition": true,
+              "UpdateRotation": true
+            },
+            {
+              "__type": "Enemy",
+              "__guid": "87cdd4bf-b499-48d6-b124-72455738e757",
+              "aggro_range": 300,
+              "attack_damage": 5,
+              "attack_windup": 1,
+              "attackingRange": 200,
+              "piercing": false,
+              "players_container": {
+                "_type": "gameobject",
+                "go": "6b6fb711-6467-4fcb-aa4b-a69398b01d3d"
+              },
+              "projectile_duration": 1,
+              "projectile_pool": {
+                "_type": "gameobject",
+                "go": "a2842977-2178-4570-b806-db38e051019c"
+              },
+              "projectile_speed": 5,
+              "re_adjustposition_interval": 0.3,
+              "rotation_speed": 15,
+              "rotation_time": 0.4,
+              "target_range": 10000,
+              "width": 2.5
+            },
+            {
+              "__type": "BoxCollider",
+              "__guid": "2f26bb88-2e05-4185-a18e-d7970692c2d0",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "60,60,100",
+              "Static": false
+            },
+            {
+              "__type": "Health",
+              "__guid": "ee3aa614-31ca-4fd5-a18d-5fb925fcb90a",
+              "max_health": 20
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "c64034ac-fbef-4b36-91f4-a7901a5722e4",
+              "Name": "Look Direction",
+              "Position": "64,0,5",
+              "Scale": "0.5,0.5,0.25",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "054099a4-6c9d-478b-8983-f739c0fe23a5",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            },
+            {
+              "__guid": "8c0018d5-0048-4f93-85ad-1dc92628f55a",
+              "Name": "Model",
+              "Position": "0,0,35",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "dcf0a2e1-bb9c-4719-90df-c3769f4e2891",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/sphere.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
             }
           ]
         }
@@ -461,7 +994,7 @@
     "TimeScale": 1,
     "UseFixedUpdate": true,
     "NavMesh": {
-      "Enabled": false,
+      "Enabled": true,
       "IncludeStaticBodies": true,
       "IncludeKeyframedBodies": true,
       "EditorAutoUpdate": true,
@@ -469,12 +1002,12 @@
       "AgentRadius": 16,
       "AgentStepSize": 18,
       "AgentMaxSlope": 40,
-      "ExcludedBodies": "",
+      "ExcludedBodies": "enemy,player",
       "IncludedBodies": ""
     }
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-03-04T12:40:53.3265052\u002B11:00",
+  "LastSaved": "2024-03-14T20:25:01.5068291\u002B11:00",
   "__references": []
 }

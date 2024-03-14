@@ -7,18 +7,44 @@ public sealed class Attack : Component
 	[Property] float projectile_duration = 1;
 	[Property] int attack_damage = 5;
 	[Property] float width = 2.5f;
+	[Property] bool piercing = true;
 	float timer;
 	[Property] GameObject projectile_pool = null;
+	public Pool pool;
+
+	Player player;
+
+	protected override void OnStart(){
+		pool = projectile_pool.Components.Get<Pool>();
+		player = GameObject.Components.Get<Player>();
+	}
 	
 	protected override void OnUpdate()
 	{
 		timer -= Time.Delta;
+		updateAttackKey();
+		
+	}
 
-		if(Input.Down("attack1") && timer < 0)
+	public void updateAttackKey(){
+		if(player.input_type == InputType.Controller){
+			updateAttack("attack_con");
+		}
+		else if(player.input_type == InputType.BaseKeyboard){
+			updateAttack("attack");
+		}
+		else{
+			updateAttack("attack_sec");
+		}
+	}
+
+	public void updateAttack(string input_name){
+		if(Input.Down(input_name) && timer < 0)
 		{
 			timer = attack_delay;
-			GameObject new_attack = projectile_pool.Components.Get<Pool>().getFromPool();
-			new_attack.Components.Get<Projectile>().projectObject(projectile_speed, Transform.Rotation.Forward, projectile_duration, attack_damage, true, GameObject, width);
+			GameObject new_attack = pool.getObject();
+			new_attack.Components.Get<Projectile>().projectObject(projectile_speed, Transform.Rotation.Forward, 
+				projectile_duration, attack_damage, true, GameObject, width, pool, piercing, false, 0);
 
 		}
 	}

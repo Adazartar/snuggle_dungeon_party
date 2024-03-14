@@ -2,15 +2,15 @@ using Sandbox;
 
 public sealed class Pool : Component
 {
-	List<GameObject> active_items =  new List<GameObject>();
-	List<GameObject> inactive_items = new List<GameObject>();
+	[Property] private GameObject prefab = null;
+	[Property] private int pool_size = 5;
+	[Property] private bool expandable = true;
+	private List<GameObject> free_list = new List<GameObject>();
+	private List<GameObject> used_list = new List<GameObject>();
 	protected override void OnStart()
 	{
-		foreach(var child in GameObject.Children){
-			if(child.Tags.Has("projectile")){
-				Log.Info("added projectile");
-				inactive_items.Add(child);
-			}
+		for(int i = 0; i < pool_size; i++){
+			generateNewObject();
 		}
 	}
 	protected override void OnUpdate()
@@ -18,19 +18,32 @@ public sealed class Pool : Component
 
 	}
 
-	public GameObject getFromPool()
+	private void generateNewObject()
 	{
-			GameObject new_item = inactive_items[inactive_items.Count - 1];
-			new_item.Enabled = true;
-			inactive_items.RemoveAt(inactive_items.Count - 1);
-			active_items.Add(new_item);
-			return new_item;
+		GameObject g = prefab.Clone();
+		g.Enabled = false;
+		free_list.Add(g);
 	}
 
-	public void returnToPool(GameObject projectile)
+	public GameObject getObject()
 	{
-		projectile.Enabled = false;
-		active_items.Remove(projectile);
-		inactive_items.Add(projectile);
+		if(free_list.Count == 0 && !expandable) return null;
+		else if(free_list.Count == 0) generateNewObject();
+
+		GameObject g = free_list[free_list.Count - 1];
+		free_list.RemoveAt(free_list.Count - 1);
+		used_list.Add(g);
+		g.Enabled = true;
+		return g;
+	}
+
+	public void returnObject(GameObject obj)
+	{
+		if(used_list.Contains(obj)){
+			obj.Transform.Position = Transform.Position;
+			obj.Enabled = false;
+			used_list.Remove(obj);
+			free_list.Add(obj);
+		}
 	}
 }
