@@ -1,5 +1,5 @@
 {
-  "Id": "dd6adb81-49ed-40f1-a959-261d32334617",
+  "Id": "d6308662-258c-4ff8-8988-b5b85b493ad1",
   "GameObjects": [
     {
       "__guid": "bfc59c12-1ed2-4f91-8956-a95a315eac3c",
@@ -320,7 +320,7 @@
               },
               "nearby_objects_handler": {
                 "_type": "component",
-                "component_id": "d5d7b90c-034c-4e10-88e4-4999389d405c",
+                "component_id": "8b6bde54-2405-4b67-ba32-ce744ac0dd74",
                 "go": "76e4c851-33c1-4773-a0b5-dfb482d09759",
                 "component_type": "NearbyObjects"
               },
@@ -353,7 +353,7 @@
             {
               "__type": "Health",
               "__guid": "0b5dc2c1-7e64-4155-a98b-9d297d9e80c2",
-              "max_health": 100
+              "max_health": 50
             },
             {
               "__type": "Ability",
@@ -379,7 +379,7 @@
             },
             {
               "__type": "NearbyObjects",
-              "__guid": "d5d7b90c-034c-4e10-88e4-4999389d405c"
+              "__guid": "8b6bde54-2405-4b67-ba32-ce744ac0dd74"
             }
           ],
           "Children": [
@@ -453,7 +453,7 @@
               },
               "nearby_objects_handler": {
                 "_type": "component",
-                "component_id": "eb302118-1202-4fbf-86f4-f3b8318d24e8",
+                "component_id": "40c597c6-dd0e-4d62-ba20-0bfcfe0b2a5d",
                 "go": "3a5cff7a-8e95-4166-89ca-5651110abb8a",
                 "component_type": "NearbyObjects"
               },
@@ -486,7 +486,7 @@
             {
               "__type": "Health",
               "__guid": "2d46132e-8bc3-4cba-8591-37d94c91a173",
-              "max_health": 100
+              "max_health": 90
             },
             {
               "__type": "Ability",
@@ -512,7 +512,7 @@
             },
             {
               "__type": "NearbyObjects",
-              "__guid": "eb302118-1202-4fbf-86f4-f3b8318d24e8"
+              "__guid": "40c597c6-dd0e-4d62-ba20-0bfcfe0b2a5d"
             }
           ],
           "Children": [
@@ -586,7 +586,7 @@
               },
               "nearby_objects_handler": {
                 "_type": "component",
-                "component_id": "ea4e0c74-a40e-46d0-871b-4a4e221ff7a3",
+                "component_id": "17beef78-f197-46ee-9c32-c85c69af5e0b",
                 "go": "d56e0f8a-2814-4ffb-8d87-9343bba16370",
                 "component_type": "NearbyObjects"
               },
@@ -619,7 +619,7 @@
             {
               "__type": "Health",
               "__guid": "8aee0fc1-3012-437a-bedf-5dc327fc49d8",
-              "max_health": 100
+              "max_health": 30
             },
             {
               "__type": "Ability",
@@ -645,7 +645,7 @@
             },
             {
               "__type": "NearbyObjects",
-              "__guid": "ea4e0c74-a40e-46d0-871b-4a4e221ff7a3"
+              "__guid": "17beef78-f197-46ee-9c32-c85c69af5e0b"
             }
           ],
           "Children": [
@@ -716,7 +716,7 @@
             },
             {
               "__type": "Enemy",
-              "__guid": "de0ae222-ef27-409c-b6fd-025cbaebe290",
+              "__guid": "31128a6c-0f8d-423e-9144-2cff3fb65598",
               "aggro_range": 300,
               "attack_damage": 5,
               "attack_windup": 1,
@@ -812,7 +812,7 @@
             },
             {
               "__type": "Enemy",
-              "__guid": "d174be83-4a50-405e-aa98-241659e91eae",
+              "__guid": "6a598670-262d-4f94-9e2c-d505af5c2bf7",
               "aggro_range": 300,
               "attack_damage": 5,
               "attack_windup": 1,
@@ -908,7 +908,7 @@
             },
             {
               "__type": "Enemy",
-              "__guid": "87cdd4bf-b499-48d6-b124-72455738e757",
+              "__guid": "6a8626cb-56df-4815-a0ec-771db8449119",
               "aggro_range": 300,
               "attack_damage": 5,
               "attack_windup": 1,
@@ -1008,6 +1008,6 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-03-14T20:25:01.5068291\u002B11:00",
+  "LastSaved": "2024-03-14T20:29:32.6757792\u002B11:00",
   "__references": []
 }
