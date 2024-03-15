@@ -17,7 +17,7 @@ public sealed class PaladinAbility : AbilityTemplate
     }
     public override void testing()
     {
-        Log.Info("paladin is working");
+        //Log.Info("paladin is working");
     }
     public override void useAbility(Player this_player)
     {

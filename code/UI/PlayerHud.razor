@@ -4,38 +4,52 @@
 
 <root>
     <div class="healthbars">
-        <div class="healthbar" style="display: @(health_components.Count > 0 ? "block" : "none")">
-            <div class="inner">
-                <div class="fill" style="width: @(Health.current_health/Health.max_health * 100)%"></div>
+        @foreach (var health_component in health_components){
+            <div class="healthbar">
+                <div class="inner">
+                    <div class="fill" style="width: @((float)health_component.current_health/health_component.max_health * 100)%"></div>
+                </div>
             </div>
-        </div>
-        <div class="healthbar" style="display: @(health_components.Count > 1 ? "block" : "none")">
-            <div class="inner">
-                <div class="fill"></div>
-            </div>
-        </div>
-        <div class="healthbar" style="display: @(health_components.Count > 2 ? "block" : "none")">
-            <div class="inner">
-                <div class="fill"></div>
-            </div>
-        </div>
+        }
     </div>
     <div class="abilitymeters">
-
+        @foreach (var player in player_list){
+            <div class="abilitymeter">
+                <div class="inner">
+                    <div class="fill" style="width: @((float)player.ability_meter/player.ability.ability_meter_max * 100)%"></div>
+                </div>
+            </div>
+        }
     </div>
 </root>
 
 @code
 {
-    [Property] List<GameObject> players = null;
-    
+    [Property] GameObject players = null;
+
+    List<Player> player_list = new List<Player>();
     List<Health> health_components = new List<Health>();
 
     protected override void OnStart()
     {
-        foreach(var player in players){
-            health_components.Add(player.Components.Get<Health>());
+        Log.Info("hey there");
+        foreach(var child in players.Children){
+            if(child.Enabled){
+                health_components.Add(child.Components.Get<Health>());
+                player_list.Add(child.Components.Get<Player>());
+            }
         }
     }
-    //protected override int BuildHash() => System.HashCode.Combine("");
+    protected override int BuildHash(){
+        List<int> current_healths = new List<int>();
+        foreach(Health health_component in health_components){
+            current_healths.Add(health_component.current_health);
+        }
+
+        List<int> current_ability = new List<int>();
+        foreach(Player player in player_list){
+            current_ability.Add(player.ability_meter);
+        }
+        return System.HashCode.Combine(current_healths, current_ability);
+    }
 }

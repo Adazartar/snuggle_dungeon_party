@@ -12,7 +12,7 @@ public sealed class Player : Component
 	[Property] float interact_cooldown = 1;
 	[Property] float interact_range = 100;
 	float interact_timer;
-	Ability ability;
+	public Ability ability;
 	public Health health;
 
 	Vector3 vel;

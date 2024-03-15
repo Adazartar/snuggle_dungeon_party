@@ -8,7 +8,7 @@ public sealed class WizardAbility : AbilityTemplate
     float width = 0.5f;
     public override void testing()
     {
-        Log.Info("wizard is working");
+        //Log.Info("wizard is working");
     }
     public override void useAbility(Player player)
     {

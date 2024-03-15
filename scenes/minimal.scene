@@ -1001,7 +1001,11 @@
         },
         {
           "__type": "PlayerHud",
-          "__guid": "a656e05b-dc62-447a-bd6c-922778b22bba"
+          "__guid": "a656e05b-dc62-447a-bd6c-922778b22bba",
+          "players": {
+            "_type": "gameobject",
+            "go": "6b6fb711-6467-4fcb-aa4b-a69398b01d3d"
+          }
         }
       ]
     }
@@ -1029,7 +1033,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-03-15T18:09:22.6831772\u002B11:00",
+  "LastSaved": "2024-03-15T23:22:40.4467134\u002B11:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": []

@@ -24,7 +24,6 @@ public sealed class Health : Component
 		else{
 			if(!unchangeable){
 				current_health += amount;
-				Log.Info($"{Tags} {current_health}");
 				if(current_health <= 0){
 					alive = false;
 					GameObject.Enabled = false;
