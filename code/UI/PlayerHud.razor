@@ -1,0 +1,41 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+
+<root>
+    <div class="healthbars">
+        <div class="healthbar" style="display: @(health_components.Count > 0 ? "block" : "none")">
+            <div class="inner">
+                <div class="fill" style="width: @(Health.current_health/Health.max_health * 100)%"></div>
+            </div>
+        </div>
+        <div class="healthbar" style="display: @(health_components.Count > 1 ? "block" : "none")">
+            <div class="inner">
+                <div class="fill"></div>
+            </div>
+        </div>
+        <div class="healthbar" style="display: @(health_components.Count > 2 ? "block" : "none")">
+            <div class="inner">
+                <div class="fill"></div>
+            </div>
+        </div>
+    </div>
+    <div class="abilitymeters">
+
+    </div>
+</root>
+
+@code
+{
+    [Property] List<GameObject> players = null;
+    
+    List<Health> health_components = new List<Health>();
+
+    protected override void OnStart()
+    {
+        foreach(var player in players){
+            health_components.Add(player.Components.Get<Health>());
+        }
+    }
+    //protected override int BuildHash() => System.HashCode.Combine("");
+}

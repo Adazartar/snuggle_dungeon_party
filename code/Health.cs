@@ -2,7 +2,7 @@ using Sandbox;
 
 public sealed class Health : Component
 {
-	[Property] int max_health = 100;
+	[Property] public int max_health = 100;
 	public int current_health;
 	bool alive = true;
 	public bool unchangeable = false;

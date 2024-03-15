@@ -1,5 +1,5 @@
 {
-  "Id": "d6308662-258c-4ff8-8988-b5b85b493ad1",
+  "__guid": "d6308662-258c-4ff8-8988-b5b85b493ad1",
   "GameObjects": [
     {
       "__guid": "bfc59c12-1ed2-4f91-8956-a95a315eac3c",
@@ -290,7 +290,7 @@
         {
           "__guid": "76e4c851-33c1-4773-a0b5-dfb482d09759",
           "Name": "Barbarian",
-          "Position": "0,0,35",
+          "Position": "0,40,35",
           "Scale": "0.5,0.5,1",
           "Tags": "player",
           "Enabled": true,
@@ -302,7 +302,7 @@
               "BodyGroups": 18446744073709551615,
               "Model": "models/dev/sphere.vmdl",
               "RenderType": "On",
-              "Tint": "1,1,1,1"
+              "Tint": "0,1,0,1"
             },
             {
               "__type": "Player",
@@ -435,7 +435,7 @@
               "BodyGroups": 18446744073709551615,
               "Model": "models/dev/sphere.vmdl",
               "RenderType": "On",
-              "Tint": "1,1,1,1"
+              "Tint": "1,1,0,1"
             },
             {
               "__type": "Player",
@@ -444,7 +444,7 @@
                 "_type": "gameobject",
                 "go": "4c0de541-69aa-45ec-bd57-02894c5d0170"
               },
-              "input_type": "SecondaryKeyboard",
+              "input_type": "Controller",
               "interact_cooldown": 0.2,
               "interact_range": 100,
               "interactables": {
@@ -556,7 +556,7 @@
         {
           "__guid": "d56e0f8a-2814-4ffb-8d87-9343bba16370",
           "Name": "Wizard",
-          "Position": "0,0,35",
+          "Position": "0,-40,35",
           "Scale": "0.5,0.5,1",
           "Tags": "player",
           "Enabled": true,
@@ -568,7 +568,7 @@
               "BodyGroups": 18446744073709551615,
               "Model": "models/dev/sphere.vmdl",
               "RenderType": "On",
-              "Tint": "1,1,1,1"
+              "Tint": "0,1,0.93333,1"
             },
             {
               "__type": "Player",
@@ -577,7 +577,7 @@
                 "_type": "gameobject",
                 "go": "4c0de541-69aa-45ec-bd57-02894c5d0170"
               },
-              "input_type": "Controller",
+              "input_type": "SecondaryKeyboard",
               "interact_cooldown": 0.2,
               "interact_range": 100,
               "interactables": {
@@ -784,7 +784,7 @@
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/dev/sphere.vmdl",
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "1,0,0,1"
                 }
               ]
             }
@@ -880,7 +880,7 @@
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/dev/sphere.vmdl",
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "1,0,0,1"
                 }
               ]
             }
@@ -976,11 +976,32 @@
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/dev/sphere.vmdl",
                   "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "Tint": "1,0,0,1"
                 }
               ]
             }
           ]
+        }
+      ]
+    },
+    {
+      "__guid": "fce5f717-b509-49c3-bd87-be8e2f7b1569",
+      "Name": "Screen",
+      "Position": "-67.81259,-117.2824,72.38522",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "ScreenPanel",
+          "__guid": "5a28362f-c87b-4579-b27a-1b8491ba2930",
+          "AutoScreenScale": true,
+          "Opacity": 1,
+          "Scale": 1,
+          "ZIndex": 100
+        },
+        {
+          "__type": "PlayerHud",
+          "__guid": "a656e05b-dc62-447a-bd6c-922778b22bba"
         }
       ]
     }
@@ -1008,6 +1029,8 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-03-14T20:29:32.6757792\u002B11:00",
+  "LastSaved": "2024-03-15T18:09:22.6831772\u002B11:00",
+  "ResourceVersion": 1,
+  "__version": 1,
   "__references": []
 }
