@@ -48,62 +48,9 @@
       ]
     },
     {
-      "__guid": "6ad70641-3c6c-4402-9c85-9a4969af4764",
-      "Name": "Plane",
-      "Scale": "5,5,5",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "Components": [
-        {
-          "__type": "ModelRenderer",
-          "__guid": "ff5a4898-3ee5-4d07-9972-29760ec203b4",
-          "BodyGroups": 18446744073709551615,
-          "MaterialOverride": "materials/default.vmat",
-          "Model": "models/dev/plane.vmdl",
-          "RenderType": "On",
-          "Tint": "0.39546,0.51163,0.27128,1"
-        },
-        {
-          "__type": "BoxCollider",
-          "__guid": "f9b7c4f9-a658-46b3-bd7d-fd1996a67583",
-          "Center": "0,0,-5",
-          "IsTrigger": false,
-          "Scale": "100,100,10",
-          "Static": false
-        }
-      ]
-    },
-    {
-      "__guid": "5b483a09-bbf2-4949-98c7-a73b789d0ee7",
-      "Name": "Wall",
-      "Position": "124.6689,-15.24236,43.67614",
-      "Scale": "0.5632889,7.633394,0.5632889",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "Components": [
-        {
-          "__type": "ModelRenderer",
-          "__guid": "fd5c51a7-f3d5-4c48-8bdb-9cfa974dc2fb",
-          "BodyGroups": 18446744073709551615,
-          "MaterialOverride": "materials/default.vmat",
-          "Model": "models/dev/box.vmdl",
-          "RenderType": "On",
-          "Tint": "1,0,0.93333,1"
-        },
-        {
-          "__type": "BoxCollider",
-          "__guid": "4f8f7d07-7028-4b30-9139-22ca61daf6ef",
-          "Center": "0,0,0",
-          "IsTrigger": false,
-          "Scale": "50,50,50",
-          "Static": false
-        }
-      ]
-    },
-    {
       "__guid": "3ee1c9f4-07be-4e0b-8b23-67bee2d8ec8a",
       "Name": "Camera",
-      "Position": "0,0,800",
+      "Position": "0,0,1400",
       "Rotation": "0,0.7071068,0,0.7071068",
       "Enabled": true,
       "NetworkMode": 2,
@@ -172,7 +119,7 @@
     {
       "__guid": "a2842977-2178-4570-b806-db38e051019c",
       "Name": "Pool",
-      "Position": "7.581024,9.416229,282.2225",
+      "Position": "0,0,1000",
       "Enabled": true,
       "NetworkMode": 2,
       "Components": [
@@ -183,70 +130,8 @@
           "pool_size": 5,
           "prefab": {
             "_type": "gameobject",
-            "prefab": "code/projectile.prefab"
+            "prefab": "code/projectile_prefab.prefab"
           }
-        }
-      ],
-      "Children": [
-        {
-          "__guid": "5d992e59-e86c-455c-80b8-c47c714f80d5",
-          "Name": "attack",
-          "Position": "0,0,0",
-          "Scale": "0.4,2.5,0.4",
-          "Tags": "projectile",
-          "NetworkMode": 2,
-          "Components": [
-            {
-              "__type": "ModelRenderer",
-              "__guid": "75f9e73e-03c3-428d-b996-b8e9ad109962",
-              "BodyGroups": 18446744073709551615,
-              "Model": "models/dev/box.vmdl",
-              "RenderType": "On",
-              "Tint": "1,0,0,1"
-            },
-            {
-              "__type": "BoxCollider",
-              "__guid": "2863f822-d6ee-425d-8b29-e5ee2b3ba71f",
-              "Center": "0,0,0",
-              "IsTrigger": true,
-              "Scale": "50,50,50",
-              "Static": false
-            },
-            {
-              "__type": "Projectile",
-              "__guid": "40681321-3146-4a0d-804b-1cfa08ed16ad"
-            }
-          ]
-        },
-        {
-          "__guid": "76830988-b6db-4bc4-a168-ea120494d623",
-          "Name": "attack",
-          "Position": "0,0,0",
-          "Scale": "0.4,2.5,0.4",
-          "Tags": "projectile",
-          "NetworkMode": 2,
-          "Components": [
-            {
-              "__type": "ModelRenderer",
-              "__guid": "29904b17-c235-447c-925a-e6a199a6ce88",
-              "BodyGroups": 18446744073709551615,
-              "Model": "models/dev/box.vmdl",
-              "RenderType": "On",
-              "Tint": "1,0,0,1"
-            },
-            {
-              "__type": "BoxCollider",
-              "__guid": "d00e7f33-4cd2-4898-aef9-700bbbd94841",
-              "Center": "0,0,0",
-              "IsTrigger": true,
-              "Scale": "50,50,50",
-              "Static": false
-            },
-            {
-              "__type": "Projectile",
-              "__guid": "6c03b71f-9b86-4e5f-82a2-6677e1accc36"
-            }
-          ]
         }
       ]
     },
@@ -290,10 +175,8 @@
         {
           "__guid": "76e4c851-33c1-4773-a0b5-dfb482d09759",
           "Name": "Barbarian",
-          "Position": "0,40,35",
-          "Scale": "0.5,0.5,1",
+          "Position": "200,40,35",
           "Tags": "player",
-          "Enabled": true,
           "NetworkMode": 2,
           "Components": [
             {
@@ -341,6 +224,7 @@
               "__guid": "f4166c5e-825f-4a7e-a5a3-fd1307fcffb6",
               "attack_damage": 5,
               "attack_delay": 0.1,
+              "element": "None",
               "piercing": true,
               "projectile_duration": 0.3,
               "projectile_pool": {
@@ -353,6 +237,7 @@
             {
               "__type": "Health",
               "__guid": "0b5dc2c1-7e64-4155-a98b-9d297d9e80c2",
+              "current_health": 0,
               "max_health": 50
             },
             {
@@ -423,10 +308,8 @@
         {
           "__guid": "3a5cff7a-8e95-4166-89ca-5651110abb8a",
           "Name": "Paladin",
-          "Position": "0,0,35",
-          "Scale": "0.5,0.5,1",
+          "Position": "200,0,35",
           "Tags": "player",
-          "Enabled": true,
           "NetworkMode": 2,
           "Components": [
             {
@@ -474,6 +357,7 @@
               "__guid": "c2fd13de-27b5-4df5-bcdd-5d757d9bb0c5",
               "attack_damage": 5,
               "attack_delay": 0.1,
+              "element": "None",
               "piercing": true,
               "projectile_duration": 0.3,
               "projectile_pool": {
@@ -486,6 +370,7 @@
             {
               "__type": "Health",
               "__guid": "2d46132e-8bc3-4cba-8591-37d94c91a173",
+              "current_health": 0,
               "max_health": 90
             },
             {
@@ -557,7 +442,6 @@
           "__guid": "d56e0f8a-2814-4ffb-8d87-9343bba16370",
           "Name": "Wizard",
           "Position": "0,-40,35",
-          "Scale": "0.5,0.5,1",
           "Tags": "player",
           "Enabled": true,
           "NetworkMode": 2,
@@ -606,20 +490,22 @@
               "__type": "Attack",
               "__guid": "c20d157d-c595-42c1-b41f-e2f2a08e6678",
               "attack_damage": 5,
-              "attack_delay": 0.1,
+              "attack_delay": 0.5,
+              "element": "Ground",
               "piercing": true,
               "projectile_duration": 0.3,
               "projectile_pool": {
                 "_type": "gameobject",
                 "go": "a2842977-2178-4570-b806-db38e051019c"
               },
-              "projectile_speed": 5,
+              "projectile_speed": 10,
               "width": 2.5
             },
             {
               "__type": "Health",
               "__guid": "8aee0fc1-3012-437a-bedf-5dc327fc49d8",
-              "max_health": 30
+              "current_health": 0,
+              "max_health": 300
             },
             {
               "__type": "Ability",
@@ -698,9 +584,7 @@
           "__guid": "15e3be92-876e-4927-abd9-2ade58748b3c",
           "Name": "Enemy",
           "Position": "-200,-200,35",
-          "Scale": "0.5,0.5,1",
           "Tags": "enemy",
-          "Enabled": true,
           "NetworkMode": 2,
           "Components": [
             {
@@ -731,12 +615,15 @@
                 "_type": "gameobject",
                 "go": "a2842977-2178-4570-b806-db38e051019c"
               },
-              "projectile_speed": 5,
+              "projectile_speed": 3,
               "re_adjustposition_interval": 0.3,
               "rotation_speed": 15,
               "rotation_time": 0.4,
+              "slow_duration": 2,
+              "slowed_speed": 60,
+              "speed": 100,
               "target_range": 10000,
-              "width": 2.5
+              "width": 0.5
             },
             {
               "__type": "BoxCollider",
@@ -749,6 +636,7 @@
             {
               "__type": "Health",
               "__guid": "b735f551-e99b-462f-a491-35e842dbf4ef",
+              "current_health": 0,
               "max_health": 20
             }
           ],
@@ -794,9 +682,7 @@
           "__guid": "36fb11ae-a548-4264-9852-2ec37ac42601",
           "Name": "Enemy",
           "Position": "-200,-100,35",
-          "Scale": "0.5,0.5,1",
           "Tags": "enemy",
-          "Enabled": true,
           "NetworkMode": 2,
           "Components": [
             {
@@ -827,10 +713,13 @@
                 "_type": "gameobject",
                 "go": "a2842977-2178-4570-b806-db38e051019c"
               },
-              "projectile_speed": 5,
+              "projectile_speed": 3,
               "re_adjustposition_interval": 0.3,
               "rotation_speed": 15,
               "rotation_time": 0.4,
+              "slow_duration": 2,
+              "slowed_speed": 60,
+              "speed": 100,
               "target_range": 10000,
               "width": 2.5
             },
@@ -845,6 +734,7 @@
             {
               "__type": "Health",
               "__guid": "f91c7641-6364-493c-b9a6-f1c16a16652a",
+              "current_health": 0,
               "max_health": 20
             }
           ],
@@ -890,7 +780,6 @@
           "__guid": "7a94863a-2676-4346-90fb-5562e80e5dce",
           "Name": "Enemy",
           "Position": "-200,0,35",
-          "Scale": "0.5,0.5,1",
           "Tags": "enemy",
           "Enabled": true,
           "NetworkMode": 2,
@@ -923,10 +812,13 @@
                 "_type": "gameobject",
                 "go": "a2842977-2178-4570-b806-db38e051019c"
               },
-              "projectile_speed": 5,
+              "projectile_speed": 3,
               "re_adjustposition_interval": 0.3,
               "rotation_speed": 15,
               "rotation_time": 0.4,
+              "slow_duration": 2,
+              "slowed_speed": 60,
+              "speed": 100,
               "target_range": 10000,
               "width": 2.5
             },
@@ -941,6 +833,7 @@
             {
               "__type": "Health",
               "__guid": "ee3aa614-31ca-4fd5-a18d-5fb925fcb90a",
+              "current_health": 0,
               "max_health": 20
             }
           ],
@@ -987,7 +880,7 @@
     {
       "__guid": "fce5f717-b509-49c3-bd87-be8e2f7b1569",
       "Name": "Screen",
-      "Position": "-67.81259,-117.2824,72.38522",
+      "Position": "100,1000,72.38522",
       "Enabled": true,
       "NetworkMode": 2,
       "Components": [
@@ -1006,6 +899,154 @@
             "_type": "gameobject",
             "go": "6b6fb711-6467-4fcb-aa4b-a69398b01d3d"
           }
+        }
+      ]
+    },
+    {
+      "__guid": "455b38f8-ab72-4c2e-894c-adc0f732b907",
+      "Name": "room",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Children": [
+        {
+          "__guid": "5b483a09-bbf2-4949-98c7-a73b789d0ee7",
+          "Name": "room_edge",
+          "Position": "410,-9,30",
+          "Scale": "0.5,17,1",
+          "Tags": "wall",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__guid": "fd5c51a7-f3d5-4c48-8bdb-9cfa974dc2fb",
+              "BodyGroups": 18446744073709551615,
+              "MaterialOverride": "materials/default.vmat",
+              "Model": "models/dev/box.vmdl",
+              "RenderType": "On",
+              "Tint": "1,0,0.93333,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "__guid": "4f8f7d07-7028-4b30-9139-22ca61daf6ef",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "50,50,50",
+              "Static": false
+            }
+          ]
+        },
+        {
+          "__guid": "0c9397a1-87d7-45de-918a-6fbd950b4325",
+          "Name": "room_edge",
+          "Position": "-410,-9,30",
+          "Scale": "0.5,17,1",
+          "Tags": "wall",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__guid": "12adce0d-b5bb-4e18-b817-be56fd6d5e3a",
+              "BodyGroups": 18446744073709551615,
+              "MaterialOverride": "materials/default.vmat",
+              "Model": "models/dev/box.vmdl",
+              "RenderType": "On",
+              "Tint": "1,0,0.93333,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "__guid": "40035be1-7c5d-4147-bfa5-9dbbe1fd344f",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "50,50,50",
+              "Static": false
+            }
+          ]
+        },
+        {
+          "__guid": "a1a7731a-8780-4819-81dd-b5eec02dbc2b",
+          "Name": "room_edge",
+          "Position": "9,-410,30",
+          "Rotation": "0,0,0.7071068,0.7071068",
+          "Scale": "0.5,17,1",
+          "Tags": "wall",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__guid": "78c89259-e295-4cd5-8916-ae194e12fdf5",
+              "BodyGroups": 18446744073709551615,
+              "MaterialOverride": "materials/default.vmat",
+              "Model": "models/dev/box.vmdl",
+              "RenderType": "On",
+              "Tint": "1,0,0.93333,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "__guid": "3a67a4fd-a454-410b-8a73-6aa29f0cba45",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "50,50,50",
+              "Static": false
+            }
+          ]
+        },
+        {
+          "__guid": "3316393d-f030-447d-b692-5ad77f069f6f",
+          "Name": "room_edge",
+          "Position": "8.999951,410,30",
+          "Rotation": "0,0,0.7071068,0.7071068",
+          "Scale": "0.5,17,1",
+          "Tags": "wall",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__guid": "37048c64-8408-4fc3-8942-aba6816be54a",
+              "BodyGroups": 18446744073709551615,
+              "MaterialOverride": "materials/default.vmat",
+              "Model": "models/dev/box.vmdl",
+              "RenderType": "On",
+              "Tint": "1,0,0.93333,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "__guid": "90ee4ae7-84e5-4418-bba9-d03f1edda207",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "50,50,50",
+              "Static": false
+            }
+          ]
+        },
+        {
+          "__guid": "6ad70641-3c6c-4402-9c85-9a4969af4764",
+          "Name": "Plane",
+          "Scale": "8,8,1",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__guid": "ff5a4898-3ee5-4d07-9972-29760ec203b4",
+              "BodyGroups": 18446744073709551615,
+              "MaterialOverride": "materials/default.vmat",
+              "Model": "models/dev/plane.vmdl",
+              "RenderType": "On",
+              "Tint": "0.39546,0.51163,0.27128,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "__guid": "f9b7c4f9-a658-46b3-bd7d-fd1996a67583",
+              "Center": "0,0,-5",
+              "IsTrigger": false,
+              "Scale": "100,100,10",
+              "Static": false
+            }
+          ]
         }
       ]
     }
@@ -1033,7 +1074,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-03-15T23:22:40.4467134\u002B11:00",
+  "LastSaved": "2024-03-16T18:02:52.1433175\u002B11:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": []

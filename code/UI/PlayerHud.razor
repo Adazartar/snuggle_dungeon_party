@@ -32,7 +32,7 @@
 
     protected override void OnStart()
     {
-        Log.Info("hey there");
+        Log.Info("start");
         foreach(var child in players.Children){
             if(child.Enabled){
                 health_components.Add(child.Components.Get<Health>());

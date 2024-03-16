@@ -3,7 +3,7 @@ using Sandbox;
 public sealed class Health : Component
 {
 	[Property] public int max_health = 100;
-	public int current_health;
+	[Property] public int current_health;
 	bool alive = true;
 	public bool unchangeable = false;
 	
@@ -27,6 +27,9 @@ public sealed class Health : Component
 				if(current_health <= 0){
 					alive = false;
 					GameObject.Enabled = false;
+				}
+				else if(current_health > max_health){
+					current_health = max_health;
 				}
 			}
 			

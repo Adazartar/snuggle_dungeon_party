@@ -52,17 +52,17 @@
         },
         {
           "Name": "attack",
-          "KeyboardCode": "2",
+          "KeyboardCode": "V",
           "GroupName": "Actions"
         },
         {
           "Name": "ability",
-          "KeyboardCode": "3",
+          "KeyboardCode": "O",
           "GroupName": "Actions"
         },
         {
           "Name": "attack_sec",
-          "KeyboardCode": "M",
+          "KeyboardCode": "P",
           "GroupName": "Actions"
         },
         {
@@ -193,12 +193,12 @@
         },
         {
           "Name": "interact",
-          "KeyboardCode": "1",
+          "KeyboardCode": "N",
           "GroupName": "Actions"
         },
         {
           "Name": "interact_sec",
-          "KeyboardCode": "B",
+          "KeyboardCode": "I",
           "GroupName": "Actions"
         },
         {
@@ -236,7 +236,8 @@
           "GamepadCode": "LeftTrigger",
           "GroupName": "Actions"
         }
-      ]
+      ],
+      "__guid": "26f7a694-6312-48f9-8ac0-40603336cae2"
     }
   }
 }

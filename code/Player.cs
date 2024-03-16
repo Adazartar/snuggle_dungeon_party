@@ -14,6 +14,7 @@ public sealed class Player : Component
 	float interact_timer;
 	public Ability ability;
 	public Health health;
+	public Attack attack;
 
 	Vector3 vel;
 	Rotation target_rotation;
@@ -24,9 +25,9 @@ public sealed class Player : Component
 	[Property] public InputType input_type = InputType.BaseKeyboard;
 	protected override void OnStart()
 	{
-		Log.Info("We have started");
 		ability = GameObject.Components.Get<Ability>();
 		health = GameObject.Components.Get<Health>();
+		attack = GameObject.Components.Get<Attack>();
 		interactable_objects = interactables.Children;
 		enemy_objects = enemies.Children;
 
@@ -95,6 +96,7 @@ public sealed class Player : Component
 		Transform.Position += vel.Normal * speed * Time.Delta * 10;
 	
 	}
+	
 
 	private void updateRotate()
 	{
@@ -175,7 +177,7 @@ public sealed class Player : Component
         }
 
         if (closestInteractable != null){
-            closestInteractable.Components.Get<InteractableObject>().interact();
+            closestInteractable.Components.Get<InteractableObject>().interact(this);
 			closestInteractable.Enabled = false;
         }
 	}

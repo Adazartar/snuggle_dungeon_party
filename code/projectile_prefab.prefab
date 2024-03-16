@@ -1,0 +1,46 @@
+{
+  "RootObject": {
+    "__guid": "02ac0379-2c8e-4c15-9a96-e6cde9a7103f",
+    "Name": "projectile_prefab",
+    "Enabled": true,
+    "NetworkMode": 2,
+    "Components": [
+      {
+        "__type": "BoxCollider",
+        "__guid": "0216664b-75a9-441e-8d09-40b62edea514",
+        "Center": "0,0,0",
+        "IsTrigger": true,
+        "Scale": "50,50,50",
+        "Static": false
+      },
+      {
+        "__type": "ModelRenderer",
+        "__guid": "6796d9d9-0cc4-450d-b5fc-9f8faed14b3b",
+        "BodyGroups": 18446744073709551615,
+        "RenderType": "On",
+        "Tint": "1,0,0,1"
+      },
+      {
+        "__type": "Projectile",
+        "__guid": "b5bd9e3e-ebea-4a3b-ab63-271ba50a65ad",
+        "nearby_objects_handler": {
+          "_type": "component",
+          "component_id": "f1fd0f0b-552f-4905-916c-9e2b0d8b3baa",
+          "go": "02ac0379-2c8e-4c15-9a96-e6cde9a7103f",
+          "component_type": "NearbyObjects"
+        }
+      },
+      {
+        "__type": "NearbyObjects",
+        "__guid": "f1fd0f0b-552f-4905-916c-9e2b0d8b3baa"
+      }
+    ],
+    "Children": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__version": 1,
+  "__references": []
+}

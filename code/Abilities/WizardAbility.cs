@@ -16,6 +16,6 @@ public sealed class WizardAbility : AbilityTemplate
         Pool projectile_pool = player.Components.Get<Attack>().pool;
         GameObject new_attack = projectile_pool.getObject();
         new_attack.Components.Get<Projectile>().projectObject(projectile_speed, Transform.Rotation.Forward, 
-            projectile_duration, attack_damage, true, GameObject, width, projectile_pool, false, true, 300);
+            projectile_duration, attack_damage, true, GameObject, width, projectile_pool, false, true, 300, ElementType.None);
     }
 }

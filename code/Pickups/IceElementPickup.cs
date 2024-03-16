@@ -6,8 +6,10 @@ public sealed class IceElementPickup : PickupTemplate
     {
         Log.Info("ice element is working");
     }
-    public override void interact()
+    public override void interact(Player player)
     {
         Log.Info("ice element picked up");
+        player.attack.element = ElementType.Ice;
+
     }
 }
