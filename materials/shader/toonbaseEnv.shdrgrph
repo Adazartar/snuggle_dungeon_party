@@ -1,0 +1,611 @@
+{
+  "Model": null,
+  "Description": "",
+  "BlendMode": "Opaque",
+  "nodes": [
+    {
+      "_class": "Result",
+      "DefaultOpacity": 1,
+      "DefaultRoughness": 1,
+      "DefaultMetalness": 0,
+      "DefaultAmbientOcclusion": 1,
+      "Identifier": "0",
+      "Position": "160,-96",
+      "Albedo": {
+        "Identifier": "39",
+        "Output": "Result"
+      },
+      "Emission": {
+        "Identifier": "35",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "ViewDirection",
+      "Identifier": "1",
+      "Position": "-1776,112"
+    },
+    {
+      "_class": "Float",
+      "Min": -1,
+      "Max": 2,
+      "Value": 0.8659146,
+      "Name": "ShadowHighlightPwr",
+      "IsAttribute": false,
+      "UI": {},
+      "Identifier": "2",
+      "Position": "-1552,-16"
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "3",
+      "Position": "-1376,48",
+      "A": {
+        "Identifier": "5",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "7",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "WorldNormal",
+      "Identifier": "4",
+      "Position": "-1776,48"
+    },
+    {
+      "_class": "DotProduct",
+      "Identifier": "5",
+      "Position": "-1552,48",
+      "InputA": {
+        "Identifier": "4",
+        "Output": "Result"
+      },
+      "InputB": {
+        "Identifier": "1",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float",
+      "Min": -1,
+      "Max": 5,
+      "Value": 0.43853116,
+      "Name": "F_ShadowPwr",
+      "IsAttribute": false,
+      "UI": {},
+      "Identifier": "6",
+      "Position": "-1552,144"
+    },
+    {
+      "_class": "Float3",
+      "Value": "0,0,0",
+      "Name": "DirectionMulti",
+      "IsAttribute": false,
+      "UI": {},
+      "Identifier": "7",
+      "Position": "-1552,208"
+    },
+    {
+      "_class": "Subtract",
+      "DefaultA": 1,
+      "DefaultB": 0,
+      "Identifier": "8",
+      "Position": "-1280,-48",
+      "B": {
+        "Identifier": "3",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 1,
+      "Value": 0,
+      "Name": "ShadowHighlightSS_Min",
+      "IsAttribute": false,
+      "UI": {},
+      "Identifier": "9",
+      "Position": "-1168,-112"
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 1,
+      "Value": 0.24161862,
+      "Name": "ShadowHighlightSS_Max",
+      "IsAttribute": false,
+      "UI": {},
+      "Identifier": "10",
+      "Position": "-1168,-48"
+    },
+    {
+      "_class": "Fresnel",
+      "DefaultPower": 10,
+      "Identifier": "11",
+      "Position": "-1168,-224",
+      "Direction": {
+        "Identifier": "8",
+        "Output": "Result"
+      },
+      "Power": {
+        "Identifier": "2",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 1,
+      "Value": 0,
+      "Name": "F_ShadowSS_Min",
+      "IsAttribute": false,
+      "UI": {},
+      "Identifier": "12",
+      "Position": "-1168,128"
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 1,
+      "Value": 0.8929459,
+      "Name": "F_ShadowSS_Max",
+      "IsAttribute": false,
+      "UI": {},
+      "Identifier": "13",
+      "Position": "-1168,192"
+    },
+    {
+      "_class": "Fresnel",
+      "DefaultPower": 10,
+      "Identifier": "14",
+      "Position": "-1168,16",
+      "Direction": {
+        "Identifier": "8",
+        "Output": "Result"
+      },
+      "Power": {
+        "Identifier": "6",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float",
+      "Min": -1,
+      "Max": 5,
+      "Value": 1.7116337,
+      "Name": "F_HighlightPwr",
+      "IsAttribute": false,
+      "UI": {},
+      "Identifier": "15",
+      "Position": "-1248,368"
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 5,
+      "Value": 0,
+      "Name": "F_HighlightSS_Min",
+      "IsAttribute": false,
+      "UI": {},
+      "Identifier": "16",
+      "Position": "-1040,448"
+    },
+    {
+      "_class": "Fresnel",
+      "DefaultPower": 10,
+      "Identifier": "17",
+      "Position": "-1040,320",
+      "Direction": {
+        "Identifier": "3",
+        "Output": "Result"
+      },
+      "Power": {
+        "Identifier": "15",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 5,
+      "Value": 1,
+      "Name": "F_HighlightSS_Max",
+      "IsAttribute": false,
+      "UI": {},
+      "Identifier": "18",
+      "Position": "-1040,512"
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": "materials/textures/palette01_color.png",
+      "Sampler": {},
+      "UI": {
+        "Name": "Albedo Map",
+        "Default": "1,1,1,1",
+        "SrgbRead": true,
+        "PrimaryGroup": {
+          "Name": ""
+        },
+        "SecondaryGroup": {
+          "Name": ""
+        },
+        "CreateInput": "CreateInputTexture2D"
+      },
+      "Identifier": "19",
+      "Position": "-1168,-592"
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 2,
+      "Value": 0,
+      "Name": "ShadowDark",
+      "IsAttribute": false,
+      "UI": {},
+      "Identifier": "20",
+      "Position": "-864,-192"
+    },
+    {
+      "_class": "SmoothStep",
+      "Identifier": "21",
+      "Position": "-864,16",
+      "Input": {
+        "Identifier": "14",
+        "Output": "Result"
+      },
+      "Edge1": {
+        "Identifier": "12",
+        "Output": "Result"
+      },
+      "Edge2": {
+        "Identifier": "13",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float4",
+      "Value": "1,1,1,1",
+      "Name": "Tint",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Color"
+      },
+      "Identifier": "22",
+      "Position": "-1168,-400"
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 1,
+      "Value": 0,
+      "Name": "ShadowDark",
+      "IsAttribute": false,
+      "UI": {},
+      "Identifier": "23",
+      "Position": "-864,128"
+    },
+    {
+      "_class": "SmoothStep",
+      "Identifier": "24",
+      "Position": "-864,-112",
+      "Input": {
+        "Identifier": "11",
+        "Output": "Result"
+      },
+      "Edge1": {
+        "Identifier": "9",
+        "Output": "Result"
+      },
+      "Edge2": {
+        "Identifier": "10",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float4",
+      "Value": "1,1,1,1",
+      "Name": "FresnelColour",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Color"
+      },
+      "Identifier": "25",
+      "Position": "-816,528"
+    },
+    {
+      "_class": "SmoothStep",
+      "Identifier": "26",
+      "Position": "-816,416",
+      "Input": {
+        "Identifier": "17",
+        "Output": "Result"
+      },
+      "Edge1": {
+        "Identifier": "16",
+        "Output": "Result"
+      },
+      "Edge2": {
+        "Identifier": "18",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "27",
+      "Position": "-592,400",
+      "A": {
+        "Identifier": "26",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "25",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "28",
+      "Position": "-912,-304",
+      "A": {
+        "Identifier": "19",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "22",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "29",
+      "Position": "-576,0",
+      "A": {
+        "Identifier": "23",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "21",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "30",
+      "Position": "-576,-96",
+      "A": {
+        "Identifier": "20",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "24",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Subtract",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "31",
+      "Position": "-432,-64",
+      "A": {
+        "Identifier": "29",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "30",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "32",
+      "Position": "-272,-96",
+      "A": {
+        "Identifier": "39",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "31",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 1,
+      "Value": 0.5503927,
+      "Name": "EmmissionPower",
+      "IsAttribute": false,
+      "UI": {},
+      "Identifier": "33",
+      "Position": "-192,64"
+    },
+    {
+      "_class": "Add",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "34",
+      "Position": "-144,-64",
+      "A": {
+        "Identifier": "32",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "27",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "35",
+      "Position": "0,-64",
+      "A": {
+        "Identifier": "34",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "33",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "VoronoiNoise",
+      "AngleOffset": 3.14,
+      "CellDensity": 10,
+      "Worley": false,
+      "Identifier": "36",
+      "Position": "-1168,-720",
+      "A": {
+        "Identifier": "41",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "42",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "VoronoiNoise",
+      "AngleOffset": 3.14,
+      "CellDensity": 10,
+      "Worley": false,
+      "Identifier": "37",
+      "Position": "-1168,-848",
+      "A": {
+        "Identifier": "45",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "46",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "38",
+      "Position": "-928,-704",
+      "A": {
+        "Identifier": "37",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "36",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "39",
+      "Position": "-432,-160",
+      "A": {
+        "Identifier": "44",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "28",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "40",
+      "Position": "-656,-480",
+      "A": {
+        "Identifier": "38",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "43",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float",
+      "Min": -5,
+      "Max": 1000,
+      "Value": 1,
+      "Name": "NoiseAngle",
+      "IsAttribute": false,
+      "UI": {},
+      "Identifier": "41",
+      "Position": "-1472,-720"
+    },
+    {
+      "_class": "Float",
+      "Min": -5,
+      "Max": 1000,
+      "Value": 0,
+      "Name": "CellDensity",
+      "IsAttribute": false,
+      "UI": {},
+      "Identifier": "42",
+      "Position": "-1472,-656"
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 1,
+      "Value": 1,
+      "Name": "NoiseOpacity",
+      "IsAttribute": false,
+      "UI": {},
+      "Identifier": "43",
+      "Position": "-864,-448"
+    },
+    {
+      "_class": "Subtract",
+      "DefaultA": 1,
+      "DefaultB": 1,
+      "Identifier": "44",
+      "Position": "-496,-400",
+      "B": {
+        "Identifier": "40",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0.5,
+      "DefaultB": 1,
+      "Identifier": "45",
+      "Position": "-1280,-896",
+      "B": {
+        "Identifier": "41",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0.5,
+      "DefaultB": 1,
+      "Identifier": "46",
+      "Position": "-1280,-800",
+      "B": {
+        "Identifier": "42",
+        "Output": "Result"
+      }
+    }
+  ]
+}

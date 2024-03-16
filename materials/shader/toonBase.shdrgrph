@@ -10,35 +10,41 @@
       "DefaultMetalness": 0,
       "DefaultAmbientOcclusion": 1,
       "Identifier": "0",
-      "Position": "512,-208",
+      "Position": "624,-624",
       "Albedo": {
-        "Identifier": "11",
+        "Identifier": "2",
         "Output": "Result"
       },
       "Emission": {
-        "Identifier": "18",
+        "Identifier": "23",
         "Output": "Result"
       }
     },
     {
       "_class": "TextureSampler",
-      "Image": "materials/dev/white_color.tga",
+      "Image": "materials/textures/palette01_color.png",
       "Sampler": {},
       "UI": {
         "Name": "Albedo Map",
         "Default": "1,1,1,1",
         "SrgbRead": true,
+        "PrimaryGroup": {
+          "Name": ""
+        },
+        "SecondaryGroup": {
+          "Name": ""
+        },
         "CreateInput": "CreateInputTexture2D"
       },
       "Identifier": "1",
-      "Position": "-752,-704"
+      "Position": "-384,-1168"
     },
     {
       "_class": "Multiply",
       "DefaultA": 0,
       "DefaultB": 1,
       "Identifier": "2",
-      "Position": "-496,-384",
+      "Position": "-144,-944",
       "A": {
         "Identifier": "1",
         "Output": "Result"
@@ -57,18 +63,22 @@
         "Type": "Color"
       },
       "Identifier": "3",
-      "Position": "-752,-512"
+      "Position": "-384,-976"
     },
     {
       "_class": "ViewDirection",
       "Identifier": "4",
-      "Position": "-1232,-240"
+      "Position": "-1312,-400"
     },
     {
       "_class": "Fresnel",
       "DefaultPower": 10,
       "Identifier": "5",
-      "Position": "-368,48",
+      "Position": "-576,-192",
+      "Direction": {
+        "Identifier": "34",
+        "Output": "Result"
+      },
       "Power": {
         "Identifier": "16",
         "Output": "Result"
@@ -79,9 +89,9 @@
       "DefaultA": 0,
       "DefaultB": 1,
       "Identifier": "6",
-      "Position": "-96,48",
+      "Position": "-128,-112",
       "A": {
-        "Identifier": "5",
+        "Identifier": "18",
         "Output": "Result"
       },
       "B": {
@@ -98,39 +108,39 @@
         "Type": "Color"
       },
       "Identifier": "7",
-      "Position": "-368,176"
+      "Position": "-352,16"
     },
     {
-      "_class": "Multiply",
+      "_class": "Float",
+      "Min": 0,
+      "Max": 1,
+      "Value": 0,
+      "Name": "ShadowHighlightSS_Min",
+      "IsAttribute": false,
+      "UI": {},
+      "Identifier": "8",
+      "Position": "-704,-624"
+    },
+    {
+      "_class": "Add",
       "DefaultA": 0,
       "DefaultB": 1,
-      "Identifier": "8",
-      "Position": "-32,-304",
+      "Identifier": "9",
+      "Position": "320,-576",
       "A": {
-        "Identifier": "13",
+        "Identifier": "29",
         "Output": "Result"
       },
       "B": {
-        "Identifier": "9",
+        "Identifier": "6",
         "Output": "Result"
       }
-    },
-    {
-      "_class": "Float4",
-      "Value": "1,1,1,1",
-      "Name": "ShadowColour",
-      "IsAttribute": false,
-      "UI": {
-        "Type": "Color"
-      },
-      "Identifier": "9",
-      "Position": "-160,-192"
     },
     {
       "_class": "Fresnel",
       "DefaultPower": 10,
       "Identifier": "10",
-      "Position": "-576,-272",
+      "Position": "-704,-496",
       "Direction": {
         "Identifier": "20",
         "Output": "Result"
@@ -141,35 +151,34 @@
       }
     },
     {
-      "_class": "Multiply",
-      "DefaultA": 0,
-      "DefaultB": 1,
+      "_class": "Fresnel",
+      "DefaultPower": 10,
       "Identifier": "11",
-      "Position": "144,-384",
-      "A": {
-        "Identifier": "2",
+      "Position": "-704,-736",
+      "Direction": {
+        "Identifier": "20",
         "Output": "Result"
       },
-      "B": {
-        "Identifier": "8",
+      "Power": {
+        "Identifier": "27",
         "Output": "Result"
       }
     },
     {
       "_class": "Float",
       "Min": -1,
-      "Max": 2,
-      "Value": -0.09166849,
+      "Max": 5,
+      "Value": 0.43853116,
       "Name": "F_ShadowPwr",
       "IsAttribute": false,
       "UI": {},
       "Identifier": "12",
-      "Position": "-1008,-176"
+      "Position": "-1088,-368"
     },
     {
       "_class": "SmoothStep",
       "Identifier": "13",
-      "Position": "-384,-288",
+      "Position": "-400,-496",
       "Input": {
         "Identifier": "10",
         "Output": "Result"
@@ -192,7 +201,7 @@
       "IsAttribute": false,
       "UI": {},
       "Identifier": "14",
-      "Position": "-576,-96"
+      "Position": "-704,-320"
     },
     {
       "_class": "Float",
@@ -203,36 +212,36 @@
       "IsAttribute": false,
       "UI": {},
       "Identifier": "15",
-      "Position": "-576,-160"
+      "Position": "-704,-384"
     },
     {
       "_class": "Float",
       "Min": -1,
-      "Max": 2,
-      "Value": -0.17884111,
+      "Max": 5,
+      "Value": 1.7116337,
       "Name": "F_HighlightPwr",
       "IsAttribute": false,
       "UI": {},
       "Identifier": "16",
-      "Position": "-576,96"
+      "Position": "-784,-144"
     },
     {
       "_class": "Float",
       "Min": 0,
-      "Max": 1,
+      "Max": 5,
       "Value": 1,
       "Name": "F_HighlightSS_Max",
       "IsAttribute": false,
       "UI": {},
       "Identifier": "17",
-      "Position": "-96,208"
+      "Position": "-576,0"
     },
     {
       "_class": "SmoothStep",
       "Identifier": "18",
-      "Position": "176,48",
+      "Position": "-352,-96",
       "Input": {
-        "Identifier": "6",
+        "Identifier": "5",
         "Output": "Result"
       },
       "Edge1": {
@@ -247,34 +256,34 @@
     {
       "_class": "Float",
       "Min": 0,
-      "Max": 1,
-      "Value": 1,
+      "Max": 5,
+      "Value": 0,
       "Name": "F_HighlightSS_Min",
       "IsAttribute": false,
       "UI": {},
       "Identifier": "19",
-      "Position": "-96,144"
+      "Position": "-576,-64"
     },
     {
       "_class": "Subtract",
       "DefaultA": 1,
       "DefaultB": 0,
       "Identifier": "20",
-      "Position": "-912,-272",
+      "Position": "-816,-560",
       "B": {
-        "Identifier": "22",
+        "Identifier": "34",
         "Output": "Result"
       }
     },
     {
       "_class": "WorldNormal",
       "Identifier": "21",
-      "Position": "-1200,-336"
+      "Position": "-1312,-464"
     },
     {
       "_class": "DotProduct",
       "Identifier": "22",
-      "Position": "-960,-384",
+      "Position": "-1088,-464",
       "InputA": {
         "Identifier": "21",
         "Output": "Result"
@@ -283,6 +292,177 @@
         "Identifier": "4",
         "Output": "Result"
       }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "23",
+      "Position": "464,-576",
+      "A": {
+        "Identifier": "9",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "24",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 1,
+      "Value": 0.5503927,
+      "Name": "EmmissionPower",
+      "IsAttribute": false,
+      "UI": {},
+      "Identifier": "24",
+      "Position": "272,-448"
+    },
+    {
+      "_class": "SmoothStep",
+      "Identifier": "25",
+      "Position": "-400,-624",
+      "Input": {
+        "Identifier": "11",
+        "Output": "Result"
+      },
+      "Edge1": {
+        "Identifier": "8",
+        "Output": "Result"
+      },
+      "Edge2": {
+        "Identifier": "26",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 1,
+      "Value": 0.24161862,
+      "Name": "ShadowHighlightSS_Max",
+      "IsAttribute": false,
+      "UI": {},
+      "Identifier": "26",
+      "Position": "-704,-560"
+    },
+    {
+      "_class": "Float",
+      "Min": -1,
+      "Max": 2,
+      "Value": 0.8659146,
+      "Name": "ShadowHighlightPwr",
+      "IsAttribute": false,
+      "UI": {},
+      "Identifier": "27",
+      "Position": "-1088,-528"
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "28",
+      "Position": "-112,-608",
+      "A": {
+        "Identifier": "30",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "25",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "29",
+      "Position": "192,-608",
+      "A": {
+        "Identifier": "2",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "33",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 2,
+      "Value": 0,
+      "Name": "ShadowDark",
+      "IsAttribute": false,
+      "UI": {},
+      "Identifier": "30",
+      "Position": "-400,-704"
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 1,
+      "Value": 0,
+      "Name": "ShadowDark",
+      "IsAttribute": false,
+      "UI": {},
+      "Identifier": "31",
+      "Position": "-400,-384"
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "32",
+      "Position": "-112,-512",
+      "A": {
+        "Identifier": "31",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "13",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Subtract",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "33",
+      "Position": "32,-576",
+      "A": {
+        "Identifier": "32",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "28",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "34",
+      "Position": "-912,-464",
+      "A": {
+        "Identifier": "22",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "35",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float3",
+      "Value": "0,0,0",
+      "Name": "DirectionMulti",
+      "IsAttribute": false,
+      "UI": {},
+      "Identifier": "35",
+      "Position": "-1088,-304"
     }
   ]
 }

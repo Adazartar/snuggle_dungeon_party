@@ -1,68 +1,38 @@
 {
-  "Id": "074bea85-3cb2-499e-b928-396140e1c4fb",
+  "__guid": "074bea85-3cb2-499e-b928-396140e1c4fb",
   "GameObjects": [
     {
-      "Id": "79923949-7d1f-457d-9470-6142efb76409",
+      "__guid": "79923949-7d1f-457d-9470-6142efb76409",
       "Name": "Sun",
       "Position": "0,0,32",
-      "Rotation": "-0.1373625,0.4182646,0.4454848,0.7795703",
       "Tags": "light_directional,light",
       "Enabled": true,
+      "NetworkMode": 2,
       "Components": [
         {
           "__type": "DirectionalLight",
-          "FogMode": "Enabled",
+          "__guid": "6d98c93c-6b02-4de7-b7e3-82a904bc0030",
+          "FogMode": "Disabled",
           "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
+          "LightColor": "1,1,1,1",
           "Shadows": false,
-          "SkyColor": "0.32658,0.45305,0.51628,1"
+          "SkyColor": "1,1,1,1"
         }
       ]
     },
     {
-      "Id": "19395fef-5fe8-45ec-95d2-dc53abb291f3",
-      "Name": "pcpaladin",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "ModelRenderer",
-          "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": "materials/mtoon.vmat",
-          "Model": "art/models/playercharacters/pcpaladin.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        }
-      ]
-    },
-    {
-      "Id": "50d9d19c-1577-4566-93e6-ab39e08691b5",
-      "Name": "stone_pillar_01",
-      "Position": "29.6683,267.8782,15.75481",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "ModelRenderer",
-          "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Model": "art/models/environment/stone_pillar_01.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        }
-      ]
-    },
-    {
-      "Id": "8e8c2b56-1929-453b-b9b0-a474fac49258",
+      "__guid": "8e8c2b56-1929-453b-b9b0-a474fac49258",
       "Name": "Camera",
-      "Position": "-573.3,53.60013,568.9169",
+      "Position": "-1167.211,53.6001,521.049",
       "Rotation": "0,0.258819,0,0.9659258",
       "Tags": "maincamera",
       "Enabled": true,
+      "NetworkMode": 2,
       "Components": [
         {
           "__type": "CameraComponent",
-          "BackgroundColor": "0.33333,0.46275,0.52157,1",
+          "__guid": "e0d96157-1030-44d1-bf83-386796d30a9c",
+          "BackgroundColor": "0.16121,0.22268,0.25116,1",
           "ClearFlags": "All",
           "FieldOfView": 60,
           "IsMainCamera": true,
@@ -75,6 +45,517 @@
           "Viewport": "0,0,1,1",
           "ZFar": 10000,
           "ZNear": 10
+        }
+      ]
+    },
+    {
+      "__guid": "a8d78f5d-d8b3-4db2-a307-58a8015bfde1",
+      "Name": "block_01",
+      "Position": "48.97583,492.6905,0.00002806992",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "059dcab5-fa93-4643-88d1-014d9582fbd2",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "art/models/environment/block_01.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "e3c8f66c-3a6f-4ca3-846a-48711bbe4e8e",
+      "Name": "block_02",
+      "Position": "913.7921,755.6335,1.637649",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "ce2277a6-901a-4cdb-9794-b443978e1a56",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "art/models/environment/block_02.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "c2dc023e-676f-4c73-a9c8-a3c11eb70486",
+      "Name": "wall_jail_01",
+      "Position": "434.2665,1500.611,0.00006474111",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "7a6707db-33a6-4ce9-956c-55fcd67e84f5",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "art/models/environment/wall_jail_01.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "b5b5d45f-5d4a-41aa-9259-30282bff07fd",
+      "Name": "dng_rock_01",
+      "Position": "116.1614,839.5592,0.08999785",
+      "Rotation": "0.0000003894144,0,0,-1",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "5bd883b7-c176-4d41-be30-42f5339c1f40",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "art/models/environment/dng_rock_01.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "f486cd67-ffdd-4219-b222-f7cb1523351c",
+      "Name": "dng_rock_02",
+      "Position": "158.242,1116.872,0.251509",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "3dcb04f3-084a-4670-85c2-c48131f0aa8d",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "art/models/environment/dng_rock_02.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "e7d68d46-d494-4eaf-9270-f49af9fff097",
+      "Name": "sdp_barbarian",
+      "Position": "24.41788,-267.9627,1.373609",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "SkinnedModelRenderer",
+          "__guid": "7809d80e-e685-4bcd-a998-db8592ec0158",
+          "BodyGroups": 18446744073709551615,
+          "CreateBoneObjects": false,
+          "Model": "art/models/playercharacters/sdp_barbarian.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "ModelCollider",
+          "__guid": "49aea30d-ae97-496f-ac63-c885f0af9d99",
+          "IsTrigger": false,
+          "Model": "art/models/playercharacters/sdp_barbarian.vmdl",
+          "Static": false
+        },
+        {
+          "__type": "Rigidbody",
+          "__guid": "517b690e-8a25-49f3-bc5e-4b2b42538f4a",
+          "AngularDamping": 0,
+          "Gravity": true,
+          "LinearDamping": 0,
+          "Locking": {},
+          "MassOverride": 0,
+          "MotionEnabled": true,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        }
+      ]
+    },
+    {
+      "__guid": "f4744bac-bac7-498b-b207-4f0dd1583725",
+      "Name": "sdp_pc_paladin",
+      "Position": "-33.02673,21.4603,0.1559889",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "SkinnedModelRenderer",
+          "__guid": "dc66d275-31bc-4dc3-b6a2-2ea6355f3d3f",
+          "BodyGroups": 18446744073709551615,
+          "CreateBoneObjects": false,
+          "Model": "art/models/playercharacters/sdp_pc_paladin.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "ModelCollider",
+          "__guid": "1659dcb6-d494-456d-9f74-0e4755e95e3b",
+          "IsTrigger": false,
+          "Model": "art/models/playercharacters/sdp_pc_paladin.vmdl",
+          "Static": false
+        },
+        {
+          "__type": "Rigidbody",
+          "__guid": "788338f5-7244-41b6-a50d-6c0e2c3da615",
+          "AngularDamping": 0,
+          "Gravity": true,
+          "LinearDamping": 0,
+          "Locking": {},
+          "MassOverride": 0,
+          "MotionEnabled": true,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "c7e9f012-429c-4675-be04-214a74cc97b9",
+          "Name": "hip",
+          "Position": "0.000007629395,0.000009536743,26.66486",
+          "Rotation": "0.4999999,0.4999998,0.4999999,0.5000005",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Children": [
+            {
+              "__guid": "c81559ee-1c62-4609-9a82-5b5af77bd72f",
+              "Name": "chest",
+              "Position": "0.00002313552,18.78506,0.00002330484",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Children": [
+                {
+                  "__guid": "f6a92ad6-3487-49e6-829f-70529ee9ef70",
+                  "Name": "clavical_l",
+                  "Position": "-9.999954,33.66323,0.00004488041",
+                  "Rotation": "-0.4999998,0.4999999,0.4999997,0.5000007",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Children": [
+                    {
+                      "__guid": "dbc62342-e353-4cc1-b507-7ea5177a3683",
+                      "Name": "armUp_l",
+                      "Position": "-0.00004305031,18.28497,-0.0001068103",
+                      "Rotation": "-0.01566077,0.01378308,-0.05540717,0.9982459",
+                      "Enabled": true,
+                      "NetworkMode": 2
+                    }
+                  ]
+                },
+                {
+                  "__guid": "e7db11be-0d71-4d34-8557-d0f432266c54",
+                  "Name": "clavical_r",
+                  "Position": "10.00004,33.66325,0.00005608609",
+                  "Rotation": "-0.4999995,-0.4999995,-0.4999998,0.5000013",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Children": [
+                    {
+                      "__guid": "2e5ca93b-dfc5-4cd2-bd8a-4082a65550c4",
+                      "Name": "armUp_r",
+                      "Position": "0.00006975408,18.28503,-0.0000686639",
+                      "Rotation": "-0.01566076,-0.01378312,0.05540717,0.9982459",
+                      "Enabled": true,
+                      "NetworkMode": 2
+                    }
+                  ]
+                },
+                {
+                  "__guid": "9a4ab12d-08e4-4346-bc1f-892b32917d5e",
+                  "Name": "head",
+                  "Position": "0.00005054804,44.18524,0.00003514684",
+                  "Enabled": true,
+                  "NetworkMode": 2
+                },
+                {
+                  "__guid": "1cc63081-834d-4577-bb6f-d97981ba6a84",
+                  "Name": "cape_c",
+                  "Position": "0.00007053122,44.1852,38.6052",
+                  "Rotation": "0.9941552,-0.00000002980232,-0.000000372529,0.1079608",
+                  "Enabled": true,
+                  "NetworkMode": 2
+                },
+                {
+                  "__guid": "0263ee8f-fbf6-42f2-945d-00bd9ce369b9",
+                  "Name": "cape_l",
+                  "Position": "-31.65902,44.18521,14.19577",
+                  "Rotation": "0.9911655,-0.07704252,0.008363605,0.107636",
+                  "Enabled": true,
+                  "NetworkMode": 2
+                },
+                {
+                  "__guid": "9e53fe9e-d4f2-4627-9b4d-b942e29ceda3",
+                  "Name": "cape_r",
+                  "Position": "31.65913,44.18524,14.19582",
+                  "Rotation": "0.9911655,0.07704246,-0.00836356,0.107636",
+                  "Enabled": true,
+                  "NetworkMode": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "bcdc8fa4-9f77-4fb4-9771-35049d947474",
+          "Name": "legUp_l",
+          "Position": "-0.00001144409,-18.99999,27.66808",
+          "Rotation": "0.5000001,0.5000001,-0.4999999,-0.4999999",
+          "Enabled": true,
+          "NetworkMode": 2
+        },
+        {
+          "__guid": "c4d6926b-3fab-4389-9403-4eafa2fc08f8",
+          "Name": "tail",
+          "Position": "23.00647,-0.000001907349,36.65392",
+          "Rotation": "-0.0000001699904,-0.0000001053672,-0.7071068,0.7071068",
+          "Enabled": true,
+          "NetworkMode": 2
+        },
+        {
+          "__guid": "2d3b1013-952a-4685-8372-1ae1b0271d84",
+          "Name": "legUp_r",
+          "Position": "-0.000003814697,18.99998,27.66807",
+          "Rotation": "-0.5,-0.4999999,0.4999998,0.5000003",
+          "Enabled": true,
+          "NetworkMode": 2
+        }
+      ]
+    },
+    {
+      "__guid": "1d7a6f5a-9e28-485b-ab1b-bbaf1350193c",
+      "Name": "pillar_stone_02",
+      "Position": "-0.3914795,244.7677,0.00001656163",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "6ee11e1b-60b6-4b6b-b0f1-18242747d446",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "art/models/environment/pillar_stone_02.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "2e8f20f0-01d2-496b-bda0-1ac596aada9b",
+      "Name": "dng_rock_03",
+      "Position": "-232.7291,642.585,0.06580292",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "f49a45af-9963-41d2-bf8a-1bf69c2ef649",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "art/models/environment/dng_rock_03.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "bb449d31-fe6e-4eff-bc46-a332fdc8512c",
+      "Name": "dng_rock_04",
+      "Position": "-242.215,346.3879,0.00002317229",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "191ca785-9a5f-45c3-9ccf-32d077c84643",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "art/models/environment/dng_rock_04.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "2ea09a57-82b5-4348-9b84-87deacbb0e19",
+      "Name": "dng_rock_05",
+      "Position": "-222.9227,914.2476,0.1876326",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "964b64db-3fc9-46f0-bbdd-6387de41fdec",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "art/models/environment/dng_rock_05.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "3d8d02a0-4f56-4ab0-971a-143f64ae73ec",
+      "Name": "dng_rock_06",
+      "Position": "-271.9663,1170.182,0.00001050669",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "ec0e72ef-c02e-48af-b253-bd6458bbe8d6",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "art/models/environment/dng_rock_06.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "b5bc7af6-b25f-460d-831e-474864ad5424",
+      "Name": "drs_boat_01",
+      "Position": "-20.78699,1563.123,0.6574361",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "291cded6-6540-4585-892f-c3a53c8ec710",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "art/models/environment/drs_boat_01.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "06c7a8a9-7e1e-43ac-889b-1d923721aa9c",
+      "Name": "floorgrate_01",
+      "Position": "-694.2093,995.0341,5.311553",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "2691f001-da2e-43e1-b6d3-8207b4c6237f",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "art/models/environment/floorgrate_01.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "1e6bb061-9161-4f0e-b5b3-2a1c60e51d39",
+      "Name": "out_grass_pre01",
+      "Position": "-651.7942,1725.455,15.57936",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "9d7e6855-4990-49b1-8844-1bf165909548",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "art/models/environment/out_grass_pre01.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "80d555ac-61a1-4b46-bf0a-e17449fdc495",
+      "Name": "tree_01",
+      "Position": "-941.3644,992.9822,6.133716",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "7d54ea4d-db36-4bc8-ada9-c10df13e863a",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "art/models/environment/tree_01.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "dd580353-15b9-42e2-a2ae-c3745ef0919b",
+      "Name": "tree_03",
+      "Position": "-944.8677,634.704,0.02535407",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "4a42cd35-726d-44a0-a2f3-e2e88cd2a9c0",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "art/models/environment/tree_03.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "77641183-ef4a-45b9-acda-bfac150b4b84",
+      "Name": "wall_double_01",
+      "Position": "178.4703,-355.8934,0.00008731726",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "__guid": "f2adf11b-5330-471c-b88f-a0a8ecfd6789",
+          "BodyGroups": 18446744073709551615,
+          "Model": "art/models/environment/wall_double_01.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "ModelCollider",
+          "__guid": "2f5f5477-5369-4d00-ad4a-d0799aea368f",
+          "IsTrigger": false,
+          "Model": "art/models/environment/wall_double_01.vmdl",
+          "Static": true
+        },
+        {
+          "__type": "Rigidbody",
+          "__guid": "9e146571-4943-4865-97ed-57929e092cbf",
+          "AngularDamping": 0,
+          "Gravity": true,
+          "LinearDamping": 0,
+          "Locking": {},
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        }
+      ]
+    },
+    {
+      "__guid": "851033ef-3696-4093-be87-61984064daf6",
+      "Name": "wall_double_02",
+      "Position": "1054.771,-565.5989,0.03496018",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "cf587595-6b3f-4c3d-9a5f-3ec5d3fbf0f3",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "art/models/environment/wall_double_02.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "c642f067-b870-4ffe-9ef5-a5d939655a87",
+      "Name": "wall_single_01",
+      "Position": "485.8458,-1263.342,0.00005295374",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "0f3e7605-d100-4a50-aa95-9e2bda8cb81b",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "art/models/environment/wall_single_01.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "eda5d1ec-80ca-498c-a3a3-dc2c2a03f2d1",
+      "Name": "floor_out_01",
+      "Position": "-276.5844,-284.7331,0",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "a00f848f-ef8f-4a50-9866-55c81982e6a0",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "art/models/environment/floor_out_01.vmdl"
         }
       ]
     }
@@ -102,6 +583,8 @@
   },
   "Title": "artimport",
   "Description": "",
-  "LastSaved": "2024-02-28T01:04:44.6051479\u002B11:00",
+  "LastSaved": "2024-03-16T22:28:40.9523991\u002B11:00",
+  "ResourceVersion": 1,
+  "__version": 1,
   "__references": []
 }
