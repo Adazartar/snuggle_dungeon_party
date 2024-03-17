@@ -1,0 +1,59 @@
+Menu
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: black;
+	pointer-events: all;
+	color: white;
+	font-family: poppins;
+	font-size: 64px;
+	font-weight: 1000;
+	
+
+	&.hide
+	{
+		opacity: 0;
+	}
+
+	> .options {
+		align-items: center;
+		justify-content: space-evenly;
+		flex-direction: row;
+		width: 100%;
+
+		> .char {
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+
+			> .control-option {
+				font-size: 25px;
+				font-weight: 800;
+				margin: 10px;
+
+				&:hover {
+					background-color: green;
+					border-radius: 3px;
+				}
+
+				&.selected {
+					background-color: green;
+				}
+			}
+		}
+	}
+
+	> .start {
+		position: absolute;
+		bottom: 40px;
+		right: 40px;
+
+		&:hover {
+			background-color: green;
+			border-radius: 10px;
+		}
+	}
+}

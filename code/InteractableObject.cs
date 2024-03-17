@@ -34,8 +34,8 @@ public sealed class InteractableObject : Component
 		}
     }
 
-    public void interact(){
-        pickup.interact();
+    public void interact(Player player){
+        pickup.interact(player);
     }
 
 }

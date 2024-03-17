@@ -1,9 +1,9 @@
 {
   "Title": "Snuggle: Dungeon Party",
   "Type": "game",
-  "Org": "local",
+  "Org": "adazartargames",
   "Ident": "snuggle_dungeon_party",
-  "Tags": null,
+  "Tags": "local-multiplayer co-op dungeon-crawler",
   "Schema": 1,
   "HasAssets": true,
   "AssetsPath": "",
@@ -13,7 +13,7 @@
   "PackageReferences": [],
   "EditorReferences": null,
   "Metadata": {
-    "MaxPlayers": 64,
+    "MaxPlayers": 1,
     "MinPlayers": 1,
     "TickRate": 50,
     "GameNetworkType": "Multiplayer",
@@ -52,22 +52,22 @@
         },
         {
           "Name": "attack",
-          "KeyboardCode": "2",
+          "KeyboardCode": "V",
           "GroupName": "Actions"
         },
         {
           "Name": "ability",
-          "KeyboardCode": "3",
+          "KeyboardCode": "B",
           "GroupName": "Actions"
         },
         {
           "Name": "attack_sec",
-          "KeyboardCode": "M",
+          "KeyboardCode": "P",
           "GroupName": "Actions"
         },
         {
           "Name": "ability_sec",
-          "KeyboardCode": "N",
+          "KeyboardCode": "O",
           "GroupName": "Actions"
         },
         {
@@ -193,12 +193,12 @@
         },
         {
           "Name": "interact",
-          "KeyboardCode": "1",
+          "KeyboardCode": "N",
           "GroupName": "Actions"
         },
         {
           "Name": "interact_sec",
-          "KeyboardCode": "B",
+          "KeyboardCode": "I",
           "GroupName": "Actions"
         },
         {
@@ -236,54 +236,9 @@
           "GamepadCode": "LeftTrigger",
           "GroupName": "Actions"
         }
-      ]
+      ],
+      "__guid": "26f7a694-6312-48f9-8ac0-40603336cae2"
     },
-    "Collision": {
-      "Defaults": {
-        "solid": "Collide",
-        "trigger": "Trigger",
-        "ladder": "Ignore",
-        "water": "Trigger",
-        "player": "Unset",
-        "enemy": "Unset"
-      },
-      "Pairs": [
-        {
-          "a": "solid",
-          "b": "solid",
-          "r": "Collide"
-        },
-        {
-          "a": "trigger",
-          "b": "playerclip",
-          "r": "Ignore"
-        },
-        {
-          "a": "trigger",
-          "b": "solid",
-          "r": "Trigger"
-        },
-        {
-          "a": "solid",
-          "b": "trigger",
-          "r": "Collide"
-        },
-        {
-          "a": "playerclip",
-          "b": "solid",
-          "r": "Collide"
-        },
-        {
-          "a": "player",
-          "b": "enemy",
-          "r": "Ignore"
-        },
-        {
-          "a": "enemy",
-          "b": "enemy",
-          "r": "Ignore"
-        }
-      ]
-    }
+    "LaunchMode": "Normal"
   }
 }

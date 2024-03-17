@@ -6,7 +6,7 @@ public sealed class AirElementPickup : PickupTemplate
     {
         Log.Info("air element is working");
     }
-    public override void interact()
+    public override void interact(Player player)
     {
         Log.Info("air element picked up");
     }

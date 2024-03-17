@@ -2,6 +2,7 @@ using Sandbox;
 
 public sealed class Attack : Component
 {
+	[Property] public ElementType element = ElementType.None;
 	[Property] float attack_delay = 3;
 	[Property] float projectile_speed = 5;
 	[Property] float projectile_duration = 1;
@@ -44,7 +45,7 @@ public sealed class Attack : Component
 			timer = attack_delay;
 			GameObject new_attack = pool.getObject();
 			new_attack.Components.Get<Projectile>().projectObject(projectile_speed, Transform.Rotation.Forward, 
-				projectile_duration, attack_damage, true, GameObject, width, pool, piercing, false, 0);
+				projectile_duration, attack_damage, true, GameObject, width, pool, piercing, false, 0, element);
 
 		}
 	}

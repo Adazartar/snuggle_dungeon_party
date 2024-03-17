@@ -6,8 +6,9 @@ public sealed class FireElementPickup : PickupTemplate
     {
         Log.Info("fire element is working");
     }
-    public override void interact()
+    public override void interact(Player player)
     {
         Log.Info("fire element picked up");
+        player.attack.element = ElementType.Fire;
     }
 }

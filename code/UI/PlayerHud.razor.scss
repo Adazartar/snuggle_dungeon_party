@@ -1,0 +1,84 @@
+
+PlayerHud
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 20px;
+
+    > .timer
+    {
+        top: 36px;
+        left: 36px;
+        font-size: 64px;
+	    font-weight: 1000;
+        position: absolute;
+        color: white;
+	    font-family: poppins;
+    }
+
+    > .healthbars
+    {  
+        width: 100%;
+        position: absolute;
+        bottom: 32px;
+        display: flex;
+        justify-content: flex-start;
+
+        > .healthbar
+        {
+            width: 300px;
+            height: 64px;
+            background-color: rgb(41, 41, 41);
+            padding: 8px;
+            margin-left: 150px;
+            margin-right: 150px;
+
+            > .inner
+            {
+                background-color: black;
+                flex-grow: 1;
+                > .fill
+                {
+                    height: 100%;
+                    background-color: red;
+                }
+            }
+        }
+    }
+
+    > .abilitymeters
+    {  
+        width: 100%;
+        position: absolute;
+        bottom: 8px;
+        display: flex;
+        justify-content: flex-start;
+
+        > .abilitymeter
+        {
+            width: 300px;
+            height: 16px;
+            background-color: rgb(41, 41, 41);
+            padding: 2px;
+            margin-left: 150px;
+            margin-right: 150px;
+
+            > .inner
+            {
+                background-color: black;
+                flex-grow: 1;
+                > .fill
+                {
+                    height: 100%;
+                    background-color: blue;
+                }
+            }
+        }
+    }
+}
