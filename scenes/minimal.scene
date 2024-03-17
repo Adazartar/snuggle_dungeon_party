@@ -175,6 +175,7 @@
               "__type": "ModelRenderer",
               "__guid": "63795b94-863b-41e6-8237-bf08015748f5",
               "BodyGroups": 18446744073709551615,
+              "MaterialOverride": "materials/firemat.vmat",
               "Model": "models/dev/sphere.vmdl",
               "RenderType": "On",
               "Tint": "1,1,1,1"
@@ -197,6 +198,7 @@
               "__type": "ModelRenderer",
               "__guid": "4e47e741-9efd-450e-851c-a9361a12874b",
               "BodyGroups": 18446744073709551615,
+              "MaterialOverride": "materials/earth.vmat",
               "Model": "models/dev/sphere.vmdl",
               "RenderType": "On",
               "Tint": "1,1,1,1"
@@ -219,6 +221,7 @@
               "__type": "ModelRenderer",
               "__guid": "b60746ac-4fe0-456d-b778-deadcc6b518c",
               "BodyGroups": 18446744073709551615,
+              "MaterialOverride": "materials/ice.vmat",
               "Model": "models/dev/sphere.vmdl",
               "RenderType": "On",
               "Tint": "1,1,1,1"
@@ -241,7 +244,7 @@
         {
           "__guid": "76e4c851-33c1-4773-a0b5-dfb482d09759",
           "Name": "barbarian",
-          "Position": "200,150,35",
+          "Position": "200,150,0",
           "Tags": "player",
           "NetworkMode": 2,
           "Components": [
@@ -384,7 +387,7 @@
             {
               "__guid": "506fd7e6-f660-46d8-bc7a-ab0a63b7a2d4",
               "Name": "sdp_barbarian",
-              "Position": "0,0,0",
+              "Position": "0,0,-20",
               "Rotation": "-0,0,-1,-0.00000004371139",
               "Enabled": true,
               "NetworkMode": 2,
@@ -426,7 +429,7 @@
         {
           "__guid": "3a5cff7a-8e95-4166-89ca-5651110abb8a",
           "Name": "paladin",
-          "Position": "200,0,35",
+          "Position": "200,0,0",
           "Tags": "player",
           "NetworkMode": 2,
           "Components": [
@@ -569,7 +572,7 @@
             {
               "__guid": "3918b6a6-5e4d-46b4-a766-d43a6183f46f",
               "Name": "sdp_pc_paladin",
-              "Position": "0,0,0",
+              "Position": "0,0,-20",
               "Rotation": "0,0,1,-0.00000004371139",
               "Scale": "0.6,0.6,0.6",
               "Enabled": true,
@@ -612,7 +615,7 @@
         {
           "__guid": "d56e0f8a-2814-4ffb-8d87-9343bba16370",
           "Name": "wizard",
-          "Position": "200,-150,35",
+          "Position": "200,-150,0",
           "Tags": "player",
           "NetworkMode": 2,
           "Components": [
@@ -755,7 +758,7 @@
             {
               "__guid": "fc940fa6-9360-412b-b142-dc85742063c9",
               "Name": "sdp_pc_wizard",
-              "Position": "0,0,0",
+              "Position": "0,0,-20",
               "Rotation": "0,0,1,-0.00000004371139",
               "Scale": "0.6,0.6,0.6",
               "Enabled": true,
@@ -14968,6 +14971,7 @@
                 {
                   "__type": "ModelRenderer",
                   "__guid": "f317decf-b6f0-45ec-9155-1aa0a9194ead",
+                  "__enabled": false,
                   "BodyGroups": 18446744073709551615,
                   "MaterialOverride": "materials/default.vmat",
                   "Model": "models/dev/box.vmdl",
@@ -19572,7 +19576,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-03-17T22:36:38.2250639\u002B11:00",
+  "LastSaved": "2024-03-17T22:49:05.2437312\u002B11:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": []
