@@ -753,22 +753,35 @@
       ]
     },
     {
-      "__guid": "948df1c0-647b-4371-b0b9-84bb9df19da1",
-      "Name": "Point Light",
-      "Position": "430.7195,329.7414,56.79097",
-      "Tags": "light_point,light",
+      "__guid": "f783eb4c-4df8-46af-b642-3fd74d30a1f3",
+      "Name": "sdp_pc_wizard",
+      "Position": "-3.147156,103.7072,6.686544",
       "Enabled": true,
       "NetworkMode": 2,
       "Components": [
         {
-          "__type": "PointLight",
-          "__guid": "df277c02-163b-465e-ad69-bf04b74ae8ae",
-          "Attenuation": 0,
-          "FogMode": "Enabled",
-          "FogStrength": 0.58,
-          "LightColor": "1,0.68333,0,1",
-          "Radius": 201.89981,
-          "Shadows": true
+          "__type": "Prop",
+          "__guid": "105007c1-1a25-4ea0-a0a0-cf5b4e89c37c",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "art/models/playercharacters/sdp_pc_wizard.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "4a35d610-c4cd-4f86-bbf9-dd567731f1bd",
+      "Name": "sdp_enem_chameleon",
+      "Position": "149.3384,222.4393,6.41119",
+      "Rotation": "-0.0000001860686,0.000007510185,0.0000005582058,1",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "b089986f-00db-4e3a-9d31-606c0c71a08f",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "art/models/enemycharacters/sdp_enem_chameleon.vmdl"
         }
       ]
     }
@@ -796,7 +809,7 @@
   },
   "Title": "artimport",
   "Description": "",
-  "LastSaved": "2024-03-17T14:43:00.3988509\u002B11:00",
+  "LastSaved": "2024-03-17T17:43:19.1677913\u002B11:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": []
