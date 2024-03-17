@@ -1,5 +1,5 @@
 {
-  "__guid": "d6308662-258c-4ff8-8988-b5b85b493ad1",
+  "__guid": "c2f49e38-b101-4de4-98e5-3c3c1eebd9b5",
   "GameObjects": [
     {
       "__guid": "bfc59c12-1ed2-4f91-8956-a95a315eac3c",
@@ -31,7 +31,7 @@
           "__type": "SkyBox2D",
           "__guid": "771a6a12-fc2c-4b86-a011-4dac8bbaacba",
           "SkyMaterial": "materials/skybox/light_test_sky_sunny03.vmat",
-          "Tint": "1,1,1,1"
+          "Tint": "0.22791,0.17279,0.17279,1"
         },
         {
           "__type": "EnvmapProbe",
@@ -50,8 +50,8 @@
     {
       "__guid": "3ee1c9f4-07be-4e0b-8b23-67bee2d8ec8a",
       "Name": "Camera",
-      "Position": "0,0,1400",
-      "Rotation": "0,0.7071068,0,0.7071068",
+      "Position": "-900,0,900",
+      "Rotation": "0,0.3826835,0,0.9238795",
       "Enabled": true,
       "NetworkMode": 2,
       "Components": [
@@ -503,6 +503,48 @@
                   "Model": "models/dev/box.vmdl",
                   "RenderType": "On",
                   "Tint": "1,0,0,1"
+                }
+              ]
+            },
+            {
+              "__guid": "3918b6a6-5e4d-46b4-a766-d43a6183f46f",
+              "Name": "sdp_pc_paladin",
+              "Position": "0,0,0",
+              "Rotation": "0,0,1,-0.00000004371139",
+              "Scale": "0.6,0.6,0.6",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "SkinnedModelRenderer",
+                  "__guid": "33d2104d-4ed5-4315-8e98-77620a3ac4c3",
+                  "AnimationGraph": "animgraphs/sdp_barbarian.vanmgrph",
+                  "BodyGroups": 18446744073709551615,
+                  "CreateBoneObjects": false,
+                  "Model": "art/models/playercharacters/sdp_pc_paladin.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                },
+                {
+                  "__type": "ModelCollider",
+                  "__guid": "4a795de0-6c39-4dff-b98e-57c32ae11650",
+                  "__enabled": false,
+                  "IsTrigger": false,
+                  "Model": "art/models/playercharacters/sdp_pc_paladin.vmdl",
+                  "Static": false
+                },
+                {
+                  "__type": "Rigidbody",
+                  "__guid": "fe61ba5f-1585-4e3f-9005-3937adb29f13",
+                  "__enabled": false,
+                  "AngularDamping": 0,
+                  "Gravity": true,
+                  "LinearDamping": 0,
+                  "Locking": {},
+                  "MassOverride": 0,
+                  "MotionEnabled": true,
+                  "RigidbodyFlags": 0,
+                  "StartAsleep": false
                 }
               ]
             }
@@ -4735,7 +4777,7 @@
             },
             {
               "__type": "PlayerHud",
-              "__guid": "a656e05b-dc62-447a-bd6c-922778b22bba",
+              "__guid": "1e263ceb-b57d-42e3-914f-ec09e4889f03",
               "players": {
                 "_type": "gameobject",
                 "go": "6b6fb711-6467-4fcb-aa4b-a69398b01d3d"
@@ -4760,7 +4802,7 @@
             },
             {
               "__type": "Menu",
-              "__guid": "8906a9d4-0578-492b-a3c1-6f745f611244",
+              "__guid": "48aa62db-9b03-4f97-8750-e7e3e5583e48",
               "config_object": {
                 "_type": "gameobject",
                 "go": "1d5f5cc0-1ab7-42b4-82e6-f0672703e8fd"
@@ -4790,7 +4832,7 @@
       "Components": [
         {
           "__type": "GameConfig",
-          "__guid": "c92907f6-ffc2-47de-a2e9-7f92e700164b",
+          "__guid": "b25b52f2-664f-4122-a35e-bba57beff59b",
           "camera": {
             "_type": "gameobject",
             "go": "3ee1c9f4-07be-4e0b-8b23-67bee2d8ec8a"
@@ -4844,7 +4886,7 @@
           "Components": [
             {
               "__type": "Room",
-              "__guid": "fc3fabda-8a52-4c3d-addc-053bdf937138",
+              "__guid": "92a4d6b5-14a9-4535-b0b6-9b133ae125ca",
               "cleared": true,
               "E_exit": false,
               "enemy_count_1player": 0,
@@ -4882,6 +4924,162 @@
                   "IsTrigger": false,
                   "Scale": "50,50,50",
                   "Static": false
+                }
+              ]
+            },
+            {
+              "__guid": "4d49edec-4d9d-4a09-b657-1f23a669a1b0",
+              "Name": "pillar_stone_02",
+              "Position": "410,-380,0",
+              "Scale": "1,0.5,0.5",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "1cbf7877-f855-42bb-8431-26ad020bb6fe",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "art/models/environment/walls/pillar_stone_02.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                },
+                {
+                  "__type": "ModelCollider",
+                  "__guid": "b269b95c-6fc7-4ade-ae5c-8eb04e1b7073",
+                  "__enabled": false,
+                  "IsTrigger": false,
+                  "Model": "art/models/environment/walls/pillar_stone_02.vmdl",
+                  "Static": false
+                },
+                {
+                  "__type": "Rigidbody",
+                  "__guid": "83ed9af0-dde8-4a45-bd13-411dccd2abd2",
+                  "__enabled": false,
+                  "AngularDamping": 0,
+                  "Gravity": true,
+                  "LinearDamping": 0,
+                  "Locking": {},
+                  "MassOverride": 0,
+                  "MotionEnabled": true,
+                  "RigidbodyFlags": 0,
+                  "StartAsleep": false
+                }
+              ]
+            },
+            {
+              "__guid": "edf64298-53ad-4d69-ba93-00328e04db78",
+              "Name": "pillar_stone_02",
+              "Position": "410,370.0031,0",
+              "Scale": "1,0.5,0.5",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "a7b3c45a-a946-49fd-a33e-49d46c9459e0",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "art/models/environment/walls/pillar_stone_02.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                },
+                {
+                  "__type": "ModelCollider",
+                  "__guid": "97920a7c-3398-409e-868c-f7d1cb745fe7",
+                  "__enabled": false,
+                  "IsTrigger": false,
+                  "Model": "art/models/environment/walls/pillar_stone_02.vmdl",
+                  "Static": false
+                },
+                {
+                  "__type": "Rigidbody",
+                  "__guid": "3fd63bba-f922-49b6-9e46-656d112e94c8",
+                  "__enabled": false,
+                  "AngularDamping": 0,
+                  "Gravity": true,
+                  "LinearDamping": 0,
+                  "Locking": {},
+                  "MassOverride": 0,
+                  "MotionEnabled": true,
+                  "RigidbodyFlags": 0,
+                  "StartAsleep": false
+                }
+              ]
+            },
+            {
+              "__guid": "41e4ca1c-8c10-456e-be6f-308827171f0c",
+              "Name": "pillar_stone_02",
+              "Position": "-383.2904,357.3732,0",
+              "Scale": "1,0.5,0.5",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "2c6d3065-4a1c-42b9-8d95-08d5848c5185",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "art/models/environment/walls/pillar_stone_02.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                },
+                {
+                  "__type": "ModelCollider",
+                  "__guid": "da77b50d-4c14-4438-a66e-ef46ba847234",
+                  "__enabled": false,
+                  "IsTrigger": false,
+                  "Model": "art/models/environment/walls/pillar_stone_02.vmdl",
+                  "Static": false
+                },
+                {
+                  "__type": "Rigidbody",
+                  "__guid": "6a509cb7-e929-4902-9b69-8bc8d994fac5",
+                  "__enabled": false,
+                  "AngularDamping": 0,
+                  "Gravity": true,
+                  "LinearDamping": 0,
+                  "Locking": {},
+                  "MassOverride": 0,
+                  "MotionEnabled": true,
+                  "RigidbodyFlags": 0,
+                  "StartAsleep": false
+                }
+              ]
+            },
+            {
+              "__guid": "2f7665b5-2b37-46ed-94e3-1919a541a779",
+              "Name": "pillar_stone_02",
+              "Position": "-397.9591,-373.2744,0",
+              "Scale": "1,0.5,0.5",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "91b5ba88-34c1-44d7-8906-73c4ac9cc60a",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "art/models/environment/walls/pillar_stone_02.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                },
+                {
+                  "__type": "ModelCollider",
+                  "__guid": "77a3e420-787b-4db3-9ff7-1ed705e05d66",
+                  "__enabled": false,
+                  "IsTrigger": false,
+                  "Model": "art/models/environment/walls/pillar_stone_02.vmdl",
+                  "Static": false
+                },
+                {
+                  "__type": "Rigidbody",
+                  "__guid": "d189314c-9a64-46a4-b915-ead13779f671",
+                  "__enabled": false,
+                  "AngularDamping": 0,
+                  "Gravity": true,
+                  "LinearDamping": 0,
+                  "Locking": {},
+                  "MassOverride": 0,
+                  "MotionEnabled": true,
+                  "RigidbodyFlags": 0,
+                  "StartAsleep": false
                 }
               ]
             },
@@ -4940,7 +5138,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "6d7a6486-a68d-46ba-81ee-575fd4f38a7a",
+                  "__guid": "75799352-185a-403b-a165-3ab508817c49",
                   "entrance": true
                 }
               ]
@@ -5059,7 +5257,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "07fb8383-59cf-49b9-88aa-4e8dedc9d6eb",
+                  "__guid": "9c12cbf8-16a3-4960-a129-7122e0a64006",
                   "entrance": true
                 }
               ]
@@ -5176,7 +5374,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "f6c8d2c1-5961-4a3f-b657-dafd27d626a6",
+                  "__guid": "7860b49b-adff-4baf-b1d9-4a15e9c9414d",
                   "entrance": true
                 }
               ]
@@ -5295,7 +5493,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "24b7d3f0-bd86-43b0-86fc-9cae22001320",
+                  "__guid": "b6b4c212-acf8-4c66-b8cd-00c482e4cad2",
                   "entrance": true
                 }
               ]
@@ -5354,6 +5552,40 @@
                   "Static": false
                 }
               ]
+            },
+            {
+              "__guid": "29d79245-ea17-482f-b158-a8e84904a2d9",
+              "Name": "wall_mod_01",
+              "Position": "410,-85.42725,0",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "__Prefab": "code/basic_wall.prefab"
+            },
+            {
+              "__guid": "dc5e860f-5cb7-4fa2-96f6-5e6bb1ccbb28",
+              "Name": "basic_wall",
+              "Position": "101.2388,410.0001,0",
+              "Rotation": "0,0,0.7071068,0.7071068",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "__Prefab": "code/basic_wall.prefab"
+            },
+            {
+              "__guid": "8eae5f46-79f5-4b28-aacf-f75242dae6f3",
+              "Name": "basic_wall",
+              "Position": "101.239,-410,0",
+              "Rotation": "0,0,0.7071068,0.7071068",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "__Prefab": "code/basic_wall.prefab"
+            },
+            {
+              "__guid": "7fc985cb-504a-40ae-800e-92183c6d35b7",
+              "Name": "basic_wall_gap",
+              "Position": "-421.3811,-5.802578,4",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "__Prefab": "code/basic_wall_gap.prefab"
             }
           ]
         },
@@ -5366,7 +5598,7 @@
           "Components": [
             {
               "__type": "Room",
-              "__guid": "297bbdd4-7077-4180-bb0f-c7457355c456",
+              "__guid": "9bbe2bbc-ca93-4835-8d30-f366ca291be5",
               "cleared": false,
               "E_exit": false,
               "enemy_count_1player": 0,
@@ -5462,7 +5694,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "90eb3a87-af82-4fe5-8f73-b103d191f3e9",
+                  "__guid": "d4809dcc-358e-4f31-871c-2a89b44b3f31",
                   "entrance": false
                 }
               ]
@@ -5581,7 +5813,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "5aaa79db-cbd0-4910-aa5f-66f70bba9d80",
+                  "__guid": "7fee790e-b71b-4772-a908-ac30213ba4ad",
                   "entrance": true
                 }
               ]
@@ -5698,7 +5930,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "fa5604f5-7c6b-416b-a5f2-4cc899309424",
+                  "__guid": "52662e17-4366-4719-80d2-46220c0c4dec",
                   "entrance": true
                 }
               ]
@@ -5817,7 +6049,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "cb3b19a7-6cae-4595-af8f-9287c3b4c1de",
+                  "__guid": "52a0daf1-cad6-4ed2-8558-9f06c7af9dac",
                   "entrance": true
                 }
               ]
@@ -5890,7 +6122,7 @@
           "Components": [
             {
               "__type": "Room",
-              "__guid": "cca9c3ad-cbf8-4fc2-aaad-f53ef40ff974",
+              "__guid": "1dfcd5be-c845-4845-b947-f6984a475655",
               "cleared": false,
               "E_exit": true,
               "enemy_count_1player": 1,
@@ -5986,7 +6218,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "2ffce191-ff9e-4515-bad6-fad7ef209c45",
+                  "__guid": "fa49df99-5f82-4f10-8b71-a0d243c69a89",
                   "entrance": false
                 }
               ]
@@ -6105,7 +6337,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "e429724e-4cc8-48d2-b89a-2317683f3c40",
+                  "__guid": "a0b48879-a83d-4ea5-9488-9ef243b4f9c1",
                   "entrance": true
                 }
               ]
@@ -6222,7 +6454,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "b9a5cc77-cd64-4378-b06b-54aae84f69ee",
+                  "__guid": "2a90aa14-d1ac-4c8d-b466-2d59ec097199",
                   "entrance": true
                 }
               ]
@@ -6341,7 +6573,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "59fb6726-c44c-438e-854a-b1d462663031",
+                  "__guid": "f9dae7e6-9a70-4233-912a-f744464403d2",
                   "entrance": true
                 }
               ]
@@ -6402,6 +6634,196 @@
                   "Static": false
                 }
               ]
+            },
+            {
+              "__guid": "2db70b57-788a-4e63-9885-45969d2f4c1a",
+              "Name": "basic_wall",
+              "Position": "105.6427,-410.0008,0",
+              "Rotation": "0,0,0.7071068,0.7071068",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "__Prefab": "code/basic_wall.prefab"
+            },
+            {
+              "__guid": "3d477cb6-7a9d-45b3-9157-aa319c22fc5e",
+              "Name": "basic_wall (1)",
+              "Position": "105.6425,409.9994,0",
+              "Rotation": "0,0,0.7071068,0.7071068",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "__Prefab": "code/basic_wall.prefab"
+            },
+            {
+              "__guid": "134e5d99-1d1d-4db2-a734-766d000c6460",
+              "Name": "wall_mod_02",
+              "Position": "-405.0973,26.26014,0",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "__Prefab": "code/wall_and_door.prefab"
+            },
+            {
+              "__guid": "832474b6-1721-4aef-8044-968bdb9b6b30",
+              "Name": "pillar_stone_02",
+              "Position": "-395.3116,357.3732,0",
+              "Scale": "1,0.5,0.5",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "ad37d011-8314-4565-9f89-9bfcd79a8e39",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "art/models/environment/walls/pillar_stone_02.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                },
+                {
+                  "__type": "ModelCollider",
+                  "__guid": "4e730422-b07f-4a5d-aad5-12b6ff34c087",
+                  "__enabled": false,
+                  "IsTrigger": false,
+                  "Model": "art/models/environment/walls/pillar_stone_02.vmdl",
+                  "Static": false
+                },
+                {
+                  "__type": "Rigidbody",
+                  "__guid": "af55a1a0-a353-49d0-8a46-25955849e6be",
+                  "__enabled": false,
+                  "AngularDamping": 0,
+                  "Gravity": true,
+                  "LinearDamping": 0,
+                  "Locking": {},
+                  "MassOverride": 0,
+                  "MotionEnabled": true,
+                  "RigidbodyFlags": 0,
+                  "StartAsleep": false
+                }
+              ]
+            },
+            {
+              "__guid": "27c60254-9374-4207-ab57-30b467dc72ae",
+              "Name": "pillar_stone_02 (1)",
+              "Position": "397.9789,370.0031,0",
+              "Scale": "1,0.5,0.5",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "ae47ef66-200d-4239-9b61-dd3e4bdcba01",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "art/models/environment/walls/pillar_stone_02.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                },
+                {
+                  "__type": "ModelCollider",
+                  "__guid": "1fdc2ec6-eaf2-4b82-98bd-6c9a121c7449",
+                  "__enabled": false,
+                  "IsTrigger": false,
+                  "Model": "art/models/environment/walls/pillar_stone_02.vmdl",
+                  "Static": false
+                },
+                {
+                  "__type": "Rigidbody",
+                  "__guid": "ea81f923-36e1-4a65-aebf-8e016c2d8c44",
+                  "__enabled": false,
+                  "AngularDamping": 0,
+                  "Gravity": true,
+                  "LinearDamping": 0,
+                  "Locking": {},
+                  "MassOverride": 0,
+                  "MotionEnabled": true,
+                  "RigidbodyFlags": 0,
+                  "StartAsleep": false
+                }
+              ]
+            },
+            {
+              "__guid": "e07d893a-057a-4f78-ab76-bea3f92c75c3",
+              "Name": "pillar_stone_02 (2)",
+              "Position": "397.9789,-380,0",
+              "Scale": "1,0.5,0.5",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "24254e8d-0b42-4713-89b6-40cc656345ff",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "art/models/environment/walls/pillar_stone_02.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                },
+                {
+                  "__type": "ModelCollider",
+                  "__guid": "5cff956f-8fb2-4199-a15e-db9ea78f093c",
+                  "__enabled": false,
+                  "IsTrigger": false,
+                  "Model": "art/models/environment/walls/pillar_stone_02.vmdl",
+                  "Static": false
+                },
+                {
+                  "__type": "Rigidbody",
+                  "__guid": "27a74404-91aa-49cd-9094-2327664d377d",
+                  "__enabled": false,
+                  "AngularDamping": 0,
+                  "Gravity": true,
+                  "LinearDamping": 0,
+                  "Locking": {},
+                  "MassOverride": 0,
+                  "MotionEnabled": true,
+                  "RigidbodyFlags": 0,
+                  "StartAsleep": false
+                }
+              ]
+            },
+            {
+              "__guid": "27a99a35-7099-4cb7-a4dc-ba02b5909bc9",
+              "Name": "pillar_stone_02 (3)",
+              "Position": "-409.9802,-373.2744,0",
+              "Scale": "1,0.5,0.5",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "4a6335b1-2fcb-4df8-a2e6-244aae22227b",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "art/models/environment/walls/pillar_stone_02.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                },
+                {
+                  "__type": "ModelCollider",
+                  "__guid": "2ad8e4eb-8f6e-4226-9a71-3f8d42af2641",
+                  "__enabled": false,
+                  "IsTrigger": false,
+                  "Model": "art/models/environment/walls/pillar_stone_02.vmdl",
+                  "Static": false
+                },
+                {
+                  "__type": "Rigidbody",
+                  "__guid": "f46aca9d-aeaa-41ab-82f0-cd541b5cc96c",
+                  "__enabled": false,
+                  "AngularDamping": 0,
+                  "Gravity": true,
+                  "LinearDamping": 0,
+                  "Locking": {},
+                  "MassOverride": 0,
+                  "MotionEnabled": true,
+                  "RigidbodyFlags": 0,
+                  "StartAsleep": false
+                }
+              ]
+            },
+            {
+              "__guid": "af7e9df6-0359-4eb5-8be6-90e7d29ba1e4",
+              "Name": "basic_wall_gap",
+              "Position": "407.1472,-14.11992,4",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "__Prefab": "code/basic_wall_gap.prefab"
             }
           ]
         },
@@ -6414,7 +6836,7 @@
           "Components": [
             {
               "__type": "Room",
-              "__guid": "c491289d-7d98-4152-860e-f36b53399833",
+              "__guid": "2df82e9c-77de-4014-a8ce-411805d57607",
               "cleared": false,
               "E_exit": false,
               "enemy_count_1player": 0,
@@ -6510,7 +6932,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "1dd0b6ed-823d-4ae7-9c42-4f5af2ba878f",
+                  "__guid": "8d8b4322-b802-4534-a94f-fa734eabea84",
                   "entrance": false
                 }
               ]
@@ -6629,7 +7051,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "1fc8416a-8fcd-4a11-9050-ee1886d3c22d",
+                  "__guid": "43790346-c7b4-4ecf-88b5-1675c74f4de6",
                   "entrance": true
                 }
               ]
@@ -6746,7 +7168,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "c0df1d85-a85d-4e28-baec-4ebe620a7c95",
+                  "__guid": "af02d2c9-3242-45b2-ac7b-e1f7c9638d0b",
                   "entrance": true
                 }
               ]
@@ -6865,7 +7287,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "3f70c494-8bcc-45c6-916f-50907d708b59",
+                  "__guid": "6faf4047-f206-4fac-b680-534aa4989646",
                   "entrance": true
                 }
               ]
@@ -6938,7 +7360,7 @@
           "Components": [
             {
               "__type": "Room",
-              "__guid": "a8c43f1b-2216-4b2d-8bdb-ad93b4353666",
+              "__guid": "1a41d1d6-e772-41a9-bbf1-3e2e67ce0339",
               "cleared": false,
               "E_exit": false,
               "enemy_count_1player": 0,
@@ -7034,7 +7456,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "db0256ae-d3c7-46b5-a945-e18290d18933",
+                  "__guid": "2cc2e739-7489-4387-a7ae-6639ae90807b",
                   "entrance": false
                 }
               ]
@@ -7153,7 +7575,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "22945452-90cc-4fd0-b303-691cfc47cc16",
+                  "__guid": "49396d8a-538f-4b2d-993b-476a7b5fef4c",
                   "entrance": true
                 }
               ]
@@ -7270,7 +7692,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "83f6bb7b-66ab-4712-9e2c-5960f4dfd15b",
+                  "__guid": "f0490e7d-5a7d-4297-a187-3e1025f686cb",
                   "entrance": true
                 }
               ]
@@ -7389,7 +7811,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "475496a4-ea7b-40a0-9e6c-716662d6a26a",
+                  "__guid": "e6006223-529e-48ed-8006-03da130e4fd3",
                   "entrance": true
                 }
               ]
@@ -7462,7 +7884,7 @@
           "Components": [
             {
               "__type": "Room",
-              "__guid": "35d663b4-17ec-4342-869a-4b92e14e9b7a",
+              "__guid": "d34ad838-1c81-4315-b152-edae34fe3800",
               "cleared": false,
               "E_exit": false,
               "enemy_count_1player": 2,
@@ -7559,7 +7981,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "e7c97692-b7b0-4bbe-ad7c-2de5426be382",
+                  "__guid": "2caf685d-705a-4f03-b25e-95391b4df52c",
                   "entrance": false
                 }
               ]
@@ -7678,7 +8100,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "2e35a369-bbfb-4636-8cac-b5edf57eb555",
+                  "__guid": "e0d5dcb0-1dae-4708-b81f-e31eaff3f4fc",
                   "entrance": false
                 }
               ]
@@ -7795,7 +8217,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "7875af74-d465-4dc5-b822-fb235bc29839",
+                  "__guid": "0cbcfd1a-d5ad-4e7e-a818-4a246a2dc665",
                   "entrance": true
                 }
               ]
@@ -7914,7 +8336,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "05e36dad-d4d9-4d79-9144-4da2b81a067a",
+                  "__guid": "8ecbfc64-4a1d-4e0b-b5f5-146b12524149",
                   "entrance": true
                 }
               ]
@@ -7988,7 +8410,7 @@
           "Components": [
             {
               "__type": "Room",
-              "__guid": "fa93a66e-8d6a-4fdf-8b8c-1a8026a51c50",
+              "__guid": "1f8d43cc-1268-4785-9e85-eb8a3134248f",
               "cleared": false,
               "E_exit": false,
               "enemy_count_1player": 0,
@@ -8084,7 +8506,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "84bdfd8b-0aa8-423b-8a9d-498988b0070b",
+                  "__guid": "761d0f4d-f520-4412-871f-0cf196f1c5e0",
                   "entrance": false
                 }
               ]
@@ -8203,7 +8625,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "84d2a56f-e83c-45b1-8ebc-ad0c72b1d543",
+                  "__guid": "7a1ea464-43a1-4626-af51-9251c5867102",
                   "entrance": true
                 }
               ]
@@ -8320,7 +8742,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "de736c6c-3cb8-489c-b0ef-7f2f1f45dd6a",
+                  "__guid": "91b132f2-2f26-416a-bb55-21b31c4dbad7",
                   "entrance": true
                 }
               ]
@@ -8439,7 +8861,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "08239c45-ee0f-4ec7-abde-9764a5dc9409",
+                  "__guid": "70e94006-7326-4958-8680-a22c6a651c92",
                   "entrance": true
                 }
               ]
@@ -8513,7 +8935,7 @@
           "Components": [
             {
               "__type": "Room",
-              "__guid": "10b5d735-a1dc-4ef1-b6ca-d8eb9bca937b",
+              "__guid": "d5878282-a1d8-4ac4-a785-e16a7b094160",
               "cleared": false,
               "E_exit": false,
               "enemy_count_1player": 0,
@@ -8609,7 +9031,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "783e594c-6729-4042-a480-79aa5d4d4427",
+                  "__guid": "0a562ad0-a71d-4c08-bb1a-d002fc6a8ac5",
                   "entrance": false
                 }
               ]
@@ -8728,7 +9150,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "f86ea617-6470-409a-a3cf-16b1c661c2ee",
+                  "__guid": "69f86b79-d7e6-41d9-b478-96a7a6871599",
                   "entrance": true
                 }
               ]
@@ -8845,7 +9267,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "78ffd84d-6a02-4490-862d-3ab870dae8b5",
+                  "__guid": "ad5ed83d-f04a-4dbc-9345-137509844938",
                   "entrance": true
                 }
               ]
@@ -8964,7 +9386,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "55d3c189-c2a1-449b-8ff4-bdc9088693f5",
+                  "__guid": "428c02c9-0ddc-48d7-ba86-0a3e227ebb40",
                   "entrance": true
                 }
               ]
@@ -9038,7 +9460,7 @@
           "Components": [
             {
               "__type": "Room",
-              "__guid": "d72267d0-d363-42aa-aca1-ab0a7a23dc55",
+              "__guid": "58c3169d-68cf-44d9-ab69-dc42193fe46c",
               "cleared": false,
               "E_exit": false,
               "enemy_count_1player": 0,
@@ -9134,7 +9556,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "ef0b5a4a-4cc3-4da5-bb0c-d8c6ee0bb405",
+                  "__guid": "88a3a8e4-41b3-44b5-a805-817531c85662",
                   "entrance": false
                 }
               ]
@@ -9253,7 +9675,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "112f09f4-889a-4efa-a12c-9017b7a75de9",
+                  "__guid": "a83c79fc-a022-4117-bbce-ace323cdf449",
                   "entrance": true
                 }
               ]
@@ -9370,7 +9792,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "3cfcb6a0-478c-4100-b676-dc6cc6d3a63c",
+                  "__guid": "4dfb91bb-d601-4e1f-b5a9-9d0e4f07e374",
                   "entrance": true
                 }
               ]
@@ -9489,7 +9911,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "dd8c71dd-cbb0-4742-a2e5-764b60f7f761",
+                  "__guid": "423ea23b-308d-4287-a637-3e74fc5f28a2",
                   "entrance": true
                 }
               ]
@@ -9563,7 +9985,7 @@
           "Components": [
             {
               "__type": "Room",
-              "__guid": "f7abe2ad-ffe5-4adf-b6e7-8fd17b98c9fb",
+              "__guid": "a6738460-aab6-4080-b396-b9085a312398",
               "cleared": false,
               "E_exit": false,
               "enemy_count_1player": 0,
@@ -9659,7 +10081,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "50ea2457-96a3-46a8-90a8-b364aba446de",
+                  "__guid": "0ef2508a-498d-4699-bd9d-3d5a79503404",
                   "entrance": false
                 }
               ]
@@ -9778,7 +10200,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "93c55c80-30d0-4d5e-be11-47d76df2cca2",
+                  "__guid": "33725f95-48f2-4b44-bb81-5b086201b11b",
                   "entrance": true
                 }
               ]
@@ -9895,7 +10317,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "48670d16-30e8-48bd-90aa-21bd94e32f71",
+                  "__guid": "e02f4855-21a2-4132-be55-304480d59a2f",
                   "entrance": true
                 }
               ]
@@ -10014,7 +10436,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "25cd0772-dbf0-462b-9112-8e0a71723750",
+                  "__guid": "ad7dddbd-c4bd-4f32-87e2-7f83d5f02bda",
                   "entrance": true
                 }
               ]
@@ -10086,7 +10508,7 @@
           "Components": [
             {
               "__type": "Room",
-              "__guid": "2991135e-2dca-48fb-9e4e-f1413fe5633d",
+              "__guid": "1f7c6f51-de92-47d4-968b-7a7aaf3fb0b8",
               "cleared": false,
               "E_exit": false,
               "enemy_count_1player": 2,
@@ -10182,7 +10604,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "614da9d8-0d95-467e-8377-fbe74f627c07",
+                  "__guid": "1ba95150-89fd-4ac2-86cb-9cfe1df81460",
                   "entrance": false
                 }
               ]
@@ -10301,7 +10723,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "57f73f83-3467-4be8-98bb-dcd8a9ab2f0d",
+                  "__guid": "b0d0c04e-880a-4521-a772-d872a8d58a4c",
                   "entrance": true
                 }
               ]
@@ -10418,7 +10840,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "ee80dfd6-ce2a-40ca-b852-720fd8f9f8c7",
+                  "__guid": "8801b492-e641-467e-ae2a-3b572c63d972",
                   "entrance": true
                 }
               ]
@@ -10537,7 +10959,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "0b9431ee-85f3-4f82-980a-91be586f555c",
+                  "__guid": "198be0e6-9dcb-46eb-957f-b5e957efe23f",
                   "entrance": true
                 }
               ]
@@ -10610,7 +11032,7 @@
           "Components": [
             {
               "__type": "Room",
-              "__guid": "576a35b5-5cd0-426e-aa04-db218cd27e8f",
+              "__guid": "e58e055b-75fd-49cf-88b5-31aed29d1b80",
               "cleared": false,
               "E_exit": true,
               "enemy_count_1player": 2,
@@ -10706,7 +11128,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "ee2ac56d-42e6-47c0-be4c-59d13fd1b16e",
+                  "__guid": "391e2c0b-8ef3-4ff5-a9dc-dbad13f06582",
                   "entrance": false
                 }
               ]
@@ -10825,7 +11247,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "2f2cab82-582a-4977-b2a8-1954d44ac3cd",
+                  "__guid": "07771f97-15c0-4a07-9b59-fa35984b5310",
                   "entrance": true
                 }
               ]
@@ -10942,7 +11364,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "634a3fd2-0e5d-4996-b71b-dad77a782eb6",
+                  "__guid": "0c6b9f67-c6ad-4a14-b0c4-2e929cd14471",
                   "entrance": true
                 }
               ]
@@ -11061,7 +11483,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "c06ef7a5-11b7-46e6-9ad8-4c48005f40ee",
+                  "__guid": "cb6b9507-4385-44d6-910d-76a855c898ae",
                   "entrance": true
                 }
               ]
@@ -11134,7 +11556,7 @@
           "Components": [
             {
               "__type": "Room",
-              "__guid": "e4c190d6-38ec-4c65-9d8c-a8b3fb125445",
+              "__guid": "9ba319f1-fa83-4fd5-9785-86eba150e6cb",
               "cleared": false,
               "E_exit": false,
               "enemy_count_1player": 0,
@@ -11230,7 +11652,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "62a62e59-7358-49c9-92b0-df73ff65ff81",
+                  "__guid": "253509d6-9271-4a17-9265-05c53a64ac09",
                   "entrance": false
                 }
               ]
@@ -11349,7 +11771,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "ef1f5d77-bb3a-4246-b68c-83308c9913b9",
+                  "__guid": "939c0c70-605e-4b24-aa9e-eb491b2de569",
                   "entrance": true
                 }
               ]
@@ -11466,7 +11888,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "f6701f88-df94-438b-9860-b08f0e9c1af8",
+                  "__guid": "d8c48606-0fe7-44d6-a7c2-7d25d935d1e0",
                   "entrance": true
                 }
               ]
@@ -11585,7 +12007,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "f2adbf91-60a3-4cec-9581-2db1925bd777",
+                  "__guid": "601bd2e8-426b-457b-880c-b6d08580d712",
                   "entrance": true
                 }
               ]
@@ -11658,7 +12080,7 @@
           "Components": [
             {
               "__type": "Room",
-              "__guid": "ced4ed4f-6296-4845-ab83-320ce9d7fa3b",
+              "__guid": "eb4db958-c57f-45c6-ae3d-cd8e0c046d0b",
               "cleared": false,
               "E_exit": false,
               "enemy_count_1player": 0,
@@ -11754,7 +12176,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "4e3300a8-1b6d-42f2-bf71-f8a8d814e214",
+                  "__guid": "89c6c73f-5948-4adf-9f35-40e53b2061af",
                   "entrance": false
                 }
               ]
@@ -11873,7 +12295,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "766a9e77-1932-4347-8ba8-d5590e56b57e",
+                  "__guid": "67bd294d-9bc5-4ae2-84e9-7fb4ba752c46",
                   "entrance": true
                 }
               ]
@@ -11990,7 +12412,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "6669e773-1c44-47de-b927-420a00c88f1d",
+                  "__guid": "2c2f421a-9ee9-4afa-9e61-481f96b49604",
                   "entrance": true
                 }
               ]
@@ -12109,7 +12531,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "8167810e-583f-435a-a5f2-e71c108d89c2",
+                  "__guid": "5c1cb7da-2468-4f6a-8f22-e17a57a8869d",
                   "entrance": true
                 }
               ]
@@ -12182,7 +12604,7 @@
           "Components": [
             {
               "__type": "Room",
-              "__guid": "fe137c87-4b2e-4931-90c7-0f91f1746c31",
+              "__guid": "e8d7883e-b0bd-4ada-afad-3880c10cff5f",
               "cleared": false,
               "E_exit": true,
               "enemy_count_1player": 2,
@@ -12278,7 +12700,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "65c69a00-9fcc-44a2-8b6e-7a751ee36ee4",
+                  "__guid": "f83a77ff-dfcb-4bce-9b21-422dd892a3d1",
                   "entrance": false
                 }
               ]
@@ -12397,7 +12819,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "24d308a5-78db-434c-a69d-1ec97e006c54",
+                  "__guid": "1782dc3d-1aec-403b-ac90-deb1fc86e1e7",
                   "entrance": true
                 }
               ]
@@ -12514,7 +12936,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "3a8788e1-8245-48fd-b8f7-9ff8e04a6a75",
+                  "__guid": "db0fa0dd-8026-46c4-a5f3-32fa50017d13",
                   "entrance": true
                 }
               ]
@@ -12633,7 +13055,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "68a35415-cf14-4c9d-87dd-fb224fc4a669",
+                  "__guid": "75a7ca9a-5162-4faf-8f74-66390f2aea28",
                   "entrance": true
                 }
               ]
@@ -12706,7 +13128,7 @@
           "Components": [
             {
               "__type": "Room",
-              "__guid": "5c869313-8ef7-404e-b0a2-8e3c489c181d",
+              "__guid": "0003cd4b-9dd1-4136-8d4e-b28f005aa463",
               "cleared": false,
               "E_exit": false,
               "enemy_count_1player": 2,
@@ -12803,7 +13225,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "e36c1a66-c023-459d-8c5d-39ca092bd42b",
+                  "__guid": "68c154bd-9d94-4ff7-aa96-d351546d8388",
                   "entrance": false
                 }
               ]
@@ -12922,7 +13344,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "d558c4e0-a226-4469-a5e5-d948cd355607",
+                  "__guid": "aaef783e-8884-4d97-b77c-73a7906e7044",
                   "entrance": false
                 }
               ]
@@ -13039,7 +13461,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "5f00311a-d03c-48cb-984e-d239102f9f04",
+                  "__guid": "b7ae1b79-31d6-49ed-a505-2905898c0663",
                   "entrance": true
                 }
               ]
@@ -13158,7 +13580,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "568cd853-be85-428b-bdf7-cddcac81b6fa",
+                  "__guid": "aaaeb4b6-135e-47ba-93a7-954ab4d0d44a",
                   "entrance": true
                 }
               ]
@@ -13231,7 +13653,7 @@
           "Components": [
             {
               "__type": "Room",
-              "__guid": "033213b1-987f-4225-b62c-afd0df261058",
+              "__guid": "06d99b32-7719-4f99-8f3a-4821aa4d2a21",
               "cleared": false,
               "E_exit": true,
               "enemy_count_1player": 2,
@@ -13328,7 +13750,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "00bd9c68-5dad-4e3c-bae3-4bfef991f24d",
+                  "__guid": "2355a0e0-19e9-4afa-8044-eba143324329",
                   "entrance": false
                 }
               ]
@@ -13447,7 +13869,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "27864172-b2a7-475c-b1a1-218e9e367160",
+                  "__guid": "8f9f6a0f-7b8f-464c-afee-18c4ec45390a",
                   "entrance": false
                 }
               ]
@@ -13564,7 +13986,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "39b6539b-2289-43f2-ada4-50d122a4b8d5",
+                  "__guid": "fab65234-3739-47dd-a71e-58dec4744b1d",
                   "entrance": true
                 }
               ]
@@ -13683,7 +14105,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "fd1d6e20-8709-418e-99e2-9f1f1764c5b0",
+                  "__guid": "84517a9c-264e-4f73-ac62-aaeddb9c643d",
                   "entrance": true
                 }
               ]
@@ -13756,7 +14178,7 @@
           "Components": [
             {
               "__type": "Room",
-              "__guid": "9dff00cb-98ce-4fd5-8ea2-341b6e1c5013",
+              "__guid": "9306d14f-f31f-4198-a94b-8016910aa046",
               "cleared": false,
               "E_exit": false,
               "enemy_count_1player": 4,
@@ -13852,7 +14274,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "2f4bd57d-8422-4490-9794-6c561d9eda87",
+                  "__guid": "81ed385c-0610-4c26-8865-26c6f0f71442",
                   "entrance": false
                 }
               ]
@@ -13971,7 +14393,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "75261cb2-be1b-43da-885c-f2f14762190b",
+                  "__guid": "b894d75f-68cb-4c0b-9100-7f00eea90048",
                   "entrance": false
                 }
               ]
@@ -14088,7 +14510,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "bd2c6544-ec92-42f7-9602-6ab6e9d97f73",
+                  "__guid": "7328f55a-81cf-4be6-8fdb-604639d6e707",
                   "entrance": true
                 }
               ]
@@ -14207,7 +14629,7 @@
                 },
                 {
                   "__type": "Door",
-                  "__guid": "e30d806e-4377-4368-b417-b6914fc6d5b3",
+                  "__guid": "4b0d5326-3abb-445e-8321-617ded9ddd53",
                   "entrance": true
                 }
               ]
@@ -14292,12 +14714,12 @@
       "AgentStepSize": 18,
       "AgentMaxSlope": 40,
       "ExcludedBodies": "enemy,player",
-      "IncludedBodies": "room"
+      "IncludedBodies": "room,wall"
     }
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-03-17T17:39:13.0141659\u002B11:00",
+  "LastSaved": "2024-03-17T19:17:42.628788\u002B11:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": []
