@@ -518,7 +518,6 @@
                 {
                   "__type": "SkinnedModelRenderer",
                   "__guid": "33d2104d-4ed5-4315-8e98-77620a3ac4c3",
-                  "AnimationGraph": "animgraphs/sdp_barbarian.vanmgrph",
                   "BodyGroups": 18446744073709551615,
                   "CreateBoneObjects": false,
                   "Model": "art/models/playercharacters/sdp_pc_paladin.vmdl",
@@ -4880,7 +4879,7 @@
       "Children": [
         {
           "__guid": "455b38f8-ab72-4c2e-894c-adc0f732b907",
-          "Name": "Room",
+          "Name": "Room_01",
           "Enabled": true,
           "NetworkMode": 2,
           "Components": [
@@ -4900,38 +4899,9 @@
           ],
           "Children": [
             {
-              "__guid": "5b483a09-bbf2-4949-98c7-a73b789d0ee7",
-              "Name": "room_edge",
-              "Position": "410,240,30",
-              "Scale": "0.5,7,1",
-              "Tags": "wall",
-              "Enabled": true,
-              "NetworkMode": 2,
-              "Components": [
-                {
-                  "__type": "ModelRenderer",
-                  "__guid": "fd5c51a7-f3d5-4c48-8bdb-9cfa974dc2fb",
-                  "BodyGroups": 18446744073709551615,
-                  "MaterialOverride": "materials/default.vmat",
-                  "Model": "models/dev/box.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,0,0.93333,1"
-                },
-                {
-                  "__type": "BoxCollider",
-                  "__guid": "4f8f7d07-7028-4b30-9139-22ca61daf6ef",
-                  "Center": "0,0,0",
-                  "IsTrigger": false,
-                  "Scale": "50,50,50",
-                  "Static": false
-                }
-              ]
-            },
-            {
               "__guid": "4d49edec-4d9d-4a09-b657-1f23a669a1b0",
               "Name": "pillar_stone_02",
-              "Position": "410,-380,0",
-              "Scale": "1,0.5,0.5",
+              "Position": "-454.7413,-480,0",
               "Enabled": true,
               "NetworkMode": 2,
               "Components": [
@@ -4969,8 +4939,7 @@
             {
               "__guid": "edf64298-53ad-4d69-ba93-00328e04db78",
               "Name": "pillar_stone_02",
-              "Position": "410,370.0031,0",
-              "Scale": "1,0.5,0.5",
+              "Position": "-454.7413,416,0",
               "Enabled": true,
               "NetworkMode": 2,
               "Components": [
@@ -5006,87 +4975,9 @@
               ]
             },
             {
-              "__guid": "41e4ca1c-8c10-456e-be6f-308827171f0c",
-              "Name": "pillar_stone_02",
-              "Position": "-383.2904,357.3732,0",
-              "Scale": "1,0.5,0.5",
-              "Enabled": true,
-              "NetworkMode": 2,
-              "Components": [
-                {
-                  "__type": "ModelRenderer",
-                  "__guid": "2c6d3065-4a1c-42b9-8d95-08d5848c5185",
-                  "BodyGroups": 18446744073709551615,
-                  "Model": "art/models/environment/walls/pillar_stone_02.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1"
-                },
-                {
-                  "__type": "ModelCollider",
-                  "__guid": "da77b50d-4c14-4438-a66e-ef46ba847234",
-                  "__enabled": false,
-                  "IsTrigger": false,
-                  "Model": "art/models/environment/walls/pillar_stone_02.vmdl",
-                  "Static": false
-                },
-                {
-                  "__type": "Rigidbody",
-                  "__guid": "6a509cb7-e929-4902-9b69-8bc8d994fac5",
-                  "__enabled": false,
-                  "AngularDamping": 0,
-                  "Gravity": true,
-                  "LinearDamping": 0,
-                  "Locking": {},
-                  "MassOverride": 0,
-                  "MotionEnabled": true,
-                  "RigidbodyFlags": 0,
-                  "StartAsleep": false
-                }
-              ]
-            },
-            {
-              "__guid": "2f7665b5-2b37-46ed-94e3-1919a541a779",
-              "Name": "pillar_stone_02",
-              "Position": "-397.9591,-373.2744,0",
-              "Scale": "1,0.5,0.5",
-              "Enabled": true,
-              "NetworkMode": 2,
-              "Components": [
-                {
-                  "__type": "ModelRenderer",
-                  "__guid": "91b5ba88-34c1-44d7-8906-73c4ac9cc60a",
-                  "BodyGroups": 18446744073709551615,
-                  "Model": "art/models/environment/walls/pillar_stone_02.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1"
-                },
-                {
-                  "__type": "ModelCollider",
-                  "__guid": "77a3e420-787b-4db3-9ff7-1ed705e05d66",
-                  "__enabled": false,
-                  "IsTrigger": false,
-                  "Model": "art/models/environment/walls/pillar_stone_02.vmdl",
-                  "Static": false
-                },
-                {
-                  "__type": "Rigidbody",
-                  "__guid": "d189314c-9a64-46a4-b915-ead13779f671",
-                  "__enabled": false,
-                  "AngularDamping": 0,
-                  "Gravity": true,
-                  "LinearDamping": 0,
-                  "Locking": {},
-                  "MassOverride": 0,
-                  "MotionEnabled": true,
-                  "RigidbodyFlags": 0,
-                  "StartAsleep": false
-                }
-              ]
-            },
-            {
               "__guid": "ad2eb1f8-7947-4ec0-b7ca-21df917b4837",
               "Name": "S_door",
-              "Position": "410,0,30",
+              "Position": "456.2845,0,30",
               "Scale": "0.5,3,1",
               "Tags": "wall",
               "Enabled": true,
@@ -5095,6 +4986,7 @@
                 {
                   "__type": "ModelRenderer",
                   "__guid": "aa56e48f-e1f2-448b-b325-9a3af13e42cc",
+                  "__enabled": false,
                   "BodyGroups": 18446744073709551615,
                   "MaterialOverride": "materials/default.vmat",
                   "Model": "models/dev/box.vmdl",
@@ -5114,7 +5006,7 @@
             {
               "__guid": "727fef80-787a-4362-becc-bee8d0a7246b",
               "Name": "S_door-trigger",
-              "Position": "390,0,30",
+              "Position": "436.2845,0,30",
               "Scale": "0.5,3,1",
               "Enabled": true,
               "NetworkMode": 2,
@@ -5122,6 +5014,7 @@
                 {
                   "__type": "ModelRenderer",
                   "__guid": "86f1304a-941d-41e9-8667-be97db53467c",
+                  "__enabled": false,
                   "BodyGroups": 18446744073709551615,
                   "MaterialOverride": "materials/default.vmat",
                   "Model": "models/dev/box.vmdl",
@@ -5144,66 +5037,9 @@
               ]
             },
             {
-              "__guid": "6f02eb7b-a983-4483-9e29-df94e38d75de",
-              "Name": "room_edge",
-              "Position": "410,-240,30",
-              "Scale": "0.5,7,1",
-              "Tags": "wall",
-              "Enabled": true,
-              "NetworkMode": 2,
-              "Components": [
-                {
-                  "__type": "ModelRenderer",
-                  "__guid": "14d247e2-304d-4c1c-b732-a8fe509e3d63",
-                  "BodyGroups": 18446744073709551615,
-                  "MaterialOverride": "materials/default.vmat",
-                  "Model": "models/dev/box.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,0,0.93333,1"
-                },
-                {
-                  "__type": "BoxCollider",
-                  "__guid": "d451bbf5-6857-48c7-bd53-4305c1d63ce5",
-                  "Center": "0,0,0",
-                  "IsTrigger": false,
-                  "Scale": "50,50,50",
-                  "Static": false
-                }
-              ]
-            },
-            {
-              "__guid": "a1a7731a-8780-4819-81dd-b5eec02dbc2b",
-              "Name": "room_edge",
-              "Position": "240,-410,30",
-              "Rotation": "0,0,0.7071068,0.7071068",
-              "Scale": "0.5,7,1",
-              "Tags": "wall",
-              "Enabled": true,
-              "NetworkMode": 2,
-              "Components": [
-                {
-                  "__type": "ModelRenderer",
-                  "__guid": "78c89259-e295-4cd5-8916-ae194e12fdf5",
-                  "BodyGroups": 18446744073709551615,
-                  "MaterialOverride": "materials/default.vmat",
-                  "Model": "models/dev/box.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,0,0.93333,1"
-                },
-                {
-                  "__type": "BoxCollider",
-                  "__guid": "3a67a4fd-a454-410b-8a73-6aa29f0cba45",
-                  "Center": "0,0,0",
-                  "IsTrigger": false,
-                  "Scale": "50,50,50",
-                  "Static": false
-                }
-              ]
-            },
-            {
               "__guid": "a418eb1f-10cc-42cc-b315-e36f01059da0",
               "Name": "W_door",
-              "Position": "0,-410,30",
+              "Position": "0.0000906694,-468.2361,30",
               "Rotation": "0,0,0.7071068,0.7071068",
               "Scale": "0.5,3,1",
               "Tags": "wall",
@@ -5213,6 +5049,7 @@
                 {
                   "__type": "ModelRenderer",
                   "__guid": "82b501e2-e1e2-48db-8094-9200cc4c7361",
+                  "__enabled": false,
                   "BodyGroups": 18446744073709551615,
                   "MaterialOverride": "materials/default.vmat",
                   "Model": "models/dev/box.vmdl",
@@ -5232,7 +5069,7 @@
             {
               "__guid": "9c71d828-a076-4f57-b18a-ec0e87a37d38",
               "Name": "W_door-trigger",
-              "Position": "0,-390,30",
+              "Position": "0.0001834503,-506.2361,30",
               "Rotation": "0,0,0.7071068,0.7071068",
               "Scale": "0.5,3,1",
               "Enabled": true,
@@ -5241,6 +5078,7 @@
                 {
                   "__type": "ModelRenderer",
                   "__guid": "60e7163e-dfbe-4321-9053-dbe6be90c712",
+                  "__enabled": false,
                   "BodyGroups": 18446744073709551615,
                   "MaterialOverride": "materials/default.vmat",
                   "Model": "models/dev/box.vmdl",
@@ -5263,180 +5101,6 @@
               ]
             },
             {
-              "__guid": "62f3f9ff-b8ca-41df-a36b-7008e829588a",
-              "Name": "room_edge",
-              "Position": "-240,-410,30",
-              "Rotation": "0,0,0.7071068,0.7071068",
-              "Scale": "0.5,7,1",
-              "Tags": "wall",
-              "Enabled": true,
-              "NetworkMode": 2,
-              "Components": [
-                {
-                  "__type": "ModelRenderer",
-                  "__guid": "5b471e18-cf25-4e12-98ef-6c0428f9283a",
-                  "BodyGroups": 18446744073709551615,
-                  "MaterialOverride": "materials/default.vmat",
-                  "Model": "models/dev/box.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,0,0.93333,1"
-                },
-                {
-                  "__type": "BoxCollider",
-                  "__guid": "43159d80-e63b-423f-819d-03588cdec932",
-                  "Center": "0,0,0",
-                  "IsTrigger": false,
-                  "Scale": "50,50,50",
-                  "Static": false
-                }
-              ]
-            },
-            {
-              "__guid": "0c9397a1-87d7-45de-918a-6fbd950b4325",
-              "Name": "room_edge",
-              "Position": "-410,-240,30",
-              "Scale": "0.5,7,1",
-              "Tags": "wall",
-              "Enabled": true,
-              "NetworkMode": 2,
-              "Components": [
-                {
-                  "__type": "ModelRenderer",
-                  "__guid": "12adce0d-b5bb-4e18-b817-be56fd6d5e3a",
-                  "BodyGroups": 18446744073709551615,
-                  "MaterialOverride": "materials/default.vmat",
-                  "Model": "models/dev/box.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,0,0.93333,1"
-                },
-                {
-                  "__type": "BoxCollider",
-                  "__guid": "40035be1-7c5d-4147-bfa5-9dbbe1fd344f",
-                  "Center": "0,0,0",
-                  "IsTrigger": false,
-                  "Scale": "50,50,50",
-                  "Static": false
-                }
-              ]
-            },
-            {
-              "__guid": "7fc14147-691d-42e5-859c-e6140bd69cce",
-              "Name": "N_door",
-              "Position": "-410,0,30",
-              "Scale": "0.5,3,1",
-              "Tags": "wall",
-              "Enabled": true,
-              "NetworkMode": 2,
-              "Components": [
-                {
-                  "__type": "ModelRenderer",
-                  "__guid": "d09d7bbe-db89-43b1-be39-3be5277835bb",
-                  "BodyGroups": 18446744073709551615,
-                  "MaterialOverride": "materials/default.vmat",
-                  "Model": "models/dev/box.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,0,0.93333,1"
-                },
-                {
-                  "__type": "BoxCollider",
-                  "__guid": "1480ff96-1932-4754-b8e1-723759ba2174",
-                  "Center": "0,0,0",
-                  "IsTrigger": false,
-                  "Scale": "50,50,50",
-                  "Static": false
-                }
-              ]
-            },
-            {
-              "__guid": "156a0567-0203-4965-961e-8a13228920c0",
-              "Name": "N_door-trigger",
-              "Position": "-390,0,30",
-              "Scale": "0.5,3,1",
-              "Enabled": true,
-              "NetworkMode": 2,
-              "Components": [
-                {
-                  "__type": "ModelRenderer",
-                  "__guid": "9323a00b-2337-44ec-b839-1731cfadaec5",
-                  "BodyGroups": 18446744073709551615,
-                  "MaterialOverride": "materials/default.vmat",
-                  "Model": "models/dev/box.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,0,0.93333,1"
-                },
-                {
-                  "__type": "BoxCollider",
-                  "__guid": "632c2d06-961e-41d4-a257-afa74ea81468",
-                  "Center": "0,0,0",
-                  "IsTrigger": true,
-                  "Scale": "50,50,50",
-                  "Static": false
-                },
-                {
-                  "__type": "Door",
-                  "__guid": "7860b49b-adff-4baf-b1d9-4a15e9c9414d",
-                  "entrance": true
-                }
-              ]
-            },
-            {
-              "__guid": "b58fa76c-447b-4be0-b5a8-a8a9d8e9576f",
-              "Name": "room_edge",
-              "Position": "-410,240,30",
-              "Scale": "0.5,7,1",
-              "Tags": "wall",
-              "Enabled": true,
-              "NetworkMode": 2,
-              "Components": [
-                {
-                  "__type": "ModelRenderer",
-                  "__guid": "1fa439cb-1802-4312-91d8-fa9710ba61ae",
-                  "BodyGroups": 18446744073709551615,
-                  "MaterialOverride": "materials/default.vmat",
-                  "Model": "models/dev/box.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,0,0.93333,1"
-                },
-                {
-                  "__type": "BoxCollider",
-                  "__guid": "3f0ad1f2-11f6-48e0-b67a-59c81f5ed7e9",
-                  "Center": "0,0,0",
-                  "IsTrigger": false,
-                  "Scale": "50,50,50",
-                  "Static": false
-                }
-              ]
-            },
-            {
-              "__guid": "3316393d-f030-447d-b692-5ad77f069f6f",
-              "Name": "room_edge",
-              "Position": "-240,410,30",
-              "Rotation": "0,0,0.7071068,0.7071068",
-              "Scale": "0.5,7,1",
-              "Tags": "wall",
-              "Enabled": true,
-              "NetworkMode": 2,
-              "Components": [
-                {
-                  "__type": "ModelRenderer",
-                  "__guid": "37048c64-8408-4fc3-8942-aba6816be54a",
-                  "BodyGroups": 18446744073709551615,
-                  "MaterialOverride": "materials/default.vmat",
-                  "Model": "models/dev/box.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,0,0.93333,1"
-                },
-                {
-                  "__type": "BoxCollider",
-                  "__guid": "90ee4ae7-84e5-4418-bba9-d03f1edda207",
-                  "Center": "0,0,0",
-                  "IsTrigger": false,
-                  "Scale": "50,50,50",
-                  "Static": false
-                }
-              ]
-            },
-            {
               "__guid": "e9306c2a-e146-4a15-8759-338c4d5b5c76",
               "Name": "E_door",
               "Position": "0,410,30",
@@ -5449,6 +5113,7 @@
                 {
                   "__type": "ModelRenderer",
                   "__guid": "f76e7367-b96b-4ee6-b557-fef347c19d30",
+                  "__enabled": false,
                   "BodyGroups": 18446744073709551615,
                   "MaterialOverride": "materials/default.vmat",
                   "Model": "models/dev/box.vmdl",
@@ -5477,6 +5142,7 @@
                 {
                   "__type": "ModelRenderer",
                   "__guid": "f7f080ee-a2ae-4912-9406-792d96ec9f33",
+                  "__enabled": false,
                   "BodyGroups": 18446744073709551615,
                   "MaterialOverride": "materials/default.vmat",
                   "Model": "models/dev/box.vmdl",
@@ -5499,50 +5165,12 @@
               ]
             },
             {
-              "__guid": "724027d3-94f0-45fc-9601-e4f158c31962",
-              "Name": "room_edge",
-              "Position": "240,410,30",
-              "Rotation": "0,0,0.7071068,0.7071068",
-              "Scale": "0.5,7,1",
-              "Tags": "wall",
-              "Enabled": true,
-              "NetworkMode": 2,
-              "Components": [
-                {
-                  "__type": "ModelRenderer",
-                  "__guid": "7b9365c6-292d-47cf-897c-fb15a0a9e99c",
-                  "BodyGroups": 18446744073709551615,
-                  "MaterialOverride": "materials/default.vmat",
-                  "Model": "models/dev/box.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,0,0.93333,1"
-                },
-                {
-                  "__type": "BoxCollider",
-                  "__guid": "464f6abe-5786-46d9-9767-6e1d1a7e4f51",
-                  "Center": "0,0,0",
-                  "IsTrigger": false,
-                  "Scale": "50,50,50",
-                  "Static": false
-                }
-              ]
-            },
-            {
               "__guid": "6ad70641-3c6c-4402-9c85-9a4969af4764",
               "Name": "Plane",
               "Scale": "8,8,1",
               "Enabled": true,
               "NetworkMode": 2,
               "Components": [
-                {
-                  "__type": "ModelRenderer",
-                  "__guid": "ff5a4898-3ee5-4d07-9972-29760ec203b4",
-                  "BodyGroups": 18446744073709551615,
-                  "MaterialOverride": "materials/default.vmat",
-                  "Model": "models/dev/plane.vmdl",
-                  "RenderType": "On",
-                  "Tint": "0.39546,0.51163,0.27128,1"
-                },
                 {
                   "__type": "BoxCollider",
                   "__guid": "f9b7c4f9-a658-46b3-bd7d-fd1996a67583",
@@ -5554,45 +5182,779 @@
               ]
             },
             {
-              "__guid": "29d79245-ea17-482f-b158-a8e84904a2d9",
-              "Name": "wall_mod_01",
-              "Position": "410,-85.42725,0",
+              "__guid": "35920b1b-3136-44a4-b4cf-cf4066887c69",
+              "Name": "collider",
               "Enabled": true,
               "NetworkMode": 2,
-              "__Prefab": "code/basic_wall.prefab"
+              "Children": [
+                {
+                  "__guid": "62f3f9ff-b8ca-41df-a36b-7008e829588a",
+                  "Name": "room_edge",
+                  "Position": "-239.9999,-480.0001,30",
+                  "Rotation": "0,0,0.7071068,0.7071068",
+                  "Scale": "0.5,7,1",
+                  "Tags": "wall",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Components": [
+                    {
+                      "__type": "BoxCollider",
+                      "__guid": "43159d80-e63b-423f-819d-03588cdec932",
+                      "Center": "0,0,0",
+                      "IsTrigger": false,
+                      "Scale": "50,50,50",
+                      "Static": false
+                    }
+                  ]
+                },
+                {
+                  "__guid": "0c9397a1-87d7-45de-918a-6fbd950b4325",
+                  "Name": "room_edge",
+                  "Position": "-410,-240,30",
+                  "Scale": "0.5,7,1",
+                  "Tags": "wall",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Components": [
+                    {
+                      "__type": "BoxCollider",
+                      "__guid": "40035be1-7c5d-4147-bfa5-9dbbe1fd344f",
+                      "Center": "0,0,0",
+                      "IsTrigger": false,
+                      "Scale": "50,50,50",
+                      "Static": false
+                    }
+                  ]
+                },
+                {
+                  "__guid": "3316393d-f030-447d-b692-5ad77f069f6f",
+                  "Name": "room_edge",
+                  "Position": "-240,410,30",
+                  "Rotation": "0,0,0.7071068,0.7071068",
+                  "Scale": "0.5,7,1",
+                  "Tags": "wall",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Components": [
+                    {
+                      "__type": "BoxCollider",
+                      "__guid": "90ee4ae7-84e5-4418-bba9-d03f1edda207",
+                      "Center": "0,0,0",
+                      "IsTrigger": false,
+                      "Scale": "50,50,50",
+                      "Static": false
+                    }
+                  ]
+                },
+                {
+                  "__guid": "b58fa76c-447b-4be0-b5a8-a8a9d8e9576f",
+                  "Name": "room_edge",
+                  "Position": "-410,240,30",
+                  "Scale": "0.5,7,1",
+                  "Tags": "wall",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Components": [
+                    {
+                      "__type": "BoxCollider",
+                      "__guid": "3f0ad1f2-11f6-48e0-b67a-59c81f5ed7e9",
+                      "Center": "0,0,0",
+                      "IsTrigger": false,
+                      "Scale": "50,50,50",
+                      "Static": false
+                    }
+                  ]
+                },
+                {
+                  "__guid": "724027d3-94f0-45fc-9601-e4f158c31962",
+                  "Name": "room_edge",
+                  "Position": "240,410,30",
+                  "Rotation": "0,0,0.7071068,0.7071068",
+                  "Scale": "0.5,7,1",
+                  "Tags": "wall",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Components": [
+                    {
+                      "__type": "BoxCollider",
+                      "__guid": "464f6abe-5786-46d9-9767-6e1d1a7e4f51",
+                      "Center": "0,0,0",
+                      "IsTrigger": false,
+                      "Scale": "50,50,50",
+                      "Static": false
+                    }
+                  ]
+                },
+                {
+                  "__guid": "a1a7731a-8780-4819-81dd-b5eec02dbc2b",
+                  "Name": "room_edge",
+                  "Position": "240.0001,-480,30",
+                  "Rotation": "0,0,0.7071068,0.7071068",
+                  "Scale": "0.5,7,1",
+                  "Tags": "wall",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Components": [
+                    {
+                      "__type": "BoxCollider",
+                      "__guid": "3a67a4fd-a454-410b-8a73-6aa29f0cba45",
+                      "Center": "0,0,0",
+                      "IsTrigger": false,
+                      "Scale": "50,50,50",
+                      "Static": false
+                    }
+                  ]
+                },
+                {
+                  "__guid": "6f02eb7b-a983-4483-9e29-df94e38d75de",
+                  "Name": "room_edge",
+                  "Position": "410,-240,30",
+                  "Scale": "0.5,7,1",
+                  "Tags": "wall",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Components": [
+                    {
+                      "__type": "BoxCollider",
+                      "__guid": "d451bbf5-6857-48c7-bd53-4305c1d63ce5",
+                      "Center": "0,0,0",
+                      "IsTrigger": false,
+                      "Scale": "50,50,50",
+                      "Static": false
+                    }
+                  ]
+                },
+                {
+                  "__guid": "5b483a09-bbf2-4949-98c7-a73b789d0ee7",
+                  "Name": "room_edge",
+                  "Position": "410,240,30",
+                  "Scale": "0.5,7,1",
+                  "Tags": "wall",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Components": [
+                    {
+                      "__type": "BoxCollider",
+                      "__guid": "4f8f7d07-7028-4b30-9139-22ca61daf6ef",
+                      "Center": "0,0,0",
+                      "IsTrigger": false,
+                      "Scale": "50,50,50",
+                      "Static": false
+                    }
+                  ]
+                },
+                {
+                  "__guid": "7fc14147-691d-42e5-859c-e6140bd69cce",
+                  "Name": "N_door",
+                  "Position": "-529.5225,0,30",
+                  "Scale": "0.5,3,1",
+                  "Tags": "wall",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Components": [
+                    {
+                      "__type": "ModelRenderer",
+                      "__guid": "d09d7bbe-db89-43b1-be39-3be5277835bb",
+                      "__enabled": false,
+                      "BodyGroups": 18446744073709551615,
+                      "MaterialOverride": "materials/default.vmat",
+                      "Model": "models/dev/box.vmdl",
+                      "RenderType": "On",
+                      "Tint": "1,0,0.93333,1"
+                    },
+                    {
+                      "__type": "BoxCollider",
+                      "__guid": "1480ff96-1932-4754-b8e1-723759ba2174",
+                      "Center": "0,0,0",
+                      "IsTrigger": false,
+                      "Scale": "50,50,50",
+                      "Static": false
+                    }
+                  ]
+                },
+                {
+                  "__guid": "156a0567-0203-4965-961e-8a13228920c0",
+                  "Name": "N_door-trigger",
+                  "Position": "-509.5224,0,30",
+                  "Scale": "0.5,3,1",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Components": [
+                    {
+                      "__type": "ModelRenderer",
+                      "__guid": "9323a00b-2337-44ec-b839-1731cfadaec5",
+                      "__enabled": false,
+                      "BodyGroups": 18446744073709551615,
+                      "MaterialOverride": "materials/default.vmat",
+                      "Model": "models/dev/box.vmdl",
+                      "RenderType": "On",
+                      "Tint": "1,0,0.93333,1"
+                    },
+                    {
+                      "__type": "BoxCollider",
+                      "__guid": "632c2d06-961e-41d4-a257-afa74ea81468",
+                      "Center": "0,0,0",
+                      "IsTrigger": true,
+                      "Scale": "50,50,50",
+                      "Static": false
+                    },
+                    {
+                      "__type": "Door",
+                      "__guid": "7860b49b-adff-4baf-b1d9-4a15e9c9414d",
+                      "entrance": true
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "__guid": "dc5e860f-5cb7-4fa2-96f6-5e6bb1ccbb28",
-              "Name": "basic_wall",
-              "Position": "101.2388,410.0001,0",
-              "Rotation": "0,0,0.7071068,0.7071068",
+              "__guid": "d201a072-e948-47ca-8043-571e32c7e167",
+              "Name": "floor",
               "Enabled": true,
               "NetworkMode": 2,
-              "__Prefab": "code/basic_wall.prefab"
+              "Children": [
+                {
+                  "__guid": "0ec215b6-c6fa-47bd-999e-2ea3220ba336",
+                  "Name": "stone_pavement_02 (2)",
+                  "Position": "-444.1743,-36.10897,0",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Components": [
+                    {
+                      "__type": "ModelRenderer",
+                      "__guid": "777ddb5a-b691-47a4-a774-e64af9b0c299",
+                      "BodyGroups": 18446744073709551615,
+                      "Model": "art/models/environment/floor/stone_pavement_02.vmdl",
+                      "RenderType": "On",
+                      "Tint": "1,1,1,1"
+                    }
+                  ]
+                },
+                {
+                  "__guid": "e679babd-464d-45a5-9789-b8209b1fe68f",
+                  "Name": "stone_pavement_02 (1)",
+                  "Position": "-144.9427,-36.10895,0",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Components": [
+                    {
+                      "__type": "ModelRenderer",
+                      "__guid": "426cfb2b-955e-4706-84d4-f71ef3cf6793",
+                      "BodyGroups": 18446744073709551615,
+                      "Model": "art/models/environment/floor/stone_pavement_02.vmdl",
+                      "RenderType": "On",
+                      "Tint": "1,1,1,1"
+                    }
+                  ]
+                },
+                {
+                  "__guid": "4713e0d5-3628-4087-8c9f-242e3e83e94a",
+                  "Name": "stone_pavement_02",
+                  "Position": "306.2547,-36.10895,0",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Components": [
+                    {
+                      "__type": "ModelRenderer",
+                      "__guid": "4f654926-5bb2-40e5-a5d6-e021473547a0",
+                      "BodyGroups": 18446744073709551615,
+                      "Model": "art/models/environment/floor/stone_pavement_02.vmdl",
+                      "RenderType": "On",
+                      "Tint": "1,1,1,1"
+                    }
+                  ]
+                },
+                {
+                  "__guid": "76997837-aec3-4740-8f54-2efc5b13bac1",
+                  "Name": "stone_pavement_04 (2)",
+                  "Position": "-296.5697,-44.96161,0",
+                  "Rotation": "0,0,1,-0.00000004371139",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Components": [
+                    {
+                      "__type": "Prop",
+                      "__guid": "c3a6de58-2280-4c97-9c8a-27ccf8cb4ba4",
+                      "Health": 0,
+                      "IsStatic": false,
+                      "Model": "art/models/environment/floor/stone_pavement_04.vmdl"
+                    }
+                  ]
+                },
+                {
+                  "__guid": "49f8c523-f567-4376-acf4-1b6f3aa950a8",
+                  "Name": "stone_pavement_04 (1)",
+                  "Position": "10.19242,-44.96159,0",
+                  "Rotation": "0,0,1,-0.00000004371139",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Components": [
+                    {
+                      "__type": "Prop",
+                      "__guid": "48ff942f-a9e1-4125-a5aa-e050a2cbbbe2",
+                      "Health": 0,
+                      "IsStatic": false,
+                      "Model": "art/models/environment/floor/stone_pavement_04.vmdl"
+                    }
+                  ]
+                },
+                {
+                  "__guid": "44a002cd-a665-4abc-826b-17ad11267c8a",
+                  "Name": "stone_pavement_04",
+                  "Position": "159.5105,-44.96159,0",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Components": [
+                    {
+                      "__type": "Prop",
+                      "__guid": "13df8b91-0126-4060-a62a-5949b824d5f8",
+                      "Health": 0,
+                      "IsStatic": false,
+                      "Model": "art/models/environment/floor/stone_pavement_04.vmdl"
+                    }
+                  ]
+                },
+                {
+                  "__guid": "bb090d4a-2bc6-4185-9944-04fa581079f6",
+                  "Name": "in_floor_01 (2)",
+                  "Position": "-27.33585,992,0",
+                  "Rotation": "0,0,1,-0.00000004371139",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Components": [
+                    {
+                      "__type": "Prop",
+                      "__guid": "dbc8c936-c2fc-4c9e-a1cb-38b9362fe308",
+                      "Health": 0,
+                      "IsStatic": false,
+                      "Model": "art/models/environment/tiles/in_floor_01.vmdl"
+                    }
+                  ]
+                },
+                {
+                  "__guid": "353fb25b-3cd5-438c-8561-2d6295cbd60c",
+                  "Name": "in_floor_01 (1)",
+                  "Position": "-27.33568,-960,0",
+                  "Rotation": "0,0,1,-0.00000004371139",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Components": [
+                    {
+                      "__type": "Prop",
+                      "__guid": "8209ef5e-bc4b-4b75-bc5b-6df5447728a1",
+                      "Health": 0,
+                      "IsStatic": false,
+                      "Model": "art/models/environment/tiles/in_floor_01.vmdl"
+                    }
+                  ]
+                },
+                {
+                  "__guid": "6b4e4aac-04d2-41a4-b5d0-9d29a3f2d693",
+                  "Name": "in_floor_01",
+                  "Position": "-27.33576,15.22564,0",
+                  "Rotation": "0,0,1,-0.00000004371139",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Components": [
+                    {
+                      "__type": "Prop",
+                      "__guid": "02c1ece3-4d7a-40db-8d89-3a7ada8f0e86",
+                      "Health": 0,
+                      "IsStatic": false,
+                      "Model": "art/models/environment/tiles/in_floor_01.vmdl"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "__guid": "8eae5f46-79f5-4b28-aacf-f75242dae6f3",
-              "Name": "basic_wall",
-              "Position": "101.239,-410,0",
-              "Rotation": "0,0,0.7071068,0.7071068",
+              "__guid": "02aa4eb1-821c-446f-9658-0af2ee3248e0",
+              "Name": "misc",
               "Enabled": true,
               "NetworkMode": 2,
-              "__Prefab": "code/basic_wall.prefab"
-            },
-            {
-              "__guid": "7fc985cb-504a-40ae-800e-92183c6d35b7",
-              "Name": "basic_wall_gap",
-              "Position": "-421.3811,-5.802578,4",
-              "Enabled": true,
-              "NetworkMode": 2,
-              "__Prefab": "code/basic_wall_gap.prefab"
+              "Children": [
+                {
+                  "__guid": "c88e2463-81ec-4852-b974-ddcdc6dd0b62",
+                  "Name": "door_frame",
+                  "Position": "-520.4437,-0.2652685,-2.959702",
+                  "Rotation": "-0.00000005960464,-0.00000007390975,0.9999999,-0.0000002217293",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Components": [
+                    {
+                      "__type": "Prop",
+                      "__guid": "7cfaf301-ef72-4442-a1f0-75f996b708c5",
+                      "Health": 0,
+                      "IsStatic": false,
+                      "Model": "art/models/environment/walls/door_frame.vmdl"
+                    }
+                  ]
+                },
+                {
+                  "__guid": "05b318be-eb53-48c3-84e0-7d0dc737b983",
+                  "Name": "misc_cage_02 (1)",
+                  "Position": "-428.8527,-253.692,208.5552",
+                  "Scale": "0.6009047,0.6009047,0.6009047",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Components": [
+                    {
+                      "__type": "Prop",
+                      "__guid": "333f2a52-6fc0-46f6-a915-73e8331686f5",
+                      "Health": 0,
+                      "IsStatic": false,
+                      "Model": "art/models/environment/misc/misc_cage_02.vmdl"
+                    }
+                  ]
+                },
+                {
+                  "__guid": "bc93ae01-bb7d-47a0-8cbd-cddf458293b0",
+                  "Name": "misc_cage_02",
+                  "Position": "-428.8527,216.2461,208.5552",
+                  "Scale": "0.6009047,0.6009047,0.6009047",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Components": [
+                    {
+                      "__type": "Prop",
+                      "__guid": "09ab29c6-4176-4742-9244-8b2ae92878f8",
+                      "Health": 0,
+                      "IsStatic": false,
+                      "Model": "art/models/environment/misc/misc_cage_02.vmdl"
+                    }
+                  ]
+                },
+                {
+                  "__guid": "a00875f1-3026-49b3-b667-4d64bea28cf7",
+                  "Name": "misc_barrel_01 (2)",
+                  "Position": "333.0646,-378.0683,-0.000002067835",
+                  "Scale": "0.3606589,0.3606589,0.3606589",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Components": [
+                    {
+                      "__type": "Prop",
+                      "__guid": "dbe1febb-0815-4b68-b9fe-c4ee96020992",
+                      "Health": 0,
+                      "IsStatic": false,
+                      "Model": "art/models/environment/misc/misc_barrel_01.vmdl"
+                    }
+                  ]
+                },
+                {
+                  "__guid": "33275944-899a-4669-97ba-2c0e1d7f4f0a",
+                  "Name": "misc_barrel_01 (1)",
+                  "Position": "299.4637,-307.0072,-0.0000911371",
+                  "Scale": "0.3606589,0.3606589,0.3606589",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Components": [
+                    {
+                      "__type": "Prop",
+                      "__guid": "3ea11ce4-412d-4372-a21a-924ee111dd64",
+                      "Health": 0,
+                      "IsStatic": false,
+                      "Model": "art/models/environment/misc/misc_barrel_01.vmdl"
+                    }
+                  ]
+                },
+                {
+                  "__guid": "534b45f7-23ed-43f7-9fe3-0e197f0ebe62",
+                  "Name": "misc_barrel_01",
+                  "Position": "243.3278,-363.7906,0.00001707001",
+                  "Scale": "0.3606589,0.3606589,0.3606589",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Components": [
+                    {
+                      "__type": "Prop",
+                      "__guid": "18ace8d0-d8e7-47cb-8486-6b1248efed10",
+                      "Health": 0,
+                      "IsStatic": false,
+                      "Model": "art/models/environment/misc/misc_barrel_01.vmdl"
+                    }
+                  ]
+                },
+                {
+                  "__guid": "b12c28c7-0dda-4a16-a9e7-9f3f85720a2f",
+                  "Name": "chain_link_02",
+                  "Position": "-440.9631,-13.18777,281.1202",
+                  "Rotation": "-0.00000005960464,-0.00000007390975,0.9999999,-0.0000002217293",
+                  "Scale": "1.2,1.2,1.2",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Components": [
+                    {
+                      "__type": "Prop",
+                      "__guid": "f75d4312-44a6-45f1-95f2-b0ac661e4a34",
+                      "Health": 0,
+                      "IsStatic": false,
+                      "Model": "art/models/environment/chains/chain_link_02.vmdl"
+                    }
+                  ]
+                },
+                {
+                  "__guid": "4c0fffc6-225e-4b26-af8b-27728b379f94",
+                  "Name": "light_box (1)",
+                  "Position": "442.8538,-538.3692,-0.00007352926",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Components": [
+                    {
+                      "__type": "Prop",
+                      "__guid": "5b001d0b-c8bb-4ce1-933a-df5bd854ad5e",
+                      "Health": 0,
+                      "IsStatic": false,
+                      "Model": "art/models/environment/lights/light_box.vmdl"
+                    }
+                  ]
+                },
+                {
+                  "__guid": "2b341530-c5f8-4c51-8161-4aa748c2b872",
+                  "Name": "light_box",
+                  "Position": "462.0117,463.717,-0.00007352926",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Components": [
+                    {
+                      "__type": "Prop",
+                      "__guid": "3162312f-26e9-4242-89eb-01ca9a4c2a05",
+                      "Health": 0,
+                      "IsStatic": false,
+                      "Model": "art/models/environment/lights/light_box.vmdl"
+                    }
+                  ]
+                },
+                {
+                  "__guid": "7465fb60-3453-40a3-85d1-a0cbac14d691",
+                  "Name": "env_door",
+                  "Position": "-532.025,1.238786,-3.392504",
+                  "Rotation": "-0.00000005960464,-0.00000007390975,0.9999999,-0.0000002217293",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Components": [
+                    {
+                      "__type": "Prop",
+                      "__guid": "1e8e27b4-57a5-42bd-bc39-6e7cd8e5f46f",
+                      "Health": 0,
+                      "IsStatic": false,
+                      "Model": "art/models/environment/walls/env_door.vmdl"
+                    }
+                  ]
+                },
+                {
+                  "__guid": "7fa76537-00f8-4bbd-a4f9-8ef2e1cbcacf",
+                  "Name": "floorgrate_01",
+                  "Position": "-301.4302,-259.4724,-1.105972",
+                  "Scale": "0.289659,0.289659,0.289659",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Components": [
+                    {
+                      "__type": "ModelRenderer",
+                      "__guid": "711ca6b7-14f2-4059-8a4e-b1b20de2c92a",
+                      "BodyGroups": 18446744073709551615,
+                      "Model": "art/models/environment/walls/floorgrate_01.vmdl",
+                      "RenderType": "On",
+                      "Tint": "1,1,1,1"
+                    }
+                  ]
+                },
+                {
+                  "__guid": "6e8d464b-1665-4ff5-93b8-62e01e19a996",
+                  "Name": "wall_doorhole_01",
+                  "Position": "-525.5068,-4.333295,0",
+                  "Rotation": "-0.00000005960464,-0.00000007390975,0.9999999,-0.0000002217293",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Components": [
+                    {
+                      "__type": "Prop",
+                      "__guid": "69124386-27fc-4251-a8de-4e3aec7181cb",
+                      "Health": 0,
+                      "IsStatic": false,
+                      "Model": "art/models/environment/walls/wall_doorhole_01.vmdl"
+                    }
+                  ]
+                },
+                {
+                  "__guid": "8cf459da-afa9-46ab-b1df-5fa0e8084f14",
+                  "Name": "wall_mod_02",
+                  "Position": "-524.9597,-269.6891,0",
+                  "Rotation": "-0,0,1,-0.00000004371139",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Components": [
+                    {
+                      "__type": "Prop",
+                      "__guid": "b1a28bb7-20b2-4a20-b73a-f893091a35be",
+                      "Health": 0,
+                      "IsStatic": false,
+                      "Model": "art/models/environment/walls/wall_mod_02.vmdl"
+                    }
+                  ]
+                },
+                {
+                  "__guid": "e30933aa-e653-4c74-86a4-7f08f7171bbf",
+                  "Name": "wall_mod_02 (6)",
+                  "Position": "-524.9597,-269.6891,130.6428",
+                  "Rotation": "-0,0,1,-0.00000004371139",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Components": [
+                    {
+                      "__type": "Prop",
+                      "__guid": "7f89652e-7a28-4206-ad85-5b78cd941438",
+                      "Health": 0,
+                      "IsStatic": false,
+                      "Model": "art/models/environment/walls/wall_mod_02.vmdl"
+                    }
+                  ]
+                },
+                {
+                  "__guid": "782729bf-0ae1-46c3-8612-56635a500082",
+                  "Name": "wall_mod_02 (3)",
+                  "Position": "-524.9598,463.3523,0",
+                  "Rotation": "-0,0,1,-0.00000004371139",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Components": [
+                    {
+                      "__type": "Prop",
+                      "__guid": "bd73c17c-7161-4262-af39-95dc35cca0c3",
+                      "Health": 0,
+                      "IsStatic": false,
+                      "Model": "art/models/environment/walls/wall_mod_02.vmdl"
+                    }
+                  ]
+                },
+                {
+                  "__guid": "13d4cc59-8623-4e38-acb0-b648465ad5d1",
+                  "Name": "wall_mod_02 (5)",
+                  "Position": "-524.9598,463.3523,130.6428",
+                  "Rotation": "-0,0,1,-0.00000004371139",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Components": [
+                    {
+                      "__type": "Prop",
+                      "__guid": "8f014c4e-0a59-483b-8e70-e96d97cf47ec",
+                      "Health": 0,
+                      "IsStatic": false,
+                      "Model": "art/models/environment/walls/wall_mod_02.vmdl"
+                    }
+                  ]
+                },
+                {
+                  "__guid": "909e4f8b-a1c7-429e-ae46-e24f04980a10",
+                  "Name": "wall_mod_02 (1)",
+                  "Position": "-524.9597,-475.1384,0",
+                  "Rotation": "-0,0,1,-0.00000004371139",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Components": [
+                    {
+                      "__type": "Prop",
+                      "__guid": "ca401c11-6a66-42e2-a850-b5fde3daed54",
+                      "Health": 0,
+                      "IsStatic": false,
+                      "Model": "art/models/environment/walls/wall_mod_02.vmdl"
+                    }
+                  ]
+                },
+                {
+                  "__guid": "ae48c9cf-be11-4163-a38a-43e34dedfef3",
+                  "Name": "wall_mod_02 (7)",
+                  "Position": "-524.9597,-475.1384,130.6428",
+                  "Rotation": "-0,0,1,-0.00000004371139",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Components": [
+                    {
+                      "__type": "Prop",
+                      "__guid": "2ee118a0-e256-4607-9e9d-f47e86c38dbb",
+                      "Health": 0,
+                      "IsStatic": false,
+                      "Model": "art/models/environment/walls/wall_mod_02.vmdl"
+                    }
+                  ]
+                },
+                {
+                  "__guid": "0858652b-00c3-4a01-a5cb-f19953f5391f",
+                  "Name": "wall_mod_02 (2)",
+                  "Position": "-524.9598,257.903,0",
+                  "Rotation": "-0,0,1,-0.00000004371139",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Components": [
+                    {
+                      "__type": "Prop",
+                      "__guid": "9c7211ec-22cf-4e39-abb3-14ef3884f95d",
+                      "Health": 0,
+                      "IsStatic": false,
+                      "Model": "art/models/environment/walls/wall_mod_02.vmdl"
+                    }
+                  ]
+                },
+                {
+                  "__guid": "cc4d3031-e3b5-4df4-b54f-138dddb8bc03",
+                  "Name": "wall_mod_02 (4)",
+                  "Position": "-524.9598,257.903,130.6428",
+                  "Rotation": "-0,0,1,-0.00000004371139",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Components": [
+                    {
+                      "__type": "Prop",
+                      "__guid": "e8dcb6a5-adce-4c0d-863d-1a1e4d374a09",
+                      "Health": 0,
+                      "IsStatic": false,
+                      "Model": "art/models/environment/walls/wall_mod_02.vmdl"
+                    }
+                  ]
+                },
+                {
+                  "__guid": "4b7b647d-e5f0-4db5-9b07-e4964e245803",
+                  "Name": "wall_jail_01",
+                  "Position": "-29.19107,-486.4922,0",
+                  "Rotation": "0,0,0.7071068,0.7071068",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Components": [
+                    {
+                      "__type": "Prop",
+                      "__guid": "ce10cbf3-4378-4f1b-baf5-fbe0de11792a",
+                      "Health": 0,
+                      "IsStatic": false,
+                      "Model": "art/models/environment/walls/wall_jail_01.vmdl"
+                    }
+                  ]
+                },
+                {
+                  "__guid": "2f599b70-e801-4062-82d0-774524c7a009",
+                  "Name": "wall_jail_01 (1)",
+                  "Position": "-29.19134,414.3291,0",
+                  "Rotation": "0,0,0.7071068,0.7071068",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Components": [
+                    {
+                      "__type": "Prop",
+                      "__guid": "15c7ef83-52a5-40db-94e5-011e9021cc32",
+                      "Health": 0,
+                      "IsStatic": false,
+                      "Model": "art/models/environment/walls/wall_jail_01.vmdl"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
         {
           "__guid": "7e4704d3-d1ba-46bf-838d-dc647ae4428e",
-          "Name": "Hallway",
-          "Position": "-820,0,0",
+          "Name": "Hallway_01",
+          "Position": "-988.6489,0,0",
           "Enabled": true,
           "NetworkMode": 2,
           "Components": [
@@ -5614,7 +5976,7 @@
             {
               "__guid": "376813d4-5f27-4c18-8614-7464fdb30f11",
               "Name": "room_edge",
-              "Position": "410,240,30",
+              "Position": "304.0045,240,30",
               "Scale": "0.5,7,1",
               "Tags": "wall",
               "Enabled": true,
@@ -5623,6 +5985,7 @@
                 {
                   "__type": "ModelRenderer",
                   "__guid": "8e3c900b-4d3f-4be3-97b0-1f247dc4f06e",
+                  "__enabled": false,
                   "BodyGroups": 18446744073709551615,
                   "MaterialOverride": "materials/default.vmat",
                   "Model": "models/dev/box.vmdl",
@@ -5640,128 +6003,11 @@
               ]
             },
             {
-              "__guid": "f2e69010-199d-427a-886d-fb0ec2802102",
-              "Name": "S_door",
-              "Position": "410,0,30",
-              "Scale": "0.5,3,1",
-              "Tags": "wall",
-              "NetworkMode": 2,
-              "Components": [
-                {
-                  "__type": "ModelRenderer",
-                  "__guid": "4d7b52f9-b1f7-4ac3-b562-23c78f60ee31",
-                  "BodyGroups": 18446744073709551615,
-                  "MaterialOverride": "materials/default.vmat",
-                  "Model": "models/dev/box.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,0,0.93333,1"
-                },
-                {
-                  "__type": "BoxCollider",
-                  "__guid": "96603085-484a-464d-83fd-f10df83cf240",
-                  "Center": "0,0,0",
-                  "IsTrigger": false,
-                  "Scale": "50,50,50",
-                  "Static": false
-                }
-              ]
-            },
-            {
-              "__guid": "66ad00e1-3b57-4c09-a094-d44ae878f44e",
-              "Name": "S_door-trigger",
-              "Position": "0,0,30",
-              "Scale": "15,6,1",
-              "Enabled": true,
-              "NetworkMode": 2,
-              "Components": [
-                {
-                  "__type": "ModelRenderer",
-                  "__guid": "102bd2fa-a0a0-4a0c-8bca-346e65edd0f4",
-                  "__enabled": false,
-                  "BodyGroups": 18446744073709551615,
-                  "MaterialOverride": "materials/default.vmat",
-                  "Model": "models/dev/box.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,0,0.93333,1"
-                },
-                {
-                  "__type": "BoxCollider",
-                  "__guid": "86b45856-ef33-4d95-b28f-faa1be4a64e8",
-                  "Center": "0,0,0",
-                  "IsTrigger": true,
-                  "Scale": "50,50,50",
-                  "Static": false
-                },
-                {
-                  "__type": "Door",
-                  "__guid": "d4809dcc-358e-4f31-871c-2a89b44b3f31",
-                  "entrance": false
-                }
-              ]
-            },
-            {
-              "__guid": "f82f8982-e8c8-4345-830a-0c3c4d6f0448",
-              "Name": "room_edge",
-              "Position": "410,-240,30",
-              "Scale": "0.5,7,1",
-              "Tags": "wall",
-              "Enabled": true,
-              "NetworkMode": 2,
-              "Components": [
-                {
-                  "__type": "ModelRenderer",
-                  "__guid": "9ac6bf9b-d01a-4322-978d-dc163442fff7",
-                  "BodyGroups": 18446744073709551615,
-                  "MaterialOverride": "materials/default.vmat",
-                  "Model": "models/dev/box.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,0,0.93333,1"
-                },
-                {
-                  "__type": "BoxCollider",
-                  "__guid": "fe467c7d-761e-42fe-8bd4-2acd5945fb22",
-                  "Center": "0,0,0",
-                  "IsTrigger": false,
-                  "Scale": "50,50,50",
-                  "Static": false
-                }
-              ]
-            },
-            {
-              "__guid": "164cef55-a9b4-4eb9-955c-99f7daa10a67",
-              "Name": "room_edge",
-              "Position": "240,-150,30",
-              "Rotation": "0,0,0.7071068,0.7071068",
-              "Scale": "0.5,7,1",
-              "Tags": "wall",
-              "Enabled": true,
-              "NetworkMode": 2,
-              "Components": [
-                {
-                  "__type": "ModelRenderer",
-                  "__guid": "6743cbfe-d0e2-44e5-bc84-2d911251f08a",
-                  "BodyGroups": 18446744073709551615,
-                  "MaterialOverride": "materials/default.vmat",
-                  "Model": "models/dev/box.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,0,0.93333,1"
-                },
-                {
-                  "__type": "BoxCollider",
-                  "__guid": "ac652b03-80e1-41e8-a344-a3271185a5cf",
-                  "Center": "0,0,0",
-                  "IsTrigger": false,
-                  "Scale": "50,50,50",
-                  "Static": false
-                }
-              ]
-            },
-            {
               "__guid": "18e9e5db-39dc-4d4f-af3d-b07835d5f8f4",
               "Name": "W_door",
-              "Position": "0,-150,30",
+              "Position": "-98.01025,-93.41246,30",
               "Rotation": "0,0,0.7071068,0.7071068",
-              "Scale": "0.5,3,1",
+              "Scale": "0.5,3.648421,1",
               "Tags": "wall",
               "Enabled": true,
               "NetworkMode": 2,
@@ -5769,6 +6015,7 @@
                 {
                   "__type": "ModelRenderer",
                   "__guid": "f05bb5bf-96c1-478a-9597-31895ac7ad35",
+                  "__enabled": false,
                   "BodyGroups": 18446744073709551615,
                   "MaterialOverride": "materials/default.vmat",
                   "Model": "models/dev/box.vmdl",
@@ -5788,15 +6035,16 @@
             {
               "__guid": "30439270-070c-4db8-a64d-1dc778a02e93",
               "Name": "W_door-trigger",
-              "Position": "0,-130,30",
+              "Position": "-98.64331,-73.23785,30",
               "Rotation": "0,0,0.7071068,0.7071068",
-              "Scale": "0.5,3,1",
+              "Scale": "0.5,3.648421,1",
               "Enabled": true,
               "NetworkMode": 2,
               "Components": [
                 {
                   "__type": "ModelRenderer",
                   "__guid": "dc5ad38e-09da-47b8-8ba6-5cd6b547c58e",
+                  "__enabled": false,
                   "BodyGroups": 18446744073709551615,
                   "MaterialOverride": "materials/default.vmat",
                   "Model": "models/dev/box.vmdl",
@@ -5821,7 +6069,7 @@
             {
               "__guid": "a1358b98-2f5b-45ea-85fa-5fa598cd5e73",
               "Name": "room_edge",
-              "Position": "-240,-150,30",
+              "Position": "-364.0001,-93.2375,30",
               "Rotation": "0,0,0.7071068,0.7071068",
               "Scale": "0.5,7,1",
               "Tags": "wall",
@@ -5831,6 +6079,7 @@
                 {
                   "__type": "ModelRenderer",
                   "__guid": "baf5d7bc-10d1-4478-a9a3-4a0c72ea0a26",
+                  "__enabled": false,
                   "BodyGroups": 18446744073709551615,
                   "MaterialOverride": "materials/default.vmat",
                   "Model": "models/dev/box.vmdl",
@@ -5848,266 +6097,400 @@
               ]
             },
             {
-              "__guid": "80f8e111-c165-45a9-9f0c-9faf3ea00dfa",
-              "Name": "room_edge",
-              "Position": "-410,-240,30",
-              "Scale": "0.5,7,1",
-              "Tags": "wall",
-              "Enabled": true,
-              "NetworkMode": 2,
-              "Components": [
-                {
-                  "__type": "ModelRenderer",
-                  "__guid": "58d9f0db-2a82-4241-af97-c7f81d15d96d",
-                  "BodyGroups": 18446744073709551615,
-                  "MaterialOverride": "materials/default.vmat",
-                  "Model": "models/dev/box.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,0,0.93333,1"
-                },
-                {
-                  "__type": "BoxCollider",
-                  "__guid": "2fc564dc-afb3-4382-98ec-51ebaf06b049",
-                  "Center": "0,0,0",
-                  "IsTrigger": false,
-                  "Scale": "50,50,50",
-                  "Static": false
-                }
-              ]
-            },
-            {
-              "__guid": "c9768a2a-ebd1-446e-9a2a-bf9940bd264b",
-              "Name": "N_door",
-              "Position": "-410,0,30",
-              "Scale": "0.5,3,1",
-              "Tags": "wall",
-              "Enabled": true,
-              "NetworkMode": 2,
-              "Components": [
-                {
-                  "__type": "ModelRenderer",
-                  "__guid": "f7e52658-4429-49d4-bd69-07cf48975b84",
-                  "BodyGroups": 18446744073709551615,
-                  "MaterialOverride": "materials/default.vmat",
-                  "Model": "models/dev/box.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,0,0.93333,1"
-                },
-                {
-                  "__type": "BoxCollider",
-                  "__guid": "eaef9a7b-91d0-408d-9f95-f3aba5581508",
-                  "Center": "0,0,0",
-                  "IsTrigger": false,
-                  "Scale": "50,50,50",
-                  "Static": false
-                }
-              ]
-            },
-            {
-              "__guid": "dde9be02-dcbb-405e-9154-f0f53fdbfd78",
-              "Name": "N_door-trigger",
-              "Position": "-390,0,30",
-              "Scale": "0.5,3,1",
-              "Enabled": true,
-              "NetworkMode": 2,
-              "Components": [
-                {
-                  "__type": "ModelRenderer",
-                  "__guid": "b6f2f229-8daa-4ec6-9833-0d5b907eb89e",
-                  "BodyGroups": 18446744073709551615,
-                  "MaterialOverride": "materials/default.vmat",
-                  "Model": "models/dev/box.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,0,0.93333,1"
-                },
-                {
-                  "__type": "BoxCollider",
-                  "__guid": "d38196f4-10f6-4f1c-bf82-06dea8121fbb",
-                  "Center": "0,0,0",
-                  "IsTrigger": true,
-                  "Scale": "50,50,50",
-                  "Static": false
-                },
-                {
-                  "__type": "Door",
-                  "__guid": "52662e17-4366-4719-80d2-46220c0c4dec",
-                  "entrance": true
-                }
-              ]
-            },
-            {
-              "__guid": "a53eeb0d-fa57-448d-aedf-8e5db4f866ad",
-              "Name": "room_edge",
-              "Position": "-410,240,30",
-              "Scale": "0.5,7,1",
-              "Tags": "wall",
-              "Enabled": true,
-              "NetworkMode": 2,
-              "Components": [
-                {
-                  "__type": "ModelRenderer",
-                  "__guid": "43f2d45f-9062-4149-8dca-eb92a6792dc6",
-                  "BodyGroups": 18446744073709551615,
-                  "MaterialOverride": "materials/default.vmat",
-                  "Model": "models/dev/box.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,0,0.93333,1"
-                },
-                {
-                  "__type": "BoxCollider",
-                  "__guid": "b8f5cccb-3d95-4a9c-b4d9-1ca92c353096",
-                  "Center": "0,0,0",
-                  "IsTrigger": false,
-                  "Scale": "50,50,50",
-                  "Static": false
-                }
-              ]
-            },
-            {
-              "__guid": "e68c2a1f-8696-495c-a8e7-c9a2b0be8bbf",
-              "Name": "room_edge",
-              "Position": "-240,150,30",
-              "Rotation": "0,0,0.7071068,0.7071068",
-              "Scale": "0.5,7,1",
-              "Tags": "wall",
-              "Enabled": true,
-              "NetworkMode": 2,
-              "Components": [
-                {
-                  "__type": "ModelRenderer",
-                  "__guid": "595a3ddb-bb1f-40c7-8ffe-10ed75f63401",
-                  "BodyGroups": 18446744073709551615,
-                  "MaterialOverride": "materials/default.vmat",
-                  "Model": "models/dev/box.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,0,0.93333,1"
-                },
-                {
-                  "__type": "BoxCollider",
-                  "__guid": "9c8f3ac2-2f3c-436a-bcea-30374261e0a1",
-                  "Center": "0,0,0",
-                  "IsTrigger": false,
-                  "Scale": "50,50,50",
-                  "Static": false
-                }
-              ]
-            },
-            {
-              "__guid": "10f787d5-eaa1-4ed8-a195-aacc327b483a",
-              "Name": "E_door",
-              "Position": "0,150,30",
-              "Rotation": "0,0,0.7071068,0.7071068",
-              "Scale": "0.5,3,1",
-              "Tags": "wall",
-              "Enabled": true,
-              "NetworkMode": 2,
-              "Components": [
-                {
-                  "__type": "ModelRenderer",
-                  "__guid": "43ef70e5-beb3-48f4-a51e-d11c49680cfb",
-                  "BodyGroups": 18446744073709551615,
-                  "MaterialOverride": "materials/default.vmat",
-                  "Model": "models/dev/box.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,0,0.93333,1"
-                },
-                {
-                  "__type": "BoxCollider",
-                  "__guid": "f7ef96ce-d8a4-49d5-96a2-d16af77d5d33",
-                  "Center": "0,0,0",
-                  "IsTrigger": false,
-                  "Scale": "50,50,50",
-                  "Static": false
-                }
-              ]
-            },
-            {
-              "__guid": "15a49b6e-6d2c-4d96-a55a-29a40b77adda",
-              "Name": "E_door-trigger",
-              "Position": "0,130,30",
-              "Rotation": "0,0,0.7071068,0.7071068",
-              "Scale": "0.5,3,1",
-              "Enabled": true,
-              "NetworkMode": 2,
-              "Components": [
-                {
-                  "__type": "ModelRenderer",
-                  "__guid": "069cb354-c8f9-4fda-9dbc-4dd0a23238d3",
-                  "BodyGroups": 18446744073709551615,
-                  "MaterialOverride": "materials/default.vmat",
-                  "Model": "models/dev/box.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,0,0.93333,1"
-                },
-                {
-                  "__type": "BoxCollider",
-                  "__guid": "cdca8036-27b8-409d-8449-12df445101d1",
-                  "Center": "0,0,0",
-                  "IsTrigger": true,
-                  "Scale": "50,50,50",
-                  "Static": false
-                },
-                {
-                  "__type": "Door",
-                  "__guid": "52a0daf1-cad6-4ed2-8558-9f06c7af9dac",
-                  "entrance": true
-                }
-              ]
-            },
-            {
-              "__guid": "634aaa04-1a64-4b89-adaf-52633cbba75a",
-              "Name": "room_edge",
-              "Position": "240.0001,150,30",
-              "Rotation": "0,0,0.7071068,0.7071068",
-              "Scale": "0.5,7,1",
-              "Tags": "wall",
-              "Enabled": true,
-              "NetworkMode": 2,
-              "Components": [
-                {
-                  "__type": "ModelRenderer",
-                  "__guid": "7dae387d-7cb8-459d-92e9-b86caadadb63",
-                  "BodyGroups": 18446744073709551615,
-                  "MaterialOverride": "materials/default.vmat",
-                  "Model": "models/dev/box.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,0,0.93333,1"
-                },
-                {
-                  "__type": "BoxCollider",
-                  "__guid": "9df01aa3-2bd3-47cb-b2b4-5229fd85aa72",
-                  "Center": "0,0,0",
-                  "IsTrigger": false,
-                  "Scale": "50,50,50",
-                  "Static": false
-                }
-              ]
-            },
-            {
-              "__guid": "6cbe0d30-47f6-4f57-8cd1-d21eef9d520f",
-              "Name": "Plane",
+              "__guid": "e1351681-9b3f-481e-9405-ce7a41b84e7b",
+              "Name": "in_floor_03",
               "Position": "0,0,0",
-              "Scale": "8,3,1",
-              "Tags": "hallway",
               "Enabled": true,
               "NetworkMode": 2,
               "Components": [
                 {
-                  "__type": "ModelRenderer",
-                  "__guid": "902f55d6-57d7-4e18-8dad-f1457a71ac86",
-                  "BodyGroups": 18446744073709551615,
-                  "MaterialOverride": "materials/default.vmat",
-                  "Model": "models/dev/plane.vmdl",
-                  "RenderType": "On",
-                  "Tint": "0.39546,0.51163,0.27128,1"
+                  "__type": "Prop",
+                  "__guid": "609d7dfa-8945-40b1-8492-2529ccaf8fd3",
+                  "Health": 0,
+                  "IsStatic": false,
+                  "Model": "art/models/environment/tiles/in_floor_03.vmdl"
+                }
+              ]
+            },
+            {
+              "__guid": "8a1946aa-0fb2-4b94-9573-9b428ef60dee",
+              "Name": "stone_pavement_04 (2)",
+              "Position": "0,0,0",
+              "Rotation": "0,0,0.7071068,0.7071068",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Prop",
+                  "__guid": "5c4aa216-228e-474b-800f-0a1e7765b072",
+                  "Health": 0,
+                  "IsStatic": false,
+                  "Model": "art/models/environment/floor/stone_pavement_04.vmdl"
+                }
+              ]
+            },
+            {
+              "__guid": "16a4357a-5b15-4fab-bd01-a02de1c0b947",
+              "Name": "wall_mod_01",
+              "Position": "180.4009,-103.7579,0",
+              "Rotation": "0,0,-0.7071068,0.7071068",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Prop",
+                  "__guid": "5434327b-2ed9-4f76-b2b3-cdcdb138b6e8",
+                  "Health": 0,
+                  "IsStatic": false,
+                  "Model": "art/models/environment/walls/wall_mod_01.vmdl"
+                }
+              ]
+            },
+            {
+              "__guid": "ea14b817-cc60-40a9-bca7-2c5f0981b8d3",
+              "Name": "wall_mod_01",
+              "Position": "180.4008,92.80727,0",
+              "Rotation": "0,0,-0.7071068,0.7071068",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Prop",
+                  "__guid": "b9a08c4e-a061-4695-9df2-3e42333c18ff",
+                  "Health": 0,
+                  "IsStatic": false,
+                  "Model": "art/models/environment/walls/wall_mod_01.vmdl"
+                }
+              ]
+            },
+            {
+              "__guid": "5ad07c44-5591-4167-a139-6cd492369011",
+              "Name": "collision",
+              "Position": "0,0,0",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Children": [
+                {
+                  "__guid": "10f787d5-eaa1-4ed8-a195-aacc327b483a",
+                  "Name": "E_door",
+                  "Position": "-98.59656,126.4348,30",
+                  "Rotation": "0,0,0.7071068,0.7071068",
+                  "Scale": "0.5,3.648421,1",
+                  "Tags": "wall",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Components": [
+                    {
+                      "__type": "ModelRenderer",
+                      "__guid": "43ef70e5-beb3-48f4-a51e-d11c49680cfb",
+                      "__enabled": false,
+                      "BodyGroups": 18446744073709551615,
+                      "MaterialOverride": "materials/default.vmat",
+                      "Model": "models/dev/box.vmdl",
+                      "RenderType": "On",
+                      "Tint": "1,0,0.93333,1"
+                    },
+                    {
+                      "__type": "BoxCollider",
+                      "__guid": "f7ef96ce-d8a4-49d5-96a2-d16af77d5d33",
+                      "Center": "0,0,0",
+                      "IsTrigger": false,
+                      "Scale": "50,50,50",
+                      "Static": false
+                    }
+                  ]
                 },
                 {
-                  "__type": "BoxCollider",
-                  "__guid": "ce87857a-ca22-4501-bc07-a527986cefd6",
-                  "Center": "0,0,-5",
-                  "IsTrigger": false,
-                  "Scale": "100,100,10",
-                  "Static": false
+                  "__guid": "15a49b6e-6d2c-4d96-a55a-29a40b77adda",
+                  "Name": "E_door-trigger",
+                  "Position": "-98.59656,106.4348,30",
+                  "Rotation": "0,0,0.7071068,0.7071068",
+                  "Scale": "0.5,3.648421,1",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Components": [
+                    {
+                      "__type": "ModelRenderer",
+                      "__guid": "069cb354-c8f9-4fda-9dbc-4dd0a23238d3",
+                      "__enabled": false,
+                      "BodyGroups": 18446744073709551615,
+                      "MaterialOverride": "materials/default.vmat",
+                      "Model": "models/dev/box.vmdl",
+                      "RenderType": "On",
+                      "Tint": "1,0,0.93333,1"
+                    },
+                    {
+                      "__type": "BoxCollider",
+                      "__guid": "cdca8036-27b8-409d-8449-12df445101d1",
+                      "Center": "0,0,0",
+                      "IsTrigger": true,
+                      "Scale": "50,50,50",
+                      "Static": false
+                    },
+                    {
+                      "__type": "Door",
+                      "__guid": "52a0daf1-cad6-4ed2-8558-9f06c7af9dac",
+                      "entrance": true
+                    }
+                  ]
+                },
+                {
+                  "__guid": "dde9be02-dcbb-405e-9154-f0f53fdbfd78",
+                  "Name": "N_door-trigger",
+                  "Position": "-515.3511,21.69199,30",
+                  "Scale": "0.5,5.84382,1",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Components": [
+                    {
+                      "__type": "ModelRenderer",
+                      "__guid": "b6f2f229-8daa-4ec6-9833-0d5b907eb89e",
+                      "BodyGroups": 18446744073709551615,
+                      "MaterialOverride": "materials/default.vmat",
+                      "Model": "models/dev/box.vmdl",
+                      "RenderType": "On",
+                      "Tint": "1,0,0.93333,1"
+                    },
+                    {
+                      "__type": "BoxCollider",
+                      "__guid": "d38196f4-10f6-4f1c-bf82-06dea8121fbb",
+                      "Center": "0,0,0",
+                      "IsTrigger": true,
+                      "Scale": "50,50,50",
+                      "Static": false
+                    },
+                    {
+                      "__type": "Door",
+                      "__guid": "52662e17-4366-4719-80d2-46220c0c4dec",
+                      "entrance": true
+                    }
+                  ]
+                },
+                {
+                  "__guid": "c9768a2a-ebd1-446e-9a2a-bf9940bd264b",
+                  "Name": "N_door",
+                  "Position": "-547.3511,21.69199,30",
+                  "Scale": "0.5,5.84382,1",
+                  "Tags": "wall",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Components": [
+                    {
+                      "__type": "ModelRenderer",
+                      "__guid": "f7e52658-4429-49d4-bd69-07cf48975b84",
+                      "BodyGroups": 18446744073709551615,
+                      "MaterialOverride": "materials/default.vmat",
+                      "Model": "models/dev/box.vmdl",
+                      "RenderType": "On",
+                      "Tint": "1,0,0.93333,1"
+                    },
+                    {
+                      "__type": "BoxCollider",
+                      "__guid": "eaef9a7b-91d0-408d-9f95-f3aba5581508",
+                      "Center": "0,0,0",
+                      "IsTrigger": false,
+                      "Scale": "50,50,50",
+                      "Static": false
+                    }
+                  ]
+                },
+                {
+                  "__guid": "e68c2a1f-8696-495c-a8e7-c9a2b0be8bbf",
+                  "Name": "room_edge",
+                  "Position": "-364.0001,126.4352,30",
+                  "Rotation": "0,0,0.7071068,0.7071068",
+                  "Scale": "0.5,7,1",
+                  "Tags": "wall",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Components": [
+                    {
+                      "__type": "ModelRenderer",
+                      "__guid": "595a3ddb-bb1f-40c7-8ffe-10ed75f63401",
+                      "__enabled": false,
+                      "BodyGroups": 18446744073709551615,
+                      "MaterialOverride": "materials/default.vmat",
+                      "Model": "models/dev/box.vmdl",
+                      "RenderType": "On",
+                      "Tint": "1,0,0.93333,1"
+                    },
+                    {
+                      "__type": "BoxCollider",
+                      "__guid": "9c8f3ac2-2f3c-436a-bcea-30374261e0a1",
+                      "Center": "0,0,0",
+                      "IsTrigger": false,
+                      "Scale": "50,50,50",
+                      "Static": false
+                    }
+                  ]
+                },
+                {
+                  "__guid": "634aaa04-1a64-4b89-adaf-52633cbba75a",
+                  "Name": "room_edge",
+                  "Position": "227.1117,126.435,30",
+                  "Rotation": "0,0,0.7071068,0.7071068",
+                  "Scale": "0.5,9.579318,1",
+                  "Tags": "wall",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Components": [
+                    {
+                      "__type": "ModelRenderer",
+                      "__guid": "7dae387d-7cb8-459d-92e9-b86caadadb63",
+                      "__enabled": false,
+                      "BodyGroups": 18446744073709551615,
+                      "MaterialOverride": "materials/default.vmat",
+                      "Model": "models/dev/box.vmdl",
+                      "RenderType": "On",
+                      "Tint": "1,0,0.93333,1"
+                    },
+                    {
+                      "__type": "BoxCollider",
+                      "__guid": "9df01aa3-2bd3-47cb-b2b4-5229fd85aa72",
+                      "Center": "0,0,0",
+                      "IsTrigger": false,
+                      "Scale": "50,50,50",
+                      "Static": false
+                    }
+                  ]
+                },
+                {
+                  "__guid": "6cbe0d30-47f6-4f57-8cd1-d21eef9d520f",
+                  "Name": "Plane",
+                  "Position": "-63.60229,12.90763,0",
+                  "Scale": "8,3,1",
+                  "Tags": "hallway",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Components": [
+                    {
+                      "__type": "BoxCollider",
+                      "__guid": "ce87857a-ca22-4501-bc07-a527986cefd6",
+                      "Center": "0,0,-5",
+                      "IsTrigger": false,
+                      "Scale": "141,100,10",
+                      "Static": false
+                    }
+                  ]
+                },
+                {
+                  "__guid": "164cef55-a9b4-4eb9-955c-99f7daa10a67",
+                  "Name": "room_edge",
+                  "Position": "227.1117,-93.23768,30",
+                  "Rotation": "0,0,0.7071068,0.7071068",
+                  "Scale": "0.5,9.579318,1",
+                  "Tags": "wall",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Components": [
+                    {
+                      "__type": "ModelRenderer",
+                      "__guid": "6743cbfe-d0e2-44e5-bc84-2d911251f08a",
+                      "__enabled": false,
+                      "BodyGroups": 18446744073709551615,
+                      "MaterialOverride": "materials/default.vmat",
+                      "Model": "models/dev/box.vmdl",
+                      "RenderType": "On",
+                      "Tint": "1,0,0.93333,1"
+                    },
+                    {
+                      "__type": "BoxCollider",
+                      "__guid": "ac652b03-80e1-41e8-a344-a3271185a5cf",
+                      "Center": "0,0,0",
+                      "IsTrigger": false,
+                      "Scale": "50,50,50",
+                      "Static": false
+                    }
+                  ]
+                },
+                {
+                  "__guid": "f82f8982-e8c8-4345-830a-0c3c4d6f0448",
+                  "Name": "room_edge",
+                  "Position": "304.0045,-240,30",
+                  "Scale": "0.5,7,1",
+                  "Tags": "wall",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Components": [
+                    {
+                      "__type": "ModelRenderer",
+                      "__guid": "9ac6bf9b-d01a-4322-978d-dc163442fff7",
+                      "__enabled": false,
+                      "BodyGroups": 18446744073709551615,
+                      "MaterialOverride": "materials/default.vmat",
+                      "Model": "models/dev/box.vmdl",
+                      "RenderType": "On",
+                      "Tint": "1,0,0.93333,1"
+                    },
+                    {
+                      "__type": "BoxCollider",
+                      "__guid": "fe467c7d-761e-42fe-8bd4-2acd5945fb22",
+                      "Center": "0,0,0",
+                      "IsTrigger": false,
+                      "Scale": "50,50,50",
+                      "Static": false
+                    }
+                  ]
+                },
+                {
+                  "__guid": "66ad00e1-3b57-4c09-a094-d44ae878f44e",
+                  "Name": "S_door-trigger",
+                  "Position": "-22.53943,0,30",
+                  "Scale": "15,6,1",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Components": [
+                    {
+                      "__type": "ModelRenderer",
+                      "__guid": "102bd2fa-a0a0-4a0c-8bca-346e65edd0f4",
+                      "__enabled": false,
+                      "BodyGroups": 18446744073709551615,
+                      "MaterialOverride": "materials/default.vmat",
+                      "Model": "models/dev/box.vmdl",
+                      "RenderType": "On",
+                      "Tint": "1,0,0.93333,1"
+                    },
+                    {
+                      "__type": "BoxCollider",
+                      "__guid": "86b45856-ef33-4d95-b28f-faa1be4a64e8",
+                      "Center": "0,0,0",
+                      "IsTrigger": true,
+                      "Scale": "61.8,50,50",
+                      "Static": false
+                    },
+                    {
+                      "__type": "Door",
+                      "__guid": "d4809dcc-358e-4f31-871c-2a89b44b3f31",
+                      "entrance": false
+                    }
+                  ]
+                },
+                {
+                  "__guid": "f2e69010-199d-427a-886d-fb0ec2802102",
+                  "Name": "S_door",
+                  "Position": "410,0,30",
+                  "Scale": "0.5,3,1",
+                  "Tags": "wall",
+                  "NetworkMode": 2,
+                  "Components": [
+                    {
+                      "__type": "ModelRenderer",
+                      "__guid": "4d7b52f9-b1f7-4ac3-b562-23c78f60ee31",
+                      "BodyGroups": 18446744073709551615,
+                      "MaterialOverride": "materials/default.vmat",
+                      "Model": "models/dev/box.vmdl",
+                      "RenderType": "On",
+                      "Tint": "1,0,0.93333,1"
+                    },
+                    {
+                      "__type": "BoxCollider",
+                      "__guid": "96603085-484a-464d-83fd-f10df83cf240",
+                      "Center": "0,0,0",
+                      "IsTrigger": false,
+                      "Scale": "50,50,50",
+                      "Static": false
+                    }
+                  ]
                 }
               ]
             }
@@ -6115,8 +6498,8 @@
         },
         {
           "__guid": "a0d53fef-7576-46ef-9654-ca1d2589b8df",
-          "Name": "Room",
-          "Position": "-1640,0,0",
+          "Name": "Room_02",
+          "Position": "-1933.067,0,0",
           "Enabled": true,
           "NetworkMode": 2,
           "Components": [
@@ -6345,7 +6728,7 @@
             {
               "__guid": "7e800a81-e563-40a2-b1c5-95244fc9f9eb",
               "Name": "room_edge",
-              "Position": "-240,-410,30",
+              "Position": "-240.0001,-410,30",
               "Rotation": "0,0,0.7071068,0.7071068",
               "Scale": "0.5,7,1",
               "Tags": "wall",
@@ -6374,7 +6757,7 @@
             {
               "__guid": "fc13e4d2-b199-43d9-af79-6b78b3a0415c",
               "Name": "room_edge",
-              "Position": "-410,-240,30",
+              "Position": "-410.0001,-240,30",
               "Scale": "0.5,7,1",
               "Tags": "wall",
               "Enabled": true,
@@ -6402,7 +6785,7 @@
             {
               "__guid": "5c31aa16-3ae5-4e39-bda6-1655523e3859",
               "Name": "N_door",
-              "Position": "-410,0,30",
+              "Position": "-410.0001,0,30",
               "Scale": "0.5,3,1",
               "Tags": "wall",
               "Enabled": true,
@@ -6430,7 +6813,7 @@
             {
               "__guid": "63cf2bce-0541-44c9-9c3e-047a4eed513f",
               "Name": "N_door-trigger",
-              "Position": "-390,0,30",
+              "Position": "-390.0001,0,30",
               "Scale": "0.5,3,1",
               "Enabled": true,
               "NetworkMode": 2,
@@ -6462,7 +6845,7 @@
             {
               "__guid": "fa725db5-f91e-4c88-a980-035188c2c48b",
               "Name": "room_edge",
-              "Position": "-410,240,30",
+              "Position": "-410.0001,240,30",
               "Scale": "0.5,7,1",
               "Tags": "wall",
               "Enabled": true,
@@ -6490,7 +6873,7 @@
             {
               "__guid": "0af27e0a-a81a-42e4-8cb0-a59e62f97b3a",
               "Name": "room_edge",
-              "Position": "-240,410,30",
+              "Position": "-240.0001,410,30",
               "Rotation": "0,0,0.7071068,0.7071068",
               "Scale": "0.5,7,1",
               "Tags": "wall",
@@ -6617,15 +7000,6 @@
               "NetworkMode": 2,
               "Components": [
                 {
-                  "__type": "ModelRenderer",
-                  "__guid": "575b5364-2de6-4625-8697-42db00739c8f",
-                  "BodyGroups": 18446744073709551615,
-                  "MaterialOverride": "materials/default.vmat",
-                  "Model": "models/dev/plane.vmdl",
-                  "RenderType": "On",
-                  "Tint": "0.39546,0.51163,0.27128,1"
-                },
-                {
                   "__type": "BoxCollider",
                   "__guid": "a1102501-3a1b-4b2f-a51b-6724c2dec1b5",
                   "Center": "0,0,-5",
@@ -6657,6 +7031,7 @@
               "__guid": "134e5d99-1d1d-4db2-a734-766d000c6460",
               "Name": "wall_mod_02",
               "Position": "-405.0973,26.26014,0",
+              "Rotation": "0,0,1,-0.00000004371139",
               "Enabled": true,
               "NetworkMode": 2,
               "__Prefab": "code/wall_and_door.prefab"
@@ -6830,7 +7205,7 @@
         {
           "__guid": "ffa4a130-9bb3-473d-8e24-ec2c81856ffd",
           "Name": "Hallway",
-          "Position": "-2460,0,0",
+          "Position": "-2736.994,0,0",
           "Enabled": true,
           "NetworkMode": 2,
           "Components": [
@@ -7354,7 +7729,7 @@
         {
           "__guid": "88abbb69-a576-4021-a309-603390da7235",
           "Name": "Hallway",
-          "Position": "-4100,0,0",
+          "Position": "-4376.994,0,0",
           "Enabled": true,
           "NetworkMode": 2,
           "Components": [
@@ -7878,7 +8253,7 @@
         {
           "__guid": "f219bd0d-36d0-4791-941e-4a26808d93bf",
           "Name": "Room",
-          "Position": "-1640,1640,0",
+          "Position": "-1916.994,1640,0",
           "Enabled": true,
           "NetworkMode": 2,
           "Components": [
@@ -8108,7 +8483,7 @@
             {
               "__guid": "08538ad1-a39e-4f25-a129-a4852016f867",
               "Name": "room_edge",
-              "Position": "-240,-410,30",
+              "Position": "-240.0001,-410,30",
               "Rotation": "0,0,0.7071068,0.7071068",
               "Scale": "0.5,7,1",
               "Tags": "wall",
@@ -8137,7 +8512,7 @@
             {
               "__guid": "ed6e1baa-cadc-4c68-8a95-83c723c7cb5c",
               "Name": "room_edge",
-              "Position": "-410,-240,30",
+              "Position": "-410.0001,-240,30",
               "Scale": "0.5,7,1",
               "Tags": "wall",
               "Enabled": true,
@@ -8165,7 +8540,7 @@
             {
               "__guid": "abffed2c-8c5d-418f-b7df-5e71744b49b5",
               "Name": "N_door",
-              "Position": "-410,0,30",
+              "Position": "-410.0001,0,30",
               "Scale": "0.5,3,1",
               "Tags": "wall",
               "Enabled": true,
@@ -8193,7 +8568,7 @@
             {
               "__guid": "a4d8c69c-1615-4f6e-9470-aacc2325196a",
               "Name": "N_door-trigger",
-              "Position": "-390,0,30",
+              "Position": "-390.0001,0,30",
               "Scale": "0.5,3,1",
               "Enabled": true,
               "NetworkMode": 2,
@@ -8225,7 +8600,7 @@
             {
               "__guid": "012e0f30-e364-4cdf-a978-5614479f1db3",
               "Name": "room_edge",
-              "Position": "-410,240,30",
+              "Position": "-410.0001,240,30",
               "Scale": "0.5,7,1",
               "Tags": "wall",
               "Enabled": true,
@@ -8253,7 +8628,7 @@
             {
               "__guid": "43854ed0-6b89-47da-8e46-5f8aeb9f0d65",
               "Name": "room_edge",
-              "Position": "-240,410,30",
+              "Position": "-240.0001,410,30",
               "Rotation": "0,0,0.7071068,0.7071068",
               "Scale": "0.5,7,1",
               "Tags": "wall",
@@ -8403,8 +8778,8 @@
         {
           "__guid": "32628489-570d-4389-8279-71751509fa9e",
           "Name": "Hallway",
-          "Position": "-1680,820,0",
-          "Rotation": "0,-0,-0.7071068,0.7071068",
+          "Position": "-1956.994,820,0",
+          "Rotation": "0,0,-0.7071068,0.7071068",
           "Enabled": true,
           "NetworkMode": 2,
           "Components": [
@@ -8542,7 +8917,7 @@
             {
               "__guid": "caa39287-7d98-4098-be87-7e93513652c8",
               "Name": "room_edge",
-              "Position": "240,-150,30",
+              "Position": "240,-150.0001,30",
               "Rotation": "0,0,0.7071068,0.7071068",
               "Scale": "0.5,7,1",
               "Tags": "wall",
@@ -8571,7 +8946,7 @@
             {
               "__guid": "979b631b-9b70-4c73-aaaa-1550a25c0c80",
               "Name": "W_door",
-              "Position": "0,-150,30",
+              "Position": "-0.000008940704,-150.0001,30",
               "Rotation": "0,0,0.7071068,0.7071068",
               "Scale": "0.5,3,1",
               "Tags": "wall",
@@ -8600,7 +8975,7 @@
             {
               "__guid": "de937049-b6f3-49f2-aca1-35e26dc6f412",
               "Name": "W_door-trigger",
-              "Position": "0,-130,30",
+              "Position": "-0.000007748611,-130.0001,30",
               "Rotation": "0,0,0.7071068,0.7071068",
               "Scale": "0.5,3,1",
               "Enabled": true,
@@ -8633,7 +9008,7 @@
             {
               "__guid": "607dbb47-7a54-41b3-bddb-5cf0d07af866",
               "Name": "room_edge",
-              "Position": "-240,-150,30",
+              "Position": "-240,-149.9998,30",
               "Rotation": "0,0,0.7071068,0.7071068",
               "Scale": "0.5,7,1",
               "Tags": "wall",
@@ -8662,7 +9037,7 @@
             {
               "__guid": "6b47a863-6f39-4dc2-889e-84106204123f",
               "Name": "room_edge",
-              "Position": "-410,-240,30",
+              "Position": "-410.0002,-239.9998,30",
               "Scale": "0.5,7,1",
               "Tags": "wall",
               "Enabled": true,
@@ -8928,7 +9303,7 @@
         {
           "__guid": "b50962ee-45fb-446d-9237-f4e4e7c3293a",
           "Name": "Hallway",
-          "Position": "-4920,820,0",
+          "Position": "-5196.994,820,0",
           "Rotation": "0,0,-0.7071068,0.7071068",
           "Enabled": true,
           "NetworkMode": 2,
@@ -9453,8 +9828,8 @@
         {
           "__guid": "ec4c1498-eb84-49c5-9422-2517e270be67",
           "Name": "Hallway",
-          "Position": "-4920,2460,0",
-          "Rotation": "0,-0,-0.7071068,0.7071068",
+          "Position": "-5196.994,2460,0",
+          "Rotation": "0,0,-0.7071068,0.7071068",
           "Enabled": true,
           "NetworkMode": 2,
           "Components": [
@@ -9978,8 +10353,8 @@
         {
           "__guid": "9f735164-c947-442e-99dd-b4749d38282d",
           "Name": "Hallway",
-          "Position": "-3280,2460,0",
-          "Rotation": "0,-0,-0.7071068,0.7071068",
+          "Position": "-3556.994,2460,0",
+          "Rotation": "0,0,-0.7071068,0.7071068",
           "Enabled": true,
           "NetworkMode": 2,
           "Components": [
@@ -10502,7 +10877,7 @@
         {
           "__guid": "cea3f656-df49-4773-b90b-91bd0455daad",
           "Name": "Room",
-          "Position": "-3280,0,0",
+          "Position": "-3556.994,0,0",
           "Enabled": true,
           "NetworkMode": 2,
           "Components": [
@@ -11026,7 +11401,7 @@
         {
           "__guid": "2c484062-c766-479c-bdb8-211e6fa82507",
           "Name": "Room",
-          "Position": "-4920,0,0",
+          "Position": "-5196.994,0,0",
           "Enabled": true,
           "NetworkMode": 2,
           "Components": [
@@ -11550,7 +11925,7 @@
         {
           "__guid": "3bbeb739-dd79-48ff-b541-891412875b30",
           "Name": "Hallway",
-          "Position": "-2460,1649,0",
+          "Position": "-2736.994,1649,0",
           "Enabled": true,
           "NetworkMode": 2,
           "Components": [
@@ -12074,7 +12449,7 @@
         {
           "__guid": "912be86c-a852-47b7-b907-6192a91cf3c1",
           "Name": "Hallway",
-          "Position": "-4100,3280,0",
+          "Position": "-4376.994,3280,0",
           "Enabled": true,
           "NetworkMode": 2,
           "Components": [
@@ -12598,7 +12973,7 @@
         {
           "__guid": "8d28528f-f7be-425c-a916-a95b9591bc8f",
           "Name": "Room",
-          "Position": "-3280,1640,0",
+          "Position": "-3556.994,1640,0",
           "Enabled": true,
           "NetworkMode": 2,
           "Components": [
@@ -13122,7 +13497,7 @@
         {
           "__guid": "615be8fc-dba5-4377-816f-1824ee8daab8",
           "Name": "Room",
-          "Position": "-3280,3280,0",
+          "Position": "-3556.994,3280,0",
           "Enabled": true,
           "NetworkMode": 2,
           "Components": [
@@ -13647,7 +14022,7 @@
         {
           "__guid": "03d81adf-6ad5-4a9e-a28a-c0722f6dd478",
           "Name": "Room",
-          "Position": "-4920,1640,0",
+          "Position": "-5196.994,1640,0",
           "Enabled": true,
           "NetworkMode": 2,
           "Components": [
@@ -14172,7 +14547,7 @@
         {
           "__guid": "6bc217a9-87cb-4629-bbb0-8e8028834000",
           "Name": "Room",
-          "Position": "-4920,3280,0",
+          "Position": "-5196.994,3280,0",
           "Enabled": true,
           "NetworkMode": 2,
           "Components": [
@@ -14719,7 +15094,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-03-17T19:17:42.628788\u002B11:00",
+  "LastSaved": "2024-03-17T20:04:58.5787489\u002B11:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": []
