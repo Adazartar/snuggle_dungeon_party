@@ -3,6 +3,7 @@
 @inherits PanelComponent
 
 <root>
+    <div class="timer">@ProduceTime(timer)</div>
     <div class="healthbars">
         @foreach (var health_component in health_components){
             <div class="healthbar">
@@ -30,16 +31,25 @@
     List<Player> player_list = new List<Player>();
     List<Health> health_components = new List<Health>();
 
-    protected override void OnStart()
-    {
-        Log.Info("start");
+    bool started = false;
+    float timer = 0;
+
+    protected override void OnUpdate(){
+        if(started){
+            timer += Time.Delta;
+        }
+    }
+
+    public void InitialiseHud(){
         foreach(var child in players.Children){
             if(child.Enabled){
                 health_components.Add(child.Components.Get<Health>());
                 player_list.Add(child.Components.Get<Player>());
             }
         }
+        started = true;
     }
+
     protected override int BuildHash(){
         List<int> current_healths = new List<int>();
         foreach(Health health_component in health_components){
@@ -50,6 +60,14 @@
         foreach(Player player in player_list){
             current_ability.Add(player.ability_meter);
         }
-        return System.HashCode.Combine(current_healths, current_ability);
+        return System.HashCode.Combine(current_healths, current_ability, timer);
+    }
+
+    private string ProduceTime(float value)
+    {
+        var minutes = (int)value / 60;
+        var seconds = (int)value % 60;
+
+        return $"{minutes:00}:{seconds:00}";
     }
 }

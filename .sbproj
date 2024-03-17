@@ -1,9 +1,9 @@
 {
   "Title": "Snuggle: Dungeon Party",
   "Type": "game",
-  "Org": "local",
+  "Org": "adazartargames",
   "Ident": "snuggle_dungeon_party",
-  "Tags": null,
+  "Tags": "local-multiplayer co-op dungeon-crawler",
   "Schema": 1,
   "HasAssets": true,
   "AssetsPath": "",
@@ -13,7 +13,7 @@
   "PackageReferences": [],
   "EditorReferences": null,
   "Metadata": {
-    "MaxPlayers": 64,
+    "MaxPlayers": 1,
     "MinPlayers": 1,
     "TickRate": 50,
     "GameNetworkType": "Multiplayer",
@@ -57,7 +57,7 @@
         },
         {
           "Name": "ability",
-          "KeyboardCode": "O",
+          "KeyboardCode": "B",
           "GroupName": "Actions"
         },
         {
@@ -67,7 +67,7 @@
         },
         {
           "Name": "ability_sec",
-          "KeyboardCode": "N",
+          "KeyboardCode": "O",
           "GroupName": "Actions"
         },
         {
@@ -238,6 +238,7 @@
         }
       ],
       "__guid": "26f7a694-6312-48f9-8ac0-40603336cae2"
-    }
+    },
+    "LaunchMode": "Normal"
   }
 }

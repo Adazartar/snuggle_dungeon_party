@@ -1,0 +1,83 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+
+<root class="@(started ? "hide" : "")">
+	<div class="options">
+		<div class="char">
+			Paladin
+			<div class="control-option @(selected_options["paladin"] == 1 ? "selected" : "")" onclick=@(() => Select("paladin",1))>WASD, Att: V, Ab: B, Use: N</div>
+			<div class="control-option @(selected_options["paladin"] == 2 ? "selected" : "")" onclick=@(() => Select("paladin",2))>←↑↓→, Att: P, Ab: O, Use: I</div>
+			<div class="control-option @(selected_options["paladin"] == 3 ? "selected" : "")" onclick=@(() => Select("paladin",3))>D-PAD, Att: R-trigger, Ab: L-trigger, Use: X</div>
+			<div class="control-option @(selected_options["paladin"] == 4 ? "selected" : "")" onclick=@(() => Select("paladin",4))>None</div>
+		</div>
+		<div class="char">
+			Barbarian
+			<div class="control-option @(selected_options["barbarian"] == 1 ? "selected" : "")" onclick=@(() => Select("barbarian",1))>WASD, Att: V, Ab: B, Use: N</div>
+			<div class="control-option @(selected_options["barbarian"] == 2 ? "selected" : "")" onclick=@(() => Select("barbarian",2))>←↑↓→, Att: P, Ab: O, Use: I</div>
+			<div class="control-option @(selected_options["barbarian"] == 3 ? "selected" : "")" onclick=@(() => Select("barbarian",3))>D-PAD, Att: R-trigger, Ab: L-trigger, Use: X</div>
+			<div class="control-option @(selected_options["barbarian"] == 4 ? "selected" : "")" onclick=@(() => Select("barbarian",4))>None</div>
+		</div>
+		<div class="char">
+			Wizard
+			<div class="control-option @(selected_options["wizard"] == 1 ? "selected" : "")" onclick=@(() => Select("wizard",1))>WASD, Att: V, Ab: B, Use: N</div>
+			<div class="control-option @(selected_options["wizard"] == 2 ? "selected" : "")" onclick=@(() => Select("wizard",2))>←↑↓→, Att: P, Ab: O, Use: I</div>
+			<div class="control-option @(selected_options["wizard"] == 3 ? "selected" : "")" onclick=@(() => Select("wizard",3))>D-PAD, Att: R-trigger, Ab: L-trigger, Use: X</div>
+			<div class="control-option @(selected_options["wizard"] == 4 ? "selected" : "")" onclick=@(() => Select("wizard",4))>None</div>
+		</div>
+	</div>
+
+	<div class="start" onclick=@StartGame>Start ></div>
+</root>
+
+@code
+{
+	public bool started = false;
+	private Dictionary<string, int> selected_options = new Dictionary<string, int>();
+	GameConfig config;
+	PlayerHud hud;
+	[Property] GameObject config_object = null;
+	[Property] GameObject playerhud_object = null;
+
+	protected override void OnStart(){
+		config = config_object.Components.Get<GameConfig>();
+		hud = playerhud_object.Components.Get<PlayerHud>();
+		selected_options.Add("paladin", 4);
+		selected_options.Add("barbarian", 4);
+		selected_options.Add("wizard", 4);
+	}
+	
+	protected override int BuildHash() => System.HashCode.Combine(started);
+
+	void Select(string character, int choice){
+		selected_options.Remove(character);
+		selected_options.Add(character, choice);
+	}
+
+	void StartGame(){
+		Log.Info("in start game");
+		bool can_start = true;
+		bool found_non4 = false;
+		config.num_players = 0;
+		foreach (var character in selected_options){
+			if(character.Value != 4){
+				config.num_players += 1;
+				found_non4 = true;
+				foreach (var other_character in selected_options){
+					if(other_character.Key != character.Key){
+						if(other_character.Value == character.Value){
+							can_start = false;
+						}
+					}
+				}
+			}
+    	}
+
+		if(can_start && found_non4){
+			started = true;
+			config.StartGame(selected_options);
+			hud.InitialiseHud();
+			Log.Info($"we have {config.num_players} players");
+		}
+	}
+}
