@@ -23,6 +23,9 @@ public sealed class Player : Component
 	List<GameObject> interactable_objects = new List<GameObject>();
 	public List<GameObject> enemy_objects = new List<GameObject>();
 	[Property] public InputType input_type = InputType.BaseKeyboard;
+
+	public SkinnedModelRenderer model;
+	[Property] GameObject model_object = null; 
 	protected override void OnStart()
 	{
 		ability = GameObject.Components.Get<Ability>();
@@ -30,6 +33,7 @@ public sealed class Player : Component
 		attack = GameObject.Components.Get<Attack>();
 		interactable_objects = interactables.Children;
 		enemy_objects = enemies.Children;
+		model = model_object.Components.Get<SkinnedModelRenderer>();
 
 
 	}
@@ -93,6 +97,10 @@ public sealed class Player : Component
 			}
 		}
 
+		
+		model.Set("Moving", vel != Vector3.Zero);
+		
+		
 		Transform.Position += vel.Normal * speed * Time.Delta * 10;
 	
 	}

@@ -24,7 +24,7 @@
 					m_tagSpans = [  ]
 					m_sequenceName = "anim_wizard_walk"
 					m_playbackSpeed = 1.0
-					m_bLoop = false
+					m_bLoop = true
 				}
 			},
 			{
@@ -45,7 +45,7 @@
 					m_tagSpans = [  ]
 					m_sequenceName = "anim_wizard_attack"
 					m_playbackSpeed = 1.0
-					m_bLoop = false
+					m_bLoop = true
 				}
 			},
 			{
@@ -162,7 +162,7 @@
 					m_blendDuration = 0.2
 					m_tagBehavior = "SelectorTagBehavior_OffWhenFinished"
 					m_bResetOnChange = true
-					m_bSyncCyclesOnChange = false
+					m_bSyncCyclesOnChange = true
 					m_blendCurve = 
 					{
 						m_vControlPoint1 = [ 0.5, 0.0 ]
@@ -241,7 +241,7 @@
 					m_blendDuration = 0.2
 					m_tagBehavior = "SelectorTagBehavior_OffWhenFinished"
 					m_bResetOnChange = true
-					m_bSyncCyclesOnChange = false
+					m_bSyncCyclesOnChange = true
 					m_blendCurve = 
 					{
 						m_vControlPoint1 = [ 0.5, 0.0 ]
@@ -268,7 +268,7 @@
 					m_tagSpans = [  ]
 					m_sequenceName = "anim_wizard_attack"
 					m_playbackSpeed = 1.0
-					m_bLoop = false
+					m_bLoop = true
 				}
 			},
 			{
@@ -336,7 +336,7 @@
 					m_blendDuration = 0.2
 					m_tagBehavior = "SelectorTagBehavior_OffWhenFinished"
 					m_bResetOnChange = true
-					m_bSyncCyclesOnChange = false
+					m_bSyncCyclesOnChange = true
 					m_blendCurve = 
 					{
 						m_vControlPoint1 = [ 0.5, 0.0 ]
@@ -363,7 +363,7 @@
 					m_tagSpans = [  ]
 					m_sequenceName = "anim_wizard_interact"
 					m_playbackSpeed = 1.0
-					m_bLoop = false
+					m_bLoop = true
 				}
 			},
 			{
@@ -384,7 +384,7 @@
 					m_tagSpans = [  ]
 					m_sequenceName = ""
 					m_playbackSpeed = 1.0
-					m_bLoop = false
+					m_bLoop = true
 				}
 			},
 			{
@@ -452,7 +452,7 @@
 					m_blendDuration = 0.2
 					m_tagBehavior = "SelectorTagBehavior_OffWhenFinished"
 					m_bResetOnChange = true
-					m_bSyncCyclesOnChange = false
+					m_bSyncCyclesOnChange = true
 					m_blendCurve = 
 					{
 						m_vControlPoint1 = [ 0.5, 0.0 ]
@@ -526,7 +526,7 @@
 					m_blendDuration = 0.2
 					m_tagBehavior = "SelectorTagBehavior_OffWhenFinished"
 					m_bResetOnChange = true
-					m_bSyncCyclesOnChange = false
+					m_bSyncCyclesOnChange = true
 					m_blendCurve = 
 					{
 						m_vControlPoint1 = [ 0.5, 0.0 ]

@@ -6,6 +6,8 @@ public sealed class Ability : Component
 	Player player;
 	[Property] public AbilityType ability_type;
 	private AbilityTemplate ability;
+	[Property] float ability_cast_duration = 2f;
+	float timer;
 	protected override void OnStart()
 	{
 		assignAbility(ability_type);
@@ -15,6 +17,9 @@ public sealed class Ability : Component
 	protected override void OnUpdate()
 	{
 		updateAbilityKey();
+		if(timer < 0){
+			player.model.Set("Ability", false);
+		}
 	}
 
 	public void updateAbilityKey(){
@@ -31,6 +36,8 @@ public sealed class Ability : Component
 
 	public void updateAbility(string input_name){
 		if(Input.Down(input_name) &&  player.ability_meter == ability_meter_max){
+			player.model.Set("Ability", true);
+			timer = ability_cast_duration;
 			Log.Info("using ability");
 			ability.useAbility(player);
 			player.ability_meter = 0;

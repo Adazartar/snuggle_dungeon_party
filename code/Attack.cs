@@ -24,6 +24,9 @@ public sealed class Attack : Component
 	{
 		timer -= Time.Delta;
 		updateAttackKey();
+		if(timer < 0){
+			player.model.Set("Attack", false);
+		}
 		
 	}
 
@@ -42,6 +45,7 @@ public sealed class Attack : Component
 	public void updateAttack(string input_name){
 		if(Input.Down(input_name) && timer < 0)
 		{
+			player.model.Set("Attack", true);
 			timer = attack_delay;
 			GameObject new_attack = pool.getObject();
 			new_attack.Components.Get<Projectile>().projectObject(projectile_speed, Transform.Rotation.Forward, 

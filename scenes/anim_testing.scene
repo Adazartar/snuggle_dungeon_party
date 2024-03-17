@@ -376,7 +376,6 @@
           "Name": "paladin",
           "Position": "200,0,35",
           "Tags": "player",
-          "Enabled": true,
           "NetworkMode": 2,
           "Components": [
             {
@@ -556,7 +555,6 @@
           "Name": "wizard",
           "Position": "200,-150,35",
           "Tags": "player",
-          "Enabled": true,
           "NetworkMode": 2,
           "Components": [
             {
@@ -580,6 +578,10 @@
               "interactables": {
                 "_type": "gameobject",
                 "go": "b868e8e5-79b3-418b-8198-337aece08c9d"
+              },
+              "model_object": {
+                "_type": "gameobject",
+                "go": "02fefe8e-2e40-444b-bc31-22fee40c12c6"
               },
               "nearby_objects_handler": {
                 "_type": "component",
@@ -684,6 +686,46 @@
                   "Model": "models/dev/box.vmdl",
                   "RenderType": "On",
                   "Tint": "1,0,0,1"
+                }
+              ]
+            },
+            {
+              "__guid": "02fefe8e-2e40-444b-bc31-22fee40c12c6",
+              "Name": "sdp_pc_wizard",
+              "Position": "0,0,0",
+              "Rotation": "0,0,1,-0.00000004371139",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "SkinnedModelRenderer",
+                  "__guid": "ff7db638-181d-48bf-99a4-c52221a0b3cd",
+                  "BodyGroups": 18446744073709551615,
+                  "CreateBoneObjects": false,
+                  "Model": "art/models/playercharacters/sdp_pc_wizard.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                },
+                {
+                  "__type": "ModelCollider",
+                  "__guid": "32f1af6f-fc7f-448a-b19a-8c92e6debf32",
+                  "__enabled": false,
+                  "IsTrigger": false,
+                  "Model": "art/models/playercharacters/sdp_pc_wizard.vmdl",
+                  "Static": false
+                },
+                {
+                  "__type": "Rigidbody",
+                  "__guid": "f700cc5e-bd95-4c76-87aa-d4ab0aebb4c2",
+                  "__enabled": false,
+                  "AngularDamping": 0,
+                  "Gravity": true,
+                  "LinearDamping": 0,
+                  "Locking": {},
+                  "MassOverride": 0,
+                  "MotionEnabled": true,
+                  "RigidbodyFlags": 0,
+                  "StartAsleep": false
                 }
               ]
             }
@@ -14696,22 +14738,6 @@
           ]
         }
       ]
-    },
-    {
-      "__guid": "02fefe8e-2e40-444b-bc31-22fee40c12c6",
-      "Name": "sdp_pc_wizard",
-      "Position": "-38.49792,199.3514,0.9537406",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "Components": [
-        {
-          "__type": "Prop",
-          "__guid": "213accab-d115-4c11-8fbc-71e2c12669d2",
-          "Health": 0,
-          "IsStatic": false,
-          "Model": "art/models/playercharacters/sdp_pc_wizard.vmdl"
-        }
-      ]
     }
   ],
   "SceneProperties": {
@@ -14737,7 +14763,7 @@
   },
   "Title": "anim_testing",
   "Description": "",
-  "LastSaved": "2024-03-17T19:26:03.3400474\u002B11:00",
+  "LastSaved": "2024-03-17T20:03:01.7047046\u002B11:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": []
