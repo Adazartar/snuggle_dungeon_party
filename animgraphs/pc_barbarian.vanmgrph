@@ -22,7 +22,7 @@
 					}
 					m_sNote = ""
 					m_tagSpans = [  ]
-					m_sequenceName = "anim_wizard_walk"
+					m_sequenceName = "anim_barb_walk"
 					m_playbackSpeed = 1.0
 					m_bLoop = false
 				}
@@ -43,7 +43,7 @@
 					}
 					m_sNote = ""
 					m_tagSpans = [  ]
-					m_sequenceName = "anim_wizard_attack"
+					m_sequenceName = "anim_barb_ability"
 					m_playbackSpeed = 1.0
 					m_bLoop = false
 				}
@@ -64,7 +64,7 @@
 					}
 					m_sNote = ""
 					m_tagSpans = [  ]
-					m_sequenceName = "anim_wizard_idle"
+					m_sequenceName = "anim_barb_idle"
 					m_playbackSpeed = 1.0
 					m_bLoop = true
 				}
@@ -266,7 +266,7 @@
 					}
 					m_sNote = ""
 					m_tagSpans = [  ]
-					m_sequenceName = "anim_wizard_attack"
+					m_sequenceName = "anim_barb_attack"
 					m_playbackSpeed = 1.0
 					m_bLoop = false
 				}
@@ -361,7 +361,7 @@
 					}
 					m_sNote = ""
 					m_tagSpans = [  ]
-					m_sequenceName = "anim_wizard_interact"
+					m_sequenceName = "anim_barb_interact"
 					m_playbackSpeed = 1.0
 					m_bLoop = false
 				}
@@ -382,7 +382,7 @@
 					}
 					m_sNote = ""
 					m_tagSpans = [  ]
-					m_sequenceName = ""
+					m_sequenceName = "anim_barb_death"
 					m_playbackSpeed = 1.0
 					m_bLoop = false
 				}
@@ -641,13 +641,13 @@
 	}
 	m_previewModels = 
 	[
-		"art/models/playercharacters/sdp_pc_wizard.vmdl",
+		"art/models/playercharacters/sdp_barbarian.vmdl",
 	]
 	m_boneMergeModels = [  ]
 	m_cameraSettings = 
 	{
 		m_flFov = 60.0
-		m_sLockBoneName = "body"
+		m_sLockBoneName = "hip"
 		m_bLockCamera = false
 		m_bViewModelCamera = false
 	}

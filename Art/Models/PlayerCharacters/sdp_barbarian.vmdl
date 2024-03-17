@@ -63,6 +63,145 @@
 					},
 				]
 			},
+			{
+				_class = "AnimationList"
+				children = 
+				[
+					{
+						_class = "AnimFile"
+						name = "anim_barb_idle"
+						activity_name = "idle"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						enable_scale = false
+						source_filename = "Art/Models/PlayerCharacters/sdp_barbarian.fbx"
+						start_frame = -1
+						end_frame = 100
+						framerate = 30.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "anim_barb_walk"
+						activity_name = "idle"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						enable_scale = false
+						source_filename = "Art/Models/PlayerCharacters/sdp_barbarian.fbx"
+						start_frame = 100
+						end_frame = 160
+						framerate = 30.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "anim_barb_interact"
+						activity_name = "idle"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						enable_scale = false
+						source_filename = "Art/Models/PlayerCharacters/sdp_barbarian.fbx"
+						start_frame = 160
+						end_frame = 200
+						framerate = 30.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "anim_barb_attack"
+						activity_name = "idle"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						enable_scale = false
+						source_filename = "Art/Models/PlayerCharacters/sdp_barbarian.fbx"
+						start_frame = 200
+						end_frame = 300
+						framerate = 30.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "anim_barb_ability"
+						activity_name = "idle"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						enable_scale = false
+						source_filename = "Art/Models/PlayerCharacters/sdp_barbarian.fbx"
+						start_frame = 300
+						end_frame = 320
+						framerate = 30.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "anim_barb_death"
+						activity_name = "idle"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						enable_scale = false
+						source_filename = "Art/Models/PlayerCharacters/sdp_barbarian.fbx"
+						start_frame = 400
+						end_frame = 430
+						framerate = 30.0
+						take = 0
+						reverse = false
+					},
+				]
+				default_root_bone_name = ""
+			},
 		]
 		model_archetype = ""
 		primary_associated_entity = ""
