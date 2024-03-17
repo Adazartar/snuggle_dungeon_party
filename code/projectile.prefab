@@ -1,6 +1,6 @@
 {
   "RootObject": {
-    "__guid": "f4e1d91f-5445-485b-80ce-cd318974f3f9",
+    "__guid": "49d4d071-de7a-4fc0-bb87-3e8fc18b5246",
     "Name": "projectile",
     "Scale": "0.4,2.5,0.4",
     "Tags": "projectile",
@@ -8,7 +8,7 @@
     "Components": [
       {
         "__type": "ModelRenderer",
-        "__guid": "c00b1105-a007-4839-8820-c52ae880dcd3",
+        "__guid": "57dbe938-d86d-4a34-a9f4-75fdef02e807",
         "BodyGroups": 18446744073709551615,
         "Model": "models/dev/box.vmdl",
         "RenderType": "On",
@@ -16,25 +16,25 @@
       },
       {
         "__type": "BoxCollider",
-        "__guid": "153d41aa-5ec4-430f-b27c-57d6cbbc75be",
+        "__guid": "d07a0d41-06b6-4d4f-a989-3770bc2e03c1",
         "Center": "0,0,0",
         "IsTrigger": true,
-        "Scale": "50,50,50",
+        "Scale": "10,30,10",
         "Static": false
       },
       {
         "__type": "Projectile",
-        "__guid": "533dd871-593a-4b38-b14c-ace344a91a63",
+        "__guid": "8934c808-badd-4616-aa4c-b893f5dcc121",
         "nearby_objects_handler": {
           "_type": "component",
-          "component_id": "a3df46b7-dbfa-4c95-a9de-0298496d4958",
-          "go": "f4e1d91f-5445-485b-80ce-cd318974f3f9",
+          "component_id": "1b7db3fd-b6ad-4468-ae7f-c2aabdf20f47",
+          "go": "49d4d071-de7a-4fc0-bb87-3e8fc18b5246",
           "component_type": "NearbyObjects"
         }
       },
       {
         "__type": "NearbyObjects",
-        "__guid": "a3df46b7-dbfa-4c95-a9de-0298496d4958"
+        "__guid": "1b7db3fd-b6ad-4468-ae7f-c2aabdf20f47"
       }
     ],
     "Children": []
@@ -42,5 +42,7 @@
   "ShowInMenu": false,
   "MenuPath": null,
   "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__version": 1,
   "__references": []
 }

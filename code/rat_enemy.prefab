@@ -1,0 +1,112 @@
+{
+  "RootObject": {
+    "__guid": "15e3be92-876e-4927-abd9-2ade58748b3c",
+    "Name": "rat",
+    "Position": "-1900,-200,35",
+    "Tags": "enemy",
+    "Enabled": true,
+    "NetworkMode": 2,
+    "Components": [
+      {
+        "__type": "NavMeshAgent",
+        "__guid": "3fd4a699-5d7d-474a-9c70-dffa3f96c3f6",
+        "Acceleration": 10000,
+        "Height": 30,
+        "MaxSpeed": 100,
+        "Radius": 16,
+        "Separation": 0.25,
+        "UpdatePosition": true,
+        "UpdateRotation": true
+      },
+      {
+        "__type": "Enemy",
+        "__guid": "31128a6c-0f8d-423e-9144-2cff3fb65598",
+        "aggro_range": 600,
+        "attack_damage": 3,
+        "attack_windup": 0.3,
+        "attackingRange": 200,
+        "piercing": false,
+        "player_count_to_spawn": 1,
+        "players_container": {
+          "_type": "gameobject",
+          "go": "6b6fb711-6467-4fcb-aa4b-a69398b01d3d"
+        },
+        "projectile_duration": 0.4,
+        "projectile_pool": {
+          "_type": "gameobject",
+          "go": "a2842977-2178-4570-b806-db38e051019c"
+        },
+        "projectile_speed": 4,
+        "re_adjustposition_interval": 0.3,
+        "rotation_speed": 15,
+        "rotation_time": 0.4,
+        "slow_duration": 2,
+        "slowed_speed": 60,
+        "speed": 170,
+        "target_range": 10000,
+        "width": 0.5
+      },
+      {
+        "__type": "BoxCollider",
+        "__guid": "3c81c38e-f9e2-4d38-9f31-4b56c8fcdfb2",
+        "Center": "0,0,0",
+        "IsTrigger": false,
+        "Scale": "60,60,100",
+        "Static": false
+      },
+      {
+        "__type": "Health",
+        "__guid": "b735f551-e99b-462f-a491-35e842dbf4ef",
+        "current_health": 0,
+        "game_config_obj": {
+          "_type": "gameobject",
+          "go": "1d5f5cc0-1ab7-42b4-82e6-f0672703e8fd"
+        },
+        "max_health": 40
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "abe6beed-8410-441a-a1af-693747f5f825",
+        "Name": "Look Direction",
+        "Position": "64,0,5",
+        "Scale": "0.5,0.5,0.25",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "Components": [
+          {
+            "__type": "ModelRenderer",
+            "__guid": "7caa1480-513e-4823-b656-872b9c4177cb",
+            "BodyGroups": 18446744073709551615,
+            "Model": "models/dev/box.vmdl",
+            "RenderType": "On",
+            "Tint": "0,0,0,1"
+          }
+        ]
+      },
+      {
+        "__guid": "5a1621c6-bc10-44be-8991-8c1228981f76",
+        "Name": "Model",
+        "Position": "0,0,35",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "Components": [
+          {
+            "__type": "ModelRenderer",
+            "__guid": "b4bc6cb3-f7b9-4929-a4fb-48121ebe17d8",
+            "BodyGroups": 18446744073709551615,
+            "Model": "models/dev/sphere.vmdl",
+            "RenderType": "On",
+            "Tint": "1,0,0,1"
+          }
+        ]
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__version": 1,
+  "__references": []
+}

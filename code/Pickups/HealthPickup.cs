@@ -6,8 +6,9 @@ public sealed class HealthPickup : PickupTemplate
     {
         Log.Info("health is working");
     }
-    public override void interact()
+    public override void interact(Player player)
     {
         Log.Info("health picked up");
+        player.health.changeHealth(20);
     }
 }

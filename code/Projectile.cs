@@ -13,6 +13,7 @@ public sealed class Projectile : Component, Component.ITriggerListener
 	Pool pool;
 	bool projectile_explodes;
 	float proj_explosion_radius;
+	ElementType projectile_elem;
 	protected override void OnUpdate()
 	{
 		projectile_duration -= Time.Delta;
@@ -23,21 +24,24 @@ public sealed class Projectile : Component, Component.ITriggerListener
 		}
 	}
 
-	public void projectObject(float speed, Vector3 direction, float duration, int damage, bool from_player, GameObject source, float width, Pool obj_pool, bool is_piercing, bool explodes, float explosion_radius)
+	public void projectObject(float speed, Vector3 direction, float duration, int damage, bool from_player,
+	 GameObject source, float width, Pool obj_pool, bool is_piercing, bool explodes, float explosion_radius, ElementType elem)
 	{
+		projectile_source = source;
+		GameObject.Components.Get<BoxCollider>().Scale = new Vector3(50f,50f * width,50f);
+		Transform.Position = source.Transform.Position;
+		Transform.Rotation = source.Transform.Rotation;
 		pool = obj_pool;
 		projectile_speed = speed;
 		projectile_direction = direction;
 		projectile_duration = duration;
 		projectile_damage = damage;
 		player_projectile = from_player;
-		projectile_source = source;
-		Transform.Position = source.Transform.Position;
-		Transform.Rotation = source.Transform.Rotation;
-		Transform.Scale = new Vector3(0.4f,width,0.4f);
+		
 		piercing = is_piercing;
 		projectile_explodes = explodes;
 		proj_explosion_radius = explosion_radius;
+		projectile_elem = elem;
 
 	}
 
@@ -46,7 +50,18 @@ public sealed class Projectile : Component, Component.ITriggerListener
 		GameObject hit_target = other.GameObject;
 		if(hit_target != null){
 			if(player_projectile && hit_target.Tags.Has("enemy")){
-				//Log.Info("player hit enemy");
+				if(projectile_elem == ElementType.Fire){
+					hit_target.Components.Get<Enemy>().startBurn();
+				}
+				if(projectile_elem == ElementType.Ice){
+					hit_target.Components.Get<Enemy>().startSlow();
+				}
+				if(projectile_elem == ElementType.Ground){
+					List<GameObject> nearby_enemies = nearby_objects_handler.getNearbyObjects(projectile_source.Components.Get<Player>().enemy_objects, 100);
+					foreach(var enemy in nearby_enemies){
+						enemy.Components.Get<Health>().changeHealth(-2);
+					}
+				}
 				hit_target.Components.Get<Health>().changeHealth(-1 * projectile_damage);
 				projectile_source.Components.Get<Player>().chargeAbilityDamaging(projectile_damage);
 				if(!piercing){
@@ -55,11 +70,15 @@ public sealed class Projectile : Component, Component.ITriggerListener
 				}
 			}
 			if(!player_projectile && hit_target.Tags.Has("player")){
-				//Log.Info("enemy hit player");
 				hit_target.Components.Get<Health>().changeHealth(-1 * projectile_damage);
 				if(!piercing){
 					pool.returnObject(GameObject);
 				}
+			}
+
+			if(hit_target.Tags.Has("wall")){
+				explode();
+				pool.returnObject(GameObject);
 			}
 		}
 		
