@@ -30,6 +30,27 @@
 			{
 				key = 
 				{
+					m_id = 177073371
+				}
+				value = 
+				{
+					_class = "CSequenceAnimNode"
+					m_sName = "Unnamed"
+					m_vecPosition = [ -224.0, 256.0 ]
+					m_nNodeID = 
+					{
+						m_id = 177073371
+					}
+					m_sNote = ""
+					m_tagSpans = [  ]
+					m_sequenceName = "anim_wizard_attack"
+					m_playbackSpeed = 1.0
+					m_bLoop = false
+				}
+			},
+			{
+				key = 
+				{
 					m_id = 493908272
 				}
 				value = 
@@ -57,7 +78,7 @@
 				{
 					_class = "CRootAnimNode"
 					m_sName = "Unnamed"
-					m_vecPosition = [ 720.0, 288.0 ]
+					m_vecPosition = [ 912.0, 304.0 ]
 					m_nNodeID = 
 					{
 						m_id = 750879432
@@ -340,7 +361,7 @@
 					}
 					m_sNote = ""
 					m_tagSpans = [  ]
-					m_sequenceName = "anim_wizard_attack"
+					m_sequenceName = "anim_wizard_interact"
 					m_playbackSpeed = 1.0
 					m_bLoop = false
 				}
@@ -354,7 +375,7 @@
 				{
 					_class = "CSequenceAnimNode"
 					m_sName = "Death"
-					m_vecPosition = [ -224.0, 256.0 ]
+					m_vecPosition = [ -224.0, 320.0 ]
 					m_nNodeID = 
 					{
 						m_id = 1840651675
@@ -375,7 +396,7 @@
 				{
 					_class = "CSelectorAnimNode"
 					m_sName = "Unnamed"
-					m_vecPosition = [ 544.0, 240.0 ]
+					m_vecPosition = [ 720.0, 304.0 ]
 					m_nNodeID = 
 					{
 						m_id = 2025222925
@@ -386,7 +407,7 @@
 						{
 							m_nodeID = 
 							{
-								m_id = 1738063925
+								m_id = 2097094956
 							}
 							m_outputID = 
 							{
@@ -417,6 +438,80 @@
 					m_boolParamID = 
 					{
 						m_id = 526659460
+					}
+					m_enumParamID = 
+					{
+						m_id = 4294967295
+					}
+					m_intParamID = 
+					{
+						m_id = 4294967295
+					}
+					m_intParamMinValue = 0
+					m_intParamMaxValue = 2
+					m_blendDuration = 0.2
+					m_tagBehavior = "SelectorTagBehavior_OffWhenFinished"
+					m_bResetOnChange = true
+					m_bSyncCyclesOnChange = false
+					m_blendCurve = 
+					{
+						m_vControlPoint1 = [ 0.5, 0.0 ]
+						m_vControlPoint2 = [ 0.5, 1.0 ]
+					}
+					m_intParamNames = [  ]
+				}
+			},
+			{
+				key = 
+				{
+					m_id = 2097094956
+				}
+				value = 
+				{
+					_class = "CSelectorAnimNode"
+					m_sName = "Unnamed"
+					m_vecPosition = [ 528.0, 240.0 ]
+					m_nNodeID = 
+					{
+						m_id = 2097094956
+					}
+					m_sNote = ""
+					m_children = 
+					[
+						{
+							m_nodeID = 
+							{
+								m_id = 1738063925
+							}
+							m_outputID = 
+							{
+								m_id = 4294967295
+							}
+						},
+						{
+							m_nodeID = 
+							{
+								m_id = 177073371
+							}
+							m_outputID = 
+							{
+								m_id = 4294967295
+							}
+						},
+					]
+					m_tags = 
+					[
+						{
+							m_id = 4294967295
+						},
+						{
+							m_id = 4294967295
+						},
+					]
+					m_selectionSource = "SelectionSource_Bool"
+					m_boolParamID = 
+					{
+						m_id = 694481947
 					}
 					m_enumParamID = 
 					{
@@ -489,6 +584,18 @@
 				m_id = 
 				{
 					m_id = 526659460
+				}
+				m_previewButton = "ANIMPARAM_BUTTON_NONE"
+				m_bUseMostRecentValue = false
+				m_bAutoReset = false
+				m_bDefaultValue = false
+			},
+			{
+				_class = "CBoolAnimParameter"
+				m_name = "Abliity"
+				m_id = 
+				{
+					m_id = 694481947
 				}
 				m_previewButton = "ANIMPARAM_BUTTON_NONE"
 				m_bUseMostRecentValue = false
