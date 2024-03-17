@@ -45,6 +45,8 @@ public sealed class Enemy : Component
 
 	Health health;
 
+	public SkinnedModelRenderer model;
+
 	protected override void OnEnabled()
 	{
 		pool = projectile_pool.Components.Get<Pool>();
@@ -54,6 +56,11 @@ public sealed class Enemy : Component
 		agent.MaxSpeed = speed;
 		attack_windup_timer = attack_windup;
 		rotation_timer = rotation_time;
+		foreach(GameObject child in GameObject.Children){
+			if(child.Components.Get<SkinnedModelRenderer>() != null){
+				model = child.Components.Get<SkinnedModelRenderer>();
+			}
+		}
 	}
 	protected override void OnUpdate()
 	{
@@ -107,6 +114,9 @@ public sealed class Enemy : Component
 
 	private void chasingState()
 	{
+		model.Set("Idle", false);
+		model.Set("Attack", false);
+		model.Set("Moving", true);
 		re_adjustposition_timer -= Time.Delta;
 		
 		targetDistance = Transform.Position.Distance(targetPlayer.Transform.Position);
@@ -129,11 +139,17 @@ public sealed class Enemy : Component
 	private void idleState()
 	{
 		//Log.Info("in idle state");
+		model.Set("Moving", false);
+		model.Set("Attack", false);
+		model.Set("Idle", true);
 		findNearestPlayer();
 	}
 
 	private void attackingState()
 	{
+		model.Set("Moving", false);
+		model.Set("Idle", false);
+		model.Set("Attack", true);
 		//Log.Info("in attacking state");
 		if(!targetPlayer.Enabled){
 			state = EnemyState.Idle;

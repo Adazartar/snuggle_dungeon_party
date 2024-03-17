@@ -54,46 +54,46 @@ public sealed class Player : Component
 		if(input_type == InputType.Controller)
 		{
 			if(Input.Down("forward_con")){
-				vel += new Vector3(1, 0, 0);
+				vel += new Vector3(-1, 0, 0);
 			}
 			if(Input.Down("backward_con")){
-				vel += new Vector3(-1,0, 0);
+				vel += new Vector3(1,0, 0);
 			}
 			if(Input.Down("left_con")){
-				vel += new Vector3(0, 1, 0);
+				vel += new Vector3(0, -1, 0);
 			}
 			if(Input.Down("right_con")){
-				vel += new Vector3(0, -1, 0);
+				vel += new Vector3(0, 1, 0);
 			}
 		}
 		else if(input_type == InputType.BaseKeyboard)
 		{
 			if(Input.Down("forward")){
-				vel += new Vector3(1, 0, 0);
+				vel += new Vector3(-1, 0, 0);
 			}
 			if(Input.Down("backward")){
-				vel += new Vector3(-1,0, 0);
+				vel += new Vector3(1,0, 0);
 			}
 			if(Input.Down("left")){
-				vel += new Vector3(0, 1, 0);
+				vel += new Vector3(0, -1, 0);
 			}
 			if(Input.Down("right")){
-				vel += new Vector3(0, -1, 0);
+				vel += new Vector3(0, 1, 0);
 			}
 		}
 		else
 		{
 			if(Input.Down("forward_sec")){
-				vel += new Vector3(1, 0, 0);
+				vel += new Vector3(-1, 0, 0);
 			}
 			if(Input.Down("backward_sec")){
-				vel += new Vector3(-1,0, 0);
+				vel += new Vector3(1,0, 0);
 			}
 			if(Input.Down("left_sec")){
-				vel += new Vector3(0, 1, 0);
+				vel += new Vector3(0, -1, 0);
 			}
 			if(Input.Down("right_sec")){
-				vel += new Vector3(0, -1, 0);
+				vel += new Vector3(0, 1, 0);
 			}
 		}
 
