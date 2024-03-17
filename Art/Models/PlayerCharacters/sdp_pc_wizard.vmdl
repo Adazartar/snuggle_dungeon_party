@@ -14,12 +14,12 @@
 						remaps = 
 						[
 							{
-								from = "base.vmat"
-								to = "materials/mtoon.vmat"
-							},
-							{
 								from = "material.vmat"
 								to = "materials/mtoonoutline.vmat"
+							},
+							{
+								from = "base.vmat"
+								to = "materials/mtoon.vmat"
 							},
 						]
 						use_global_default = false
@@ -63,10 +63,105 @@
 					},
 				]
 			},
+			{
+				_class = "AnimationList"
+				children = 
+				[
+					{
+						_class = "AnimFile"
+						name = "anim_wizard_idle"
+						activity_name = "Idle"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						enable_scale = false
+						source_filename = "Art/Models/PlayerCharacters/sdp_pc_wizard.fbx"
+						start_frame = 1
+						end_frame = 100
+						framerate = 30.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "anim_wizard_walk"
+						activity_name = "Idle"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						enable_scale = false
+						source_filename = "Art/Models/PlayerCharacters/sdp_pc_wizard.fbx"
+						start_frame = 100
+						end_frame = 160
+						framerate = 30.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "anim_wizard_interact"
+						activity_name = "Idle"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						enable_scale = false
+						source_filename = "Art/Models/PlayerCharacters/sdp_pc_wizard.fbx"
+						start_frame = 160
+						end_frame = 200
+						framerate = 30.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "anim_wizard_attack"
+						activity_name = "Idle"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						enable_scale = false
+						source_filename = "Art/Models/PlayerCharacters/sdp_pc_wizard.fbx"
+						start_frame = 200
+						end_frame = 300
+						framerate = 30.0
+						take = 0
+						reverse = false
+					},
+				]
+				default_root_bone_name = ""
+			},
 		]
 		model_archetype = ""
 		primary_associated_entity = ""
-		anim_graph_name = ""
+		anim_graph_name = "animgraphs/sdp_wizard.vanmgrph"
 		base_model_name = ""
 	}
 }
