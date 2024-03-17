@@ -33,7 +33,7 @@
 				[
 					{
 						_class = "RenderMeshFile"
-						filename = "art/models/environment/floorgrate_01.fbx"
+						filename = "art/models/environment/walls/floorgrate_01.fbx"
 						import_translation = [ 0.0, 0.0, 0.0 ]
 						import_rotation = [ 0.0, 0.0, 0.0 ]
 						import_scale = 1.0

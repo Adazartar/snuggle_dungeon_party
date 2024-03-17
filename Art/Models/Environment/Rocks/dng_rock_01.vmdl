@@ -19,7 +19,7 @@
 							},
 							{
 								from = "material.001.vmat"
-								to = "materials/outline.vmat"
+								to = "materials/mtoonoutline.vmat"
 							},
 						]
 						use_global_default = false
@@ -33,7 +33,7 @@
 				[
 					{
 						_class = "RenderMeshFile"
-						filename = "art/models/environment/dng_rock_01.fbx"
+						filename = "art/models/environment/rocks/dng_rock_01.fbx"
 						import_translation = [ 0.0, 0.0, 0.0 ]
 						import_rotation = [ 0.0, 0.0, 0.0 ]
 						import_scale = 1.0

@@ -33,7 +33,7 @@
 				[
 					{
 						_class = "RenderMeshFile"
-						filename = "art/models/environment/dng_rock_04.fbx"
+						filename = "art/models/environment/rocks/dng_rock_04.fbx"
 						import_translation = [ 0.0, 0.0, 0.0 ]
 						import_rotation = [ 0.0, 0.0, 0.0 ]
 						import_scale = 1.0

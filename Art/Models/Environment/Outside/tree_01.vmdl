@@ -17,6 +17,10 @@
 								from = "base.vmat"
 								to = "materials/mtoonenv.vmat"
 							},
+							{
+								from = "leaves.vmat"
+								to = "materials/mtoonenv.vmat"
+							},
 						]
 						use_global_default = false
 						global_default_material = ""
@@ -29,7 +33,7 @@
 				[
 					{
 						_class = "RenderMeshFile"
-						filename = "art/models/environment/tree_01.fbx"
+						filename = "art/models/environment/outside/tree_01.fbx"
 						import_translation = [ 0.0, 0.0, 0.0 ]
 						import_rotation = [ 0.0, 0.0, 0.0 ]
 						import_scale = 1.0

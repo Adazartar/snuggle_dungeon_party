@@ -15,7 +15,7 @@
 						[
 							{
 								from = "material.vmat"
-								to = "materials/outline.vmat"
+								to = "materials/mtoonoutline.vmat"
 							},
 							{
 								from = "base.vmat"
