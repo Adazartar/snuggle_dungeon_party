@@ -309,6 +309,7 @@
             {
               "__type": "Ability",
               "__guid": "352df93e-7925-4750-8044-5e6dd5f013ea",
+              "ability_cast_duration": 2,
               "ability_meter_max": 25,
               "ability_type": "Barbarian"
             },
@@ -446,6 +447,7 @@
             {
               "__type": "Ability",
               "__guid": "ce095a70-7ff2-436c-8483-922804a80ba8",
+              "ability_cast_duration": 2,
               "ability_meter_max": 25,
               "ability_type": "Paladin"
             },
@@ -624,6 +626,7 @@
             {
               "__type": "Ability",
               "__guid": "030f5908-fd51-4cd9-b621-11ba025f1719",
+              "ability_cast_duration": 2,
               "ability_meter_max": 25,
               "ability_type": "Wizard"
             },
@@ -15094,7 +15097,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-03-17T20:04:58.5787489\u002B11:00",
+  "LastSaved": "2024-03-17T20:07:23.3823879\u002B11:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": []
