@@ -1,0 +1,34 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "materials/shader/toonbase.shader"
+
+	//---- Animation ----
+	F_MORPH_SUPPORTED 1
+
+	//---- Blending ----
+	F_ADDITIVE_BLEND 1
+
+	//---- Texture Filtering ----
+	F_TEXTURE_FILTERING 1 // Bilinear
+
+	AlbedoMap "materials/textures/palette01_color.png"
+	g_flEmmissionPower "0.744"
+	g_flF_HighlightPwr "1.579"
+	g_flF_HighlightSS_Max "2.800"
+	g_flF_HighlightSS_Min "2.750"
+	g_flF_ShadowPwr "2.000"
+	g_flF_ShadowSS_Max "1.000"
+	g_flF_ShadowSS_Min "0.917"
+	g_flShadowDark "1.000"
+	g_flShadowHighlightPwr "0.091"
+	g_flShadowHighlightSS_Max "0.800"
+	g_flShadowHighlightSS_Min "0.790"
+	g_vDirectionMulti "[0.200 0.200 0.200]"
+	g_vFresnelColour "[1.000000 0.078431 0.576471 1.000000]"
+	g_vTint "[1.000000 1.000000 1.000000 1.000000]"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+}

@@ -1,0 +1,816 @@
+{
+  "__guid": "074bea85-3cb2-499e-b928-396140e1c4fb",
+  "GameObjects": [
+    {
+      "__guid": "79923949-7d1f-457d-9470-6142efb76409",
+      "Name": "Sun",
+      "Position": "0,0,32",
+      "Tags": "light_directional,light",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "DirectionalLight",
+          "__guid": "6d98c93c-6b02-4de7-b7e3-82a904bc0030",
+          "FogMode": "Disabled",
+          "FogStrength": 1,
+          "LightColor": "1,1,1,1",
+          "Shadows": false,
+          "SkyColor": "1,1,1,1"
+        }
+      ]
+    },
+    {
+      "__guid": "8e8c2b56-1929-453b-b9b0-a474fac49258",
+      "Name": "Camera",
+      "Position": "-1167.211,53.6001,521.049",
+      "Rotation": "0,0.258819,0,0.9659258",
+      "Tags": "maincamera",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "CameraComponent",
+          "__guid": "e0d96157-1030-44d1-bf83-386796d30a9c",
+          "BackgroundColor": "0.16121,0.22268,0.25116,1",
+          "ClearFlags": "All",
+          "FieldOfView": 60,
+          "IsMainCamera": true,
+          "Orthographic": false,
+          "OrthographicHeight": 1204,
+          "Priority": 1,
+          "RenderExcludeTags": "",
+          "RenderTags": "",
+          "TargetEye": "None",
+          "Viewport": "0,0,1,1",
+          "ZFar": 10000,
+          "ZNear": 10
+        }
+      ]
+    },
+    {
+      "__guid": "e7d68d46-d494-4eaf-9270-f49af9fff097",
+      "Name": "sdp_barbarian",
+      "Position": "24.41788,-267.9627,1.373609",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "SkinnedModelRenderer",
+          "__guid": "7809d80e-e685-4bcd-a998-db8592ec0158",
+          "BodyGroups": 18446744073709551615,
+          "CreateBoneObjects": false,
+          "Model": "art/models/playercharacters/sdp_barbarian.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "ModelCollider",
+          "__guid": "49aea30d-ae97-496f-ac63-c885f0af9d99",
+          "IsTrigger": false,
+          "Model": "art/models/playercharacters/sdp_barbarian.vmdl",
+          "Static": false
+        },
+        {
+          "__type": "Rigidbody",
+          "__guid": "517b690e-8a25-49f3-bc5e-4b2b42538f4a",
+          "AngularDamping": 0,
+          "Gravity": true,
+          "LinearDamping": 0,
+          "Locking": {},
+          "MassOverride": 0,
+          "MotionEnabled": true,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        }
+      ]
+    },
+    {
+      "__guid": "f4744bac-bac7-498b-b207-4f0dd1583725",
+      "Name": "sdp_pc_paladin",
+      "Position": "2.831142,-65.2412,0.1561855",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "SkinnedModelRenderer",
+          "__guid": "dc66d275-31bc-4dc3-b6a2-2ea6355f3d3f",
+          "BodyGroups": 18446744073709551615,
+          "CreateBoneObjects": false,
+          "Model": "art/models/playercharacters/sdp_pc_paladin.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "ModelCollider",
+          "__guid": "1659dcb6-d494-456d-9f74-0e4755e95e3b",
+          "IsTrigger": false,
+          "Model": "art/models/playercharacters/sdp_pc_paladin.vmdl",
+          "Static": false
+        },
+        {
+          "__type": "Rigidbody",
+          "__guid": "788338f5-7244-41b6-a50d-6c0e2c3da615",
+          "AngularDamping": 0,
+          "Gravity": true,
+          "LinearDamping": 0,
+          "Locking": {},
+          "MassOverride": 0,
+          "MotionEnabled": true,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "c7e9f012-429c-4675-be04-214a74cc97b9",
+          "Name": "hip",
+          "Position": "0.000007629395,0.000009536743,26.66486",
+          "Rotation": "0.4999999,0.4999998,0.4999999,0.5000005",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Children": [
+            {
+              "__guid": "c81559ee-1c62-4609-9a82-5b5af77bd72f",
+              "Name": "chest",
+              "Position": "0.00002313552,18.78506,0.00002330484",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Children": [
+                {
+                  "__guid": "f6a92ad6-3487-49e6-829f-70529ee9ef70",
+                  "Name": "clavical_l",
+                  "Position": "-9.999954,33.66323,0.00004488041",
+                  "Rotation": "-0.4999998,0.4999999,0.4999997,0.5000007",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Children": [
+                    {
+                      "__guid": "dbc62342-e353-4cc1-b507-7ea5177a3683",
+                      "Name": "armUp_l",
+                      "Position": "-0.00004305031,18.28497,-0.0001068103",
+                      "Rotation": "-0.01566077,0.01378308,-0.05540717,0.9982459",
+                      "Enabled": true,
+                      "NetworkMode": 2
+                    }
+                  ]
+                },
+                {
+                  "__guid": "e7db11be-0d71-4d34-8557-d0f432266c54",
+                  "Name": "clavical_r",
+                  "Position": "10.00004,33.66325,0.00005608609",
+                  "Rotation": "-0.4999995,-0.4999995,-0.4999998,0.5000013",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Children": [
+                    {
+                      "__guid": "2e5ca93b-dfc5-4cd2-bd8a-4082a65550c4",
+                      "Name": "armUp_r",
+                      "Position": "0.00006975408,18.28503,-0.0000686639",
+                      "Rotation": "-0.01566076,-0.01378312,0.05540717,0.9982459",
+                      "Enabled": true,
+                      "NetworkMode": 2
+                    }
+                  ]
+                },
+                {
+                  "__guid": "9a4ab12d-08e4-4346-bc1f-892b32917d5e",
+                  "Name": "head",
+                  "Position": "0.00005054804,44.18524,0.00003514684",
+                  "Enabled": true,
+                  "NetworkMode": 2
+                },
+                {
+                  "__guid": "1cc63081-834d-4577-bb6f-d97981ba6a84",
+                  "Name": "cape_c",
+                  "Position": "0.00007053122,44.1852,38.6052",
+                  "Rotation": "0.9941552,-0.00000002980232,-0.000000372529,0.1079608",
+                  "Enabled": true,
+                  "NetworkMode": 2
+                },
+                {
+                  "__guid": "0263ee8f-fbf6-42f2-945d-00bd9ce369b9",
+                  "Name": "cape_l",
+                  "Position": "-31.65902,44.18521,14.19577",
+                  "Rotation": "0.9911655,-0.07704252,0.008363605,0.107636",
+                  "Enabled": true,
+                  "NetworkMode": 2
+                },
+                {
+                  "__guid": "9e53fe9e-d4f2-4627-9b4d-b942e29ceda3",
+                  "Name": "cape_r",
+                  "Position": "31.65913,44.18524,14.19582",
+                  "Rotation": "0.9911655,0.07704246,-0.00836356,0.107636",
+                  "Enabled": true,
+                  "NetworkMode": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "bcdc8fa4-9f77-4fb4-9771-35049d947474",
+          "Name": "legUp_l",
+          "Position": "-0.00001144409,-18.99999,27.66808",
+          "Rotation": "0.5000001,0.5000001,-0.4999999,-0.4999999",
+          "Enabled": true,
+          "NetworkMode": 2
+        },
+        {
+          "__guid": "c4d6926b-3fab-4389-9403-4eafa2fc08f8",
+          "Name": "tail",
+          "Position": "23.00647,-0.000001907349,36.65392",
+          "Rotation": "-0.0000001699904,-0.0000001053672,-0.7071068,0.7071068",
+          "Enabled": true,
+          "NetworkMode": 2
+        },
+        {
+          "__guid": "2d3b1013-952a-4685-8372-1ae1b0271d84",
+          "Name": "legUp_r",
+          "Position": "-0.000003814697,18.99998,27.66807",
+          "Rotation": "-0.5,-0.4999999,0.4999998,0.5000003",
+          "Enabled": true,
+          "NetworkMode": 2
+        }
+      ]
+    },
+    {
+      "__guid": "d062e717-9c7c-4b2b-9520-9f1a25508857",
+      "Name": "sdp_enem_rat",
+      "Position": "150.5761,47.00568,0.1580391",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "SkinnedModelRenderer",
+          "__guid": "4526c961-0ab5-42ed-9c29-5dfeba0d809a",
+          "AnimationGraph": "animgraphs/sdp_barbarian.vanmgrph",
+          "BodyGroups": 18446744073709551615,
+          "CreateBoneObjects": false,
+          "Model": "art/models/enemycharacters/sdp_enem_rat.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "ModelCollider",
+          "__guid": "e26a6e1d-2e2a-43f7-95de-0cdf695d8fd4",
+          "IsTrigger": false,
+          "Model": "art/models/enemycharacters/sdp_enem_rat.vmdl",
+          "Static": false
+        },
+        {
+          "__type": "Rigidbody",
+          "__guid": "57609d8b-debe-4230-be26-792a350f5b35",
+          "AngularDamping": 0,
+          "Gravity": true,
+          "LinearDamping": 0,
+          "Locking": {},
+          "MassOverride": 0,
+          "MotionEnabled": true,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        }
+      ]
+    },
+    {
+      "__guid": "088ff10f-b441-45e6-ba68-67f3d07059a0",
+      "Name": "sdp_enem_boar",
+      "Position": "130.4368,-232.2864,0.001590729",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "SkinnedModelRenderer",
+          "__guid": "4fe5a6c7-ec04-4d96-8734-62b3091d759d",
+          "AnimationGraph": "animgraphs/sdp_barbarian.vanmgrph",
+          "BodyGroups": 18446744073709551615,
+          "CreateBoneObjects": false,
+          "Model": "art/models/enemycharacters/sdp_enem_boar.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Rigidbody",
+          "__guid": "9559ef6a-645d-469a-813c-7554d16e1309",
+          "AngularDamping": 0,
+          "Gravity": true,
+          "LinearDamping": 0,
+          "Locking": {},
+          "MassOverride": 0,
+          "MotionEnabled": true,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        },
+        {
+          "__type": "CapsuleCollider",
+          "__guid": "6b3abae7-9c6e-4c9a-9d40-f2872eb4b7b1",
+          "End": "0,0,199.8001",
+          "IsTrigger": false,
+          "Radius": 64.29996,
+          "Start": "0,0,0",
+          "Static": false
+        }
+      ]
+    },
+    {
+      "__guid": "3026e0ae-e975-4bec-bc2c-abc9c0656e98",
+      "Name": "in_floor_01",
+      "Position": "110.9134,0,0",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "ccf68482-d351-4885-a22a-893c8a939001",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "art/models/environment/tiles/in_floor_01.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "776477c5-d886-4efd-88e7-7ec2c398c749",
+      "Name": "in_floor_03",
+      "Position": "-21.39661,811.417,4.337669",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "04f47d45-5c02-477d-938e-70221f32fda8",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "art/models/environment/tiles/in_floor_03.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "bf783919-d8d0-47b0-a36a-e9a6c720295f",
+      "Name": "floor_out_01",
+      "Position": "-47.50183,1485.281,96.76705",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "99ba2c55-81b9-420c-954c-ca717420be04",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "art/models/environment/tiles/floor_out_01.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "c90a976a-94b5-4934-a99f-a3ae6095de08",
+      "Name": "in_floor_04",
+      "Position": "-66.88672,623.6365,0",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "7d2367b8-e41c-4b18-a174-2e6739fb75c1",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "art/models/environment/tiles/in_floor_04.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "5b87c626-e174-4f7e-bc42-1e63a6dd351f",
+      "Name": "in_floor_05",
+      "Position": "599.7659,-1664.362,0",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "3f98a4de-f3ca-4777-8eee-14be65944c69",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "art/models/environment/tiles/in_floor_05.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "66020076-5721-4ce7-b6d0-e390b2480acf",
+      "Name": "stone_pavement_03",
+      "Position": "-277.9946,6.833889,5.710811",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "665051aa-420c-4e55-a341-fdb7653bc0ff",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "art/models/environment/floor/stone_pavement_03.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "d61f600c-b004-4d25-92ed-2596c62004f5",
+      "Name": "stone_pavement_03 (1)",
+      "Position": "170.4953,6.833885,5.710811",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "9cc60ca2-a2cd-4794-b654-15a2007345a9",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "art/models/environment/floor/stone_pavement_03.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "3692d72c-8814-4254-bb4e-b994f9b391f1",
+      "Name": "stone_pavement_02",
+      "Position": "20.18775,10.90335,5.710746",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "2b5ddbd6-f5a9-4360-bf77-a5190a3195d8",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "art/models/environment/floor/stone_pavement_02.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "07be8ea8-ea9b-4f3f-8519-a52df6d18741",
+      "Name": "stone_pavement_02 (2)",
+      "Position": "-131.4239,10.90335,5.710746",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "2b6c3492-49fe-4f07-881b-e32c890024a8",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "art/models/environment/floor/stone_pavement_02.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "dc2d0b37-4caf-499a-8475-c7a845b978c5",
+      "Name": "stone_pavement_02 (1)",
+      "Position": "470.6671,10.90335,5.710746",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "a44980c1-69a5-4055-9886-d1e060ba80c0",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "art/models/environment/floor/stone_pavement_02.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "3fdf251c-a7bf-4774-85a1-3e5e6cc757e8",
+      "Name": "stone_pavement_02 (3)",
+      "Position": "316.2886,10.90335,5.710746",
+      "Rotation": "0,0,1,-0.00000004371139",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "8d7f89ef-13d0-400d-be3b-f6a461ebb18e",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "art/models/environment/floor/stone_pavement_02.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "95da45a8-57c8-4856-abfa-6ffdba28fec7",
+      "Name": "misc_barrel_01",
+      "Position": "-225.7719,385.0316,5.741472",
+      "Rotation": "-0.0000001860686,0.000007510185,0.0000005582058,1",
+      "Scale": "0.5,0.5,0.5",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "00fb14f7-7420-45a0-8eb7-7e55d36a1fba",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "art/models/environment/misc/misc_barrel_01.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "6de95be3-6bda-4a35-a8bb-252e75068732",
+      "Name": "misc_barrel_01 (1)",
+      "Position": "-285.4268,274.9654,5.742409",
+      "Rotation": "-0.0000001860686,0.000007510185,0.0000005582058,1",
+      "Scale": "0.5,0.5,0.5",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "e5aebd7e-72e4-407a-940e-e389244704a5",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "art/models/environment/misc/misc_barrel_01.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "c90b429e-25c9-4e5f-95dd-4d205f533b15",
+      "Name": "pillar_stone_02",
+      "Position": "514.1785,474.2899,-4.337752",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "0d9ae939-0214-4010-9c50-6812c5ddeef0",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "art/models/environment/walls/pillar_stone_02.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "122735a5-409a-4d30-bd5e-50f089b791df",
+      "Name": "pillar_stone_02",
+      "Position": "533.2902,-453.5746,-4.337569",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "c74cf51f-b9e8-4080-adbc-4110d175d8db",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "art/models/environment/walls/pillar_stone_02.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "d947f40c-284c-41d4-a30a-bbdc5c4a6440",
+      "Name": "pillar_stone_02 (1)",
+      "Position": "-404.4763,-453.5746,-4.337569",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "30475cf6-ef6d-4be5-914e-e481c743dcc0",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "art/models/environment/walls/pillar_stone_02.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "64f11e82-32b5-44cd-8839-f8ee89bf156e",
+      "Name": "pillar_stone_02 (2)",
+      "Position": "-404.4762,469.2877,-4.337569",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "1e4af167-8311-438a-b8f6-b0f45194999d",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "art/models/environment/walls/pillar_stone_02.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "f0257b5b-161a-4eec-bf29-0a6e9348e0d5",
+      "Name": "wall_doorhole_01",
+      "Position": "555,51.0174,0",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "d9de47e9-104b-460e-adfe-7c437caac8ff",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "art/models/environment/walls/wall_doorhole_01.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "60e0b25e-f35b-4ff2-9722-e9247795dc3f",
+      "Name": "wall_mod_01",
+      "Position": "555,467.1203,0",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "18ce30cc-cf29-4a94-9877-af447fd36173",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "art/models/environment/walls/wall_mod_01.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "19e8ef3e-e8b7-4270-b215-9fe0cb55193d",
+      "Name": "wall_mod_01 (3)",
+      "Position": "555,469.9834,128",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "7efaa616-4131-4cf0-acde-9576a1fb972e",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "art/models/environment/walls/wall_mod_01.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "a0a53d94-ac3c-43cf-a9f8-6a91ddc5a19d",
+      "Name": "wall_mod_01 (1)",
+      "Position": "555,-371.8635,0",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "a0b994f3-39e5-4a3d-8e27-62cb29938a7a",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "art/models/environment/walls/wall_mod_01.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "3ed49c3f-ac50-4a20-9035-f6a2a828c91b",
+      "Name": "wall_mod_01 (2)",
+      "Position": "555,-371.8635,127.6259",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "b06a0abf-a336-46f9-9727-f12b6e47d05d",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "art/models/environment/walls/wall_mod_01.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "eaa15ab0-2e25-4cc7-8db1-9bb445ab8a40",
+      "Name": "door_frame",
+      "Position": "547.972,45.30413,0",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "4512a8aa-2395-4fa0-8a64-758006bef4e0",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "art/models/environment/walls/door_frame.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "05850f7f-99c4-4846-9948-cbdebfe83187",
+      "Name": "env_door",
+      "Position": "547.972,45.30413,0",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "18ee3b4d-a218-4200-b528-1e61c05e8702",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "art/models/environment/walls/env_door.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "c0bf40ab-7317-4658-8669-a68d000b4450",
+      "Name": "floorgrate_01",
+      "Position": "2.460145,289.8368,11.04434",
+      "Scale": "0.4446567,0.4446567,0.4446567",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "1bbf45cb-9b81-457a-be10-facf44dc21f5",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "art/models/environment/walls/floorgrate_01.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "bf929e41-bf9b-4ec2-956e-11b71a608a97",
+      "Name": "wall_jail_01",
+      "Position": "56.04545,-453.4702,5.732975",
+      "Rotation": "0,0,-0.7071067,0.7071068",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "a8bde17a-2652-473e-87eb-6d0a3f8d4668",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "art/models/environment/walls/wall_jail_01.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "dba501cb-4407-43c9-84ec-0a4eff026178",
+      "Name": "wall_jail_01 (1)",
+      "Position": "56.04527,470.9788,5.732975",
+      "Rotation": "0,0,-0.7071067,0.7071068",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "49c7c23a-4bd3-4657-9e8e-b367ab8ad587",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "art/models/environment/walls/wall_jail_01.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "f783eb4c-4df8-46af-b642-3fd74d30a1f3",
+      "Name": "sdp_pc_wizard",
+      "Position": "-3.147156,103.7072,6.686544",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "105007c1-1a25-4ea0-a0a0-cf5b4e89c37c",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "art/models/playercharacters/sdp_pc_wizard.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "4a35d610-c4cd-4f86-bbf9-dd567731f1bd",
+      "Name": "sdp_enem_chameleon",
+      "Position": "149.3384,222.4393,6.41119",
+      "Rotation": "-0.0000001860686,0.000007510185,0.0000005582058,1",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "b089986f-00db-4e3a-9d31-606c0c71a08f",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "art/models/enemycharacters/sdp_enem_chameleon.vmdl"
+        }
+      ]
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "Lerping": true,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 30,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true,
+    "NavMesh": {
+      "Enabled": false,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": true,
+      "AgentHeight": 64,
+      "AgentRadius": 16,
+      "AgentStepSize": 18,
+      "AgentMaxSlope": 40,
+      "ExcludedBodies": "",
+      "IncludedBodies": ""
+    }
+  },
+  "Title": "artimport",
+  "Description": "",
+  "LastSaved": "2024-03-17T17:43:19.1677913\u002B11:00",
+  "ResourceVersion": 1,
+  "__version": 1,
+  "__references": []
+}
