@@ -1,0 +1,92 @@
+{
+  "RootObject": {
+    "__guid": "29d79245-ea17-482f-b158-a8e84904a2d9",
+    "Name": "basic_wall",
+    "Enabled": true,
+    "NetworkMode": 2,
+    "Children": [
+      {
+        "__guid": "07c48522-80df-4631-bb30-471076d12d70",
+        "Name": "wall_mod_02",
+        "Position": "0,373.2169,0",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "Components": [
+          {
+            "__type": "ModelRenderer",
+            "__guid": "a5ca46bb-4c58-40ac-8a1d-9396ea2b806f",
+            "BodyGroups": 18446744073709551615,
+            "Model": "art/models/environment/walls/wall_mod_02.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "__guid": "d09f92b5-8b81-4c79-9604-0628d318cbc5",
+            "__enabled": false,
+            "IsTrigger": false,
+            "Model": "art/models/environment/walls/wall_mod_02.vmdl",
+            "Static": false
+          },
+          {
+            "__type": "Rigidbody",
+            "__guid": "bc457170-56f5-4f65-9c40-55dc75fc66b9",
+            "__enabled": false,
+            "AngularDamping": 0,
+            "Gravity": true,
+            "LinearDamping": 0,
+            "Locking": {},
+            "MassOverride": 0,
+            "MotionEnabled": true,
+            "RigidbodyFlags": 0,
+            "StartAsleep": false
+          }
+        ]
+      },
+      {
+        "__guid": "5bfd3ed6-55e6-46dd-b3d2-6f13e4e586bd",
+        "Name": "wall_mod_01",
+        "Position": "0,-0.9563432,0",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "Components": [
+          {
+            "__type": "ModelRenderer",
+            "__guid": "b173804f-525e-43c7-a0e6-938b79e89d1c",
+            "BodyGroups": 18446744073709551615,
+            "Model": "art/models/environment/walls/wall_mod_01.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "__guid": "11332a95-6a28-4200-b19b-2836c3339db8",
+            "__enabled": false,
+            "IsTrigger": false,
+            "Model": "art/models/environment/walls/wall_mod_01.vmdl",
+            "Static": false
+          },
+          {
+            "__type": "Rigidbody",
+            "__guid": "ac964883-729b-494b-94ad-784764b429c7",
+            "__enabled": false,
+            "AngularDamping": 0,
+            "Gravity": true,
+            "LinearDamping": 0,
+            "Locking": {},
+            "MassOverride": 0,
+            "MotionEnabled": true,
+            "RigidbodyFlags": 0,
+            "StartAsleep": false
+          }
+        ]
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__version": 1,
+  "__references": []
+}

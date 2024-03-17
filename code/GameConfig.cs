@@ -33,7 +33,7 @@ public sealed class GameConfig : Component
 	protected override void OnUpdate()
 	{
 		if(timer > 0){
-			camera.Transform.Position = Vector3.Lerp(camera.Transform.Position, new Vector3(room_center.x, room_center.y, 1400), 5 * Time.Delta);
+			camera.Transform.Position = Vector3.Lerp(camera.Transform.Position, new Vector3(room_center.x - 900, room_center.y, 900), 5 * Time.Delta);
 		}
 	}
 

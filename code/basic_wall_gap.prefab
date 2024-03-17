@@ -1,0 +1,93 @@
+{
+  "RootObject": {
+    "__guid": "8cd50338-7814-47d8-bfb6-a78bc1baba72",
+    "Name": "basic_wall_gap",
+    "Enabled": true,
+    "NetworkMode": 2,
+    "Children": [
+      {
+        "__guid": "3fad9a55-26e3-4973-bba5-8111396c8b6e",
+        "Name": "wall_mod_02",
+        "Position": "0,-242,0",
+        "Rotation": "0,0,1,-0.00000004371139",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "Components": [
+          {
+            "__type": "ModelRenderer",
+            "__guid": "b32375ad-f9e0-46f2-a3f3-7bf71e43e106",
+            "BodyGroups": 18446744073709551615,
+            "Model": "art/models/environment/walls/wall_mod_02.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "__guid": "091ec286-54aa-459d-9dd6-e43027bc914b",
+            "__enabled": false,
+            "IsTrigger": false,
+            "Model": "art/models/environment/walls/wall_mod_02.vmdl",
+            "Static": false
+          },
+          {
+            "__type": "Rigidbody",
+            "__guid": "abf9309e-2ba0-4e54-942c-bd665526c542",
+            "__enabled": false,
+            "AngularDamping": 0,
+            "Gravity": true,
+            "LinearDamping": 0,
+            "Locking": {},
+            "MassOverride": 0,
+            "MotionEnabled": true,
+            "RigidbodyFlags": 0,
+            "StartAsleep": false
+          }
+        ]
+      },
+      {
+        "__guid": "061c28b9-6a83-47c7-aa5b-9a9ed53e1f2c",
+        "Name": "wall_mod_02",
+        "Position": "0,242,0",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "Components": [
+          {
+            "__type": "ModelRenderer",
+            "__guid": "c4055f6c-3aa1-49b8-8122-f4e976c8586c",
+            "BodyGroups": 18446744073709551615,
+            "Model": "art/models/environment/walls/wall_mod_02.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "__guid": "2c323436-0149-44c1-b56b-9b610a96e7d1",
+            "__enabled": false,
+            "IsTrigger": false,
+            "Model": "art/models/environment/walls/wall_mod_02.vmdl",
+            "Static": false
+          },
+          {
+            "__type": "Rigidbody",
+            "__guid": "8c35e618-fead-4358-b755-053e58a09f8c",
+            "__enabled": false,
+            "AngularDamping": 0,
+            "Gravity": true,
+            "LinearDamping": 0,
+            "Locking": {},
+            "MassOverride": 0,
+            "MotionEnabled": true,
+            "RigidbodyFlags": 0,
+            "StartAsleep": false
+          }
+        ]
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__version": 1,
+  "__references": []
+}

@@ -1,0 +1,204 @@
+{
+  "RootObject": {
+    "__guid": "a63cad37-85f7-4fe7-82fb-c33937fde131",
+    "Name": "wall_and_door",
+    "Enabled": true,
+    "NetworkMode": 2,
+    "Children": [
+      {
+        "__guid": "0f85b218-69a9-41f6-aed7-fb57a8629bb9",
+        "Name": "door_frame",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "Components": [
+          {
+            "__type": "ModelRenderer",
+            "__guid": "71f4b453-e36b-4c1a-9bcd-c6fc33e6c34f",
+            "BodyGroups": 18446744073709551615,
+            "Model": "art/models/environment/walls/door_frame.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "__guid": "c16289ce-fe2d-4c08-ac52-1b558700a3a8",
+            "__enabled": false,
+            "IsTrigger": false,
+            "Model": "art/models/environment/walls/door_frame.vmdl",
+            "Static": false
+          },
+          {
+            "__type": "Rigidbody",
+            "__guid": "7879d2f3-182a-45de-b116-a509e9f399af",
+            "__enabled": false,
+            "AngularDamping": 0,
+            "Gravity": true,
+            "LinearDamping": 0,
+            "Locking": {},
+            "MassOverride": 0,
+            "MotionEnabled": true,
+            "RigidbodyFlags": 0,
+            "StartAsleep": false
+          }
+        ]
+      },
+      {
+        "__guid": "01f8b182-a5f7-4e0f-936c-213fb5b979b6",
+        "Name": "env_door",
+        "Rotation": "0,0,1,-0.00000004371139",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "Components": [
+          {
+            "__type": "ModelRenderer",
+            "__guid": "26242273-813f-4eb7-a8b2-0eca3093dd84",
+            "BodyGroups": 18446744073709551615,
+            "Model": "art/models/environment/walls/env_door.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "__guid": "d8fdc3f9-963f-4222-a6d3-bbc4807166d7",
+            "__enabled": false,
+            "IsTrigger": false,
+            "Model": "art/models/environment/walls/env_door.vmdl",
+            "Static": false
+          },
+          {
+            "__type": "Rigidbody",
+            "__guid": "fd4d4ee9-665b-469e-bfb6-35ec95f2a5ae",
+            "__enabled": false,
+            "AngularDamping": 0,
+            "Gravity": true,
+            "LinearDamping": 0,
+            "Locking": {},
+            "MassOverride": 0,
+            "MotionEnabled": true,
+            "RigidbodyFlags": 0,
+            "StartAsleep": false
+          }
+        ]
+      },
+      {
+        "__guid": "b1b2f43a-9f73-469e-8ac3-fa441491af15",
+        "Name": "wall_mod_02",
+        "Position": "0,-263.9297,0",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "Components": [
+          {
+            "__type": "ModelRenderer",
+            "__guid": "96340f5c-4321-42a0-a430-9408a665e39f",
+            "BodyGroups": 18446744073709551615,
+            "Model": "art/models/environment/walls/wall_mod_02.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "__guid": "6f598f43-7a41-45cc-90bd-c4f865916ad8",
+            "__enabled": false,
+            "IsTrigger": false,
+            "Model": "art/models/environment/walls/wall_mod_02.vmdl",
+            "Static": false
+          },
+          {
+            "__type": "Rigidbody",
+            "__guid": "5579becc-06a1-48ab-ad34-b66a636a92c7",
+            "__enabled": false,
+            "AngularDamping": 0,
+            "Gravity": true,
+            "LinearDamping": 0,
+            "Locking": {},
+            "MassOverride": 0,
+            "MotionEnabled": true,
+            "RigidbodyFlags": 0,
+            "StartAsleep": false
+          }
+        ]
+      },
+      {
+        "__guid": "4020db44-9ee0-464d-aa75-10eabb5361ab",
+        "Name": "wall_mod_02",
+        "Position": "0,263.7599,0",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "Components": [
+          {
+            "__type": "ModelRenderer",
+            "__guid": "a3eb8930-feb7-4432-bec3-e0983c03eec9",
+            "BodyGroups": 18446744073709551615,
+            "Model": "art/models/environment/walls/wall_mod_02.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "__guid": "f4d33ece-b5f9-48a2-bea8-a4840f8ca6db",
+            "__enabled": false,
+            "IsTrigger": false,
+            "Model": "art/models/environment/walls/wall_mod_02.vmdl",
+            "Static": false
+          },
+          {
+            "__type": "Rigidbody",
+            "__guid": "04074b99-d5d1-4f16-b759-4be2255a93ec",
+            "__enabled": false,
+            "AngularDamping": 0,
+            "Gravity": true,
+            "LinearDamping": 0,
+            "Locking": {},
+            "MassOverride": 0,
+            "MotionEnabled": true,
+            "RigidbodyFlags": 0,
+            "StartAsleep": false
+          }
+        ]
+      },
+      {
+        "__guid": "8e5bcac2-8e0f-47ee-88f9-fe18763875b7",
+        "Name": "wall_doorhole_01",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "Components": [
+          {
+            "__type": "ModelRenderer",
+            "__guid": "e917f73e-99e7-4cff-90ae-708352094cae",
+            "BodyGroups": 18446744073709551615,
+            "Model": "art/models/environment/walls/wall_doorhole_01.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "__guid": "dde6390b-4023-49fe-b997-ed097b3034e7",
+            "__enabled": false,
+            "IsTrigger": false,
+            "Model": "art/models/environment/walls/wall_doorhole_01.vmdl",
+            "Static": false
+          },
+          {
+            "__type": "Rigidbody",
+            "__guid": "2d3ccf54-3563-4bd4-95af-26bb96be4162",
+            "__enabled": false,
+            "AngularDamping": 0,
+            "Gravity": true,
+            "LinearDamping": 0,
+            "Locking": {},
+            "MassOverride": 0,
+            "MotionEnabled": true,
+            "RigidbodyFlags": 0,
+            "StartAsleep": false
+          }
+        ]
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__version": 1,
+  "__references": []
+}
