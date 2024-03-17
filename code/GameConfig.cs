@@ -33,7 +33,7 @@ public sealed class GameConfig : Component
 	protected override void OnUpdate()
 	{
 		if(timer > 0){
-			camera.Transform.Position = Vector3.Lerp(camera.Transform.Position, new Vector3(room_center.x - 900, room_center.y, 900), 5 * Time.Delta);
+			camera.Transform.Position = Vector3.Lerp(camera.Transform.Position, new Vector3(room_center.x + 900, room_center.y, 900), 5 * Time.Delta);
 		}
 	}
 
@@ -72,6 +72,7 @@ public sealed class GameConfig : Component
 	}
 
 	public void changeActiveRoom(Vector3 in_room_center){
+		Log.Info("switching room");
 		room_center = in_room_center;
 		timer = camera_travel_time;
 		enemy_dead_count = 0;

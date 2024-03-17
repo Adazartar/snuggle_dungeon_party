@@ -31,6 +31,7 @@ public sealed class Room : Component
 
 	protected override void OnStart(){
 		foreach(GameObject child in GameObject.Children){
+			Log.Info(child.Name);
 			if(child.Name == "N_door"){ N_door = child; }
 			if(child.Name == "N_door-trigger"){ N_trigger = child; }
 			if(child.Name == "E_door"){ E_door = child; }
