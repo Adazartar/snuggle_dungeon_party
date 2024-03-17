@@ -207,7 +207,7 @@
                 "component_type": "NearbyObjects"
               },
               "rotation_speed": 50,
-              "speed": 50,
+              "speed": 10,
               "time_moving_for_1_ability_pt": 1
             },
             {
@@ -221,8 +221,8 @@
             {
               "__type": "Attack",
               "__guid": "f4166c5e-825f-4a7e-a5a3-fd1307fcffb6",
-              "attack_damage": 5,
-              "attack_delay": 0.1,
+              "attack_damage": 7,
+              "attack_delay": 2,
               "element": "None",
               "piercing": true,
               "projectile_duration": 0.3,
@@ -231,18 +231,22 @@
                 "go": "a2842977-2178-4570-b806-db38e051019c"
               },
               "projectile_speed": 5,
-              "width": 2.5
+              "width": 4
             },
             {
               "__type": "Health",
               "__guid": "0b5dc2c1-7e64-4155-a98b-9d297d9e80c2",
               "current_health": 0,
-              "max_health": 50
+              "game_config_obj": {
+                "_type": "gameobject",
+                "go": "1d5f5cc0-1ab7-42b4-82e6-f0672703e8fd"
+              },
+              "max_health": 70
             },
             {
               "__type": "Ability",
               "__guid": "352df93e-7925-4750-8044-5e6dd5f013ea",
-              "ability_meter_max": 5,
+              "ability_meter_max": 25,
               "ability_type": "Barbarian"
             },
             {
@@ -340,7 +344,7 @@
                 "component_type": "NearbyObjects"
               },
               "rotation_speed": 50,
-              "speed": 10,
+              "speed": 20,
               "time_moving_for_1_ability_pt": 1
             },
             {
@@ -354,8 +358,8 @@
             {
               "__type": "Attack",
               "__guid": "c2fd13de-27b5-4df5-bcdd-5d757d9bb0c5",
-              "attack_damage": 5,
-              "attack_delay": 0.1,
+              "attack_damage": 4,
+              "attack_delay": 0.8,
               "element": "None",
               "piercing": true,
               "projectile_duration": 0.3,
@@ -364,18 +368,22 @@
                 "go": "a2842977-2178-4570-b806-db38e051019c"
               },
               "projectile_speed": 5,
-              "width": 2.5
+              "width": 3
             },
             {
               "__type": "Health",
               "__guid": "2d46132e-8bc3-4cba-8591-37d94c91a173",
               "current_health": 0,
-              "max_health": 90
+              "game_config_obj": {
+                "_type": "gameobject",
+                "go": "1d5f5cc0-1ab7-42b4-82e6-f0672703e8fd"
+              },
+              "max_health": 60
             },
             {
               "__type": "Ability",
               "__guid": "ce095a70-7ff2-436c-8483-922804a80ba8",
-              "ability_meter_max": 5,
+              "ability_meter_max": 25,
               "ability_type": "Paladin"
             },
             {
@@ -473,7 +481,7 @@
                 "component_type": "NearbyObjects"
               },
               "rotation_speed": 50,
-              "speed": 10,
+              "speed": 15,
               "time_moving_for_1_ability_pt": 1
             },
             {
@@ -487,10 +495,10 @@
             {
               "__type": "Attack",
               "__guid": "c20d157d-c595-42c1-b41f-e2f2a08e6678",
-              "attack_damage": 5,
+              "attack_damage": 4,
               "attack_delay": 0.5,
               "element": "None",
-              "piercing": true,
+              "piercing": false,
               "projectile_duration": 0.3,
               "projectile_pool": {
                 "_type": "gameobject",
@@ -503,12 +511,16 @@
               "__type": "Health",
               "__guid": "8aee0fc1-3012-437a-bedf-5dc327fc49d8",
               "current_health": 0,
-              "max_health": 300
+              "game_config_obj": {
+                "_type": "gameobject",
+                "go": "1d5f5cc0-1ab7-42b4-82e6-f0672703e8fd"
+              },
+              "max_health": 30
             },
             {
               "__type": "Ability",
               "__guid": "030f5908-fd51-4cd9-b621-11ba025f1719",
-              "ability_meter_max": 5,
+              "ability_meter_max": 25,
               "ability_type": "Wizard"
             },
             {
@@ -580,14 +592,15 @@
       "Children": [
         {
           "__guid": "15e3be92-876e-4927-abd9-2ade58748b3c",
-          "Name": "Enemy",
-          "Position": "-200,-200,35",
+          "Name": "rat",
+          "Position": "-1869.062,-136.6598,35",
           "Tags": "enemy",
+          "Enabled": true,
           "NetworkMode": 2,
           "Components": [
             {
               "__type": "NavMeshAgent",
-              "__guid": "3fd4a699-5d7d-474a-9c70-dffa3f96c3f6",
+              "__guid": "39343192-4d5f-48df-9eb8-4a82a49f8500",
               "Acceleration": 10000,
               "Height": 30,
               "MaxSpeed": 100,
@@ -598,34 +611,35 @@
             },
             {
               "__type": "Enemy",
-              "__guid": "31128a6c-0f8d-423e-9144-2cff3fb65598",
-              "aggro_range": 300,
-              "attack_damage": 5,
-              "attack_windup": 1,
+              "__guid": "2e880902-bd04-410b-bdae-ebb439686193",
+              "aggro_range": 600,
+              "attack_damage": 3,
+              "attack_windup": 0.3,
               "attackingRange": 200,
               "piercing": false,
+              "player_count_to_spawn": 2,
               "players_container": {
                 "_type": "gameobject",
                 "go": "6b6fb711-6467-4fcb-aa4b-a69398b01d3d"
               },
-              "projectile_duration": 1,
+              "projectile_duration": 0.4,
               "projectile_pool": {
                 "_type": "gameobject",
                 "go": "a2842977-2178-4570-b806-db38e051019c"
               },
-              "projectile_speed": 3,
+              "projectile_speed": 4,
               "re_adjustposition_interval": 0.3,
               "rotation_speed": 15,
               "rotation_time": 0.4,
               "slow_duration": 2,
               "slowed_speed": 60,
-              "speed": 100,
+              "speed": 170,
               "target_range": 10000,
               "width": 0.5
             },
             {
               "__type": "BoxCollider",
-              "__guid": "3c81c38e-f9e2-4d38-9f31-4b56c8fcdfb2",
+              "__guid": "adf582e7-266e-42b0-8891-7e31f2e6a392",
               "Center": "0,0,0",
               "IsTrigger": false,
               "Scale": "60,60,100",
@@ -633,14 +647,18 @@
             },
             {
               "__type": "Health",
-              "__guid": "b735f551-e99b-462f-a491-35e842dbf4ef",
+              "__guid": "c2774d83-0787-4e3b-a96d-3dc7006d54ab",
               "current_health": 0,
-              "max_health": 20
+              "game_config_obj": {
+                "_type": "gameobject",
+                "go": "1d5f5cc0-1ab7-42b4-82e6-f0672703e8fd"
+              },
+              "max_health": 40
             }
           ],
           "Children": [
             {
-              "__guid": "abe6beed-8410-441a-a1af-693747f5f825",
+              "__guid": "3ca6b267-ca32-446e-8c18-7c550095764b",
               "Name": "Look Direction",
               "Position": "64,0,5",
               "Scale": "0.5,0.5,0.25",
@@ -649,7 +667,7 @@
               "Components": [
                 {
                   "__type": "ModelRenderer",
-                  "__guid": "7caa1480-513e-4823-b656-872b9c4177cb",
+                  "__guid": "8dcafb2f-ed25-4392-b29e-ce185a3ff9cd",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/dev/box.vmdl",
                   "RenderType": "On",
@@ -658,7 +676,7 @@
               ]
             },
             {
-              "__guid": "5a1621c6-bc10-44be-8991-8c1228981f76",
+              "__guid": "fcde74aa-3636-4841-90a0-5aecc8c0f74b",
               "Name": "Model",
               "Position": "0,0,35",
               "Enabled": true,
@@ -666,7 +684,1671 @@
               "Components": [
                 {
                   "__type": "ModelRenderer",
-                  "__guid": "b4bc6cb3-f7b9-4929-a4fb-48121ebe17d8",
+                  "__guid": "87645d51-1a22-4fae-abf5-b8d770691074",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/sphere.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,0,0,1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "c30fac0c-021b-4013-b044-d23fcce5bdbf",
+          "Name": "rat",
+          "Position": "-1732.645,1898.686,35",
+          "Tags": "enemy",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "NavMeshAgent",
+              "__guid": "36dba616-89ab-44b8-9a66-fe068dd9551b",
+              "Acceleration": 10000,
+              "Height": 30,
+              "MaxSpeed": 100,
+              "Radius": 16,
+              "Separation": 0.25,
+              "UpdatePosition": true,
+              "UpdateRotation": true
+            },
+            {
+              "__type": "Enemy",
+              "__guid": "43348daa-d1b0-435f-a3c9-8344830b931c",
+              "aggro_range": 600,
+              "attack_damage": 3,
+              "attack_windup": 0.3,
+              "attackingRange": 200,
+              "piercing": false,
+              "player_count_to_spawn": 2,
+              "players_container": {
+                "_type": "gameobject",
+                "go": "6b6fb711-6467-4fcb-aa4b-a69398b01d3d"
+              },
+              "projectile_duration": 0.4,
+              "projectile_pool": {
+                "_type": "gameobject",
+                "go": "a2842977-2178-4570-b806-db38e051019c"
+              },
+              "projectile_speed": 4,
+              "re_adjustposition_interval": 0.3,
+              "rotation_speed": 15,
+              "rotation_time": 0.4,
+              "slow_duration": 2,
+              "slowed_speed": 60,
+              "speed": 170,
+              "target_range": 10000,
+              "width": 0.5
+            },
+            {
+              "__type": "BoxCollider",
+              "__guid": "efd9d2e1-3dc6-4a05-98ae-2b5e6a8de2c9",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "60,60,100",
+              "Static": false
+            },
+            {
+              "__type": "Health",
+              "__guid": "162041b5-26aa-42c2-9eda-a889766a169b",
+              "current_health": 0,
+              "game_config_obj": {
+                "_type": "gameobject",
+                "go": "1d5f5cc0-1ab7-42b4-82e6-f0672703e8fd"
+              },
+              "max_health": 40
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "2d56f39e-6a18-4901-af8f-2e9e95d4613c",
+              "Name": "Look Direction",
+              "Position": "64,0,5",
+              "Scale": "0.5,0.5,0.25",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "8eac9c01-07d3-4978-9e72-8ccbef662deb",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            },
+            {
+              "__guid": "ba04ecd2-7983-42cd-9ff3-b2c3d8efd539",
+              "Name": "Model",
+              "Position": "0,0,35",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "3f155f06-f275-4ef8-9028-a78db15e738a",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/sphere.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,0,0,1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "1a53986c-27ac-490a-bdb2-500fcf8dbe3a",
+          "Name": "rat",
+          "Position": "-1434.605,1907.729,35",
+          "Tags": "enemy",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "NavMeshAgent",
+              "__guid": "cfa544ea-67ce-4def-b4a0-732199b0e725",
+              "Acceleration": 10000,
+              "Height": 30,
+              "MaxSpeed": 100,
+              "Radius": 16,
+              "Separation": 0.25,
+              "UpdatePosition": true,
+              "UpdateRotation": true
+            },
+            {
+              "__type": "Enemy",
+              "__guid": "bcb17449-a00f-419d-bc74-07ccdf18c270",
+              "aggro_range": 600,
+              "attack_damage": 3,
+              "attack_windup": 0.3,
+              "attackingRange": 200,
+              "piercing": false,
+              "player_count_to_spawn": 1,
+              "players_container": {
+                "_type": "gameobject",
+                "go": "6b6fb711-6467-4fcb-aa4b-a69398b01d3d"
+              },
+              "projectile_duration": 0.4,
+              "projectile_pool": {
+                "_type": "gameobject",
+                "go": "a2842977-2178-4570-b806-db38e051019c"
+              },
+              "projectile_speed": 4,
+              "re_adjustposition_interval": 0.3,
+              "rotation_speed": 15,
+              "rotation_time": 0.4,
+              "slow_duration": 2,
+              "slowed_speed": 60,
+              "speed": 170,
+              "target_range": 10000,
+              "width": 0.5
+            },
+            {
+              "__type": "BoxCollider",
+              "__guid": "067ec617-a2a7-45fa-82ae-d0ce5dd292d2",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "60,60,100",
+              "Static": false
+            },
+            {
+              "__type": "Health",
+              "__guid": "bea23e8d-1b39-4a0c-9b26-ada05ae5f1ad",
+              "current_health": 0,
+              "game_config_obj": {
+                "_type": "gameobject",
+                "go": "1d5f5cc0-1ab7-42b4-82e6-f0672703e8fd"
+              },
+              "max_health": 40
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "7c1a22ee-46c9-459f-aa72-2f5f24787fd0",
+              "Name": "Look Direction",
+              "Position": "64,0,5",
+              "Scale": "0.5,0.5,0.25",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "e9cd041f-7a1f-463d-8a42-912b6a766460",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            },
+            {
+              "__guid": "417d9376-bebf-4ad8-84a8-4b71bd5079f0",
+              "Name": "Model",
+              "Position": "0,0,35",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "62b27d95-6edc-47ca-b4da-6cb79ad3f39e",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/sphere.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,0,0,1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "d8598f59-8d7a-493d-a0cc-4be2cabab99a",
+          "Name": "rat",
+          "Position": "-1889.41,129.6754,35",
+          "Tags": "enemy",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "NavMeshAgent",
+              "__guid": "99f2bbaf-e638-442c-9f7a-0669759ec024",
+              "Acceleration": 10000,
+              "Height": 30,
+              "MaxSpeed": 100,
+              "Radius": 16,
+              "Separation": 0.25,
+              "UpdatePosition": true,
+              "UpdateRotation": true
+            },
+            {
+              "__type": "Enemy",
+              "__guid": "e06175fa-a4db-4847-a447-3cb3b11807ce",
+              "aggro_range": 600,
+              "attack_damage": 3,
+              "attack_windup": 0.3,
+              "attackingRange": 200,
+              "piercing": false,
+              "player_count_to_spawn": 3,
+              "players_container": {
+                "_type": "gameobject",
+                "go": "6b6fb711-6467-4fcb-aa4b-a69398b01d3d"
+              },
+              "projectile_duration": 0.4,
+              "projectile_pool": {
+                "_type": "gameobject",
+                "go": "a2842977-2178-4570-b806-db38e051019c"
+              },
+              "projectile_speed": 4,
+              "re_adjustposition_interval": 0.3,
+              "rotation_speed": 15,
+              "rotation_time": 0.4,
+              "slow_duration": 2,
+              "slowed_speed": 60,
+              "speed": 170,
+              "target_range": 10000,
+              "width": 0.5
+            },
+            {
+              "__type": "BoxCollider",
+              "__guid": "f1e321b0-f31d-4938-b4c5-b736d2fe3faa",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "60,60,100",
+              "Static": false
+            },
+            {
+              "__type": "Health",
+              "__guid": "877a1bed-7128-4ada-850d-274325dd20bd",
+              "current_health": 0,
+              "game_config_obj": {
+                "_type": "gameobject",
+                "go": "1d5f5cc0-1ab7-42b4-82e6-f0672703e8fd"
+              },
+              "max_health": 40
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "0f519afe-95f0-4986-8580-3fdb2eecebd3",
+              "Name": "Look Direction",
+              "Position": "64,0,5",
+              "Scale": "0.5,0.5,0.25",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "4bc88c33-4d3c-4156-85dc-5985dde48d33",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            },
+            {
+              "__guid": "e5b6faea-9161-4d2d-8984-e4ae99261e79",
+              "Name": "Model",
+              "Position": "0,0,35",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "49378b51-8a08-463d-bd8d-49095a71023e",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/sphere.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,0,0,1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "ef7eb76d-5254-4311-b090-97898531e905",
+          "Name": "rat",
+          "Position": "-1912.996,-6.503342,35",
+          "Tags": "enemy",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "NavMeshAgent",
+              "__guid": "664754fb-88a3-4c6a-ad77-24706446f221",
+              "Acceleration": 10000,
+              "Height": 30,
+              "MaxSpeed": 100,
+              "Radius": 16,
+              "Separation": 0.25,
+              "UpdatePosition": true,
+              "UpdateRotation": true
+            },
+            {
+              "__type": "Enemy",
+              "__guid": "2e26f9df-d8a6-489c-95dc-2e7ffc2b825e",
+              "aggro_range": 600,
+              "attack_damage": 3,
+              "attack_windup": 0.3,
+              "attackingRange": 200,
+              "piercing": false,
+              "player_count_to_spawn": 1,
+              "players_container": {
+                "_type": "gameobject",
+                "go": "6b6fb711-6467-4fcb-aa4b-a69398b01d3d"
+              },
+              "projectile_duration": 0.4,
+              "projectile_pool": {
+                "_type": "gameobject",
+                "go": "a2842977-2178-4570-b806-db38e051019c"
+              },
+              "projectile_speed": 4,
+              "re_adjustposition_interval": 0.3,
+              "rotation_speed": 15,
+              "rotation_time": 0.4,
+              "slow_duration": 2,
+              "slowed_speed": 60,
+              "speed": 170,
+              "target_range": 10000,
+              "width": 0.5
+            },
+            {
+              "__type": "BoxCollider",
+              "__guid": "9b54cd9a-374c-40a2-af9f-72d8ef94d8d3",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "60,60,100",
+              "Static": false
+            },
+            {
+              "__type": "Health",
+              "__guid": "c6c4d213-9b20-4e9c-89ca-4ce9d0c3456a",
+              "current_health": 0,
+              "game_config_obj": {
+                "_type": "gameobject",
+                "go": "1d5f5cc0-1ab7-42b4-82e6-f0672703e8fd"
+              },
+              "max_health": 40
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "5c4fbb40-16ba-45d9-bf93-95f7cdb8dfb4",
+              "Name": "Look Direction",
+              "Position": "64,0,5",
+              "Scale": "0.5,0.5,0.25",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "55e92638-5661-4461-aec0-072ccafd83c1",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            },
+            {
+              "__guid": "c94da15a-b501-40fb-829a-6ddf00d4282d",
+              "Name": "Model",
+              "Position": "0,0,35",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "37043659-f93e-48d1-93bb-23fdb88b1100",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/sphere.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,0,0,1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "84eba942-1388-4566-865c-93e59fd69665",
+          "Name": "rat",
+          "Position": "-3506.497,-6.503342,35",
+          "Tags": "enemy",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "NavMeshAgent",
+              "__guid": "fd75d339-34b5-4578-b8c7-3a49dd13ebbc",
+              "Acceleration": 10000,
+              "Height": 30,
+              "MaxSpeed": 100,
+              "Radius": 16,
+              "Separation": 0.25,
+              "UpdatePosition": true,
+              "UpdateRotation": true
+            },
+            {
+              "__type": "Enemy",
+              "__guid": "e66cba4a-c97c-446c-8143-048d9f5a9fc7",
+              "aggro_range": 600,
+              "attack_damage": 3,
+              "attack_windup": 0.3,
+              "attackingRange": 200,
+              "piercing": false,
+              "player_count_to_spawn": 2,
+              "players_container": {
+                "_type": "gameobject",
+                "go": "6b6fb711-6467-4fcb-aa4b-a69398b01d3d"
+              },
+              "projectile_duration": 0.4,
+              "projectile_pool": {
+                "_type": "gameobject",
+                "go": "a2842977-2178-4570-b806-db38e051019c"
+              },
+              "projectile_speed": 4,
+              "re_adjustposition_interval": 0.3,
+              "rotation_speed": 15,
+              "rotation_time": 0.4,
+              "slow_duration": 2,
+              "slowed_speed": 60,
+              "speed": 170,
+              "target_range": 10000,
+              "width": 0.5
+            },
+            {
+              "__type": "BoxCollider",
+              "__guid": "c8008f88-a3f5-4c04-b065-321c17e787fd",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "60,60,100",
+              "Static": false
+            },
+            {
+              "__type": "Health",
+              "__guid": "880a84fb-5d16-47b7-a691-c39649956562",
+              "current_health": 0,
+              "game_config_obj": {
+                "_type": "gameobject",
+                "go": "1d5f5cc0-1ab7-42b4-82e6-f0672703e8fd"
+              },
+              "max_health": 40
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "6c8fc6ad-91bc-4f3a-acfe-7eb8e55ae110",
+              "Name": "Look Direction",
+              "Position": "64,0,5",
+              "Scale": "0.5,0.5,0.25",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "b46e072d-9704-42f5-ae2c-2ce8ee4070ff",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            },
+            {
+              "__guid": "531f6df9-2eca-45c5-89cd-8a793ce8690f",
+              "Name": "Model",
+              "Position": "0,0,35",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "0152fcbf-3cb8-4a28-acd2-95bbb4be0663",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/sphere.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,0,0,1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "2b3390b2-bef1-49d9-804f-3d495ffeb6c2",
+          "Name": "rat",
+          "Position": "-5202.526,-6.503342,35",
+          "Tags": "enemy",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "NavMeshAgent",
+              "__guid": "124fa202-fc53-469e-8732-b4501ac21e29",
+              "Acceleration": 10000,
+              "Height": 30,
+              "MaxSpeed": 100,
+              "Radius": 16,
+              "Separation": 0.25,
+              "UpdatePosition": true,
+              "UpdateRotation": true
+            },
+            {
+              "__type": "Enemy",
+              "__guid": "7eac7340-9594-4c20-95a3-3343acd73433",
+              "aggro_range": 600,
+              "attack_damage": 3,
+              "attack_windup": 0.3,
+              "attackingRange": 200,
+              "piercing": false,
+              "player_count_to_spawn": 2,
+              "players_container": {
+                "_type": "gameobject",
+                "go": "6b6fb711-6467-4fcb-aa4b-a69398b01d3d"
+              },
+              "projectile_duration": 0.4,
+              "projectile_pool": {
+                "_type": "gameobject",
+                "go": "a2842977-2178-4570-b806-db38e051019c"
+              },
+              "projectile_speed": 4,
+              "re_adjustposition_interval": 0.3,
+              "rotation_speed": 15,
+              "rotation_time": 0.4,
+              "slow_duration": 2,
+              "slowed_speed": 60,
+              "speed": 170,
+              "target_range": 10000,
+              "width": 0.5
+            },
+            {
+              "__type": "BoxCollider",
+              "__guid": "db379de3-b0f3-4817-b062-9982307cda12",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "60,60,100",
+              "Static": false
+            },
+            {
+              "__type": "Health",
+              "__guid": "0fccb147-b9a1-47a9-8375-b6b087b4f303",
+              "current_health": 0,
+              "game_config_obj": {
+                "_type": "gameobject",
+                "go": "1d5f5cc0-1ab7-42b4-82e6-f0672703e8fd"
+              },
+              "max_health": 40
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "72ca2def-1efc-4892-83b5-c09dec12b758",
+              "Name": "Look Direction",
+              "Position": "64,0,5",
+              "Scale": "0.5,0.5,0.25",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "e15f3125-d94c-496a-aee1-d17600a7363f",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            },
+            {
+              "__guid": "3d94213f-b539-4a4b-bab1-662bdd078eea",
+              "Name": "Model",
+              "Position": "0,0,35",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "40498aae-bc81-4375-acce-ee8c52eacb85",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/sphere.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,0,0,1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "8b9df5c1-c1be-4250-a422-2dab4f9d4591",
+          "Name": "rat",
+          "Position": "-5212.52,117.8301,35",
+          "Tags": "enemy",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "NavMeshAgent",
+              "__guid": "377a1c92-a066-489f-9b94-f94a1c0d465f",
+              "Acceleration": 10000,
+              "Height": 30,
+              "MaxSpeed": 100,
+              "Radius": 16,
+              "Separation": 0.25,
+              "UpdatePosition": true,
+              "UpdateRotation": true
+            },
+            {
+              "__type": "Enemy",
+              "__guid": "a9854c7a-3eac-426d-8981-1610d3f550c2",
+              "aggro_range": 600,
+              "attack_damage": 3,
+              "attack_windup": 0.3,
+              "attackingRange": 200,
+              "piercing": false,
+              "player_count_to_spawn": 1,
+              "players_container": {
+                "_type": "gameobject",
+                "go": "6b6fb711-6467-4fcb-aa4b-a69398b01d3d"
+              },
+              "projectile_duration": 0.4,
+              "projectile_pool": {
+                "_type": "gameobject",
+                "go": "a2842977-2178-4570-b806-db38e051019c"
+              },
+              "projectile_speed": 4,
+              "re_adjustposition_interval": 0.3,
+              "rotation_speed": 15,
+              "rotation_time": 0.4,
+              "slow_duration": 2,
+              "slowed_speed": 60,
+              "speed": 170,
+              "target_range": 10000,
+              "width": 0.5
+            },
+            {
+              "__type": "BoxCollider",
+              "__guid": "b51b6e76-7a2c-4766-a285-6bcd8d4d6728",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "60,60,100",
+              "Static": false
+            },
+            {
+              "__type": "Health",
+              "__guid": "43d3d23b-4073-49e0-8633-367477389021",
+              "current_health": 0,
+              "game_config_obj": {
+                "_type": "gameobject",
+                "go": "1d5f5cc0-1ab7-42b4-82e6-f0672703e8fd"
+              },
+              "max_health": 40
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "ff5d5096-c6aa-49b6-ae32-10545d32d3dd",
+              "Name": "Look Direction",
+              "Position": "64,0,5",
+              "Scale": "0.5,0.5,0.25",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "e3b8bdd7-1f86-42c2-a881-dd87ef32c7bc",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            },
+            {
+              "__guid": "61e0ec75-6c2b-4364-8dfe-695711040897",
+              "Name": "Model",
+              "Position": "0,0,35",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "4329916b-a76a-4328-a27b-df27ee708020",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/sphere.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,0,0,1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "da0bf771-7d07-4060-82f4-e3239617f164",
+          "Name": "rat",
+          "Position": "-5200.583,-143.2036,35",
+          "Tags": "enemy",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "NavMeshAgent",
+              "__guid": "5b400985-cf6d-48f0-80e0-3c32a1ee03a5",
+              "Acceleration": 10000,
+              "Height": 30,
+              "MaxSpeed": 100,
+              "Radius": 16,
+              "Separation": 0.25,
+              "UpdatePosition": true,
+              "UpdateRotation": true
+            },
+            {
+              "__type": "Enemy",
+              "__guid": "864e0e33-fb3b-4ea7-a93a-4eeae51ac1f6",
+              "aggro_range": 600,
+              "attack_damage": 3,
+              "attack_windup": 0.3,
+              "attackingRange": 200,
+              "piercing": false,
+              "player_count_to_spawn": 1,
+              "players_container": {
+                "_type": "gameobject",
+                "go": "6b6fb711-6467-4fcb-aa4b-a69398b01d3d"
+              },
+              "projectile_duration": 0.4,
+              "projectile_pool": {
+                "_type": "gameobject",
+                "go": "a2842977-2178-4570-b806-db38e051019c"
+              },
+              "projectile_speed": 4,
+              "re_adjustposition_interval": 0.3,
+              "rotation_speed": 15,
+              "rotation_time": 0.4,
+              "slow_duration": 2,
+              "slowed_speed": 60,
+              "speed": 170,
+              "target_range": 10000,
+              "width": 0.5
+            },
+            {
+              "__type": "BoxCollider",
+              "__guid": "479ccd19-7375-4cf5-a2e6-4d53f574ad4c",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "60,60,100",
+              "Static": false
+            },
+            {
+              "__type": "Health",
+              "__guid": "8ee1127c-a504-4a9c-b79b-cf8992ed9351",
+              "current_health": 0,
+              "game_config_obj": {
+                "_type": "gameobject",
+                "go": "1d5f5cc0-1ab7-42b4-82e6-f0672703e8fd"
+              },
+              "max_health": 40
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "7dc2366c-0759-408b-8038-6a0fb97279ec",
+              "Name": "Look Direction",
+              "Position": "64,0,5",
+              "Scale": "0.5,0.5,0.25",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "d29c517d-7e6c-4502-b568-04841f4faf02",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            },
+            {
+              "__guid": "74df0b78-a5ce-4dd8-9bae-f322e5305d32",
+              "Name": "Model",
+              "Position": "0,0,35",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "45e1fc5b-9fb7-4396-862f-9167a97d18b5",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/sphere.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,0,0,1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "eaf49121-f33f-4724-8797-98f6bb24dc88",
+          "Name": "rat",
+          "Position": "-5188.924,-303.8628,35",
+          "Tags": "enemy",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "NavMeshAgent",
+              "__guid": "8fb2bb02-e356-4d46-94e6-ccd7466ca1fb",
+              "Acceleration": 10000,
+              "Height": 30,
+              "MaxSpeed": 100,
+              "Radius": 16,
+              "Separation": 0.25,
+              "UpdatePosition": true,
+              "UpdateRotation": true
+            },
+            {
+              "__type": "Enemy",
+              "__guid": "42518027-aac4-4d86-92f0-7d6e5bf0c6c4",
+              "aggro_range": 600,
+              "attack_damage": 3,
+              "attack_windup": 0.3,
+              "attackingRange": 200,
+              "piercing": false,
+              "player_count_to_spawn": 3,
+              "players_container": {
+                "_type": "gameobject",
+                "go": "6b6fb711-6467-4fcb-aa4b-a69398b01d3d"
+              },
+              "projectile_duration": 0.4,
+              "projectile_pool": {
+                "_type": "gameobject",
+                "go": "a2842977-2178-4570-b806-db38e051019c"
+              },
+              "projectile_speed": 4,
+              "re_adjustposition_interval": 0.3,
+              "rotation_speed": 15,
+              "rotation_time": 0.4,
+              "slow_duration": 2,
+              "slowed_speed": 60,
+              "speed": 170,
+              "target_range": 10000,
+              "width": 0.5
+            },
+            {
+              "__type": "BoxCollider",
+              "__guid": "78cf60a4-0f9e-4b09-b545-1393f601459a",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "60,60,100",
+              "Static": false
+            },
+            {
+              "__type": "Health",
+              "__guid": "498cc474-824d-4b87-95d7-cc4da133cb10",
+              "current_health": 0,
+              "game_config_obj": {
+                "_type": "gameobject",
+                "go": "1d5f5cc0-1ab7-42b4-82e6-f0672703e8fd"
+              },
+              "max_health": 40
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "cbd79d32-0295-4a17-b1db-51d563c8ea06",
+              "Name": "Look Direction",
+              "Position": "64,0,5",
+              "Scale": "0.5,0.5,0.25",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "58ff6946-4286-49cb-a3db-63dea60f9eaa",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            },
+            {
+              "__guid": "807adc2b-840c-4c56-894f-dce945a41bfc",
+              "Name": "Model",
+              "Position": "0,0,35",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "8f732d2e-1e5e-487c-bf1e-2b36c37e8161",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/sphere.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,0,0,1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "e4b5cfbb-25ad-4d8d-811c-f953cd916a74",
+          "Name": "rat",
+          "Position": "-5227.586,268.415,35",
+          "Tags": "enemy",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "NavMeshAgent",
+              "__guid": "52df6353-f11d-4a0a-9eb3-78b355c157c4",
+              "Acceleration": 10000,
+              "Height": 30,
+              "MaxSpeed": 100,
+              "Radius": 16,
+              "Separation": 0.25,
+              "UpdatePosition": true,
+              "UpdateRotation": true
+            },
+            {
+              "__type": "Enemy",
+              "__guid": "c7994b5f-c625-4a0e-a712-08cb6cbb6901",
+              "aggro_range": 600,
+              "attack_damage": 3,
+              "attack_windup": 0.3,
+              "attackingRange": 200,
+              "piercing": false,
+              "player_count_to_spawn": 3,
+              "players_container": {
+                "_type": "gameobject",
+                "go": "6b6fb711-6467-4fcb-aa4b-a69398b01d3d"
+              },
+              "projectile_duration": 0.4,
+              "projectile_pool": {
+                "_type": "gameobject",
+                "go": "a2842977-2178-4570-b806-db38e051019c"
+              },
+              "projectile_speed": 4,
+              "re_adjustposition_interval": 0.3,
+              "rotation_speed": 15,
+              "rotation_time": 0.4,
+              "slow_duration": 2,
+              "slowed_speed": 60,
+              "speed": 170,
+              "target_range": 10000,
+              "width": 0.5
+            },
+            {
+              "__type": "BoxCollider",
+              "__guid": "54b9127c-1eb7-4c7e-8e9a-e87965e2e1ce",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "60,60,100",
+              "Static": false
+            },
+            {
+              "__type": "Health",
+              "__guid": "bcb01901-b6be-4268-9aeb-66b62ee9b689",
+              "current_health": 0,
+              "game_config_obj": {
+                "_type": "gameobject",
+                "go": "1d5f5cc0-1ab7-42b4-82e6-f0672703e8fd"
+              },
+              "max_health": 40
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "0970ef16-f1a4-49e2-9124-d78ba2c6e136",
+              "Name": "Look Direction",
+              "Position": "64,0,5",
+              "Scale": "0.5,0.5,0.25",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "88c1960a-24a3-441f-ba6f-f37801a9228e",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            },
+            {
+              "__guid": "ce32f6e4-01db-47b9-944e-2cd91603ebfd",
+              "Name": "Model",
+              "Position": "0,0,35",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "d733f2a8-7806-4ace-921d-dfccd34b05a7",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/sphere.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,0,0,1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "6987c3e3-68c0-40a5-8b8d-a3dfbcd56b03",
+          "Name": "rat",
+          "Position": "-3535.144,1470.645,35",
+          "Tags": "enemy",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "NavMeshAgent",
+              "__guid": "56d17cdb-6c9f-4daa-836f-62fc1f8868ba",
+              "Acceleration": 10000,
+              "Height": 30,
+              "MaxSpeed": 100,
+              "Radius": 16,
+              "Separation": 0.25,
+              "UpdatePosition": true,
+              "UpdateRotation": true
+            },
+            {
+              "__type": "Enemy",
+              "__guid": "3c2c6dce-1f0a-4d05-91ae-8f0a064183a8",
+              "aggro_range": 600,
+              "attack_damage": 3,
+              "attack_windup": 0.3,
+              "attackingRange": 200,
+              "piercing": false,
+              "player_count_to_spawn": 2,
+              "players_container": {
+                "_type": "gameobject",
+                "go": "6b6fb711-6467-4fcb-aa4b-a69398b01d3d"
+              },
+              "projectile_duration": 0.4,
+              "projectile_pool": {
+                "_type": "gameobject",
+                "go": "a2842977-2178-4570-b806-db38e051019c"
+              },
+              "projectile_speed": 4,
+              "re_adjustposition_interval": 0.3,
+              "rotation_speed": 15,
+              "rotation_time": 0.4,
+              "slow_duration": 2,
+              "slowed_speed": 60,
+              "speed": 170,
+              "target_range": 10000,
+              "width": 0.5
+            },
+            {
+              "__type": "BoxCollider",
+              "__guid": "7750d6a4-54a5-42cd-b0a4-59ccfae61571",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "60,60,100",
+              "Static": false
+            },
+            {
+              "__type": "Health",
+              "__guid": "f7f6de9d-ff96-42b2-a5fe-d49388706562",
+              "current_health": 0,
+              "game_config_obj": {
+                "_type": "gameobject",
+                "go": "1d5f5cc0-1ab7-42b4-82e6-f0672703e8fd"
+              },
+              "max_health": 40
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "25e85bd6-a03f-4012-947d-af1f2d80ac3c",
+              "Name": "Look Direction",
+              "Position": "64,0,5",
+              "Scale": "0.5,0.5,0.25",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "327401ca-37fb-4867-9a3e-21bbfde1fb31",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            },
+            {
+              "__guid": "a97e0b70-89a0-4486-b620-caba27518207",
+              "Name": "Model",
+              "Position": "0,0,35",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "a2aacd1f-6345-4828-a724-d95bd7c803c1",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/sphere.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,0,0,1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "97f54f5c-30ca-4865-b997-c7f91cf1d438",
+          "Name": "rat",
+          "Position": "-3535.144,1806.094,35",
+          "Tags": "enemy",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "NavMeshAgent",
+              "__guid": "b46119f5-2a1a-4c39-89d0-e112cd8298ee",
+              "Acceleration": 10000,
+              "Height": 30,
+              "MaxSpeed": 100,
+              "Radius": 16,
+              "Separation": 0.25,
+              "UpdatePosition": true,
+              "UpdateRotation": true
+            },
+            {
+              "__type": "Enemy",
+              "__guid": "c398a978-c31a-4a11-be80-60d9686afd58",
+              "aggro_range": 600,
+              "attack_damage": 3,
+              "attack_windup": 0.3,
+              "attackingRange": 200,
+              "piercing": false,
+              "player_count_to_spawn": 1,
+              "players_container": {
+                "_type": "gameobject",
+                "go": "6b6fb711-6467-4fcb-aa4b-a69398b01d3d"
+              },
+              "projectile_duration": 0.4,
+              "projectile_pool": {
+                "_type": "gameobject",
+                "go": "a2842977-2178-4570-b806-db38e051019c"
+              },
+              "projectile_speed": 4,
+              "re_adjustposition_interval": 0.3,
+              "rotation_speed": 15,
+              "rotation_time": 0.4,
+              "slow_duration": 2,
+              "slowed_speed": 60,
+              "speed": 170,
+              "target_range": 10000,
+              "width": 0.5
+            },
+            {
+              "__type": "BoxCollider",
+              "__guid": "db1c05b1-07a0-4b72-a01c-df798fe7c8a5",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "60,60,100",
+              "Static": false
+            },
+            {
+              "__type": "Health",
+              "__guid": "baf85d04-5971-48a6-97ee-d21626a41af5",
+              "current_health": 0,
+              "game_config_obj": {
+                "_type": "gameobject",
+                "go": "1d5f5cc0-1ab7-42b4-82e6-f0672703e8fd"
+              },
+              "max_health": 40
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "c1dfe4a8-bdf4-44ec-827e-df5c14ad2e3b",
+              "Name": "Look Direction",
+              "Position": "64,0,5",
+              "Scale": "0.5,0.5,0.25",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "405ea775-0461-4c71-8a35-747860bb6440",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            },
+            {
+              "__guid": "97700865-08a1-4a14-8ba9-57d48ab5e67e",
+              "Name": "Model",
+              "Position": "0,0,35",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "ea8e0702-42f4-41ae-94ec-a083a2d487dc",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/sphere.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,0,0,1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "5fe45aec-f9a1-4d6e-94a4-f72779fe0b91",
+          "Name": "rat",
+          "Position": "-5114.955,3253.812,35",
+          "Tags": "enemy",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "NavMeshAgent",
+              "__guid": "83bfd4ad-3f9e-4c5b-8f6b-3ab89b655e07",
+              "Acceleration": 10000,
+              "Height": 30,
+              "MaxSpeed": 100,
+              "Radius": 16,
+              "Separation": 0.25,
+              "UpdatePosition": true,
+              "UpdateRotation": true
+            },
+            {
+              "__type": "Enemy",
+              "__guid": "8a39339a-df64-4068-9281-868c9df3a0fb",
+              "aggro_range": 600,
+              "attack_damage": 3,
+              "attack_windup": 0.3,
+              "attackingRange": 200,
+              "piercing": false,
+              "player_count_to_spawn": 1,
+              "players_container": {
+                "_type": "gameobject",
+                "go": "6b6fb711-6467-4fcb-aa4b-a69398b01d3d"
+              },
+              "projectile_duration": 0.4,
+              "projectile_pool": {
+                "_type": "gameobject",
+                "go": "a2842977-2178-4570-b806-db38e051019c"
+              },
+              "projectile_speed": 4,
+              "re_adjustposition_interval": 0.3,
+              "rotation_speed": 15,
+              "rotation_time": 0.4,
+              "slow_duration": 2,
+              "slowed_speed": 60,
+              "speed": 170,
+              "target_range": 10000,
+              "width": 0.5
+            },
+            {
+              "__type": "BoxCollider",
+              "__guid": "5dcde202-e80a-498f-8869-c066fbafb3f9",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "60,60,100",
+              "Static": false
+            },
+            {
+              "__type": "Health",
+              "__guid": "6496b72f-1995-4f14-bc01-bf1bba4d514d",
+              "current_health": 0,
+              "game_config_obj": {
+                "_type": "gameobject",
+                "go": "1d5f5cc0-1ab7-42b4-82e6-f0672703e8fd"
+              },
+              "max_health": 40
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "1f66c532-4a9f-4d74-a001-b83fac9f2e96",
+              "Name": "Look Direction",
+              "Position": "64,0,5",
+              "Scale": "0.5,0.5,0.25",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "0baf4c89-3698-494b-af43-7c85ee568ff8",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            },
+            {
+              "__guid": "f00bb71d-7c35-48a4-932c-832d8aa64e01",
+              "Name": "Model",
+              "Position": "0,0,35",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "951e7d38-8037-4916-b1c2-4a587d44ee03",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/sphere.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,0,0,1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "d610132c-5067-4d88-9839-ec9d49473320",
+          "Name": "rat",
+          "Position": "-5053.072,3413.859,35",
+          "Tags": "enemy",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "NavMeshAgent",
+              "__guid": "516898c2-290b-4455-99bc-de1d3917fb29",
+              "Acceleration": 10000,
+              "Height": 30,
+              "MaxSpeed": 100,
+              "Radius": 16,
+              "Separation": 0.25,
+              "UpdatePosition": true,
+              "UpdateRotation": true
+            },
+            {
+              "__type": "Enemy",
+              "__guid": "41e2624d-15fa-4e7a-99a1-f93db68ca51d",
+              "aggro_range": 600,
+              "attack_damage": 3,
+              "attack_windup": 0.3,
+              "attackingRange": 200,
+              "piercing": false,
+              "player_count_to_spawn": 1,
+              "players_container": {
+                "_type": "gameobject",
+                "go": "6b6fb711-6467-4fcb-aa4b-a69398b01d3d"
+              },
+              "projectile_duration": 0.4,
+              "projectile_pool": {
+                "_type": "gameobject",
+                "go": "a2842977-2178-4570-b806-db38e051019c"
+              },
+              "projectile_speed": 4,
+              "re_adjustposition_interval": 0.3,
+              "rotation_speed": 15,
+              "rotation_time": 0.4,
+              "slow_duration": 2,
+              "slowed_speed": 60,
+              "speed": 170,
+              "target_range": 10000,
+              "width": 0.5
+            },
+            {
+              "__type": "BoxCollider",
+              "__guid": "afe350c7-f81b-44b9-b8d8-6977a2daa390",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "60,60,100",
+              "Static": false
+            },
+            {
+              "__type": "Health",
+              "__guid": "c2ced1c5-f16b-4494-9243-e105b9eb9b48",
+              "current_health": 0,
+              "game_config_obj": {
+                "_type": "gameobject",
+                "go": "1d5f5cc0-1ab7-42b4-82e6-f0672703e8fd"
+              },
+              "max_health": 40
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "5ee496f3-c626-4206-aea1-b79b483c8ef5",
+              "Name": "Look Direction",
+              "Position": "64,0,5",
+              "Scale": "0.5,0.5,0.25",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "403585bb-6d13-48e4-881f-7710c2e4b69c",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            },
+            {
+              "__guid": "79ad1a9f-9f9d-49d1-b0ef-eb5630246e43",
+              "Name": "Model",
+              "Position": "0,0,35",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "929299d3-d5aa-4c34-98d9-38775acb2150",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/sphere.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,0,0,1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "24090ffb-a139-4d93-9ed0-3cbfca79a8fc",
+          "Name": "rat",
+          "Position": "-4900.085,3413.859,35",
+          "Tags": "enemy",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "NavMeshAgent",
+              "__guid": "b60fd415-1436-434d-af3b-f84007e514b8",
+              "Acceleration": 10000,
+              "Height": 30,
+              "MaxSpeed": 100,
+              "Radius": 16,
+              "Separation": 0.25,
+              "UpdatePosition": true,
+              "UpdateRotation": true
+            },
+            {
+              "__type": "Enemy",
+              "__guid": "768a4e9e-9859-4ad0-b8fd-c74458bee816",
+              "aggro_range": 600,
+              "attack_damage": 3,
+              "attack_windup": 0.3,
+              "attackingRange": 200,
+              "piercing": false,
+              "player_count_to_spawn": 3,
+              "players_container": {
+                "_type": "gameobject",
+                "go": "6b6fb711-6467-4fcb-aa4b-a69398b01d3d"
+              },
+              "projectile_duration": 0.4,
+              "projectile_pool": {
+                "_type": "gameobject",
+                "go": "a2842977-2178-4570-b806-db38e051019c"
+              },
+              "projectile_speed": 4,
+              "re_adjustposition_interval": 0.3,
+              "rotation_speed": 15,
+              "rotation_time": 0.4,
+              "slow_duration": 2,
+              "slowed_speed": 60,
+              "speed": 170,
+              "target_range": 10000,
+              "width": 0.5
+            },
+            {
+              "__type": "BoxCollider",
+              "__guid": "3bbc8725-50f1-44c7-809f-048f60b35b4c",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "60,60,100",
+              "Static": false
+            },
+            {
+              "__type": "Health",
+              "__guid": "2435ffd1-7780-45fa-a8b2-045d2347c1a6",
+              "current_health": 0,
+              "game_config_obj": {
+                "_type": "gameobject",
+                "go": "1d5f5cc0-1ab7-42b4-82e6-f0672703e8fd"
+              },
+              "max_health": 40
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "656de56e-fc8b-416c-998b-a6fa7ce83dd0",
+              "Name": "Look Direction",
+              "Position": "64,0,5",
+              "Scale": "0.5,0.5,0.25",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "c4333252-9be4-48e0-94e3-660c7e520fb7",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            },
+            {
+              "__guid": "0454944b-28e6-4831-95e7-75ea0b35115c",
+              "Name": "Model",
+              "Position": "0,0,35",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "8f22e100-94bc-4e94-82d5-8d130db44244",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/sphere.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,0,0,1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "4bfcc500-037a-40fe-a343-6cdc3aa868e6",
+          "Name": "rat",
+          "Position": "-4984.637,3300.566,35",
+          "Tags": "enemy",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "NavMeshAgent",
+              "__guid": "11a56d35-1782-47aa-836c-e225536f7dac",
+              "Acceleration": 10000,
+              "Height": 30,
+              "MaxSpeed": 100,
+              "Radius": 16,
+              "Separation": 0.25,
+              "UpdatePosition": true,
+              "UpdateRotation": true
+            },
+            {
+              "__type": "Enemy",
+              "__guid": "31a1caf3-4c86-4a17-98c3-b15917131215",
+              "aggro_range": 600,
+              "attack_damage": 3,
+              "attack_windup": 0.3,
+              "attackingRange": 200,
+              "piercing": false,
+              "player_count_to_spawn": 2,
+              "players_container": {
+                "_type": "gameobject",
+                "go": "6b6fb711-6467-4fcb-aa4b-a69398b01d3d"
+              },
+              "projectile_duration": 0.4,
+              "projectile_pool": {
+                "_type": "gameobject",
+                "go": "a2842977-2178-4570-b806-db38e051019c"
+              },
+              "projectile_speed": 4,
+              "re_adjustposition_interval": 0.3,
+              "rotation_speed": 15,
+              "rotation_time": 0.4,
+              "slow_duration": 2,
+              "slowed_speed": 60,
+              "speed": 170,
+              "target_range": 10000,
+              "width": 0.5
+            },
+            {
+              "__type": "BoxCollider",
+              "__guid": "1718a96e-0b1e-4daf-96ab-409eb163a7f0",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "60,60,100",
+              "Static": false
+            },
+            {
+              "__type": "Health",
+              "__guid": "be56dbf5-e81a-4aef-8766-0d3f7b793bec",
+              "current_health": 0,
+              "game_config_obj": {
+                "_type": "gameobject",
+                "go": "1d5f5cc0-1ab7-42b4-82e6-f0672703e8fd"
+              },
+              "max_health": 40
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "061defe4-1456-4eea-9d3a-052f19cc6833",
+              "Name": "Look Direction",
+              "Position": "64,0,5",
+              "Scale": "0.5,0.5,0.25",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "2149ae6d-fc76-43fd-8fe0-2803b28cdd73",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            },
+            {
+              "__guid": "8d44d455-35db-45cc-addf-70e780c3ee02",
+              "Name": "Model",
+              "Position": "0,0,35",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "2d825ec1-9675-4fa0-850e-bfc6d7f79769",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/dev/sphere.vmdl",
                   "RenderType": "On",
@@ -678,14 +2360,15 @@
         },
         {
           "__guid": "36fb11ae-a548-4264-9852-2ec37ac42601",
-          "Name": "Enemy",
-          "Position": "-200,-100,35",
+          "Name": "chameleon",
+          "Position": "-3548.887,-296.6766,35",
           "Tags": "enemy",
+          "Enabled": true,
           "NetworkMode": 2,
           "Components": [
             {
               "__type": "NavMeshAgent",
-              "__guid": "d56725ae-bb4d-4c48-9cbe-f29d225fb90e",
+              "__guid": "8483c28c-cc46-478d-a670-dc3408d03b51",
               "Acceleration": 10000,
               "Height": 30,
               "MaxSpeed": 100,
@@ -696,12 +2379,13 @@
             },
             {
               "__type": "Enemy",
-              "__guid": "6a598670-262d-4f94-9e2c-d505af5c2bf7",
-              "aggro_range": 300,
+              "__guid": "251c736f-6026-480b-bc34-70c1e22107a0",
+              "aggro_range": 1000,
               "attack_damage": 5,
               "attack_windup": 1,
-              "attackingRange": 200,
+              "attackingRange": 700,
               "piercing": false,
+              "player_count_to_spawn": 1,
               "players_container": {
                 "_type": "gameobject",
                 "go": "6b6fb711-6467-4fcb-aa4b-a69398b01d3d"
@@ -711,19 +2395,19 @@
                 "_type": "gameobject",
                 "go": "a2842977-2178-4570-b806-db38e051019c"
               },
-              "projectile_speed": 3,
+              "projectile_speed": 7,
               "re_adjustposition_interval": 0.3,
               "rotation_speed": 15,
               "rotation_time": 0.4,
               "slow_duration": 2,
-              "slowed_speed": 60,
-              "speed": 100,
+              "slowed_speed": 30,
+              "speed": 60,
               "target_range": 10000,
               "width": 2.5
             },
             {
               "__type": "BoxCollider",
-              "__guid": "fbe0c22c-a568-4bc5-9c8f-32c3f8757554",
+              "__guid": "385d24e6-4f8b-441e-a608-2864bbc344ba",
               "Center": "0,0,0",
               "IsTrigger": false,
               "Scale": "60,60,100",
@@ -731,14 +2415,18 @@
             },
             {
               "__type": "Health",
-              "__guid": "f91c7641-6364-493c-b9a6-f1c16a16652a",
+              "__guid": "2359a776-137f-4e2f-bd53-970292ef06e4",
               "current_health": 0,
+              "game_config_obj": {
+                "_type": "gameobject",
+                "go": "1d5f5cc0-1ab7-42b4-82e6-f0672703e8fd"
+              },
               "max_health": 20
             }
           ],
           "Children": [
             {
-              "__guid": "0bc08789-87c5-49fb-bc0a-a5525ece2574",
+              "__guid": "4cb9373d-1e7c-41cd-a1b2-074420a641ca",
               "Name": "Look Direction",
               "Position": "64,0,5",
               "Scale": "0.5,0.5,0.25",
@@ -747,7 +2435,7 @@
               "Components": [
                 {
                   "__type": "ModelRenderer",
-                  "__guid": "124c02f6-7ee9-4f47-ab9d-7f781ae4a451",
+                  "__guid": "892fd29b-2e7f-4480-8b2b-3d109bddf999",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/dev/box.vmdl",
                   "RenderType": "On",
@@ -756,7 +2444,7 @@
               ]
             },
             {
-              "__guid": "2add75bd-90ea-4f37-9c9c-7d2115f012b8",
+              "__guid": "85e897cc-d3dc-4826-8bcf-94158904230e",
               "Name": "Model",
               "Position": "0,0,35",
               "Enabled": true,
@@ -764,11 +2452,843 @@
               "Components": [
                 {
                   "__type": "ModelRenderer",
-                  "__guid": "67c95853-8e4a-4efd-a449-6d058445cc98",
+                  "__guid": "f9710a27-f7c7-485d-86bd-5ec8b68e7232",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/dev/sphere.vmdl",
                   "RenderType": "On",
-                  "Tint": "1,0,0,1"
+                  "Tint": "0,0.16744,0.05023,1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "8cfd7839-bc05-424f-bf99-0ab9e6f22f7a",
+          "Name": "chameleon",
+          "Position": "-1914.555,1927.334,35",
+          "Tags": "enemy",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "NavMeshAgent",
+              "__guid": "815b35ca-4585-447e-9cec-68ef6f28e91b",
+              "Acceleration": 10000,
+              "Height": 30,
+              "MaxSpeed": 100,
+              "Radius": 16,
+              "Separation": 0.25,
+              "UpdatePosition": true,
+              "UpdateRotation": true
+            },
+            {
+              "__type": "Enemy",
+              "__guid": "03f13756-f12f-4ae8-85bc-7cfdfad64743",
+              "aggro_range": 1000,
+              "attack_damage": 5,
+              "attack_windup": 1,
+              "attackingRange": 700,
+              "piercing": false,
+              "player_count_to_spawn": 1,
+              "players_container": {
+                "_type": "gameobject",
+                "go": "6b6fb711-6467-4fcb-aa4b-a69398b01d3d"
+              },
+              "projectile_duration": 1,
+              "projectile_pool": {
+                "_type": "gameobject",
+                "go": "a2842977-2178-4570-b806-db38e051019c"
+              },
+              "projectile_speed": 7,
+              "re_adjustposition_interval": 0.3,
+              "rotation_speed": 15,
+              "rotation_time": 0.4,
+              "slow_duration": 2,
+              "slowed_speed": 30,
+              "speed": 60,
+              "target_range": 10000,
+              "width": 2.5
+            },
+            {
+              "__type": "BoxCollider",
+              "__guid": "6d6ffdd5-fbc1-4bd1-a645-a4e9c85bf7f4",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "60,60,100",
+              "Static": false
+            },
+            {
+              "__type": "Health",
+              "__guid": "faee1ea2-d686-4d9d-8ff0-54141a1c46b2",
+              "current_health": 0,
+              "game_config_obj": {
+                "_type": "gameobject",
+                "go": "1d5f5cc0-1ab7-42b4-82e6-f0672703e8fd"
+              },
+              "max_health": 20
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "e60e7f9f-41d9-4cb2-90bb-45868db4bdf5",
+              "Name": "Look Direction",
+              "Position": "64,0,5",
+              "Scale": "0.5,0.5,0.25",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "4189aaec-c1fe-4d01-896e-074027738dc5",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            },
+            {
+              "__guid": "1f9dbec7-867c-4c43-ba39-2fddfe034e71",
+              "Name": "Model",
+              "Position": "0,0,35",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "37082714-4e7c-46c0-bab6-ff66bc0bd67d",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/sphere.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0.16744,0.05023,1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "78fea9ef-5ff5-4fc8-8269-4827552a9648",
+          "Name": "chameleon",
+          "Position": "-3238.254,3565.141,35",
+          "Tags": "enemy",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "NavMeshAgent",
+              "__guid": "f7a6785c-907d-4e86-957f-b4ddb9b559dc",
+              "Acceleration": 10000,
+              "Height": 30,
+              "MaxSpeed": 100,
+              "Radius": 16,
+              "Separation": 0.25,
+              "UpdatePosition": true,
+              "UpdateRotation": true
+            },
+            {
+              "__type": "Enemy",
+              "__guid": "dd37f782-a5a3-4cde-b313-e5a879b504ea",
+              "aggro_range": 1000,
+              "attack_damage": 5,
+              "attack_windup": 1,
+              "attackingRange": 700,
+              "piercing": false,
+              "player_count_to_spawn": 2,
+              "players_container": {
+                "_type": "gameobject",
+                "go": "6b6fb711-6467-4fcb-aa4b-a69398b01d3d"
+              },
+              "projectile_duration": 1,
+              "projectile_pool": {
+                "_type": "gameobject",
+                "go": "a2842977-2178-4570-b806-db38e051019c"
+              },
+              "projectile_speed": 7,
+              "re_adjustposition_interval": 0.3,
+              "rotation_speed": 15,
+              "rotation_time": 0.4,
+              "slow_duration": 2,
+              "slowed_speed": 30,
+              "speed": 60,
+              "target_range": 10000,
+              "width": 2.5
+            },
+            {
+              "__type": "BoxCollider",
+              "__guid": "0b729d0e-d513-42ab-a855-5e068de18758",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "60,60,100",
+              "Static": false
+            },
+            {
+              "__type": "Health",
+              "__guid": "1833239a-7bfe-4e4c-a0a5-2a688317b34e",
+              "current_health": 0,
+              "game_config_obj": {
+                "_type": "gameobject",
+                "go": "1d5f5cc0-1ab7-42b4-82e6-f0672703e8fd"
+              },
+              "max_health": 20
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "f4aee656-c354-44bf-9621-dd7feb689d4d",
+              "Name": "Look Direction",
+              "Position": "64,0,5",
+              "Scale": "0.5,0.5,0.25",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "f1ef1b10-d899-4089-873a-f6b8fb794539",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            },
+            {
+              "__guid": "bd1015b6-d275-46ac-b052-ee0fcfaad95f",
+              "Name": "Model",
+              "Position": "0,0,35",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "f709d231-ba2f-4295-aa2a-f8df00feda6c",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/sphere.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0.16744,0.05023,1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "27d55340-236c-43cd-a696-4d95033c69d9",
+          "Name": "chameleon",
+          "Position": "-2990.822,3616.781,35",
+          "Tags": "enemy",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "NavMeshAgent",
+              "__guid": "2ace146d-3ea1-4be1-90b8-cf23a80f3f41",
+              "Acceleration": 10000,
+              "Height": 30,
+              "MaxSpeed": 100,
+              "Radius": 16,
+              "Separation": 0.25,
+              "UpdatePosition": true,
+              "UpdateRotation": true
+            },
+            {
+              "__type": "Enemy",
+              "__guid": "78e67f49-919c-4c97-8445-6f0c3834b1a9",
+              "aggro_range": 1000,
+              "attack_damage": 5,
+              "attack_windup": 1,
+              "attackingRange": 700,
+              "piercing": false,
+              "player_count_to_spawn": 3,
+              "players_container": {
+                "_type": "gameobject",
+                "go": "6b6fb711-6467-4fcb-aa4b-a69398b01d3d"
+              },
+              "projectile_duration": 1,
+              "projectile_pool": {
+                "_type": "gameobject",
+                "go": "a2842977-2178-4570-b806-db38e051019c"
+              },
+              "projectile_speed": 7,
+              "re_adjustposition_interval": 0.3,
+              "rotation_speed": 15,
+              "rotation_time": 0.4,
+              "slow_duration": 2,
+              "slowed_speed": 30,
+              "speed": 60,
+              "target_range": 10000,
+              "width": 2.5
+            },
+            {
+              "__type": "BoxCollider",
+              "__guid": "f0361aa1-0108-4640-aa4b-bd73b2e3538c",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "60,60,100",
+              "Static": false
+            },
+            {
+              "__type": "Health",
+              "__guid": "b7e106fe-5fd9-45d8-af75-36893d639cca",
+              "current_health": 0,
+              "game_config_obj": {
+                "_type": "gameobject",
+                "go": "1d5f5cc0-1ab7-42b4-82e6-f0672703e8fd"
+              },
+              "max_health": 20
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "0de83020-b1aa-4de3-9abc-abbd962d48fe",
+              "Name": "Look Direction",
+              "Position": "64,0,5",
+              "Scale": "0.5,0.5,0.25",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "d4ccadd1-074c-4878-a340-0b084f7c494f",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            },
+            {
+              "__guid": "df249f93-7c3d-4b27-8cd0-e073f73f2a09",
+              "Name": "Model",
+              "Position": "0,0,35",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "f7f5cf14-84cb-4a2e-9cff-c9e128bb16a3",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/sphere.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0.16744,0.05023,1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "1a7a8058-0b5f-48d6-a816-00ff2eeb6bf9",
+          "Name": "chameleon",
+          "Position": "-3580.641,3586.177,35",
+          "Tags": "enemy",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "NavMeshAgent",
+              "__guid": "1f1036c8-8938-4049-b69a-832d8c3fd861",
+              "Acceleration": 10000,
+              "Height": 30,
+              "MaxSpeed": 100,
+              "Radius": 16,
+              "Separation": 0.25,
+              "UpdatePosition": true,
+              "UpdateRotation": true
+            },
+            {
+              "__type": "Enemy",
+              "__guid": "c613ba46-9177-446a-a024-911d7f378c80",
+              "aggro_range": 1000,
+              "attack_damage": 5,
+              "attack_windup": 1,
+              "attackingRange": 700,
+              "piercing": false,
+              "player_count_to_spawn": 1,
+              "players_container": {
+                "_type": "gameobject",
+                "go": "6b6fb711-6467-4fcb-aa4b-a69398b01d3d"
+              },
+              "projectile_duration": 1,
+              "projectile_pool": {
+                "_type": "gameobject",
+                "go": "a2842977-2178-4570-b806-db38e051019c"
+              },
+              "projectile_speed": 7,
+              "re_adjustposition_interval": 0.3,
+              "rotation_speed": 15,
+              "rotation_time": 0.4,
+              "slow_duration": 2,
+              "slowed_speed": 30,
+              "speed": 60,
+              "target_range": 10000,
+              "width": 2.5
+            },
+            {
+              "__type": "BoxCollider",
+              "__guid": "5cd22bb7-a488-49e9-a551-7f7366c5c2b6",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "60,60,100",
+              "Static": false
+            },
+            {
+              "__type": "Health",
+              "__guid": "d30b5951-0148-4c38-9105-c9efc5d54819",
+              "current_health": 0,
+              "game_config_obj": {
+                "_type": "gameobject",
+                "go": "1d5f5cc0-1ab7-42b4-82e6-f0672703e8fd"
+              },
+              "max_health": 20
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "7f946ac0-9d96-4a13-bd4b-eac3c795d8d7",
+              "Name": "Look Direction",
+              "Position": "64,0,5",
+              "Scale": "0.5,0.5,0.25",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "c46bb2b3-7446-4169-96e1-0c49215a3d0c",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            },
+            {
+              "__guid": "21aeea59-79fb-45ae-91ad-4e1c7c1eb395",
+              "Name": "Model",
+              "Position": "0,0,35",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "21b9417e-96ea-4283-87ee-eef31f7ffc03",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/sphere.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0.16744,0.05023,1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "6ac428fc-d4f9-4833-ae70-22147f176d69",
+          "Name": "chameleon",
+          "Position": "-5178.021,3478.449,35",
+          "Tags": "enemy",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "NavMeshAgent",
+              "__guid": "2645e2c5-62a2-426d-872c-c5ce63a45597",
+              "Acceleration": 10000,
+              "Height": 30,
+              "MaxSpeed": 100,
+              "Radius": 16,
+              "Separation": 0.25,
+              "UpdatePosition": true,
+              "UpdateRotation": true
+            },
+            {
+              "__type": "Enemy",
+              "__guid": "c65f6df1-eca8-48cd-8397-73e631d7ff70",
+              "aggro_range": 1000,
+              "attack_damage": 5,
+              "attack_windup": 1,
+              "attackingRange": 700,
+              "piercing": false,
+              "player_count_to_spawn": 1,
+              "players_container": {
+                "_type": "gameobject",
+                "go": "6b6fb711-6467-4fcb-aa4b-a69398b01d3d"
+              },
+              "projectile_duration": 1,
+              "projectile_pool": {
+                "_type": "gameobject",
+                "go": "a2842977-2178-4570-b806-db38e051019c"
+              },
+              "projectile_speed": 7,
+              "re_adjustposition_interval": 0.3,
+              "rotation_speed": 15,
+              "rotation_time": 0.4,
+              "slow_duration": 2,
+              "slowed_speed": 30,
+              "speed": 60,
+              "target_range": 10000,
+              "width": 2.5
+            },
+            {
+              "__type": "BoxCollider",
+              "__guid": "4110a538-dcd7-41c9-910f-99c9539cda96",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "60,60,100",
+              "Static": false
+            },
+            {
+              "__type": "Health",
+              "__guid": "69d29ebf-fdc7-41c8-8dcb-66801ce044bb",
+              "current_health": 0,
+              "game_config_obj": {
+                "_type": "gameobject",
+                "go": "1d5f5cc0-1ab7-42b4-82e6-f0672703e8fd"
+              },
+              "max_health": 20
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "90bded5a-ea40-4125-986d-208ef32683b3",
+              "Name": "Look Direction",
+              "Position": "64,0,5",
+              "Scale": "0.5,0.5,0.25",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "89038dc9-d335-4179-b27b-2c936dcbdb34",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            },
+            {
+              "__guid": "1fae0c50-81bd-46e6-b9fb-88a46b237e15",
+              "Name": "Model",
+              "Position": "0,0,35",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "770c0d5d-f5a7-44ca-b7e5-366bc1c7c6f4",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/sphere.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0.16744,0.05023,1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "f639776e-e047-4f6b-88c7-470519ff7d48",
+          "Name": "chameleon",
+          "Position": "-5083.314,3556.663,35",
+          "Tags": "enemy",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "NavMeshAgent",
+              "__guid": "d8cd1bef-0e6e-457d-83d7-971c1768f474",
+              "Acceleration": 10000,
+              "Height": 30,
+              "MaxSpeed": 100,
+              "Radius": 16,
+              "Separation": 0.25,
+              "UpdatePosition": true,
+              "UpdateRotation": true
+            },
+            {
+              "__type": "Enemy",
+              "__guid": "94ae5a47-be42-48de-9ba9-7f07939f41a7",
+              "aggro_range": 1000,
+              "attack_damage": 5,
+              "attack_windup": 1,
+              "attackingRange": 700,
+              "piercing": false,
+              "player_count_to_spawn": 3,
+              "players_container": {
+                "_type": "gameobject",
+                "go": "6b6fb711-6467-4fcb-aa4b-a69398b01d3d"
+              },
+              "projectile_duration": 1,
+              "projectile_pool": {
+                "_type": "gameobject",
+                "go": "a2842977-2178-4570-b806-db38e051019c"
+              },
+              "projectile_speed": 7,
+              "re_adjustposition_interval": 0.3,
+              "rotation_speed": 15,
+              "rotation_time": 0.4,
+              "slow_duration": 2,
+              "slowed_speed": 30,
+              "speed": 60,
+              "target_range": 10000,
+              "width": 2.5
+            },
+            {
+              "__type": "BoxCollider",
+              "__guid": "22462434-8c0f-4fde-ac56-c2414681d906",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "60,60,100",
+              "Static": false
+            },
+            {
+              "__type": "Health",
+              "__guid": "c217c035-d4d5-4148-ada6-5815f76d44da",
+              "current_health": 0,
+              "game_config_obj": {
+                "_type": "gameobject",
+                "go": "1d5f5cc0-1ab7-42b4-82e6-f0672703e8fd"
+              },
+              "max_health": 20
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "3ad5ee93-4169-4155-a510-7439cad6348b",
+              "Name": "Look Direction",
+              "Position": "64,0,5",
+              "Scale": "0.5,0.5,0.25",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "d079674b-f259-4801-9a15-af95f454eaed",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            },
+            {
+              "__guid": "d424673e-fc66-4028-8d00-d556bfca93db",
+              "Name": "Model",
+              "Position": "0,0,35",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "8bf7b31a-3de9-4f85-8e9d-d9825aaa8841",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/sphere.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0.16744,0.05023,1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "029f8719-f2b3-45d8-baa0-9cb78420dafe",
+          "Name": "chameleon",
+          "Position": "-1345.185,1927.334,35",
+          "Tags": "enemy",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "NavMeshAgent",
+              "__guid": "d2fbeb2e-f4d6-40c8-8caa-3b3829942155",
+              "Acceleration": 10000,
+              "Height": 30,
+              "MaxSpeed": 100,
+              "Radius": 16,
+              "Separation": 0.25,
+              "UpdatePosition": true,
+              "UpdateRotation": true
+            },
+            {
+              "__type": "Enemy",
+              "__guid": "e01eedc9-5ea1-478e-bcf5-3a4a083ce118",
+              "aggro_range": 1000,
+              "attack_damage": 5,
+              "attack_windup": 1,
+              "attackingRange": 700,
+              "piercing": false,
+              "player_count_to_spawn": 3,
+              "players_container": {
+                "_type": "gameobject",
+                "go": "6b6fb711-6467-4fcb-aa4b-a69398b01d3d"
+              },
+              "projectile_duration": 1,
+              "projectile_pool": {
+                "_type": "gameobject",
+                "go": "a2842977-2178-4570-b806-db38e051019c"
+              },
+              "projectile_speed": 7,
+              "re_adjustposition_interval": 0.3,
+              "rotation_speed": 15,
+              "rotation_time": 0.4,
+              "slow_duration": 2,
+              "slowed_speed": 30,
+              "speed": 60,
+              "target_range": 10000,
+              "width": 2.5
+            },
+            {
+              "__type": "BoxCollider",
+              "__guid": "bf5871c1-3d16-4db7-a9d7-60577b80a113",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "60,60,100",
+              "Static": false
+            },
+            {
+              "__type": "Health",
+              "__guid": "555699a3-ce6c-4a30-afbf-00edea4cdfb0",
+              "current_health": 0,
+              "game_config_obj": {
+                "_type": "gameobject",
+                "go": "1d5f5cc0-1ab7-42b4-82e6-f0672703e8fd"
+              },
+              "max_health": 20
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "89f27a85-bf90-4de6-9cf5-5097dc5413c1",
+              "Name": "Look Direction",
+              "Position": "64,0,5",
+              "Scale": "0.5,0.5,0.25",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "da1e81a4-6975-411d-b133-942317335379",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            },
+            {
+              "__guid": "db0d9819-5b69-48f0-8a12-8a6f98a4d54c",
+              "Name": "Model",
+              "Position": "0,0,35",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "44db4dfb-8d86-4c26-83bc-7fca4b4bae5b",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/sphere.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0.16744,0.05023,1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "7c64ff14-94ab-4b38-a1bb-3deec50699c1",
+          "Name": "chameleon",
+          "Position": "-3547.38,342.1942,35",
+          "Tags": "enemy",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "NavMeshAgent",
+              "__guid": "5b37eaac-0bd7-4de2-9f53-fa5928980907",
+              "Acceleration": 10000,
+              "Height": 30,
+              "MaxSpeed": 100,
+              "Radius": 16,
+              "Separation": 0.25,
+              "UpdatePosition": true,
+              "UpdateRotation": true
+            },
+            {
+              "__type": "Enemy",
+              "__guid": "e2c9a88d-1d7a-4b2a-95b4-2fc915afa079",
+              "aggro_range": 1000,
+              "attack_damage": 5,
+              "attack_windup": 1,
+              "attackingRange": 700,
+              "piercing": false,
+              "player_count_to_spawn": 2,
+              "players_container": {
+                "_type": "gameobject",
+                "go": "6b6fb711-6467-4fcb-aa4b-a69398b01d3d"
+              },
+              "projectile_duration": 1,
+              "projectile_pool": {
+                "_type": "gameobject",
+                "go": "a2842977-2178-4570-b806-db38e051019c"
+              },
+              "projectile_speed": 7,
+              "re_adjustposition_interval": 0.3,
+              "rotation_speed": 15,
+              "rotation_time": 0.4,
+              "slow_duration": 2,
+              "slowed_speed": 30,
+              "speed": 60,
+              "target_range": 10000,
+              "width": 2.5
+            },
+            {
+              "__type": "BoxCollider",
+              "__guid": "8a2e36c7-88f2-464f-89bb-f5b5b0841d33",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "60,60,100",
+              "Static": false
+            },
+            {
+              "__type": "Health",
+              "__guid": "b5364330-779b-4d83-8343-214dd5def6b8",
+              "current_health": 0,
+              "game_config_obj": {
+                "_type": "gameobject",
+                "go": "1d5f5cc0-1ab7-42b4-82e6-f0672703e8fd"
+              },
+              "max_health": 20
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "29503f41-a598-4838-9e2e-94f2b45ed39f",
+              "Name": "Look Direction",
+              "Position": "64,0,5",
+              "Scale": "0.5,0.5,0.25",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "96d42ebd-6ec5-409c-9fc9-65cfbf72f011",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            },
+            {
+              "__guid": "77e63d5b-d169-4e8b-9658-a2bb03cad505",
+              "Name": "Model",
+              "Position": "0,0,35",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "9efd716a-11ed-4399-bf88-2d4e1f1c8950",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/sphere.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0.16744,0.05023,1"
                 }
               ]
             }
@@ -776,14 +3296,15 @@
         },
         {
           "__guid": "7a94863a-2676-4346-90fb-5562e80e5dce",
-          "Name": "Enemy",
-          "Position": "-200,0,35",
+          "Name": "boar",
+          "Position": "-3474.456,-170.0663,35",
           "Tags": "enemy",
+          "Enabled": true,
           "NetworkMode": 2,
           "Components": [
             {
               "__type": "NavMeshAgent",
-              "__guid": "a3c52c6d-1387-4d46-bf81-325295460333",
+              "__guid": "870ebc38-99ad-4bec-8336-de040a26ab63",
               "Acceleration": 10000,
               "Height": 30,
               "MaxSpeed": 100,
@@ -794,34 +3315,35 @@
             },
             {
               "__type": "Enemy",
-              "__guid": "6a8626cb-56df-4815-a0ec-771db8449119",
-              "aggro_range": 300,
-              "attack_damage": 5,
-              "attack_windup": 1,
-              "attackingRange": 200,
+              "__guid": "14f99013-532c-494f-8787-c7a62bfb90b2",
+              "aggro_range": 600,
+              "attack_damage": 10,
+              "attack_windup": 1.2,
+              "attackingRange": 150,
               "piercing": false,
+              "player_count_to_spawn": 3,
               "players_container": {
                 "_type": "gameobject",
                 "go": "6b6fb711-6467-4fcb-aa4b-a69398b01d3d"
               },
-              "projectile_duration": 1,
+              "projectile_duration": 0.2,
               "projectile_pool": {
                 "_type": "gameobject",
                 "go": "a2842977-2178-4570-b806-db38e051019c"
               },
-              "projectile_speed": 3,
+              "projectile_speed": 10,
               "re_adjustposition_interval": 0.3,
               "rotation_speed": 15,
               "rotation_time": 0.4,
               "slow_duration": 2,
-              "slowed_speed": 60,
-              "speed": 100,
+              "slowed_speed": 50,
+              "speed": 80,
               "target_range": 10000,
-              "width": 2.5
+              "width": 3.5
             },
             {
               "__type": "BoxCollider",
-              "__guid": "2f26bb88-2e05-4185-a18e-d7970692c2d0",
+              "__guid": "9e4cd2f4-0fe2-4291-8221-92fc69f7c631",
               "Center": "0,0,0",
               "IsTrigger": false,
               "Scale": "60,60,100",
@@ -829,14 +3351,18 @@
             },
             {
               "__type": "Health",
-              "__guid": "ee3aa614-31ca-4fd5-a18d-5fb925fcb90a",
+              "__guid": "aa68ffa3-e611-4a21-a9c8-fabee8f3a709",
               "current_health": 0,
-              "max_health": 20
+              "game_config_obj": {
+                "_type": "gameobject",
+                "go": "1d5f5cc0-1ab7-42b4-82e6-f0672703e8fd"
+              },
+              "max_health": 100
             }
           ],
           "Children": [
             {
-              "__guid": "c64034ac-fbef-4b36-91f4-a7901a5722e4",
+              "__guid": "30115498-089f-4202-b559-aacdafae8f31",
               "Name": "Look Direction",
               "Position": "64,0,5",
               "Scale": "0.5,0.5,0.25",
@@ -845,7 +3371,7 @@
               "Components": [
                 {
                   "__type": "ModelRenderer",
-                  "__guid": "054099a4-6c9d-478b-8983-f739c0fe23a5",
+                  "__guid": "fef2c5e8-392a-453c-9f20-c4078e9a8b2c",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/dev/box.vmdl",
                   "RenderType": "On",
@@ -854,7 +3380,7 @@
               ]
             },
             {
-              "__guid": "8c0018d5-0048-4f93-85ad-1dc92628f55a",
+              "__guid": "ba3477d0-4571-437b-9def-c4e8c4bce896",
               "Name": "Model",
               "Position": "0,0,35",
               "Enabled": true,
@@ -862,11 +3388,1259 @@
               "Components": [
                 {
                   "__type": "ModelRenderer",
-                  "__guid": "dcf0a2e1-bb9c-4719-90df-c3769f4e2891",
+                  "__guid": "4cf362aa-0973-4556-afc7-27b2c6970472",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/dev/sphere.vmdl",
                   "RenderType": "On",
-                  "Tint": "1,0,0,1"
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "7c0b82b6-c0ef-4be8-bfe1-e5b6058bb938",
+          "Name": "boar",
+          "Position": "-3441.315,1599.106,35",
+          "Tags": "enemy",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "NavMeshAgent",
+              "__guid": "32cb10fd-3e32-4b0e-8485-aa95e3fb5cfc",
+              "Acceleration": 10000,
+              "Height": 30,
+              "MaxSpeed": 100,
+              "Radius": 16,
+              "Separation": 0.25,
+              "UpdatePosition": true,
+              "UpdateRotation": true
+            },
+            {
+              "__type": "Enemy",
+              "__guid": "b7dabb14-c2e4-4f08-93bd-2366b4c18690",
+              "aggro_range": 600,
+              "attack_damage": 10,
+              "attack_windup": 1.2,
+              "attackingRange": 150,
+              "piercing": false,
+              "player_count_to_spawn": 1,
+              "players_container": {
+                "_type": "gameobject",
+                "go": "6b6fb711-6467-4fcb-aa4b-a69398b01d3d"
+              },
+              "projectile_duration": 0.2,
+              "projectile_pool": {
+                "_type": "gameobject",
+                "go": "a2842977-2178-4570-b806-db38e051019c"
+              },
+              "projectile_speed": 10,
+              "re_adjustposition_interval": 0.3,
+              "rotation_speed": 15,
+              "rotation_time": 0.4,
+              "slow_duration": 2,
+              "slowed_speed": 50,
+              "speed": 80,
+              "target_range": 10000,
+              "width": 3.5
+            },
+            {
+              "__type": "BoxCollider",
+              "__guid": "ee694e85-df7a-44bd-8b18-80e3cf5dbe20",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "60,60,100",
+              "Static": false
+            },
+            {
+              "__type": "Health",
+              "__guid": "01c8180a-246c-4774-a52d-e5dd57475bc7",
+              "current_health": 0,
+              "game_config_obj": {
+                "_type": "gameobject",
+                "go": "1d5f5cc0-1ab7-42b4-82e6-f0672703e8fd"
+              },
+              "max_health": 100
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "96bb4880-f346-4f0c-b352-705dbf8d665a",
+              "Name": "Look Direction",
+              "Position": "64,0,5",
+              "Scale": "0.5,0.5,0.25",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "0bb11141-ae9e-40c4-a4db-998bd82163ba",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            },
+            {
+              "__guid": "6bc7d8f4-0a02-4bb6-9df9-d24b3377981d",
+              "Name": "Model",
+              "Position": "0,0,35",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "f0361ab7-c12c-4317-b725-ff9f0a9a25b8",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/sphere.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "85167c11-5cf3-4155-abc2-66bc21fe6439",
+          "Name": "boar",
+          "Position": "-3441.315,1705.823,35",
+          "Tags": "enemy",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "NavMeshAgent",
+              "__guid": "1d462797-6777-4a5d-a44e-59285b2ced46",
+              "Acceleration": 10000,
+              "Height": 30,
+              "MaxSpeed": 100,
+              "Radius": 16,
+              "Separation": 0.25,
+              "UpdatePosition": true,
+              "UpdateRotation": true
+            },
+            {
+              "__type": "Enemy",
+              "__guid": "6cff8d81-e3a2-45ef-a1a2-3965daf26a65",
+              "aggro_range": 600,
+              "attack_damage": 10,
+              "attack_windup": 1.2,
+              "attackingRange": 150,
+              "piercing": false,
+              "player_count_to_spawn": 3,
+              "players_container": {
+                "_type": "gameobject",
+                "go": "6b6fb711-6467-4fcb-aa4b-a69398b01d3d"
+              },
+              "projectile_duration": 0.2,
+              "projectile_pool": {
+                "_type": "gameobject",
+                "go": "a2842977-2178-4570-b806-db38e051019c"
+              },
+              "projectile_speed": 10,
+              "re_adjustposition_interval": 0.3,
+              "rotation_speed": 15,
+              "rotation_time": 0.4,
+              "slow_duration": 2,
+              "slowed_speed": 50,
+              "speed": 80,
+              "target_range": 10000,
+              "width": 3.5
+            },
+            {
+              "__type": "BoxCollider",
+              "__guid": "4789308f-fd9f-4bf2-a39a-2a2ca810d0e4",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "60,60,100",
+              "Static": false
+            },
+            {
+              "__type": "Health",
+              "__guid": "1f95dfdd-8857-4fcf-b3db-9f69db2cb3ea",
+              "current_health": 0,
+              "game_config_obj": {
+                "_type": "gameobject",
+                "go": "1d5f5cc0-1ab7-42b4-82e6-f0672703e8fd"
+              },
+              "max_health": 100
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "a527d882-b3cc-4aec-b977-8469eea8d8d4",
+              "Name": "Look Direction",
+              "Position": "64,0,5",
+              "Scale": "0.5,0.5,0.25",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "4d5cc72b-80bd-49c0-b26e-1565bee5d7f5",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            },
+            {
+              "__guid": "8a164041-66dd-4172-85e1-b9798009e4b6",
+              "Name": "Model",
+              "Position": "0,0,35",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "435a0eb8-283e-4f64-9053-9beb4224e235",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/sphere.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "1b801fe9-45c4-4a40-8856-87b33bbe4dfe",
+          "Name": "boar",
+          "Position": "-3321.646,3465.195,35",
+          "Tags": "enemy",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "NavMeshAgent",
+              "__guid": "04f052f6-834e-4cec-9c4b-8d5e2074f6ad",
+              "Acceleration": 10000,
+              "Height": 30,
+              "MaxSpeed": 100,
+              "Radius": 16,
+              "Separation": 0.25,
+              "UpdatePosition": true,
+              "UpdateRotation": true
+            },
+            {
+              "__type": "Enemy",
+              "__guid": "3f10dc63-9c6f-44fb-ac02-d6703ca66921",
+              "aggro_range": 600,
+              "attack_damage": 10,
+              "attack_windup": 1.2,
+              "attackingRange": 150,
+              "piercing": false,
+              "player_count_to_spawn": 1,
+              "players_container": {
+                "_type": "gameobject",
+                "go": "6b6fb711-6467-4fcb-aa4b-a69398b01d3d"
+              },
+              "projectile_duration": 0.2,
+              "projectile_pool": {
+                "_type": "gameobject",
+                "go": "a2842977-2178-4570-b806-db38e051019c"
+              },
+              "projectile_speed": 10,
+              "re_adjustposition_interval": 0.3,
+              "rotation_speed": 15,
+              "rotation_time": 0.4,
+              "slow_duration": 2,
+              "slowed_speed": 50,
+              "speed": 80,
+              "target_range": 10000,
+              "width": 3.5
+            },
+            {
+              "__type": "BoxCollider",
+              "__guid": "dbef91cf-588a-4aab-94b9-996bad9717c2",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "60,60,100",
+              "Static": false
+            },
+            {
+              "__type": "Health",
+              "__guid": "bf10f8d2-f2db-4c91-a758-5b4bd146417e",
+              "current_health": 0,
+              "game_config_obj": {
+                "_type": "gameobject",
+                "go": "1d5f5cc0-1ab7-42b4-82e6-f0672703e8fd"
+              },
+              "max_health": 100
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "95616838-21a9-4957-a2f9-2cc5e98cd4b5",
+              "Name": "Look Direction",
+              "Position": "64,0,5",
+              "Scale": "0.5,0.5,0.25",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "31dc6a29-b41b-4419-8e6e-1b73825f30a6",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            },
+            {
+              "__guid": "c9fa7b44-add6-4b34-a3d0-bc0c182ef5d1",
+              "Name": "Model",
+              "Position": "0,0,35",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "af1cb8ac-9a85-4aff-afa1-76e854cd3809",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/sphere.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "adae0a94-4031-40ad-9286-4c08fda1659c",
+          "Name": "boar",
+          "Position": "-5154.855,1879.907,35",
+          "Tags": "enemy",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "NavMeshAgent",
+              "__guid": "aaf974fd-e80f-44d1-9a93-0cb4585e64a5",
+              "Acceleration": 10000,
+              "Height": 30,
+              "MaxSpeed": 100,
+              "Radius": 16,
+              "Separation": 0.25,
+              "UpdatePosition": true,
+              "UpdateRotation": true
+            },
+            {
+              "__type": "Enemy",
+              "__guid": "08412e2e-ba1e-4c34-b50b-8aa1ff2b94fb",
+              "aggro_range": 600,
+              "attack_damage": 10,
+              "attack_windup": 1.2,
+              "attackingRange": 150,
+              "piercing": false,
+              "player_count_to_spawn": 2,
+              "players_container": {
+                "_type": "gameobject",
+                "go": "6b6fb711-6467-4fcb-aa4b-a69398b01d3d"
+              },
+              "projectile_duration": 0.2,
+              "projectile_pool": {
+                "_type": "gameobject",
+                "go": "a2842977-2178-4570-b806-db38e051019c"
+              },
+              "projectile_speed": 10,
+              "re_adjustposition_interval": 0.3,
+              "rotation_speed": 15,
+              "rotation_time": 0.4,
+              "slow_duration": 2,
+              "slowed_speed": 50,
+              "speed": 80,
+              "target_range": 10000,
+              "width": 3.5
+            },
+            {
+              "__type": "BoxCollider",
+              "__guid": "b9e074c1-a456-448c-8410-f880e9aba04f",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "60,60,100",
+              "Static": false
+            },
+            {
+              "__type": "Health",
+              "__guid": "9d691313-5658-434d-a209-913f9cf9c57e",
+              "current_health": 0,
+              "game_config_obj": {
+                "_type": "gameobject",
+                "go": "1d5f5cc0-1ab7-42b4-82e6-f0672703e8fd"
+              },
+              "max_health": 100
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "a917f97a-3298-43f0-8f46-f4080e68685b",
+              "Name": "Look Direction",
+              "Position": "64,0,5",
+              "Scale": "0.5,0.5,0.25",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "5c4fb63a-d1da-445a-88b3-1cb2a3ced501",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            },
+            {
+              "__guid": "087dbc0a-ee75-4325-b6dc-347e666f945f",
+              "Name": "Model",
+              "Position": "0,0,35",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "a284b502-352d-4011-bb76-398489f66ad5",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/sphere.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "13e224e8-23d4-40ff-b6c1-8af8c4622f63",
+          "Name": "boar",
+          "Position": "-5154.855,1757.036,35",
+          "Tags": "enemy",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "NavMeshAgent",
+              "__guid": "b1d7efee-982c-4104-91ee-50669b7e769d",
+              "Acceleration": 10000,
+              "Height": 30,
+              "MaxSpeed": 100,
+              "Radius": 16,
+              "Separation": 0.25,
+              "UpdatePosition": true,
+              "UpdateRotation": true
+            },
+            {
+              "__type": "Enemy",
+              "__guid": "385b0f08-e2b6-4d3d-8ebb-4d9d1ca473a6",
+              "aggro_range": 600,
+              "attack_damage": 10,
+              "attack_windup": 1.2,
+              "attackingRange": 150,
+              "piercing": false,
+              "player_count_to_spawn": 2,
+              "players_container": {
+                "_type": "gameobject",
+                "go": "6b6fb711-6467-4fcb-aa4b-a69398b01d3d"
+              },
+              "projectile_duration": 0.2,
+              "projectile_pool": {
+                "_type": "gameobject",
+                "go": "a2842977-2178-4570-b806-db38e051019c"
+              },
+              "projectile_speed": 10,
+              "re_adjustposition_interval": 0.3,
+              "rotation_speed": 15,
+              "rotation_time": 0.4,
+              "slow_duration": 2,
+              "slowed_speed": 50,
+              "speed": 80,
+              "target_range": 10000,
+              "width": 3.5
+            },
+            {
+              "__type": "BoxCollider",
+              "__guid": "809159b6-3dbb-41a0-addc-c98a8be9a07d",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "60,60,100",
+              "Static": false
+            },
+            {
+              "__type": "Health",
+              "__guid": "01fa03a2-4a70-4d03-a5d4-60f29a6e6b31",
+              "current_health": 0,
+              "game_config_obj": {
+                "_type": "gameobject",
+                "go": "1d5f5cc0-1ab7-42b4-82e6-f0672703e8fd"
+              },
+              "max_health": 100
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "9cff83a3-83b5-4ae3-bc82-34ac93f0a1dc",
+              "Name": "Look Direction",
+              "Position": "64,0,5",
+              "Scale": "0.5,0.5,0.25",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "486eb7da-be5b-466f-bb61-6bc4b9c5548c",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            },
+            {
+              "__guid": "4426fe81-efb7-4853-9b8c-f82946762972",
+              "Name": "Model",
+              "Position": "0,0,35",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "5650b381-a7c3-4838-a542-5adde6f5e5e0",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/sphere.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "2de89a4b-fdcd-4479-890a-03c7ff89efa3",
+          "Name": "boar",
+          "Position": "-4929.287,1757.036,35",
+          "Tags": "enemy",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "NavMeshAgent",
+              "__guid": "9ff05222-c8b6-4158-8623-89a64b123bcc",
+              "Acceleration": 10000,
+              "Height": 30,
+              "MaxSpeed": 100,
+              "Radius": 16,
+              "Separation": 0.25,
+              "UpdatePosition": true,
+              "UpdateRotation": true
+            },
+            {
+              "__type": "Enemy",
+              "__guid": "ba27fa42-9fa0-499e-ba53-160555c8ffb5",
+              "aggro_range": 600,
+              "attack_damage": 10,
+              "attack_windup": 1.2,
+              "attackingRange": 150,
+              "piercing": false,
+              "player_count_to_spawn": 1,
+              "players_container": {
+                "_type": "gameobject",
+                "go": "6b6fb711-6467-4fcb-aa4b-a69398b01d3d"
+              },
+              "projectile_duration": 0.2,
+              "projectile_pool": {
+                "_type": "gameobject",
+                "go": "a2842977-2178-4570-b806-db38e051019c"
+              },
+              "projectile_speed": 10,
+              "re_adjustposition_interval": 0.3,
+              "rotation_speed": 15,
+              "rotation_time": 0.4,
+              "slow_duration": 2,
+              "slowed_speed": 50,
+              "speed": 80,
+              "target_range": 10000,
+              "width": 3.5
+            },
+            {
+              "__type": "BoxCollider",
+              "__guid": "09d6cbde-9a0b-4fcd-a544-6d4b53e1758a",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "60,60,100",
+              "Static": false
+            },
+            {
+              "__type": "Health",
+              "__guid": "84558632-f7f6-4760-83b9-86b4a83271ec",
+              "current_health": 0,
+              "game_config_obj": {
+                "_type": "gameobject",
+                "go": "1d5f5cc0-1ab7-42b4-82e6-f0672703e8fd"
+              },
+              "max_health": 100
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "9673b181-e199-4041-b0e9-b961480aeeca",
+              "Name": "Look Direction",
+              "Position": "64,0,5",
+              "Scale": "0.5,0.5,0.25",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "7b08cd2a-d25a-46f1-bf41-dfe778a9af2c",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            },
+            {
+              "__guid": "8f27d6eb-ad6e-4969-8cbb-55b8c2547b3a",
+              "Name": "Model",
+              "Position": "0,0,35",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "b4152d6e-ac08-4c35-b177-5b069020fa86",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/sphere.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "def40b09-f5b7-49c5-a99a-8b21a0f55df6",
+          "Name": "boar",
+          "Position": "-4929.287,1885.024,35",
+          "Tags": "enemy",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "NavMeshAgent",
+              "__guid": "ad73d052-7ee5-453e-bddb-fed3b7855069",
+              "Acceleration": 10000,
+              "Height": 30,
+              "MaxSpeed": 100,
+              "Radius": 16,
+              "Separation": 0.25,
+              "UpdatePosition": true,
+              "UpdateRotation": true
+            },
+            {
+              "__type": "Enemy",
+              "__guid": "8f8f59b6-c83e-4226-af5e-71812aad406d",
+              "aggro_range": 600,
+              "attack_damage": 10,
+              "attack_windup": 1.2,
+              "attackingRange": 150,
+              "piercing": false,
+              "player_count_to_spawn": 1,
+              "players_container": {
+                "_type": "gameobject",
+                "go": "6b6fb711-6467-4fcb-aa4b-a69398b01d3d"
+              },
+              "projectile_duration": 0.2,
+              "projectile_pool": {
+                "_type": "gameobject",
+                "go": "a2842977-2178-4570-b806-db38e051019c"
+              },
+              "projectile_speed": 10,
+              "re_adjustposition_interval": 0.3,
+              "rotation_speed": 15,
+              "rotation_time": 0.4,
+              "slow_duration": 2,
+              "slowed_speed": 50,
+              "speed": 80,
+              "target_range": 10000,
+              "width": 3.5
+            },
+            {
+              "__type": "BoxCollider",
+              "__guid": "8c36c10f-7a6e-4fc6-9d08-6e5735ac858c",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "60,60,100",
+              "Static": false
+            },
+            {
+              "__type": "Health",
+              "__guid": "9c724e03-acec-4863-a34a-0e940b155795",
+              "current_health": 0,
+              "game_config_obj": {
+                "_type": "gameobject",
+                "go": "1d5f5cc0-1ab7-42b4-82e6-f0672703e8fd"
+              },
+              "max_health": 100
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "f3ef783d-584b-4da5-9bc7-5470bf8e48eb",
+              "Name": "Look Direction",
+              "Position": "64,0,5",
+              "Scale": "0.5,0.5,0.25",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "abd74cbf-aa78-4429-bd11-b3f11a53ba4d",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            },
+            {
+              "__guid": "20694240-e221-47a2-8d8e-8085d7f12acf",
+              "Name": "Model",
+              "Position": "0,0,35",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "eb1d9e21-6b08-46fd-b726-358006e1b48a",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/sphere.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "f88d9a43-8bc7-4aea-a190-f00011ca7dfa",
+          "Name": "boar",
+          "Position": "-4781.232,1885.024,35",
+          "Tags": "enemy",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "NavMeshAgent",
+              "__guid": "1952c118-1d20-4ddc-bb1a-fcc207b4c697",
+              "Acceleration": 10000,
+              "Height": 30,
+              "MaxSpeed": 100,
+              "Radius": 16,
+              "Separation": 0.25,
+              "UpdatePosition": true,
+              "UpdateRotation": true
+            },
+            {
+              "__type": "Enemy",
+              "__guid": "7b91d8d8-a5c1-444b-bf02-d64a4ac14b6c",
+              "aggro_range": 600,
+              "attack_damage": 10,
+              "attack_windup": 1.2,
+              "attackingRange": 150,
+              "piercing": false,
+              "player_count_to_spawn": 3,
+              "players_container": {
+                "_type": "gameobject",
+                "go": "6b6fb711-6467-4fcb-aa4b-a69398b01d3d"
+              },
+              "projectile_duration": 0.2,
+              "projectile_pool": {
+                "_type": "gameobject",
+                "go": "a2842977-2178-4570-b806-db38e051019c"
+              },
+              "projectile_speed": 10,
+              "re_adjustposition_interval": 0.3,
+              "rotation_speed": 15,
+              "rotation_time": 0.4,
+              "slow_duration": 2,
+              "slowed_speed": 50,
+              "speed": 80,
+              "target_range": 10000,
+              "width": 3.5
+            },
+            {
+              "__type": "BoxCollider",
+              "__guid": "ea98ebca-a5c7-4dd0-8b98-6dce3b3b1994",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "60,60,100",
+              "Static": false
+            },
+            {
+              "__type": "Health",
+              "__guid": "8a320daf-3369-45cb-b2fb-42fb3c0f4e33",
+              "current_health": 0,
+              "game_config_obj": {
+                "_type": "gameobject",
+                "go": "1d5f5cc0-1ab7-42b4-82e6-f0672703e8fd"
+              },
+              "max_health": 100
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "e9dbf5ba-dfcb-400e-a191-c1687f7f86ad",
+              "Name": "Look Direction",
+              "Position": "64,0,5",
+              "Scale": "0.5,0.5,0.25",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "f133e01e-0035-4f47-b9c7-cdb633926c92",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            },
+            {
+              "__guid": "5293fe61-9d41-42f4-9c93-73e9a9e8fbbc",
+              "Name": "Model",
+              "Position": "0,0,35",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "c141f71a-7935-4fd7-8a63-c50199ed3f48",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/sphere.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "d7b1600e-0088-499d-93a7-806f226f5b09",
+          "Name": "boar",
+          "Position": "-4781.232,1755.977,35",
+          "Tags": "enemy",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "NavMeshAgent",
+              "__guid": "d08964e2-74fa-4eb9-9608-d87b6a77e640",
+              "Acceleration": 10000,
+              "Height": 30,
+              "MaxSpeed": 100,
+              "Radius": 16,
+              "Separation": 0.25,
+              "UpdatePosition": true,
+              "UpdateRotation": true
+            },
+            {
+              "__type": "Enemy",
+              "__guid": "4677da71-9858-42c7-9ba6-3c20efda0225",
+              "aggro_range": 600,
+              "attack_damage": 10,
+              "attack_windup": 1.2,
+              "attackingRange": 150,
+              "piercing": false,
+              "player_count_to_spawn": 3,
+              "players_container": {
+                "_type": "gameobject",
+                "go": "6b6fb711-6467-4fcb-aa4b-a69398b01d3d"
+              },
+              "projectile_duration": 0.2,
+              "projectile_pool": {
+                "_type": "gameobject",
+                "go": "a2842977-2178-4570-b806-db38e051019c"
+              },
+              "projectile_speed": 10,
+              "re_adjustposition_interval": 0.3,
+              "rotation_speed": 15,
+              "rotation_time": 0.4,
+              "slow_duration": 2,
+              "slowed_speed": 50,
+              "speed": 80,
+              "target_range": 10000,
+              "width": 3.5
+            },
+            {
+              "__type": "BoxCollider",
+              "__guid": "05ab91c3-38c0-4080-a50d-24d22d325efc",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "60,60,100",
+              "Static": false
+            },
+            {
+              "__type": "Health",
+              "__guid": "d4545d72-13e6-4c5e-aea5-d3a73f462df8",
+              "current_health": 0,
+              "game_config_obj": {
+                "_type": "gameobject",
+                "go": "1d5f5cc0-1ab7-42b4-82e6-f0672703e8fd"
+              },
+              "max_health": 100
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "1d13a8af-c240-487c-8e2d-8413d63ec678",
+              "Name": "Look Direction",
+              "Position": "64,0,5",
+              "Scale": "0.5,0.5,0.25",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "e0f845ea-dc71-45ac-a037-cbb4d14bac65",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            },
+            {
+              "__guid": "b5c7be98-6d94-49f5-81ef-31b4e04d72bd",
+              "Name": "Model",
+              "Position": "0,0,35",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "a8fdb3b8-fdef-45e3-b955-bca3c32de408",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/sphere.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "f0932ef7-bf80-482f-a362-ace41fd9e466",
+          "Name": "boar",
+          "Position": "-4889.611,3529.047,35",
+          "Tags": "enemy",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "NavMeshAgent",
+              "__guid": "dafcb838-435a-44cd-a143-02c34b3b0fc2",
+              "Acceleration": 10000,
+              "Height": 30,
+              "MaxSpeed": 100,
+              "Radius": 16,
+              "Separation": 0.25,
+              "UpdatePosition": true,
+              "UpdateRotation": true
+            },
+            {
+              "__type": "Enemy",
+              "__guid": "93b48993-aa2e-42cb-b843-2196b02b6e85",
+              "aggro_range": 600,
+              "attack_damage": 10,
+              "attack_windup": 1.2,
+              "attackingRange": 150,
+              "piercing": false,
+              "player_count_to_spawn": 2,
+              "players_container": {
+                "_type": "gameobject",
+                "go": "6b6fb711-6467-4fcb-aa4b-a69398b01d3d"
+              },
+              "projectile_duration": 0.2,
+              "projectile_pool": {
+                "_type": "gameobject",
+                "go": "a2842977-2178-4570-b806-db38e051019c"
+              },
+              "projectile_speed": 10,
+              "re_adjustposition_interval": 0.3,
+              "rotation_speed": 15,
+              "rotation_time": 0.4,
+              "slow_duration": 2,
+              "slowed_speed": 50,
+              "speed": 80,
+              "target_range": 10000,
+              "width": 3.5
+            },
+            {
+              "__type": "BoxCollider",
+              "__guid": "160acc4d-1d4b-4144-ba7a-8377c251f7ee",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "60,60,100",
+              "Static": false
+            },
+            {
+              "__type": "Health",
+              "__guid": "2b45104c-1fb2-4377-90e0-b274d209c984",
+              "current_health": 0,
+              "game_config_obj": {
+                "_type": "gameobject",
+                "go": "1d5f5cc0-1ab7-42b4-82e6-f0672703e8fd"
+              },
+              "max_health": 100
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "9724e19c-0609-4802-a4fd-e48c796828d6",
+              "Name": "Look Direction",
+              "Position": "64,0,5",
+              "Scale": "0.5,0.5,0.25",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "57c311a1-dae0-4cb9-bc3c-d24fcb6ecd0f",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            },
+            {
+              "__guid": "9e5524e6-a0f2-4f5f-b60f-52ff8103519e",
+              "Name": "Model",
+              "Position": "0,0,35",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "782c78ab-adf8-4944-8b9a-a72202327614",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/sphere.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "9bb130c8-ec9b-4382-941b-9d0ebc5bcd2a",
+          "Name": "boar",
+          "Position": "-5158.104,3122.253,35",
+          "Tags": "enemy",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "NavMeshAgent",
+              "__guid": "140b2403-fd5e-4a76-aa1c-e39b4fd31d4b",
+              "Acceleration": 10000,
+              "Height": 30,
+              "MaxSpeed": 100,
+              "Radius": 16,
+              "Separation": 0.25,
+              "UpdatePosition": true,
+              "UpdateRotation": true
+            },
+            {
+              "__type": "Enemy",
+              "__guid": "7221571d-7867-49e3-b464-73cfd410b56a",
+              "aggro_range": 600,
+              "attack_damage": 10,
+              "attack_windup": 1.2,
+              "attackingRange": 150,
+              "piercing": false,
+              "player_count_to_spawn": 1,
+              "players_container": {
+                "_type": "gameobject",
+                "go": "6b6fb711-6467-4fcb-aa4b-a69398b01d3d"
+              },
+              "projectile_duration": 0.2,
+              "projectile_pool": {
+                "_type": "gameobject",
+                "go": "a2842977-2178-4570-b806-db38e051019c"
+              },
+              "projectile_speed": 10,
+              "re_adjustposition_interval": 0.3,
+              "rotation_speed": 15,
+              "rotation_time": 0.4,
+              "slow_duration": 2,
+              "slowed_speed": 50,
+              "speed": 80,
+              "target_range": 10000,
+              "width": 3.5
+            },
+            {
+              "__type": "BoxCollider",
+              "__guid": "67f469d7-3449-41b3-8a60-4fda75afce2f",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "60,60,100",
+              "Static": false
+            },
+            {
+              "__type": "Health",
+              "__guid": "70866128-0539-482f-93f5-7dadf20c791d",
+              "current_health": 0,
+              "game_config_obj": {
+                "_type": "gameobject",
+                "go": "1d5f5cc0-1ab7-42b4-82e6-f0672703e8fd"
+              },
+              "max_health": 100
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "660d61ec-2875-416b-8c56-d149da71ca03",
+              "Name": "Look Direction",
+              "Position": "64,0,5",
+              "Scale": "0.5,0.5,0.25",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "bf517db7-d64f-4b03-9cbf-a0ef329a0605",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            },
+            {
+              "__guid": "2b0af38c-5302-43c9-ab30-6c1f2fca2846",
+              "Name": "Model",
+              "Position": "0,0,35",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "ef99aeae-0d43-48c9-858d-7d189fcf1e9d",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/sphere.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "54fbb2e4-da99-4c80-bb05-10e9973f1a3a",
+          "Name": "boar",
+          "Position": "-3509.985,134.52,35",
+          "Tags": "enemy",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "NavMeshAgent",
+              "__guid": "938b1181-b50d-4acf-b60a-6456dae40699",
+              "Acceleration": 10000,
+              "Height": 30,
+              "MaxSpeed": 100,
+              "Radius": 16,
+              "Separation": 0.25,
+              "UpdatePosition": true,
+              "UpdateRotation": true
+            },
+            {
+              "__type": "Enemy",
+              "__guid": "462b8a9a-a707-4df5-a449-b6f488614be4",
+              "aggro_range": 600,
+              "attack_damage": 10,
+              "attack_windup": 1.2,
+              "attackingRange": 150,
+              "piercing": false,
+              "player_count_to_spawn": 1,
+              "players_container": {
+                "_type": "gameobject",
+                "go": "6b6fb711-6467-4fcb-aa4b-a69398b01d3d"
+              },
+              "projectile_duration": 0.2,
+              "projectile_pool": {
+                "_type": "gameobject",
+                "go": "a2842977-2178-4570-b806-db38e051019c"
+              },
+              "projectile_speed": 10,
+              "re_adjustposition_interval": 0.3,
+              "rotation_speed": 15,
+              "rotation_time": 0.4,
+              "slow_duration": 2,
+              "slowed_speed": 50,
+              "speed": 80,
+              "target_range": 10000,
+              "width": 3.5
+            },
+            {
+              "__type": "BoxCollider",
+              "__guid": "973dd13b-2f09-4d89-8139-c7636e61c4c7",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "60,60,100",
+              "Static": false
+            },
+            {
+              "__type": "Health",
+              "__guid": "7648cec1-7d53-41e1-a35d-d3cd7c36dcf3",
+              "current_health": 0,
+              "game_config_obj": {
+                "_type": "gameobject",
+                "go": "1d5f5cc0-1ab7-42b4-82e6-f0672703e8fd"
+              },
+              "max_health": 100
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "726f1be6-4f4a-4a12-85c8-173a26f7ae69",
+              "Name": "Look Direction",
+              "Position": "64,0,5",
+              "Scale": "0.5,0.5,0.25",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "25c6680d-bade-43d9-a31c-0337678467f0",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/box.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
+                }
+              ]
+            },
+            {
+              "__guid": "1c9241e2-13a5-498e-903f-c007ac9f0ce8",
+              "Name": "Model",
+              "Position": "0,0,35",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "95ed81a4-0db8-4a6f-bce4-623f42616c1b",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/dev/sphere.vmdl",
+                  "RenderType": "On",
+                  "Tint": "0,0,0,1"
                 }
               ]
             }
@@ -958,6 +4732,10 @@
             "_type": "gameobject",
             "go": "3ee1c9f4-07be-4e0b-8b23-67bee2d8ec8a"
           },
+          "enemy_holder": {
+            "_type": "gameobject",
+            "go": "4c0de541-69aa-45ec-bd57-02894c5d0170"
+          },
           "player_holder": {
             "_type": "gameobject",
             "go": "6b6fb711-6467-4fcb-aa4b-a69398b01d3d"
@@ -1000,7 +4778,11 @@
             {
               "__type": "Room",
               "__guid": "fc3fabda-8a52-4c3d-addc-053bdf937138",
+              "cleared": true,
               "E_exit": false,
+              "enemy_count_1player": 0,
+              "enemy_count_2player": 0,
+              "enemy_count_3player": 0,
               "N_exit": true,
               "S_exit": false,
               "W_exit": false
@@ -1517,7 +5299,11 @@
             {
               "__type": "Room",
               "__guid": "297bbdd4-7077-4180-bb0f-c7457355c456",
+              "cleared": false,
               "E_exit": false,
+              "enemy_count_1player": 0,
+              "enemy_count_2player": 0,
+              "enemy_count_3player": 0,
               "N_exit": true,
               "S_exit": true,
               "W_exit": false
@@ -2001,6 +5787,7 @@
               "Name": "Plane",
               "Position": "0,0,0",
               "Scale": "8,3,1",
+              "Tags": "hallway",
               "Enabled": true,
               "NetworkMode": 2,
               "Components": [
@@ -2035,7 +5822,11 @@
             {
               "__type": "Room",
               "__guid": "cca9c3ad-cbf8-4fc2-aaad-f53ef40ff974",
+              "cleared": false,
               "E_exit": true,
+              "enemy_count_1player": 1,
+              "enemy_count_2player": 2,
+              "enemy_count_3player": 3,
               "N_exit": true,
               "S_exit": true,
               "W_exit": false
@@ -2519,6 +6310,7 @@
               "Name": "Plane",
               "Position": "0,0,0",
               "Scale": "8,8,1",
+              "Tags": "room",
               "Enabled": true,
               "NetworkMode": 2,
               "Components": [
@@ -2553,7 +6345,11 @@
             {
               "__type": "Room",
               "__guid": "c491289d-7d98-4152-860e-f36b53399833",
+              "cleared": false,
               "E_exit": false,
+              "enemy_count_1player": 0,
+              "enemy_count_2player": 0,
+              "enemy_count_3player": 0,
               "N_exit": true,
               "S_exit": true,
               "W_exit": false
@@ -3006,7 +6802,7 @@
             {
               "__guid": "701537a1-4b9c-4c98-8364-0d3eb70ece85",
               "Name": "room_edge",
-              "Position": "240.0001,150,30",
+              "Position": "240,150,30",
               "Rotation": "0,0,0.7071068,0.7071068",
               "Scale": "0.5,7,1",
               "Tags": "wall",
@@ -3037,6 +6833,7 @@
               "Name": "Plane",
               "Position": "0,0,0",
               "Scale": "8,3,1",
+              "Tags": "hallway",
               "Enabled": true,
               "NetworkMode": 2,
               "Components": [
@@ -3071,7 +6868,11 @@
             {
               "__type": "Room",
               "__guid": "a8c43f1b-2216-4b2d-8bdb-ad93b4353666",
+              "cleared": false,
               "E_exit": false,
+              "enemy_count_1player": 0,
+              "enemy_count_2player": 0,
+              "enemy_count_3player": 0,
               "N_exit": true,
               "S_exit": true,
               "W_exit": false
@@ -3555,6 +7356,7 @@
               "Name": "Plane",
               "Position": "0,0,0",
               "Scale": "8,3,1",
+              "Tags": "hallway",
               "Enabled": true,
               "NetworkMode": 2,
               "Components": [
@@ -3589,7 +7391,11 @@
             {
               "__type": "Room",
               "__guid": "35d663b4-17ec-4342-869a-4b92e14e9b7a",
+              "cleared": false,
               "E_exit": false,
+              "enemy_count_1player": 2,
+              "enemy_count_2player": 3,
+              "enemy_count_3player": 4,
               "N_exit": true,
               "S_exit": false,
               "W_exit": true
@@ -4074,6 +7880,7 @@
               "Name": "Plane",
               "Position": "0,0,0",
               "Scale": "8,8,1",
+              "Tags": "room",
               "Enabled": true,
               "NetworkMode": 2,
               "Components": [
@@ -4109,7 +7916,11 @@
             {
               "__type": "Room",
               "__guid": "fa93a66e-8d6a-4fdf-8b8c-1a8026a51c50",
+              "cleared": false,
               "E_exit": false,
+              "enemy_count_1player": 0,
+              "enemy_count_2player": 0,
+              "enemy_count_3player": 0,
               "N_exit": true,
               "S_exit": true,
               "W_exit": false
@@ -4207,7 +8018,7 @@
             {
               "__guid": "97a50b1b-7fb2-4cef-bfdc-777131a9ad12",
               "Name": "room_edge",
-              "Position": "410,-240,30",
+              "Position": "410,-240.002,30",
               "Scale": "0.5,7,1",
               "Tags": "wall",
               "Enabled": true,
@@ -4443,7 +8254,7 @@
             {
               "__guid": "49c864b1-444f-4173-a424-49d304fdc224",
               "Name": "room_edge",
-              "Position": "-410,240,30",
+              "Position": "-410,240.002,30",
               "Scale": "0.5,7,1",
               "Tags": "wall",
               "Enabled": true,
@@ -4593,6 +8404,7 @@
               "Name": "Plane",
               "Position": "0,0,0",
               "Scale": "8,3,1",
+              "Tags": "hallway",
               "Enabled": true,
               "NetworkMode": 2,
               "Components": [
@@ -4628,7 +8440,11 @@
             {
               "__type": "Room",
               "__guid": "10b5d735-a1dc-4ef1-b6ca-d8eb9bca937b",
+              "cleared": false,
               "E_exit": false,
+              "enemy_count_1player": 0,
+              "enemy_count_2player": 0,
+              "enemy_count_3player": 0,
               "N_exit": true,
               "S_exit": true,
               "W_exit": false
@@ -5112,6 +8928,7 @@
               "Name": "Plane",
               "Position": "0,0,0",
               "Scale": "8,3,1",
+              "Tags": "hallway",
               "Enabled": true,
               "NetworkMode": 2,
               "Components": [
@@ -5147,7 +8964,11 @@
             {
               "__type": "Room",
               "__guid": "d72267d0-d363-42aa-aca1-ab0a7a23dc55",
+              "cleared": false,
               "E_exit": false,
+              "enemy_count_1player": 0,
+              "enemy_count_2player": 0,
+              "enemy_count_3player": 0,
               "N_exit": true,
               "S_exit": true,
               "W_exit": false
@@ -5631,6 +9452,7 @@
               "Name": "Plane",
               "Position": "0,0,0",
               "Scale": "8,3,1",
+              "Tags": "hallway",
               "Enabled": true,
               "NetworkMode": 2,
               "Components": [
@@ -5666,7 +9488,11 @@
             {
               "__type": "Room",
               "__guid": "f7abe2ad-ffe5-4adf-b6e7-8fd17b98c9fb",
+              "cleared": false,
               "E_exit": false,
+              "enemy_count_1player": 0,
+              "enemy_count_2player": 0,
+              "enemy_count_3player": 0,
               "N_exit": true,
               "S_exit": true,
               "W_exit": false
@@ -6184,7 +10010,11 @@
             {
               "__type": "Room",
               "__guid": "2991135e-2dca-48fb-9e4e-f1413fe5633d",
+              "cleared": false,
               "E_exit": false,
+              "enemy_count_1player": 2,
+              "enemy_count_2player": 4,
+              "enemy_count_3player": 5,
               "N_exit": true,
               "S_exit": true,
               "W_exit": false
@@ -6668,6 +10498,7 @@
               "Name": "Plane",
               "Position": "0,0,0",
               "Scale": "8,8,1",
+              "Tags": "room",
               "Enabled": true,
               "NetworkMode": 2,
               "Components": [
@@ -6702,7 +10533,11 @@
             {
               "__type": "Room",
               "__guid": "576a35b5-5cd0-426e-aa04-db218cd27e8f",
+              "cleared": false,
               "E_exit": true,
+              "enemy_count_1player": 2,
+              "enemy_count_2player": 3,
+              "enemy_count_3player": 5,
               "N_exit": false,
               "S_exit": true,
               "W_exit": false
@@ -7186,6 +11021,7 @@
               "Name": "Plane",
               "Position": "0,0,0",
               "Scale": "8,8,1",
+              "Tags": "room",
               "Enabled": true,
               "NetworkMode": 2,
               "Components": [
@@ -7220,7 +11056,11 @@
             {
               "__type": "Room",
               "__guid": "e4c190d6-38ec-4c65-9d8c-a8b3fb125445",
+              "cleared": false,
               "E_exit": false,
+              "enemy_count_1player": 0,
+              "enemy_count_2player": 0,
+              "enemy_count_3player": 0,
               "N_exit": true,
               "S_exit": true,
               "W_exit": false
@@ -7704,6 +11544,7 @@
               "Name": "Plane",
               "Position": "0,0,0",
               "Scale": "8,3,1",
+              "Tags": "hallway",
               "Enabled": true,
               "NetworkMode": 2,
               "Components": [
@@ -7738,7 +11579,11 @@
             {
               "__type": "Room",
               "__guid": "ced4ed4f-6296-4845-ab83-320ce9d7fa3b",
+              "cleared": false,
               "E_exit": false,
+              "enemy_count_1player": 0,
+              "enemy_count_2player": 0,
+              "enemy_count_3player": 0,
               "N_exit": true,
               "S_exit": true,
               "W_exit": false
@@ -8222,6 +12067,7 @@
               "Name": "Plane",
               "Position": "0,0,0",
               "Scale": "8,3,1",
+              "Tags": "hallway",
               "Enabled": true,
               "NetworkMode": 2,
               "Components": [
@@ -8256,7 +12102,11 @@
             {
               "__type": "Room",
               "__guid": "fe137c87-4b2e-4931-90c7-0f91f1746c31",
+              "cleared": false,
               "E_exit": true,
+              "enemy_count_1player": 2,
+              "enemy_count_2player": 3,
+              "enemy_count_3player": 4,
               "N_exit": false,
               "S_exit": true,
               "W_exit": false
@@ -8740,6 +12590,7 @@
               "Name": "Plane",
               "Position": "0,0,0",
               "Scale": "8,8,1",
+              "Tags": "room",
               "Enabled": true,
               "NetworkMode": 2,
               "Components": [
@@ -8774,7 +12625,11 @@
             {
               "__type": "Room",
               "__guid": "5c869313-8ef7-404e-b0a2-8e3c489c181d",
+              "cleared": false,
               "E_exit": false,
+              "enemy_count_1player": 2,
+              "enemy_count_2player": 3,
+              "enemy_count_3player": 4,
               "N_exit": true,
               "S_exit": false,
               "W_exit": true
@@ -9259,6 +13114,7 @@
               "Name": "Plane",
               "Position": "0,0,0",
               "Scale": "8,8,1",
+              "Tags": "room",
               "Enabled": true,
               "NetworkMode": 2,
               "Components": [
@@ -9293,7 +13149,11 @@
             {
               "__type": "Room",
               "__guid": "033213b1-987f-4225-b62c-afd0df261058",
+              "cleared": false,
               "E_exit": true,
+              "enemy_count_1player": 2,
+              "enemy_count_2player": 4,
+              "enemy_count_3player": 6,
               "N_exit": false,
               "S_exit": false,
               "W_exit": true
@@ -9778,6 +13638,7 @@
               "Name": "Plane",
               "Position": "0,0,0",
               "Scale": "8,8,1",
+              "Tags": "room",
               "Enabled": true,
               "NetworkMode": 2,
               "Components": [
@@ -9812,7 +13673,11 @@
             {
               "__type": "Room",
               "__guid": "9dff00cb-98ce-4fd5-8ea2-341b6e1c5013",
+              "cleared": false,
               "E_exit": false,
+              "enemy_count_1player": 4,
+              "enemy_count_2player": 6,
+              "enemy_count_3player": 8,
               "N_exit": false,
               "S_exit": true,
               "W_exit": true
@@ -10296,6 +14161,7 @@
               "Name": "Plane",
               "Position": "0,0,0",
               "Scale": "8,8,1",
+              "Tags": "room",
               "Enabled": true,
               "NetworkMode": 2,
               "Components": [
@@ -10341,12 +14207,12 @@
       "AgentStepSize": 18,
       "AgentMaxSlope": 40,
       "ExcludedBodies": "enemy,player",
-      "IncludedBodies": ""
+      "IncludedBodies": "room"
     }
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-03-17T14:22:57.8407518\u002B11:00",
+  "LastSaved": "2024-03-17T17:15:54.0508857\u002B11:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": []

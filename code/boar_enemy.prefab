@@ -1,0 +1,112 @@
+{
+  "RootObject": {
+    "__guid": "7a94863a-2676-4346-90fb-5562e80e5dce",
+    "Name": "boar",
+    "Position": "-1900,0,35",
+    "Tags": "enemy",
+    "Enabled": true,
+    "NetworkMode": 2,
+    "Components": [
+      {
+        "__type": "NavMeshAgent",
+        "__guid": "a3c52c6d-1387-4d46-bf81-325295460333",
+        "Acceleration": 10000,
+        "Height": 30,
+        "MaxSpeed": 100,
+        "Radius": 16,
+        "Separation": 0.25,
+        "UpdatePosition": true,
+        "UpdateRotation": true
+      },
+      {
+        "__type": "Enemy",
+        "__guid": "6a8626cb-56df-4815-a0ec-771db8449119",
+        "aggro_range": 600,
+        "attack_damage": 10,
+        "attack_windup": 1.2,
+        "attackingRange": 150,
+        "piercing": false,
+        "player_count_to_spawn": 3,
+        "players_container": {
+          "_type": "gameobject",
+          "go": "6b6fb711-6467-4fcb-aa4b-a69398b01d3d"
+        },
+        "projectile_duration": 0.2,
+        "projectile_pool": {
+          "_type": "gameobject",
+          "go": "a2842977-2178-4570-b806-db38e051019c"
+        },
+        "projectile_speed": 10,
+        "re_adjustposition_interval": 0.3,
+        "rotation_speed": 15,
+        "rotation_time": 0.4,
+        "slow_duration": 2,
+        "slowed_speed": 50,
+        "speed": 80,
+        "target_range": 10000,
+        "width": 3.5
+      },
+      {
+        "__type": "BoxCollider",
+        "__guid": "2f26bb88-2e05-4185-a18e-d7970692c2d0",
+        "Center": "0,0,0",
+        "IsTrigger": false,
+        "Scale": "60,60,100",
+        "Static": false
+      },
+      {
+        "__type": "Health",
+        "__guid": "ee3aa614-31ca-4fd5-a18d-5fb925fcb90a",
+        "current_health": 0,
+        "game_config_obj": {
+          "_type": "gameobject",
+          "go": "1d5f5cc0-1ab7-42b4-82e6-f0672703e8fd"
+        },
+        "max_health": 100
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "c64034ac-fbef-4b36-91f4-a7901a5722e4",
+        "Name": "Look Direction",
+        "Position": "64,0,5",
+        "Scale": "0.5,0.5,0.25",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "Components": [
+          {
+            "__type": "ModelRenderer",
+            "__guid": "054099a4-6c9d-478b-8983-f739c0fe23a5",
+            "BodyGroups": 18446744073709551615,
+            "Model": "models/dev/box.vmdl",
+            "RenderType": "On",
+            "Tint": "0,0,0,1"
+          }
+        ]
+      },
+      {
+        "__guid": "8c0018d5-0048-4f93-85ad-1dc92628f55a",
+        "Name": "Model",
+        "Position": "0,0,35",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "Components": [
+          {
+            "__type": "ModelRenderer",
+            "__guid": "dcf0a2e1-bb9c-4719-90df-c3769f4e2891",
+            "BodyGroups": 18446744073709551615,
+            "Model": "models/dev/sphere.vmdl",
+            "RenderType": "On",
+            "Tint": "0,0,0,1"
+          }
+        ]
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__version": 1,
+  "__references": []
+}

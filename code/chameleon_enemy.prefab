@@ -1,0 +1,112 @@
+{
+  "RootObject": {
+    "__guid": "36fb11ae-a548-4264-9852-2ec37ac42601",
+    "Name": "chameleon",
+    "Position": "-1900,-100,35",
+    "Tags": "enemy",
+    "Enabled": true,
+    "NetworkMode": 2,
+    "Components": [
+      {
+        "__type": "NavMeshAgent",
+        "__guid": "d56725ae-bb4d-4c48-9cbe-f29d225fb90e",
+        "Acceleration": 10000,
+        "Height": 30,
+        "MaxSpeed": 100,
+        "Radius": 16,
+        "Separation": 0.25,
+        "UpdatePosition": true,
+        "UpdateRotation": true
+      },
+      {
+        "__type": "Enemy",
+        "__guid": "6a598670-262d-4f94-9e2c-d505af5c2bf7",
+        "aggro_range": 1000,
+        "attack_damage": 5,
+        "attack_windup": 1,
+        "attackingRange": 700,
+        "piercing": false,
+        "player_count_to_spawn": 2,
+        "players_container": {
+          "_type": "gameobject",
+          "go": "6b6fb711-6467-4fcb-aa4b-a69398b01d3d"
+        },
+        "projectile_duration": 1,
+        "projectile_pool": {
+          "_type": "gameobject",
+          "go": "a2842977-2178-4570-b806-db38e051019c"
+        },
+        "projectile_speed": 7,
+        "re_adjustposition_interval": 0.3,
+        "rotation_speed": 15,
+        "rotation_time": 0.4,
+        "slow_duration": 2,
+        "slowed_speed": 30,
+        "speed": 60,
+        "target_range": 10000,
+        "width": 2.5
+      },
+      {
+        "__type": "BoxCollider",
+        "__guid": "fbe0c22c-a568-4bc5-9c8f-32c3f8757554",
+        "Center": "0,0,0",
+        "IsTrigger": false,
+        "Scale": "60,60,100",
+        "Static": false
+      },
+      {
+        "__type": "Health",
+        "__guid": "f91c7641-6364-493c-b9a6-f1c16a16652a",
+        "current_health": 0,
+        "game_config_obj": {
+          "_type": "gameobject",
+          "go": "1d5f5cc0-1ab7-42b4-82e6-f0672703e8fd"
+        },
+        "max_health": 20
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "0bc08789-87c5-49fb-bc0a-a5525ece2574",
+        "Name": "Look Direction",
+        "Position": "64,0,5",
+        "Scale": "0.5,0.5,0.25",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "Components": [
+          {
+            "__type": "ModelRenderer",
+            "__guid": "124c02f6-7ee9-4f47-ab9d-7f781ae4a451",
+            "BodyGroups": 18446744073709551615,
+            "Model": "models/dev/box.vmdl",
+            "RenderType": "On",
+            "Tint": "0,0,0,1"
+          }
+        ]
+      },
+      {
+        "__guid": "2add75bd-90ea-4f37-9c9c-7d2115f012b8",
+        "Name": "Model",
+        "Position": "0,0,35",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "Components": [
+          {
+            "__type": "ModelRenderer",
+            "__guid": "67c95853-8e4a-4efd-a449-6d058445cc98",
+            "BodyGroups": 18446744073709551615,
+            "Model": "models/dev/sphere.vmdl",
+            "RenderType": "On",
+            "Tint": "0,0.16744,0.05023,1"
+          }
+        ]
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__version": 1,
+  "__references": []
+}

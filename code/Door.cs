@@ -14,15 +14,15 @@ public sealed class Door : Component, Component.ITriggerListener
 
 	protected override void OnUpdate()
 	{
-		if(players_on_door == total_players && activatable && entrance){
-			Log.Info("opening door");
+		if(players_on_door == total_players && activatable && entrance && room.cleared){
 			door.Enabled = false;
+			room.active = false;
 		}
 		else if(players_on_door == total_players && activatable && !entrance){
-			Log.Info("closing door");
 			door.Enabled = true;
 			activatable = false;
 			room.config.changeActiveRoom(room.room_center);
+			room.active = true;
 		}
 	}
 
@@ -30,7 +30,6 @@ public sealed class Door : Component, Component.ITriggerListener
 		GameObject obj = other.GameObject;
 		if(obj != null){
 			if(obj.Tags.Has("player")){
-				Log.Info("player on door");
 				players_on_door += 1;
 			}
 		}
@@ -40,7 +39,6 @@ public sealed class Door : Component, Component.ITriggerListener
 		GameObject obj = other.GameObject;
 		if(obj != null){
 			if(obj.Tags.Has("player")){
-				Log.Info("player off door");
 				players_on_door -= 1;
 			}
 		}

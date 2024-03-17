@@ -3,8 +3,10 @@ using Sandbox;
 public sealed class GameConfig : Component
 {
 	[Property] GameObject player_holder = null;
+	[Property] GameObject enemy_holder = null;
 	[Property] GameObject camera = null;
 	List<GameObject> players;
+	List<GameObject> enemies;
 	public int num_players;
 
 	[Property] GameObject rooms_holder = null;
@@ -15,15 +17,20 @@ public sealed class GameConfig : Component
 
 	Vector3 room_center;
 
+	public int enemy_dead_count;
+
+	public List<GameObject> active_players = new List<GameObject>();
+
 	protected override void OnStart()
 	{
 		players = player_holder.Children;
 		rooms = rooms_holder.Children;
+		enemies = enemy_holder.Children;
 	}
 	protected override void OnUpdate()
 	{
 		if(timer > 0){
-			camera.Transform.Position = Vector3.Lerp(camera.Transform.Position, new Vector3(room_center.x, room_center.y, 1400), 3 * Time.Delta);
+			camera.Transform.Position = Vector3.Lerp(camera.Transform.Position, new Vector3(room_center.x, room_center.y, 1400), 5 * Time.Delta);
 		}
 	}
 
@@ -33,12 +40,18 @@ public sealed class GameConfig : Component
 			foreach(var player in players){
 				if(option.Key == player.Name && option.Value != 4){
 					player.Enabled = true;
+					active_players.Add(player);
 					assignControl(option.Value, player);
 				}
 			}
 		}
+
 		foreach(var room in rooms){
 			room.Components.Get<Room>().setUpTriggers(num_players, this);
+		}
+
+		foreach(var enemy in enemies){
+			enemy.Components.Get<Enemy>().checkOn(num_players);
 		}
 	}
 
@@ -58,7 +71,10 @@ public sealed class GameConfig : Component
 	public void changeActiveRoom(Vector3 in_room_center){
 		room_center = in_room_center;
 		timer = camera_travel_time;
+		enemy_dead_count = 0;
 	}
 
-
+	public void notifyEnemyDead(){
+		enemy_dead_count++;
+	}
 }

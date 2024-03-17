@@ -10,7 +10,7 @@ public sealed class Pool : Component
 	int top_id = 0;
 
 	protected override void OnStart()
-	{
+	{		
 		for(int i = 0; i < pool_size; i++){
 			generateNewObject(top_id);
 			top_id++;

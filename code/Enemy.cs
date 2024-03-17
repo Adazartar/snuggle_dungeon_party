@@ -3,6 +3,7 @@ using System;
 
 public sealed class Enemy : Component
 {
+	[Property] int player_count_to_spawn = 1;
 	[Property] float attack_windup = 1;
 	float attack_windup_timer;
 	[Property] float projectile_speed = 5;
@@ -44,7 +45,7 @@ public sealed class Enemy : Component
 
 	Health health;
 
-	protected override void OnStart()
+	protected override void OnEnabled()
 	{
 		pool = projectile_pool.Components.Get<Pool>();
 		players = players_container.Children;
@@ -215,6 +216,12 @@ public sealed class Enemy : Component
 		slow_timer -= Time.Delta;
 		if(slow_timer < 0){
 			agent.MaxSpeed = speed;
+		}
+	}
+
+	public void checkOn(int num_players){
+		if(num_players < player_count_to_spawn){
+			GameObject.Enabled = false;
 		}
 	}
 
