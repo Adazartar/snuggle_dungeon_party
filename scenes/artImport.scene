@@ -1,5 +1,5 @@
 {
-  "__guid": "074bea85-3cb2-499e-b928-396140e1c4fb",
+  "__guid": "11708526-2058-41ef-ad48-911312c49987",
   "GameObjects": [
     {
       "__guid": "79923949-7d1f-457d-9470-6142efb76409",
@@ -760,11 +760,32 @@
       "NetworkMode": 2,
       "Components": [
         {
-          "__type": "Prop",
-          "__guid": "105007c1-1a25-4ea0-a0a0-cf5b4e89c37c",
-          "Health": 0,
-          "IsStatic": false,
-          "Model": "art/models/playercharacters/sdp_pc_wizard.vmdl"
+          "__type": "SkinnedModelRenderer",
+          "__guid": "abdb80a6-fac5-46a0-a4bd-4a1100af8c88",
+          "BodyGroups": 18446744073709551615,
+          "CreateBoneObjects": false,
+          "Model": "art/models/playercharacters/sdp_pc_wizard.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "ModelCollider",
+          "__guid": "e47739ba-8471-4e32-8e74-00c824d7b1c1",
+          "IsTrigger": false,
+          "Model": "art/models/playercharacters/sdp_pc_wizard.vmdl",
+          "Static": false
+        },
+        {
+          "__type": "Rigidbody",
+          "__guid": "67d71ce4-1755-4100-8c50-d5e42d192311",
+          "AngularDamping": 0,
+          "Gravity": true,
+          "LinearDamping": 0,
+          "Locking": {},
+          "MassOverride": 0,
+          "MotionEnabled": true,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     },
@@ -809,7 +830,7 @@
   },
   "Title": "artimport",
   "Description": "",
-  "LastSaved": "2024-03-17T17:43:19.1677913\u002B11:00",
+  "LastSaved": "2024-03-17T19:22:58.6642713\u002B11:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": []
