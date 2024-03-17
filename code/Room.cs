@@ -1,8 +1,11 @@
 using Sandbox;
+using System;
 
 public sealed class Room : Component
 {
 	public bool active = false;
+	bool powerUpSpawned = false;
+	[Property] bool isRoom = true;
 	[Property] public bool cleared = false;
 	[Property] int enemy_count_1player = 0;
 	[Property] int enemy_count_2player = 0;
@@ -23,6 +26,8 @@ public sealed class Room : Component
 
 	public Vector3 room_center;
 	public GameConfig config;
+
+	Random random = new Random();
 
 	protected override void OnStart(){
 		foreach(GameObject child in GameObject.Children){
@@ -57,18 +62,21 @@ public sealed class Room : Component
 			if(config.enemy_dead_count >= enemy_count_1player){
 				cleared = true;
 				reviveDeadPlayers();
+				spawnPowerup();
 			}
 		}
 		if(config.num_players == 2){
 			if(config.enemy_dead_count >= enemy_count_2player){
 				cleared = true;
 				reviveDeadPlayers();
+				spawnPowerup();
 			}
 		}
 		if(config.num_players == 3){
 			if(config.enemy_dead_count >= enemy_count_3player){
 				cleared = true;
 				reviveDeadPlayers();
+				spawnPowerup();
 			}
 		}
 	}
@@ -80,6 +88,19 @@ public sealed class Room : Component
 				player.Transform.Position = room_center;
 				player.Components.Get<Player>().health.current_health = player.Components.Get<Player>().health.max_health/2;
 			}
+		}
+	}
+
+	public void spawnPowerup(){
+		Log.Info("spawning powerup");
+		if(config.interactables_list.Count > 0 && isRoom && !powerUpSpawned){
+			int randomIndex = random.Next(0, config.interactables_list.Count);
+			GameObject interactable = config.interactables_list[randomIndex];
+			//config.interactables_list.RemoveAt(randomIndex);
+			interactable.Enabled = true;
+			interactable.Transform.Position = room_center;
+			Log.Info("powerup spawned");
+			powerUpSpawned = true;
 		}
 	}
 	

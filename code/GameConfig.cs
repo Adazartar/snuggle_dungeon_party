@@ -20,12 +20,15 @@ public sealed class GameConfig : Component
 	public int enemy_dead_count;
 
 	public List<GameObject> active_players = new List<GameObject>();
+	[Property] GameObject interactables_holder = null;
+	public List<GameObject> interactables_list;
 
 	protected override void OnStart()
 	{
 		players = player_holder.Children;
 		rooms = rooms_holder.Children;
 		enemies = enemy_holder.Children;
+		interactables_list = interactables_holder.Children;
 	}
 	protected override void OnUpdate()
 	{
